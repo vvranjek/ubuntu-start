@@ -1,0 +1,15 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Name=Enable Icon Theme
+GenericName=Themes Utility
+Comment=Enable/activate icon theme found in this folder.
+Categories=Utility;Settings;DesktopSettings;GTK;GNOME;
+Icon=preferences-desktop-theme
+Exec=sh -c "$(dirname '%k')/zcsetup/enable-icon-theme.sh"
+Terminal=false
+StartupNotify=false
+NotShowIn=KDE;
+

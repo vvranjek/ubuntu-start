@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg7384"
+   height="16"
+   width="16"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="network-idle-symbolic.svg">
+  <defs
+     id="defs12">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2995">
+      <path
+         style="color:#000000;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 1,1.5 c -0.554,0 -1,0.446 -1,1 L 0,8 c 0,0.554 0.446,1 1,1 l 3,0 0,-1.5 -2.5,0 0,-4.5 8,0 0,1 1.5,0 0,-1.5 c 0,-0.554 -0.446,-1 -1,-1 l -9,0 z m 0,9 0,1 3,0 0,-1 -3,0 z"
+         id="path2997"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1011"
+     inkscape:window-height="709"
+     id="namedview10"
+     showgrid="true"
+     inkscape:zoom="30.5625"
+     inkscape:cx="8"
+     inkscape:cy="8.3762781"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg7384">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2989" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata90">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title
+     id="title9167">Gnome Symbolic Icon Theme</title>
+  <path
+     inkscape:connector-curvature="0"
+     style="color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;opacity:0.35"
+     d="M 6,5 C 5.446,5 5,5.446 5,6 l 0,5.5 c 0,0.554 0.446,1 1,1 l 4,0 0,0.84375 C 9.7009041,13.470257 9.4702569,13.700904 9.34375,14 L 6,14 l 0,1 3.34375,0 c 0.1897603,0.448644 0.638483,0.75 1.15625,0.75 0.517767,0 0.96649,-0.301356 1.15625,-0.75 L 15,15 15,14 11.65625,14 C 11.529743,13.700904 11.299096,13.470257 11,13.34375 L 11,12.5 l 4,0 c 0.554,0 1,-0.446 1,-1 L 16,6 C 16,5.446 15.554,5 15,5 L 6,5 z m 0.5,1.5 8,0 0,4.5 -8,0 0,-4.5 z"
+     id="path3816" />
+  <path
+     id="path2988"
+     d="m 1,1.5 c -0.554,0 -1,0.446 -1,1 L 0,8 C 0,8.554 0.446,9 1,9 L 5,9 5,9.84375 C 4.7009041,9.970257 4.4702569,10.200904 4.34375,10.5 L 1,10.5 l 0,1 3.34375,0 c 0.1897603,0.448644 0.638483,0.75 1.15625,0.75 0.517767,0 0.96649,-0.301356 1.15625,-0.75 l 3.34375,0 0,-1 -3.34375,0 C 6.529743,10.200904 6.299096,9.970257 6,9.84375 L 6,9 10,9 c 0.554,0 1,-0.446 1,-1 l 0,-5.5 c 0,-0.554 -0.446,-1 -1,-1 l -9,0 z m 0.5,1.5 8,0 0,4.5 -8,0 0,-4.5 z"
+     style="color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;opacity:1"
+     inkscape:connector-curvature="0"
+     clip-path="url(#clipPath2995)" />
+</svg>

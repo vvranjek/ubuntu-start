@@ -1,0 +1,38 @@
+
+
+##################### Added by bashrc-add.sh ############################## 
+
+function mkcd
+{
+  dir="$*";
+  mkdir -p "$dir" && cd "$dir";
+}
+
+function svnrmrm
+{
+  svn st | grep ^! | awk '{$1=""; print " --force \""substr($0,2)"@\"" }' | xargs svn rm
+}
+
+function svnaddadd
+{
+   svn st |grep ^? | awk '{$1=""; print " --force \""substr($0,2)"@\"" }' | xargs svn add 
+}
+
+udir="/home/$USER/SVN/ubuntu-vid/Apt-get/trunk/"
+
+PATH=$PATH:/home/$USER/bin
+
+#############################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+

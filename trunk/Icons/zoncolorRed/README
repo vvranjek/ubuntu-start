@@ -1,0 +1,44 @@
+# ===================================================================
+# zonColor Themes Pack Project - http://www.fandigital.com
+# This icon theme is licensed under GNU GPL version 3 or later.
+# ===================================================================
+
+
+To enable/activate this theme (if already installed):
+=====================================================
+Run "enable-icon-theme.sh" script file included in this folder,
+either by double-clicking it in Nautilus (file manager) window,
+or by executing it in Terminal window.
+The script supports Unity/GNOME/Cinnamon/MATE/Xfce session.
+
+Alternatively, use a theme changer utility (e.g. GNOME Tweak Tool)
+or a built-in appearance settings app (if available).
+
+.
+
+To install (if not already):
+============================
+Run "enable-icon-theme.sh" script file included in this folder.
+The script will check whether this icon theme installed or not,
+and will automatically install when needed into "/home/$USER/.icons".
+Alternatively, you can install it manually by copying this folder
+into the icons folder.
+
+.
+
+NOTES
+=====
+You may need to set file permission to the script to allow
+executing it as program.
+* To set file permission in Nautilus file manager:
+    Right-click on the file ==> Properties ==> Permissions ==>
+    Execute ==> Check "Allow executing file as program" option.
+  You may also need to change Nautilus (Files) preference to be able
+  to run executable text files:
+    Open Nautilus (Files) Preferences window ==> Behavior ==>
+    Executable Text Files: Select "Ask each time".
+* To mark the script file as executable via Terminal:
+  Navigate to this folder, and then run this command:
+  "chmod +x *.sh" (without quotes)
+
+.
