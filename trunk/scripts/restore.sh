@@ -2,7 +2,7 @@
 
 
 
-settings=$(cat backup/gsettings)
+settings=$(cat ../backup/gsettings)
 
 echo "$settings" | while read -r line
 do
@@ -11,7 +11,16 @@ do
 done
 
 echo "Setting ccsm settings"
-./ccsm-import.py backup/ccsm-settings.profile
+if which programname >/dev/null; then
+    	echo CCSM found
+	./ccsm-import.py backup/ccsm-settings.profile
+else
+    echo CCSM not installed
+    echo Installing ccsm
+    sudo bash -c "apt-get install ccsm"
+    ./ccsm-import.py ../backup/ccsm-settings.profile
+fi
+
 
 
 
