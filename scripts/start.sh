@@ -9,7 +9,6 @@ cur_dir=$(pwd)
 
 sudo chmod +x *
 
-
 echo "Hello and welcome to this must have Ubuntu installation script."
 sleep 0.5
 
@@ -65,6 +64,7 @@ else
 
 fi
 
+#Disable/enable scrollbar overlay
 sh scrollbarOverlay.sh
 
 
