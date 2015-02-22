@@ -5,9 +5,11 @@
 
 clear
 
-cur_dir=$(pwd)
+cur_dir=$(find `pwd` -name "scripts")
 
 sudo chmod +x *
+
+touch touch
 
 echo "Hello and welcome to this must have Ubuntu installation script."
 sleep 0.5
