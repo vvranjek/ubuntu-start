@@ -8,14 +8,19 @@ function mkcd
   mkdir -p "$dir" && cd "$dir";
 }
 
-function svnrmrm
+function svnrm
 {
   svn st | grep ^! | awk '{$1=""; print " --force \""substr($0,2)"@\"" }' | xargs svn rm
 }
 
-function svnaddadd
+function svnadd
 {
    svn st |grep ^? | awk '{$1=""; print " --force \""substr($0,2)"@\"" }' | xargs svn add 
+}
+
+function gitrm
+{
+	git ls-files --deleted | xargs git rm 
 }
 
 udir="/home/$USER/SVN/ubuntu-vid/Apt-get/trunk/"
