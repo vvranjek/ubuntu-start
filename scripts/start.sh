@@ -185,6 +185,7 @@ while true; do
       sudo apt-get install screenlets-pack-all -y
       sudo apt-get install kid3-qt -y
       sudo apt-get install tagtool -y
+      sudo apt-get install gpointing-device-settings -y
 
       #RUN PROGRAMS
       indicator-weather &
