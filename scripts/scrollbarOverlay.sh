@@ -2,10 +2,10 @@
 	while true; do
 	    read -p "Do you want to disable scrollbar overlay (Y/N)? To enable press E." answer
 	    case $answer in
-		[Yy]* ) if  grep "export LIBOVERLAY_SCROLLBAR=0" /etc/X11/Xsession.d/80overlayscrollbars 
+		[Yy]* ) if ! gsettings get com.canonical.desktop.interface scrollbar-mode | grep 'normal'
 			then
-				sudo bash -c "echo \"export LIBOVERLAY_SCROLLBAR=0\" > /etc/X11/Xsession.d/80overlayscrollbars"
-				echo "Scrollbar overlay disabled"
+				gsettings set com.canonical.desktop.interface scrollbar-mode normal
+				echo "Scrollbar overlay now disabled"
 			else
 				echo "Scrollbar allready disabled"
 			fi
@@ -13,7 +13,7 @@
 
 		[Nn]* ) echo "No"; break;;
 
-		[Ee]* ) sudo bash -c "echo \"export LIBOVERLAY_SCROLLBAR=1\" > /etc/X11/Xsession.d/80overlayscrollbars"
+		[Ee]* ) gsettings set com.canonical.desktop.interface scrollbar-mode overlay-auto
 			echo "Scrollbar overlay enabled"
 			break;;
 

@@ -7,7 +7,7 @@ clear
 
 cur_dir=$(find `pwd` -name "scripts")
 
-sudo chmod +x *
+sudo chmod +x $cur_dir/*
 
 touch touch
 
@@ -67,7 +67,7 @@ else
 fi
 
 #Disable/enable scrollbar overlay
-sh scrollbarOverlay.sh
+sh $cur_dir/scrollbarOverlay.sh
 
 
 while true; do
