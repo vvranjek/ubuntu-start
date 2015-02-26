@@ -80,7 +80,8 @@ while true; do
     sudo add-apt-repository ppa:nae-team/ppa -y
     sudo add-apt-repository ppa:rabbitvcs/ppa -y    #SVN nautilus stuff
     sudo add-apt-repository ppa:flozz/flozz    -y     # nautilus-terminal
-    sudo add-apt-repository ppa:noobslab/apps   -y    #open-as-administrator
+    sudo add-apt-repository ppa:noobslab/apps   -y    #open-as-administrator 
+    sudo add-apt-repository ppa:daniel.pavel/solaar -y #Sollar, tool for logitech unigying receicers  
     #sudo add-apt-repository ppa:gloobus-dev/gloobus-preview -y
     #sudo apt-add-repository ppa:screenlets/ppa -y 		# Scrennlets
     #sudo apt-add-repository ppa:ian-berke/ppa-drawers -y   # Drawers
@@ -186,6 +187,7 @@ while true; do
       sudo apt-get install kid3-qt -y
       sudo apt-get install tagtool -y
       sudo apt-get install gpointing-device-settings -y
+      sudo apt-get install solaar -y
 
       #RUN PROGRAMS
       indicator-weather &
