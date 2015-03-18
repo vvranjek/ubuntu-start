@@ -76,6 +76,7 @@ while true; do
 	  [Yy]* ) 
 
     
+    sudo add-apt-repository ppa:thefanclub/grive-tools   # Grive, google drive client
     sudo add-apt-repository ppa:jd-team/jdownloader -y
     sudo add-apt-repository ppa:nae-team/ppa -y
     sudo add-apt-repository ppa:rabbitvcs/ppa -y    #SVN nautilus stuff
@@ -111,6 +112,7 @@ while true; do
       [Yy]* ) 
 
       sudo apt-get update
+      sudo apt-get install grive-tools
       sudo apt-get install ubuntu-tweak -y
       sudo apt-get install google-chrome-stable -y
       sudo apt-get install nautilus-dropbox -y
