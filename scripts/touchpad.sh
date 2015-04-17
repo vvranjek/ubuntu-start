@@ -12,7 +12,7 @@ xinput set-prop "$touchpad" "Synaptics Noise Cancellation" 0, 0
 xinput set-prop "$touchpad" "Synaptics Move Speed" 1.0, 1.75, 0.053305, 0
 
 #Scrolling speed
-#xinput set-prop "$touchpad" "Synaptics Scrolling Distance" 60, 60 
+xinput set-prop "$touchpad" "Synaptics Scrolling Distance" 60, 60 
 
 #Touchpad working area
 #xinput set-prop "$touchpad" "Synaptics Area" 0, 2974, 0, 1700
