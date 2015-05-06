@@ -3,9 +3,10 @@ sudo apt-get update
 sudo apt-get remove gnome-terminal
 sudo ln -s /usr/bin/terminator /usr/bin/gnome-terminal
 
-
-
-
+doxygen-gui
+exfat-fuse
+exfat-utils
+kate
 icedtea-plugin 
 retext 
 grive-tools 
