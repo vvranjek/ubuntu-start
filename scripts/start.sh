@@ -76,12 +76,14 @@ while true; do
 	  [Yy]* ) 
 
     
+    sudo add-apt-repository ppa:thefanclub/grive-tools -y   # Grive, google drive client
     sudo add-apt-repository ppa:jd-team/jdownloader -y
     sudo add-apt-repository ppa:nae-team/ppa -y
     sudo add-apt-repository ppa:rabbitvcs/ppa -y    #SVN nautilus stuff
     sudo add-apt-repository ppa:flozz/flozz    -y     # nautilus-terminal
     sudo add-apt-repository ppa:noobslab/apps   -y    #open-as-administrator 
-    sudo add-apt-repository ppa:daniel.pavel/solaar -y #Sollar, tool for logitech unigying receicers  
+    sudo add-apt-repository ppa:daniel.pavel/solaar -y #Sollar, tool for logitech unigying receicers 
+    sudo add-apt-repository ppa:appgrid/stable -y      #Appgrid
     #sudo add-apt-repository ppa:gloobus-dev/gloobus-preview -y
     #sudo apt-add-repository ppa:screenlets/ppa -y 		# Scrennlets
     #sudo apt-add-repository ppa:ian-berke/ppa-drawers -y   # Drawers
@@ -111,7 +113,9 @@ while true; do
       [Yy]* ) 
 
       sudo apt-get update
-      sudo apt-get install retex -y
+      sudo apt-get install icedtea-plugin -y
+      sudo apt-get install retext -y
+      sudo apt-get install grive-tools -y
       sudo apt-get install ubuntu-tweak -y
       sudo apt-get install google-chrome-stable -y
       sudo apt-get install nautilus-dropbox -y

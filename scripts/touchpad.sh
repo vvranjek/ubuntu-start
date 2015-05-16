@@ -27,3 +27,5 @@ xinput set-prop "$touchpad" "Synaptics Palm Dimensions" 5, 10
 
 #Synapstics Move Speed: min speed, max speed, acc factor, second, trackstick
 #xinput set-prop "$touchpad" "Move Speed" 1.5, 1.5, 0.053305, 0
+
+echo "Done!"

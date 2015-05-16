@@ -57,16 +57,17 @@ echo "Creating launcher"
 echo
 
 #cd /home/$USER/Desktop
-touch ${name}.desktop
+touch /home/$USER/Desktop/${name}.desktop
 
-echo $name
-echo $comment
+echo "[Desktop Entry]" > /home/$USER/Desktop/${name}.desktop
+echo "Name=$name" >> /home/$USER/Desktop/${name}.desktop
+echo "Comment=$comment" >> /home/$USER/Desktop/${name}.desktop
+echo "Exec=$exe" >> /home/$USER/Desktop/${name}.desktop
+echo "Icon=$icon" >> /home/$USER/Desktop/${name}.desktop
+echo "Type=$typ" >> /home/$USER/Desktop/${name}.desktop
+echo "StartUpNotif=$sn" >> /home/$USER/Desktop/${name}.desktop
 
-echo "[Desktop Entry]" > ${name}.desktop
-echo "Name=$name" >> ${name}.desktop
-echo "Comment=$comment" >> ${name}.desktop
-echo "Exec=$exe" >> ${name}.desktop
-echo "Icon=$icon" >> ${name}.desktop
-echo "Type=$typ" >> ${name}.desktop
-echo "StartUpNotif=$sn" >> ${name}.desktop
+echo "Laoncher is placed on /home/$USER/Desktop/${name}.desktop"
+
+chmod +x /home/$USER/Desktop/${name}.desktop
 
