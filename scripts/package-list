@@ -3,6 +3,8 @@ sudo apt-get update
 sudo apt-get remove gnome-terminal
 sudo ln -s /usr/bin/terminator /usr/bin/gnome-terminal
 
+
+appgrid
 doxygen-gui
 exfat-fuse
 exfat-utils

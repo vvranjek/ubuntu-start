@@ -82,7 +82,8 @@ while true; do
     sudo add-apt-repository ppa:rabbitvcs/ppa -y    #SVN nautilus stuff
     sudo add-apt-repository ppa:flozz/flozz    -y     # nautilus-terminal
     sudo add-apt-repository ppa:noobslab/apps   -y    #open-as-administrator 
-    sudo add-apt-repository ppa:daniel.pavel/solaar -y #Sollar, tool for logitech unigying receicers  
+    sudo add-apt-repository ppa:daniel.pavel/solaar -y #Sollar, tool for logitech unigying receicers 
+    sudo add-apt-repository ppa:appgrid/stable -y      #Appgrid
     #sudo add-apt-repository ppa:gloobus-dev/gloobus-preview -y
     #sudo apt-add-repository ppa:screenlets/ppa -y 		# Scrennlets
     #sudo apt-add-repository ppa:ian-berke/ppa-drawers -y   # Drawers
