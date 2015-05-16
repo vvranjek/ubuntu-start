@@ -111,12 +111,13 @@ while true; do
       [Yy]* ) 
 
       sudo apt-get update
+      sudo apt-get install retex -y
       sudo apt-get install ubuntu-tweak -y
       sudo apt-get install google-chrome-stable -y
       sudo apt-get install nautilus-dropbox -y
       
       sudo apt-get install terminator -y
-      sudo apt-get remove gnome-terminal
+      sudo apt-get remove gnome-terminal -y
       sudo ln -s /usr/bin/terminator /usr/bin/gnome-terminal
       
       sudo apt-get install jdownloader -y
@@ -190,7 +191,7 @@ while true; do
       sudo apt-get install solaar -y
 
       #RUN PROGRAMS
-      indicator-weather &
+      #indicator-weather &
       indicator-multiload &
 
       break;;
