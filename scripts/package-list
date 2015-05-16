@@ -1,0 +1,92 @@
+
+sudo apt-get update
+sudo apt-get remove gnome-terminal
+sudo ln -s /usr/bin/terminator /usr/bin/gnome-terminal
+
+
+
+
+icedtea-plugin 
+retext 
+grive-tools 
+ubuntu-tweak 
+google-chrome-stable 
+nautilus-dropbox 
+
+terminator 
+
+
+jdownloader 
+ubuntu-restricted-extras 
+skype 
+compizconfig-settings-manager 
+compiz-plugins-extra 
+#nautilus-actions 
+#sudo apt-get remove  banshee 
+#rhythmbox 
+mountmanager 
+xoscope 
+wine 
+flashplugin-installer 
+vlc 
+unetbootin 
+fdupes 
+#sudo  apt-get install gnome-panel 
+tuxguitar timidity tuxguitar-jsa 
+#sudo  apt-get install drawers 
+dayfolder 
+#sudo  apt-get install myagenda 
+sl 
+
+#nautilus
+
+nautilus-actions-extra 
+nautilus-open-terminal 
+nautilus-image-converter 
+nautilus-actions 
+nautilus-scripts-manager 
+
+rabbitvcs-cli  
+rabbitvcs-core 
+rabbitvcs-gedit  
+rabbitvcs-nautilus3 
+
+aptitude 
+git 
+qbittorrent 
+gconf-editor 
+startupmanager 
+dconf-tools 
+#sudo  apt-get install indicator-weather 
+indicator-multiload 
+compiz-fusion-plugins-apt 
+#gnome-pie 
+#myunity 
+gimp 
+clementine 
+calibre 
+
+build-essential 
+cmake 
+subversion 
+libgtk2.0-dev 
+pkg-config 
+libjpeg-dev 
+python-dev 
+yasm 
+openshot openshot-doc 
+minitube 
+pinta 
+picasa 
+dia 
+xsane 
+stellarium 
+xbmc 
+screenlets 
+screenlets-pack-all 
+kid3-qt 
+tagtool 
+gpointing-device-settings 
+solaar 
+
+  
