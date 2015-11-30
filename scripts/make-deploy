@@ -1,0 +1,39 @@
+#! /bin/bash
+
+TIMESTAMP=$(date +%s)
+BRANCH=$(git symbolic-ref --short HEAD)
+
+#Remove old files
+rm -rf firmware.hex
+
+#Get options
+while getopts m: option
+do
+    case "${option}"
+    in
+            m) MASSAGE=${OPTARG};;
+    esac
+done    
+
+#Compile code
+make clean
+make
+
+#Create firmware
+if [ $? == 0 ]; then
+    line=$(awk 'NR==3' src/version.h)
+    version=$(echo $line | awk -F'"' '{print $2}')
+    echo "Branch: $BRANCH"
+    echo "Version: $version"
+    
+    ffg build/firmware.bin firmware.hex
+fi
+
+#Copy files
+mkdir -p /home/$USER/ULU/temp/firmware/$BRANCH;
+cp firmware.hex /home/$USER/ULU/temp/firmware/$BRANCH/firmware
+
+#Uplaod
+make run
+
+
