@@ -1,9 +1,5 @@
-
-sudo apt-get update
-sudo apt-get remove gnome-terminal
-sudo ln -s /usr/bin/terminator /usr/bin/gnome-terminal
-
-
+curl
+xclip
 appgrid
 doxygen-gui
 exfat-fuse
@@ -15,10 +11,7 @@ grive-tools
 ubuntu-tweak 
 google-chrome-stable 
 nautilus-dropbox 
-
 terminator 
-
-
 jdownloader 
 ubuntu-restricted-extras 
 skype 
@@ -35,32 +28,28 @@ vlc
 unetbootin 
 fdupes 
 #sudo  apt-get install gnome-panel 
-tuxguitar timidity tuxguitar-jsa 
-#sudo  apt-get install drawers 
+tuxguitar 
+timidity 
+tuxguitar-jsa 
+#drawers 
 dayfolder 
-#sudo  apt-get install myagenda 
 sl 
-
-#nautilus
-
 nautilus-actions-extra 
 nautilus-open-terminal 
 nautilus-image-converter 
 nautilus-actions 
 nautilus-scripts-manager 
-
 rabbitvcs-cli  
 rabbitvcs-core 
 rabbitvcs-gedit  
 rabbitvcs-nautilus3 
-
 aptitude 
 git 
 qbittorrent 
 gconf-editor 
 startupmanager 
 dconf-tools 
-#sudo  apt-get install indicator-weather 
+#indicator-weather 
 indicator-multiload 
 compiz-fusion-plugins-apt 
 #gnome-pie 
@@ -68,10 +57,10 @@ compiz-fusion-plugins-apt
 gimp 
 clementine 
 calibre 
-
 build-essential 
 cmake 
 subversion 
+git
 libgtk2.0-dev 
 pkg-config 
 libjpeg-dev 
@@ -91,5 +80,3 @@ kid3-qt
 tagtool 
 gpointing-device-settings 
 solaar 
-
-  

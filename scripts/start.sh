@@ -5,9 +5,10 @@
 
 clear
 
-cur_dir=$(find `pwd` -name "scripts")
+CURRENT_DIR=$(find `pwd` -name "scripts")
+FILENAME=package-list
 
-sudo chmod +x $cur_dir/*
+sudo chmod +x $CURRENT_DIR/*
 
 touch touch
 
@@ -20,7 +21,7 @@ mkdir -p /home/$USER/bin
 sleep 0.3
 
 echo "Copying scripts to bin."
-cp -r $cur_dir/. /home/$USER/bin
+cp -r $CURRENT_DIR/. /home/$USER/bin
 sudo chmod +x /home/$USER/bin/*
 sleep 0.3
 
@@ -29,7 +30,7 @@ sudo adduser $USER dialout
 sleep 0.3
 
 echo "Adding open as root menu to nautilus"
-sudo bash -c "$cur_dir/nautilusRoot.sh"
+sudo bash -c "$CURRENT_DIR/nautilusRoot.sh"
 sleep 0.3
 
 echo "Adding modifications to bashrc"
@@ -67,7 +68,7 @@ else
 fi
 
 #Disable/enable scrollbar overlay
-sh $cur_dir/scrollbarOverlay.sh
+sh $CURRENT_DIR/scrollbarOverlay.sh
 
 
 while true; do
@@ -82,7 +83,7 @@ while true; do
     sudo add-apt-repository ppa:rabbitvcs/ppa -y    #SVN nautilus stuff
     sudo add-apt-repository ppa:flozz/flozz    -y     # nautilus-terminal
     sudo add-apt-repository ppa:noobslab/apps   -y    #open-as-administrator 
-    sudo add-apt-repository ppa:daniel.pavel/solaar -y #Sollar, tool for logitech unigying receicers 
+    sudo add-apt-repository ppa:daniel.pavel/solaar -y #Sollar, tool for logitech unigying receicers  
     sudo add-apt-repository ppa:appgrid/stable -y      #Appgrid
     #sudo add-apt-repository ppa:gloobus-dev/gloobus-preview -y
     #sudo apt-add-repository ppa:screenlets/ppa -y 		# Scrennlets
@@ -106,99 +107,20 @@ while true; do
     esac
 done
 
-
+# Install applications from package-list
 while true; do
-    read -p "Do you want to install of apps (Y/N)?" answer
+    read -p "Do you want to install some apps (Y/N)?" answer
     case $answer in
       [Yy]* ) 
-
-      sudo apt-get update
-      sudo apt-get install icedtea-plugin -y
-      sudo apt-get install retext -y
-      sudo apt-get install grive-tools -y
-      sudo apt-get install ubuntu-tweak -y
-      sudo apt-get install google-chrome-stable -y
-      sudo apt-get install nautilus-dropbox -y
-      
-      sudo apt-get install terminator -y
-      sudo apt-get remove gnome-terminal -y
-      sudo ln -s /usr/bin/terminator /usr/bin/gnome-terminal
-      
-      sudo apt-get install jdownloader -y
-      sudo apt-get install ubuntu-restricted-extras -y
-      sudo apt-get install skype -y
-      sudo apt-get install compizconfig-settings-manager -y
-      sudo apt-get install compiz-plugins-extra -y
-      #sudo apt-get install nautilus-actions -y
-      #sudo apt-get remove  banshee -y
-      #sudo apt-get install rhythmbox -y
-      sudo apt-get install mountmanager -y
-      sudo apt-get install xoscope -y
-      sudo apt-get install wine -y
-      sudo apt-get install flashplugin-installer -y
-      sudo apt-get install vlc -y
-      sudo apt-get install unetbootin -y
-      sudo apt-get install fdupes -y
-      #sudo  apt-get install gnome-panel -y
-      sudo apt-get install tuxguitar timidity tuxguitar-jsa -y
-      #sudo  apt-get install drawers -y
-      sudo apt-get install dayfolder -y
-      #sudo  apt-get install myagenda -y
-      sudo apt-get install sl -y
-      
-      #nautilus
-
-      sudo apt-get install nautilus-actions-extra -y
-      sudo apt-get install nautilus-open-terminal -y
-      sudo apt-get install nautilus-image-converter -y
-      sudo apt-get install nautilus-actions -y
-      sudo apt-get install nautilus-scripts-manager -y
-      
-      sudo apt-get install rabbitvcs-cli -y rabbitvcs-core -y rabbitvcs-gedit -y rabbitvcs-nautilus3 -y
-
-      sudo apt-get install aptitude -y
-      sudo apt-get install git -y
-      sudo apt-get install qbittorrent -y
-      sudo apt-get install gconf-editor -y
-      sudo apt-get install startupmanager -y
-      sudo apt-get install dconf-tools -y
-      #sudo  apt-get install indicator-weather -y
-      sudo apt-get install indicator-multiload -y
-      sudo apt-get install compiz-fusion-plugins-apt -y
-      #sudo apt-get install gnome-pie -y
-      #sudo apt-get install myunity -y
-      sudo apt-get install gimp -y
-      sudo apt-get install clementine -y
-      sudo apt-get install calibre -y
-
-      sudo apt-get install build-essential -y
-      sudo apt-get install cmake -y
-      sudo apt-get install subversion -y
-      sudo apt-get install libgtk2.0-dev -y
-      sudo apt-get install pkg-config -y
-      sudo apt-get install libjpeg-dev -y
-      sudo apt-get install python-dev -y
-      sudo apt-get install yasm -y
-      sudo apt-get install openshot openshot-doc -y
-      sudo apt-get install minitube -y
-      sudo apt-get install pinta -y
-      sudo apt-get install picasa -y
-      sudo apt-get install dia -y
-      sudo apt-get install xsane -y
-      sudo apt-get install stellarium -y
-      sudo apt-get install xbmc -y
-      sudo apt-get install screenlets -y
-      sudo apt-get install screenlets-pack-all -y
-      sudo apt-get install kid3-qt -y
-      sudo apt-get install tagtool -y
-      sudo apt-get install gpointing-device-settings -y
-      sudo apt-get install solaar -y
-
-      #RUN PROGRAMS
-      #indicator-weather &
-      indicator-multiload &
-
-      break;;
+	
+	cat $FILENAME | while read -r line; do
+			# Check for commented lines
+			fs=${line:0:1}
+		if [ "$fs" != "#" ]; then
+			sudo apt-get install $line -y
+		fi
+	done
+	break;;
  		
     [Nn]* ) echo "NO"; break;;
 	* ) echo "Please answer yes or no.";;
