@@ -1,19 +1,7 @@
-#!bin/bash
+/* Timing variables for measuring compiler performance.
+   Copyright (C) 2000-2013 Free Software Foundation, Inc.
+   Contributed by Alex Samuel <samuel@codesourcery.com>
 
-echo Press any key to continue...
-read -n 1
+   This file is part of GCC.
 
-
-mkdir /home/$USER/Programs
-
-tar -zhvf pyepics-* -C /home/$USER/Programs/
-cd /home/$USER/Programs/pyepics-*
-
-python setup.py install
-
-sudo ln -s /opt/epics/base-*/bin/linux-*/ca* /usr/bin/
-
-
-
-
- 
+   GCC is free software; you can redistribute it an

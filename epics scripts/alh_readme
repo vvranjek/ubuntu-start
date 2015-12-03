@@ -1,25 +1,8 @@
+/
+#define USART_DREINTLVL0_bp  0  /* Data Register Empty Interrupt Level bit 0 position. */
+#define USART_DREINTLVL1_bm  (1<<1)  /* Data Register Empty Interrupt Level bit 1 mask. */
+#define USART_DREINTLVL1_bp  1  /* Data Register Empty Interrupt Level bit 1 position. */
 
-install
-
-sudo apt-get install libxmu-dev
-
-
-Had to edit file 
-
-/opt/epics/base-3.14.12.4/extensions/configure/os/CONFIG_SITE.linux-x86_64.linux-x86_64
-
-change lib64 to lib/x86_64-linux-gnu
-
-
-Example:
-
-
-X11_LIB=/usr/lib/x86_64-linux-gnu
-X11_INC=/usr/include
-
-# OpenMotif location
-MOTIF_LIB=/usr/lib/x86_64-linux-gnu
-MOTIF_INC=/usr/include
-#MOTIF_LIB=/usr/X11R6/lib64
-#MOTIF_INC=/usr/X11R6/include
-
+/* USART.CTRLB  bit masks and bit positions */
+#define USART_RXEN_bm  0x10  /* Receiver Enable bit mask. */
+#define 

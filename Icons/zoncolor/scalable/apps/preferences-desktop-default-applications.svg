@@ -1,551 +1,1112 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 12.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 51448)  -->
+ter8_t CTRLF;  /* Control Register F */
+    register8_t reserved_0x0A;
+    register8_t reserved_0x0B;
+    register8_t INTFLAGS;  /* Interrupt Flag Register */
+    register8_t reserved_0x0D;
+    register8_t reserved_0x0E;
+    register8_t reserved_0x0F;
+    register8_t reserved_0x10;
+    register8_t reserved_0x11;
+    register8_t reserved_0x12;
+    register8_t reserved_0x13;
+    register8_t reserved_0x14;
+    register8_t reserved_0x15;
+    register8_t reserved_0x16;
+    register8_t reserved_0x17;
+    register8_t reserved_0x18;
+    register8_t reserved_0x19;
+    register8_t reserved_0x1A;
+    register8_t reserved_0x1B;
+    register8_t reserved_0x1C;
+    register8_t reserved_0x1D;
+    register8_t reserved_0x1E;
+    register8_t reserved_0x1F;
+    register8_t LCNT;  /* Low Byte Count */
+    register8_t HCNT;  /* High Byte Count */
+    register8_t reserved_0x22;
+    register8_t reserved_0x23;
+    register8_t reserved_0x24;
+    register8_t reserved_0x25;
+    register8_t LPER;  /* Low Byte Period */
+    register8_t HPER;  /* High Byte Period */
+    register8_t LCMPA;  /* Low Byte Compare A */
+    register8_t HCMPA;  /* High Byte Compare A */
+    register8_t LCMPB;  /* Low Byte Compare B */
+    register8_t HCMPB;  /* High Byte Compare B */
+    register8_t LCMPC;  /* Low Byte Compare C */
+    register8_t HCMPC;  /* High Byte Compare C */
+    register8_t LCMPD;  /* Low Byte Compare D */
+    register8_t HCMPD;  /* High Byte Compare D */
+} TC2_t;
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   id="Livello_1"
-   width="96"
-   height="96"
-   viewBox="0 0 96 96"
-   overflow="visible"
-   enable-background="new 0 0 128 128"
-   xml:space="preserve"
-   sodipodi:version="0.32"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="preferences-desktop-default-applications.svg"
-   inkscape:output_extension="org.inkscape.output.svgz.inkscape"
-   inkscape:export-filename="/media/prognt/Resource/1-icon/1-theme/1-live/zzz1oxg/48x48/apps/preferences-desktop-default-applications.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90"
-   style="overflow:visible"><metadata
-   id="metadata195"><rdf:RDF><cc:Work
-       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
-   id="defs193"><linearGradient
-     id="linearGradient3757"><stop
-       style="stop-color:#ffffff;stop-opacity:1;"
-       offset="0"
-       id="stop3759" /><stop
-       style="stop-color:#ffffff;stop-opacity:0;"
-       offset="1"
-       id="stop3761" /></linearGradient><linearGradient
-     id="linearGradient2966"><stop
-       style="stop-color:#090909;stop-opacity:1;"
-       offset="0"
-       id="stop2968" /><stop
-       style="stop-color:#555753;stop-opacity:1;"
-       offset="1"
-       id="stop2970" /></linearGradient><linearGradient
-     y2="77.789001"
-     x2="32.308601"
-     y1="141.1738"
-     x1="95.693398"
-     gradientUnits="userSpaceOnUse"
-     id="XMLID_1_"><stop
-       id="stop7227"
-       style="stop-color:#ffd50a;stop-opacity:1;"
-       offset="0" /><stop
-       id="stop7233"
-       style="stop-color:#8d4000;stop-opacity:1;"
-       offset="1" /></linearGradient><linearGradient
-     id="linearGradient3290"><stop
-       id="stop3292"
-       offset="0"
-       style="stop-color:yellow;stop-opacity:1;" /><stop
-       id="stop3294"
-       offset="1"
-       style="stop-color:#f07800;stop-opacity:1;" /></linearGradient><linearGradient
-     id="linearGradient3309"><stop
-       id="stop3311"
-       offset="0"
-       style="stop-color:#f8ff8a;stop-opacity:1" /><stop
-       id="stop3313"
-       offset="1"
-       style="stop-color:#ffffff;stop-opacity:0;" /></linearGradient><linearGradient
-     id="linearGradient3363"
-     inkscape:collect="always"><stop
-       id="stop3365"
-       offset="0"
-       style="stop-color:#ffffff;stop-opacity:1;" /><stop
-       id="stop3367"
-       offset="1"
-       style="stop-color:#ffffff;stop-opacity:0;" /></linearGradient><linearGradient
-     id="linearGradient3379"
-     inkscape:collect="always"><stop
-       id="stop3381"
-       offset="0"
-       style="stop-color:#fffc07;stop-opacity:1;" /><stop
-       id="stop3383"
-       offset="1"
-       style="stop-color:#fffc07;stop-opacity:0;" /></linearGradient><linearGradient
-     id="linearGradient3844"
-     inkscape:collect="always"><stop
-       id="stop3846"
-       offset="0"
-       style="stop-color:#faff64;stop-opacity:1;" /><stop
-       id="stop3848"
-       offset="1"
-       style="stop-color:#faff64;stop-opacity:0;" /></linearGradient><linearGradient
-     gradientTransform="matrix(1,0,0,-1,-242,-198)"
-     y2="-247.59531"
-     x2="294.32709"
-     y1="-220.8315"
-     x1="294.32709"
-     gradientUnits="userSpaceOnUse"
-     id="path99_1_">
-		<stop
-   id="stop108"
-   style="stop-color:#FFFFFF"
-   offset="0.1302" />
-		<stop
-   id="stop110"
-   style="stop-color:#ffffff;stop-opacity:0;"
-   offset="0.5" />
-	</linearGradient><filter
-     inkscape:collect="always"
-     id="filter4604"
-     x="-0.042282371"
-     width="1.0845647"
-     y="-0.1008338"
-     height="1.2016676"><feGaussianBlur
-       inkscape:collect="always"
-       stdDeviation="1.6971983"
-       id="feGaussianBlur4606" /></filter><linearGradient
-     inkscape:collect="always"
-     xlink:href="#XMLID_13_"
-     id="linearGradient4646"
-     gradientUnits="userSpaceOnUse"
-     spreadMethod="pad"
-     x1="65.406593"
-     y1="76.840057"
-     x2="60.694721"
-     y2="105.69601" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#XMLID_1_"
-     id="linearGradient4803"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.43881485,0,0,0.43881485,-0.11908743,40.225492)"
-     x1="64.07962"
-     y1="-14.227339"
-     x2="64.07962"
-     y2="120.44466" /><radialGradient
-     inkscape:collect="always"
-     xlink:href="#linearGradient3290"
-     id="radialGradient4805"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.9439139,-0.3301918,0.332644,0.9509241,-16.097695,27.249949)"
-     cx="69.526619"
-     cy="60.115833"
-     fx="69.526619"
-     fy="89.655701"
-     r="111.65377" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#XMLID_1_"
-     id="linearGradient4807"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.43881485,0,0,0.43881485,-0.11908743,40.225492)"
-     x1="64.07962"
-     y1="-14.227339"
-     x2="64.07962"
-     y2="120.44466" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#linearGradient3363"
-     id="linearGradient4809"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.43881485,0,0,0.43881485,-0.11908743,40.225492)"
-     spreadMethod="reflect"
-     x1="63.948792"
-     y1="12.034382"
-     x2="67.219337"
-     y2="12.034382" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#linearGradient3309"
-     id="linearGradient4811"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.43881485,0,0,0.43881485,-74.755324,40.225492)"
-     x1="219.22163"
-     y1="11.902248"
-     x2="219.22163"
-     y2="136.85997" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#linearGradient3844"
-     id="linearGradient4813"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.43881485,0,0,0.43881485,-0.11908743,40.225492)"
-     spreadMethod="reflect"
-     x1="28.637825"
-     y1="120.84999"
-     x2="31.289474"
-     y2="122.08743" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#linearGradient3379"
-     id="linearGradient4815"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.43881485,0,0,0.43881485,-66.818945,40.225492)"
-     x1="216.88614"
-     y1="122.5867"
-     x2="216.88614"
-     y2="37.969955" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#linearGradient3379"
-     id="linearGradient4817"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.43881485,0,0,0.43881485,-66.818945,40.225492)"
-     x1="216.88614"
-     y1="122.5867"
-     x2="216.88614"
-     y2="37.969955" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#linearGradient3844"
-     id="linearGradient4819"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(-0.43881485,0,0,0.43881485,56.095355,40.225492)"
-     spreadMethod="reflect"
-     x1="28.637825"
-     y1="120.84999"
-     x2="31.289474"
-     y2="122.08743" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#XMLID_18_"
-     id="linearGradient3175"
-     gradientUnits="userSpaceOnUse"
-     x1="86.726601"
-     y1="91.683601"
-     x2="96.930702"
-     y2="91.683601" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#XMLID_15_"
-     id="linearGradient3972"
-     gradientUnits="userSpaceOnUse"
-     x1="68.231712"
-     y1="55.419441"
-     x2="95.944519"
-     y2="58.8335" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#path99_1_"
-     id="linearGradient4208"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.79287277,0,0,-0.79287277,-190.94386,-155.92761)"
-     x1="294.32709"
-     y1="-220.8315"
-     x2="294.32709"
-     y2="-247.59531" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#linearGradient2966"
-     id="linearGradient4216"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.79287277,0,0,0.79287277,0.93135371,0.26832243)"
-     x1="90"
-     y1="4.532867"
-     x2="100"
-     y2="4.532867" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#XMLID_17_"
-     id="linearGradient4220"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.79287277,0,0,0.79287277,0.93135371,0.26832243)"
-     x1="11.8818"
-     y1="10.4443"
-     x2="72.318398"
-     y2="113.4838" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#XMLID_14_"
-     id="linearGradient4224"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.79287277,0,0,0.79287277,0.93135371,0.26832243)"
-     x1="34.652802"
-     y1="-0.29929999"
-     x2="90"
-     y2="89.299507" /><linearGradient
-     inkscape:collect="always"
-     xlink:href="#linearGradient3757"
-     id="linearGradient4230"
-     gradientUnits="userSpaceOnUse"
-     gradientTransform="matrix(0.79287277,0,0,0.79287277,0.93135371,0.26832243)"
-     x1="85.833"
-     y1="54.127617"
-     x2="90.5"
-     y2="97.735458" /><filter
-     inkscape:collect="always"
-     id="filter4354"><feGaussianBlur
-       inkscape:collect="always"
-       stdDeviation="0.38767469"
-       id="feGaussianBlur4356" /></filter></defs><sodipodi:namedview
-   inkscape:window-height="706"
-   inkscape:window-width="1006"
-   inkscape:pageshadow="2"
-   inkscape:pageopacity="0.0"
-   guidetolerance="10.0"
-   gridtolerance="10.0"
-   objecttolerance="10.0"
-   borderopacity="1.0"
-   bordercolor="#666666"
-   pagecolor="#ffffff"
-   id="base"
-   inkscape:zoom="4"
-   inkscape:cx="48"
-   inkscape:cy="48"
-   inkscape:window-x="0"
-   inkscape:window-y="24"
-   inkscape:current-layer="Livello_1"
-   showgrid="false"
-   inkscape:window-maximized="0"
-   fit-margin-top="0"
-   fit-margin-left="0"
-   fit-margin-right="0"
-   fit-margin-bottom="0"
-   inkscape:object-paths="true"
-   inkscape:object-nodes="true"
-   inkscape:snap-global="true" />
-<linearGradient
-   id="XMLID_13_"
-   gradientUnits="userSpaceOnUse"
-   x1="128"
-   y1="90.376999"
-   x2="82"
-   y2="90.3769"
-   spreadMethod="pad">
-	<stop
-   offset="0"
-   style="stop-color:#000000;stop-opacity:0;"
-   id="stop4" />
-	<stop
-   offset="1"
-   style="stop-color:#000000"
-   id="stop6" />
-</linearGradient>
+/* Clock Selection */
+typedef enum TC2_CLKSEL_enum
+{
+    TC2_CLKSEL_OFF_gc = (0x00<<0),  /* Timer Off */
+    TC2_CLKSEL_DIV1_gc = (0x01<<0),  /* System Clock */
+    TC2_CLKSEL_DIV2_gc = (0x02<<0),  /* System Clock / 2 */
+    TC2_CLKSEL_DIV4_gc = (0x03<<0),  /* System Clock / 4 */
+    TC2_CLKSEL_DIV8_gc = (0x04<<0),  /* System Clock / 8 */
+    TC2_CLKSEL_DIV64_gc = (0x05<<0),  /* System Clock / 64 */
+    TC2_CLKSEL_DIV256_gc = (0x06<<0),  /* System Clock / 256 */
+    TC2_CLKSEL_DIV1024_gc = (0x07<<0),  /* System Clock / 1024 */
+    TC2_CLKSEL_EVCH0_gc = (0x08<<0),  /* Event Channel 0 */
+    TC2_CLKSEL_EVCH1_gc = (0x09<<0),  /* Event Channel 1 */
+    TC2_CLKSEL_EVCH2_gc = (0x0A<<0),  /* Event Channel 2 */
+    TC2_CLKSEL_EVCH3_gc = (0x0B<<0),  /* Event Channel 3 */
+} TC2_CLKSEL_t;
 
-<g
-   id="g4386"><path
-     transform="matrix(0.76568478,0,0,0.79287277,1.9062338,0.26832243)"
-     inkscape:connector-curvature="0"
-     sodipodi:nodetypes="ccccc"
-     id="polygon8"
-     d="M 60.379275,76.271063 22.480024,98.757917 88.125306,116.667 118.81511,83.133786 z"
-     style="opacity:0.75;fill:url(#linearGradient4646);fill-opacity:1;filter:url(#filter4604)" /><path
-     sodipodi:nodetypes="cccccccccccccccccccccccc"
-     inkscape:connector-curvature="0"
-     id="path4329"
-     d="M 72.28125,2.125 C 72.183544,2.1420724 72.088408,2.1737841 72,2.21875 L 18.09375,8.3125 c -0.491228,0.061552 -0.894261,0.5365556 -0.875,1.03125 l 2.46875,69.75 c 0.01328,0.429032 0.334348,0.830364 0.75,0.9375 l 48.5,12.4375 c 0.01019,0.01064 0.02061,0.02106 0.03125,0.03125 0.157804,0.100384 0.344226,0.155214 0.53125,0.15625 l 0.125,0 c 0.08157,0.02089 0.165795,0.03141 0.25,0.03125 l 0.40625,0 c 0.503391,9.37e-4 0.968492,-0.435095 1,-0.9375 l 0,-0.1875 7.03125,-8.21875 c 0.151543,-0.171484 0.241473,-0.39631 0.25,-0.625 L 81.71875,5.5625 C 81.736462,5.1206361 81.424463,4.686551 81,4.5625 L 73.875,2.4375 C 73.69267,2.2611251 73.44117,2.1582388 73.1875,2.15625 l -0.3125,0 -0.09375,0 L 72.5,2.125 c -0.07263,-0.00799 -0.146125,-0.00799 -0.21875,0 z"
-     style="opacity:0.1;fill:#000000;stroke:none;filter:url(#filter4354)" /><path
-     inkscape:connector-curvature="0"
-     id="path4275"
-     d="m 71.90625,2.625 0,0.0625 -54.1875,6.125 1.90625,54 0.28125,7.6875 0.28125,8.0625 48.71875,12.5 0.09375,0.03125 0,0.0625 0.25,0 0.125,0.03125 0.40625,0 0.03125,-0.5 7.25,-8.5 3.15625,-77.15625 -7.53125,-2.25 0,-0.125 -0.40625,0 -0.375,-0.03125 z"
-     style="fill:#000000;stroke:none;opacity:0.25" /><g
-     id="g4234"><path
-       style="fill:url(#linearGradient4224);stroke:none"
-       d="M 17.725312,8.8214739 20.176009,78.570786 69.382439,91.184664 72.289903,2.6469407 z"
-       id="polygon17"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" /><polygon
-       points="90,3 100,6 96,103.334 86.333,114.667 "
-       id="polygon26"
-       style="fill:url(#linearGradient3972);stroke:none"
-       transform="matrix(0.79287277,0,0,0.79287277,0.93135371,0.26832243)" /><path
-       style="fill:url(#linearGradient4220);stroke:none"
-       d="M 19.621872,62.799479 70.05083,70.847478 69.69483,81.688427 19.892541,70.503011 z"
-       id="polygon40"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" /><polygon
-       points="96.931,80.678 87.176,89.017 86.727,102.69 96.425,92.992 "
-       id="polygon49"
-       style="fill:url(#linearGradient3175);stroke:none"
-       transform="matrix(0.79287277,0,0,0.79287277,0.93135371,0.26832243)" /><path
-       d="m 72.289903,2.6469408 7.928728,2.3786183 c 0,0 -0.924489,0.2640266 -3.435518,-0.3964364 -2.511028,-0.660463 -4.49321,-1.9821819 -4.49321,-1.9821819 z"
-       id="path180"
-       style="fill:url(#linearGradient4216);fill-opacity:1;stroke:none"
-       inkscape:connector-curvature="0" /><path
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:0.25000000000000000;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.50000000000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-       d="M 17.725311,8.821474 20.176009,78.570786 69.382439,91.184665 20.733173,77.513623 18.782475,9.3786377 72.289903,2.6469408 z"
-       clip-path="none"
-       id="polyline190"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccc" /><path
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:url(#linearGradient4230);fill-opacity:1;stroke:none;stroke-width:0.79287278999999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-       d="M 71.90625,2.625 69,91.15625 69.78125,91.1875 72.6875,2.65625 71.90625,2.625 z"
-       id="polygon3754"
-       inkscape:connector-curvature="0" /><path
-       inkscape:connector-curvature="0"
-       style="opacity:0.80000000000000004;fill:#0057ae;stroke:none"
-       d="m 29.753072,24.444335 c -0.104659,-2.168507 1.110815,-4.097567 2.741754,-4.266449 l 19.047976,-1.436949 c 2.231144,-0.230726 4.054751,1.769692 3.990528,4.415508 l -0.597033,24.992671 c -0.05471,2.262859 -1.797443,3.881113 -3.818475,3.630565 L 33.625463,50.137377 C 32.108697,49.949466 30.821072,48.25589 30.729891,46.35141 z"
-       id="path35"
-       sodipodi:nodetypes="ccccccccc" /><path
-       inkscape:connector-curvature="0"
-       style="opacity:0.56000000999999999;fill:url(#linearGradient4208);stroke:none"
-       d="M 53.838961,31.142788 C 53.616164,27.294977 53.194356,24.086485 53.18722,24.041291 53.086525,23.343563 52.223879,22.385773 51.63081,22.300143 51.57452,22.291443 46.242447,20.95728 41.275099,21.469476 l -0.0111,7.93e-4 c -4.624827,0.324285 -8.887311,1.798235 -8.929333,1.812507 -0.436873,0.147475 -1.042628,1.064035 -1.097336,1.666619 -0.0024,0.02854 -0.142717,2.300388 -0.234691,4.411015 0.06264,1.393078 0.124481,2.774262 0.187118,4.145932 0.03806,0.84996 0.50506,1.831536 1.041042,2.192293 -7.92e-4,-0.02379 0.957791,3.11599 8.448853,3.401424 8.448059,0.321907 11.872477,-5.171909 11.869305,-5.108479 0.685042,-0.516953 1.268597,-1.76652 1.288418,-2.785362 0,-0.02061 7.93e-4,-0.04282 0.0016,-0.06343 z"
-       enable-background="new    "
-       id="path99"
-       sodipodi:nodetypes="ccccccccccsccc" /></g></g><image
-   display="none"
-   width="127.9976"
-   height="127.9976"
-   xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAWRXhpZgAASUkqAAgAAAAAAAAAAAD/2wBDAAgGBgcGBQgH BwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/ 2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy MjIyMjIyMjIyMjL/wAARCADBAMEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQF BgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS 0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4 eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi 4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREA AgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl 8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImK kpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP0 9fb3+Pn6/9oADAMBAAIRAxEAPwD36lpKWgBDRQaQkKCSQAOSTQAtFV3v7OPJe5hX6uKrSa7pqdbu M/7pz/KqUJPoQ6kFuzRzSH61iyeJ9OX7sjv9EP8AWqz+LrVc7LeVvrgVao1HsjN4mkup0f40dq5V vGDY/d2YHu0mf6VWfxZfHOyKBfqCf61aw1V9DN46iup2lJXBv4k1NzgTquf7qD+tVpNY1F87ryXn 0OP5VawVTroYvMaXRXPRc1G88UfLyoo9yBXmz3VxIcvPK31cmoue9WsFfeRm8zXSJ6K+rafF9+8h H0cGqz+I9Ljzm5yf9lGrgJplt4JJiDhFLnAAPHOOtJNDrMF5a240S4DT7tsjyxhF2jJLkMccetDw 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"
-   id="image10"
-   style="display:none"
-   x="0"
-   y="-32">
-</image>
-<linearGradient
-   id="XMLID_14_"
-   gradientUnits="userSpaceOnUse"
-   x1="34.652802"
-   y1="-0.29929999"
-   x2="90"
-   y2="89.299507">
-	<stop
-   offset="0.1302"
-   style="stop-color:#FFFFFF"
-   id="stop13" />
-	<stop
-   offset="1"
-   style="stop-color:#D3D7CF"
-   id="stop15" />
-</linearGradient>
+/* Byte Mode */
+typedef enum TC2_BYTEM_enum
+{
+    TC2_BYTEM_NORMAL_gc = (0x00<<0),  /* 16-bit mode */
+    TC2_BYTEM_BYTEMODE_gc = (0x01<<0),  /* Timer/Counter operating in byte mode only (TC2) */
+    TC2_BYTEM_SPLITMODE_gc = (0x02<<0),  /* Timer/Counter split into two 8-bit Counters */
+} TC2_BYTEM_t;
 
-<linearGradient
-   id="XMLID_15_"
-   gradientUnits="userSpaceOnUse"
-   x1="79.1064"
-   y1="58.8335"
-   x2="95.944519"
-   y2="58.8335">
-	<stop
-   offset="0.2604"
-   style="stop-color:#FFFFFF"
-   id="stop20" />
-	<stop
-   offset="0.4142"
-   style="stop-color:#EEEEEC"
-   id="stop22" />
-	<stop
-   offset="1"
-   style="stop-color:#BABDB6"
-   id="stop24" />
-</linearGradient>
+/* High Byte Underflow Interrupt Level */
+typedef enum TC2_HUNFINTLVL_enum
+{
+    TC2_HUNFINTLVL_OFF_gc = (0x00<<2),  /* Interrupt Disabled */
+    TC2_HUNFINTLVL_LO_gc = (0x01<<2),  /* Low Level */
+    TC2_HUNFINTLVL_MED_gc = (0x02<<2),  /* Medium Level */
+    TC2_HUNFINTLVL_HI_gc = (0x03<<2),  /* High Level */
+} TC2_HUNFINTLVL_t;
 
-<linearGradient
-   id="XMLID_16_"
-   gradientUnits="userSpaceOnUse"
-   x1="54.139599"
-   y1="-25.6714"
-   x2="104.1396"
-   y2="44.328602">
-	<stop
-   offset="0.1302"
-   style="stop-color:#888A85"
-   id="stop29" />
-	<stop
-   offset="1"
-   style="stop-color:#2E3436"
-   id="stop31" />
-</linearGradient>
+/* Low Byte Underflow Interrupt Level */
+typedef enum TC2_LUNFINTLVL_enum
+{
+    TC2_LUNFINTLVL_OFF_gc = (0x00<<0),  /* Interrupt Disabled */
+    TC2_LUNFINTLVL_LO_gc = (0x01<<0),  /* Low Level */
+    TC2_LUNFINTLVL_MED_gc = (0x02<<0),  /* Medium Level */
+    TC2_LUNFINTLVL_HI_gc = (0x03<<0),  /* High Level */
+} TC2_LUNFINTLVL_t;
 
-<linearGradient
-   id="XMLID_17_"
-   gradientUnits="userSpaceOnUse"
-   x1="11.8818"
-   y1="10.4443"
-   x2="72.318398"
-   y2="113.4838">
-	<stop
-   offset="0.1302"
-   style="stop-color:#A4C0E4"
-   id="stop36" />
-	<stop
-   offset="1"
-   style="stop-color:#2C72C7"
-   id="stop38" />
-</linearGradient>
+/* Low Byte Compare D Interrupt Level */
+typedef enum TC2_LCMPDINTLVL_enum
+{
+    TC2_LCMPDINTLVL_OFF_gc = (0x00<<6),  /* Interrupt Disabled */
+    TC2_LCMPDINTLVL_LO_gc = (0x01<<6),  /* Low Level */
+    TC2_LCMPDINTLVL_MED_gc = (0x02<<6),  /* Medium Level */
+    TC2_LCMPDINTLVL_HI_gc = (0x03<<6),  /* High Level */
+} TC2_LCMPDINTLVL_t;
 
-<linearGradient
-   id="XMLID_18_"
-   gradientUnits="userSpaceOnUse"
-   x1="86.726601"
-   y1="91.683601"
-   x2="96.930702"
-   y2="91.683601">
-	<stop
-   offset="0"
-   style="stop-color:#6193CF"
-   id="stop43" />
-	<stop
-   offset="0.2959"
-   style="stop-color:#2C72C7"
-   id="stop45" />
-	<stop
-   offset="1"
-   style="stop-color:#0057AE"
-   id="stop47" />
-</linearGradient>
+/* Low Byte Compare C Interrupt Level */
+typedef enum TC2_LCMPCINTLVL_enum
+{
+    TC2_LCMPCINTLVL_OFF_gc = (0x00<<4),  /* Interrupt Disabled */
+    TC2_LCMPCINTLVL_LO_gc = (0x01<<4),  /* Low Level */
+    TC2_LCMPCINTLVL_MED_gc = (0x02<<4),  /* Medium Level */
+    TC2_LCMPCINTLVL_HI_gc = (0x03<<4),  /* High Level */
+} TC2_LCMPCINTLVL_t;
+
+/* Low Byte Compare B Interrupt Level */
+typedef enum TC2_LCMPBINTLVL_enum
+{
+    TC2_LCMPBINTLVL_OFF_gc = (0x00<<2),  /* Interrupt Disabled */
+    TC2_LCMPBINTLVL_LO_gc = (0x01<<2),  /* Low Level */
+    TC2_LCMPBINTLVL_MED_gc = (0x02<<2),  /* Medium Level */
+    TC2_LCMPBINTLVL_HI_gc = (0x03<<2),  /* High Level */
+} TC2_LCMPBINTLVL_t;
+
+/* Low Byte Compare A Interrupt Level */
+typedef enum TC2_LCMPAINTLVL_enum
+{
+    TC2_LCMPAINTLVL_OFF_gc = (0x00<<0),  /* Interrupt Disabled */
+    TC2_LCMPAINTLVL_LO_gc = (0x01<<0),  /* Low Level */
+    TC2_LCMPAINTLVL_MED_gc = (0x02<<0),  /* Medium Level */
+    TC2_LCMPAINTLVL_HI_gc = (0x03<<0),  /* High Level */
+} TC2_LCMPAINTLVL_t;
+
+/* Timer/Counter Command */
+typedef enum TC2_CMD_enum
+{
+    TC2_CMD_NONE_gc = (0x00<<2),  /* No Command */
+    TC2_CMD_RESTART_gc = (0x02<<2),  /* Force Restart */
+    TC2_CMD_RESET_gc = (0x03<<2),  /* Force Hard Reset */
+} TC2_CMD_t;
+
+/* Timer/Counter Command */
+typedef enum TC2_CMDEN_enum
+{
+    TC2_CMDEN_LOW_gc = (0x01<<0),  /* Low Byte Timer/Counter */
+    TC2_CMDEN_HIGH_gc = (0x02<<0),  /* High Byte Timer/Counter */
+    TC2_CMDEN_BOTH_gc = (0x03<<0),  /* Both Low Byte and High Byte Timer/Counters */
+} TC2_CMDEN_t;
 
 
+/*
+--------------------------------------------------------------------------
+AWEX - Timer/Counter Advanced Waveform Extension
+--------------------------------------------------------------------------
+*/
+
+/* Advanced Waveform Extension */
+typedef struct AWEX_struct
+{
+    register8_t CTRL;  /* Control Register */
+    register8_t reserved_0x01;
+    register8_t FDEMASK;  /* Fault Detection Event Mask */
+    register8_t FDCTRL;  /* Fault Detection Control Register */
+    register8_t STATUS;  /* Status Register */
+    register8_t STATUSSET;  /* Status Set Register */
+    register8_t DTBOTH;  /* Dead Time Both Sides */
+    register8_t DTBOTHBUF;  /* Dead Time Both Sides Buffer */
+    register8_t DTLS;  /* Dead Time Low Side */
+    register8_t DTHS;  /* Dead Time High Side */
+    register8_t DTLSBUF;  /* Dead Time Low Side Buffer */
+    register8_t DTHSBUF;  /* Dead Time High Side Buffer */
+    register8_t OUTOVEN;  /* Output Override Enable */
+} AWEX_t;
+
+/* Fault Detect Action */
+typedef enum AWEX_FDACT_enum
+{
+    AWEX_FDACT_NONE_gc = (0x00<<0),  /* No Fault Protection */
+    AWEX_FDACT_CLEAROE_gc = (0x01<<0),  /* Clear Output Enable Bits */
+    AWEX_FDACT_CLEARDIR_gc = (0x03<<0),  /* Clear I/O Port Direction Bits */
+} AWEX_FDACT_t;
 
 
+/*
+--------------------------------------------------------------------------
+HIRES - Timer/Counter High-Resolution Extension
+--------------------------------------------------------------------------
+*/
+
+/* High-Resolution Extension */
+typedef struct HIRES_struct
+{
+    register8_t CTRLA;  /* Control Register */
+} HIRES_t;
+
+/* High Resolution Enable */
+typedef enum HIRES_HREN_enum
+{
+    HIRES_HREN_NONE_gc = (0x00<<0),  /* No Fault Protection */
+    HIRES_HREN_TC0_gc = (0x01<<0),  /* Enable High Resolution on Timer/Counter 0 */
+    HIRES_HREN_TC1_gc = (0x02<<0),  /* Enable High Resolution on Timer/Counter 1 */
+    HIRES_HREN_BOTH_gc = (0x03<<0),  /* Enable High Resolution both Timer/Counters */
+} HIRES_HREN_t;
 
 
+/*
+--------------------------------------------------------------------------
+USART - Universal Asynchronous Receiver-Transmitter
+--------------------------------------------------------------------------
+*/
+
+/* Universal Synchronous/Asynchronous Receiver/Transmitter */
+typedef struct USART_struct
+{
+    register8_t DATA;  /* Data Register */
+    register8_t STATUS;  /* Status Register */
+    register8_t reserved_0x02;
+    register8_t CTRLA;  /* Control Register A */
+    register8_t CTRLB;  /* Control Register B */
+    register8_t CTRLC;  /* Control Register C */
+    register8_t BAUDCTRLA;  /* Baud Rate Control Register A */
+    register8_t BAUDCTRLB;  /* Baud Rate Control Register B */
+} USART_t;
+
+/* Receive Complete Interrupt level */
+typedef enum USART_RXCINTLVL_enum
+{
+    USART_RXCINTLVL_OFF_gc = (0x00<<4),  /* Interrupt Disabled */
+    USART_RXCINTLVL_LO_gc = (0x01<<4),  /* Low Level */
+    USART_RXCINTLVL_MED_gc = (0x02<<4),  /* Medium Level */
+    USART_RXCINTLVL_HI_gc = (0x03<<4),  /* High Level */
+} USART_RXCINTLVL_t;
+
+/* Transmit Complete Interrupt level */
+typedef enum USART_TXCINTLVL_enum
+{
+    USART_TXCINTLVL_OFF_gc = (0x00<<2),  /* Interrupt Disabled */
+    USART_TXCINTLVL_LO_gc = (0x01<<2),  /* Low Level */
+    USART_TXCINTLVL_MED_gc = (0x02<<2),  /* Medium Level */
+    USART_TXCINTLVL_HI_gc = (0x03<<2),  /* High Level */
+} USART_TXCINTLVL_t;
+
+/* Data Register Empty Interrupt level */
+typedef enum USART_DREINTLVL_enum
+{
+    USART_DREINTLVL_OFF_gc = (0x00<<0),  /* Interrupt Disabled */
+    USART_DREINTLVL_LO_gc = (0x01<<0),  /* Low Level */
+    USART_DREINTLVL_MED_gc = (0x02<<0),  /* Medium Level */
+    USART_DREINTLVL_HI_gc = (0x03<<0),  /* High Level */
+} USART_DREINTLVL_t;
+
+/* Character Size */
+typedef enum USART_CHSIZE_enum
+{
+    USART_CHSIZE_5BIT_gc = (0x00<<0),  /* Character size: 5 bit */
+    USART_CHSIZE_6BIT_gc = (0x01<<0),  /* Character size: 6 bit */
+    USART_CHSIZE_7BIT_gc = (0x02<<0),  /* Character size: 7 bit */
+    USART_CHSIZE_8BIT_gc = (0x03<<0),  /* Character size: 8 bit */
+    USART_CHSIZE_9BIT_gc = (0x07<<0),  /* Character size: 9 bit */
+} USART_CHSIZE_t;
+
+/* Communication Mode */
+typedef enum USART_CMODE_enum
+{
+    USART_CMODE_ASYNCHRONOUS_gc = (0x00<<6),  /* Asynchronous Mode */
+    USART_CMODE_SYNCHRONOUS_gc = (0x01<<6),  /* Synchronous Mode */
+    USART_CMODE_IRDA_gc = (0x02<<6),  /* IrDA Mode */
+    USART_CMODE_MSPI_gc = (0x03<<6),  /* Master SPI Mode */
+} USART_CMODE_t;
+
+/* Parity Mode */
+typedef enum USART_PMODE_enum
+{
+    USART_PMODE_DISABLED_gc = (0x00<<4),  /* No Parity */
+    USART_PMODE_EVEN_gc = (0x02<<4),  /* Even Parity */
+    USART_PMODE_ODD_gc = (0x03<<4),  /* Odd Parity */
+} USART_PMODE_t;
 
 
-		
-	<g
-   id="g4792"
-   transform="matrix(1.0000094,0,0,1.0000094,0.63695205,-0.63942051)"><path
-     style="fill:url(#linearGradient4803);fill-opacity:1;fill-rule:nonzero;stroke:none"
-     d="m 27.978776,43.736011 c -3.452785,0.0044 -7.548795,11.652487 -10.339575,13.685538 -2.790779,2.03305 -15.1322197,2.36459 -16.1950105,5.649741 -1.0627909,3.285151 8.7336215,10.773354 9.8047695,14.055788 1.071147,3.282436 -2.4119812,15.115263 0.383963,17.141205 2.795944,2.025943 12.94792,-4.973413 16.400705,-4.977806 3.452785,-0.0044 13.623639,6.969719 16.414418,4.936667 C 47.238825,92.194093 43.714367,80.371089 44.777157,77.085939 45.839949,73.800788 55.625647,66.285161 54.5545,63.002725 53.483353,59.72029 41.14172,59.420065 38.345777,57.394123 35.549833,55.368182 31.431562,43.731617 27.978776,43.736011 z m 0,1.71412 c 0.07758,0.06107 0.674243,0.353691 1.371296,1.206741 0.796634,0.974914 1.700485,2.437094 2.591751,3.990473 0.891265,1.553378 1.77785,3.20283 2.646602,4.634982 0.868752,1.432152 1.606663,2.640125 2.770018,3.483092 1.163354,0.842968 2.537254,1.170043 4.168741,1.549565 1.631489,0.379522 3.470943,0.706449 5.22464,1.069612 1.753697,0.363161 3.419311,0.767064 4.593843,1.220453 1.027713,0.396716 1.508294,0.877965 1.590704,0.932482 -0.03515,0.0913 -0.144603,0.732725 -0.740501,1.659269 -0.681023,1.058906 -1.78749,2.374835 -2.989426,3.7025 -1.201931,1.327663 -2.499199,2.680542 -3.592796,3.949334 -1.093597,1.268791 -2.012408,2.349305 -2.454621,3.716213 -0.442213,1.366906 -0.321479,2.774085 -0.178268,4.443 0.14321,1.668917 0.393122,3.526825 0.589657,5.306917 0.196536,1.780088 0.328795,3.487538 0.260546,4.744686 -0.05972,1.100008 -0.35752,1.688208 -0.383963,1.782685 -0.09821,-0.0035 -0.758486,0.115856 -1.823824,-0.164555 -1.217528,-0.320476 -2.808898,-0.981283 -4.443,-1.714121 -1.634101,-0.732834 -3.32347,-1.546081 -4.868102,-2.194074 -1.544632,-0.647998 -2.841787,-1.181141 -4.278445,-1.179315 -1.436657,0.0018 -2.749179,0.541102 -4.292158,1.193028 -1.542978,0.651925 -3.222157,1.470793 -4.854389,2.207787 -1.632233,0.736989 -3.226292,1.390552 -4.443001,1.71412 -1.06462,0.283124 -1.711637,0.174267 -1.810111,0.178269 -0.02567,-0.09373 -0.335158,-0.68284 -0.397676,-1.782685 -0.07145,-1.256972 0.05483,-2.964102 0.246834,-4.744686 0.192003,-1.780579 0.436981,-3.637642 0.575944,-5.306917 C 13.198034,79.379712 13.31278,77.958051 12.86709,76.592273 12.421399,75.226494 11.495579,74.155776 10.398756,72.889772 9.301933,71.62377 8.0112688,70.278753 6.8059594,68.954152 5.60065,67.629549 4.4865381,66.322535 3.8028203,65.265364 3.2045672,64.340341 3.1102411,63.683393 3.0760332,63.592383 c 0.00656,0.03852 0.4330456,-0.492884 1.5632779,-0.932482 1.1733712,-0.456377 2.854789,-0.866543 4.6075559,-1.234167 1.752767,-0.367622 3.594123,-0.685938 5.224639,-1.069611 1.630518,-0.383672 3.007535,-0.717352 4.168741,-1.563278 1.161207,-0.845926 1.891202,-2.062448 2.756306,-3.496805 0.865104,-1.434358 1.74558,-3.079341 2.632889,-4.634982 0.887309,-1.555642 1.783889,-3.027248 2.578038,-4.004186 0.694879,-0.85482 1.295036,-1.146052 1.371296,-1.206741 z"
-     id="path3961"
-     inkscape:connector-curvature="0" /><path
-     sodipodi:type="star"
-     style="fill:url(#radialGradient4805);fill-opacity:1;fill-rule:nonzero;stroke:none"
-     id="path3574"
-     sodipodi:sides="5"
-     sodipodi:cx="52.952892"
-     sodipodi:cy="25.510532"
-     sodipodi:r1="121.72647"
-     sodipodi:r2="76.832565"
-     sodipodi:arg1="0.60469864"
-     sodipodi:arg2="1.2330172"
-     inkscape:flatsided="false"
-     inkscape:rounded="0.20136392"
-     inkscape:randomized="0"
-     d="M 153.09403,94.713757 C 144.53658,107.09689 92.616372,93.013297 78.414631,98.001518 64.21289,102.98974 32.50348,146.4474 18.082028,142.13539 3.6605746,137.82337 1.0106378,84.092245 -8.1220219,72.127031 -17.254681,60.161818 -68.384124,43.433534 -68.739625,28.385431 c -0.3555,-15.048104 49.926959,-34.1721736 58.484406,-46.555303 8.557447,-12.38313 8.6671236,-66.179444 22.868864,-71.167664 14.201742,-4.988221 47.927947,36.923576 62.3494,41.235595 14.421453,4.312018 65.618675,-12.207649 74.751335,-0.242435 9.13266,11.965214 -20.30585,56.9921987 -19.95035,72.040303 0.3555,15.048103 31.88745,58.634701 23.33,71.01783 z"
-     transform="matrix(0.21652064,0.07574137,-0.07574137,0.21652064,18.476953,62.126099)" /><path
-     id="path2304"
-     d="m 27.978776,43.736011 c -3.452785,0.0044 -7.548795,11.652487 -10.339575,13.685538 -2.790779,2.03305 -15.1322197,2.36459 -16.1950105,5.649741 -1.0627909,3.285151 8.7336215,10.773354 9.8047695,14.055788 1.071147,3.282436 -2.4119812,15.115263 0.383963,17.141205 2.795944,2.025943 12.94792,-4.973413 16.400705,-4.977806 3.452785,-0.0044 13.623639,6.969719 16.414418,4.936667 C 47.238825,92.194093 43.714367,80.371089 44.777157,77.085939 45.839949,73.800788 55.625647,66.285161 54.5545,63.002725 53.483353,59.72029 41.14172,59.420065 38.345777,57.394123 35.549833,55.368182 31.431562,43.731617 27.978776,43.736011 z m 0,1.71412 c 0.07758,0.06107 0.674243,0.353691 1.371296,1.206741 0.796634,0.974914 1.700485,2.437094 2.591751,3.990473 0.891265,1.553378 1.77785,3.20283 2.646602,4.634982 0.868752,1.432152 1.606663,2.640125 2.770018,3.483092 1.163354,0.842968 2.537254,1.170043 4.168741,1.549565 1.631489,0.379522 3.470943,0.706449 5.22464,1.069612 1.753697,0.363161 3.419311,0.767064 4.593843,1.220453 1.027713,0.396716 1.508294,0.877965 1.590704,0.932482 -0.03515,0.0913 -0.144603,0.732725 -0.740501,1.659269 -0.681023,1.058906 -1.78749,2.374835 -2.989426,3.7025 -1.201931,1.327663 -2.499199,2.680542 -3.592796,3.949334 -1.093597,1.268791 -2.012408,2.349305 -2.454621,3.716213 -0.442213,1.366906 -0.321479,2.774085 -0.178268,4.443 0.14321,1.668917 0.393122,3.526825 0.589657,5.306917 0.196536,1.780088 0.328795,3.487538 0.260546,4.744686 -0.05972,1.100008 -0.35752,1.688208 -0.383963,1.782685 -0.09821,-0.0035 -0.758486,0.115856 -1.823824,-0.164555 -1.217528,-0.320476 -2.808898,-0.981283 -4.443,-1.714121 -1.634101,-0.732834 -3.32347,-1.546081 -4.868102,-2.194074 -1.544632,-0.647998 -2.841787,-1.181141 -4.278445,-1.179315 -1.436657,0.0018 -2.749179,0.541102 -4.292158,1.193028 -1.542978,0.651925 -3.222157,1.470793 -4.854389,2.207787 -1.632233,0.736989 -3.226292,1.390552 -4.443001,1.71412 -1.06462,0.283124 -1.711637,0.174267 -1.810111,0.178269 -0.02567,-0.09373 -0.335158,-0.68284 -0.397676,-1.782685 -0.07145,-1.256972 0.05483,-2.964102 0.246834,-4.744686 0.192003,-1.780579 0.436981,-3.637642 0.575944,-5.306917 C 13.198034,79.379712 13.31278,77.958051 12.86709,76.592273 12.421399,75.226494 11.495579,74.155776 10.398756,72.889772 9.301933,71.62377 8.0112688,70.278753 6.8059594,68.954152 5.60065,67.629549 4.4865381,66.322535 3.8028203,65.265364 3.2045672,64.340341 3.1102411,63.683393 3.0760332,63.592383 c 0.00656,0.03852 0.4330456,-0.492884 1.5632779,-0.932482 1.1733712,-0.456377 2.854789,-0.866543 4.6075559,-1.234167 1.752767,-0.367622 3.594123,-0.685938 5.224639,-1.069611 1.630518,-0.383672 3.007535,-0.717352 4.168741,-1.563278 1.161207,-0.845926 1.891202,-2.062448 2.756306,-3.496805 0.865104,-1.434358 1.74558,-3.079341 2.632889,-4.634982 0.887309,-1.555642 1.783889,-3.027248 2.578038,-4.004186 0.694879,-0.85482 1.295036,-1.146052 1.371296,-1.206741 z"
-     style="fill:url(#linearGradient4807);fill-opacity:1;fill-rule:nonzero;stroke:none"
-     inkscape:connector-curvature="0" /><path
-     sodipodi:nodetypes="cccc"
-     id="path3409"
-     d="m 26.643335,44.381607 c 0.815551,-0.551557 1.712232,-0.636614 2.734421,0 l -1.3963,2.695635 -1.338121,-2.695635 z"
-     style="fill:url(#linearGradient4809);fill-opacity:1;fill-rule:evenodd;stroke:none"
-     inkscape:connector-curvature="0" /><path
-     id="path2910"
-     d="m 27.982205,45.450131 c -0.07626,0.06069 -0.67642,0.351921 -1.371297,1.206741 -0.794149,0.976938 -1.690727,2.448544 -2.578037,4.004186 -0.88731,1.555641 -1.767787,3.200624 -2.632889,4.634982 -0.865106,1.434357 -1.595101,2.650879 -2.756306,3.496805 -1.161209,0.845926 -2.538223,1.179606 -4.168741,1.563278 -1.630517,0.383673 -3.471872,0.701989 -5.2246391,1.069611 -1.7527669,0.367624 -3.4341869,0.77779 -4.6075559,1.234167 -1.1302339,0.439598 -1.556718,0.971003 -1.5632783,0.932482 0.034206,0.09101 0.1285333,0.747958 0.7267871,1.672981 0.6837178,1.057171 1.7978292,2.364185 3.0031395,3.688788 1.2053103,1.324601 2.4959745,2.669618 3.5927967,3.93562 1.096822,1.266004 2.022642,2.336722 2.468333,3.702501 0.115663,0.35444 0.183574,0.718005 0.233121,1.083324 1.056596,0.03832 2.119089,0.06857 3.19512,0.06857 11.866616,0 22.62532,-2.36647 30.497631,-6.211973 0.789766,-0.866093 1.620885,-1.757383 2.413481,-2.632889 1.201936,-1.327665 2.308399,-2.643594 2.989427,-3.7025 0.595897,-0.926544 0.705359,-1.567968 0.7405,-1.659269 -0.08241,-0.05452 -0.562995,-0.535766 -1.590704,-0.932482 -1.174532,-0.453389 -2.84015,-0.857292 -4.593843,-1.220453 -1.753697,-0.363163 -3.593155,-0.69009 -5.224638,-1.069612 -1.631487,-0.379522 -3.00539,-0.706597 -4.168741,-1.549565 -1.163355,-0.842967 -1.901266,-2.05094 -2.770018,-3.483092 -0.868753,-1.432152 -1.755339,-3.081604 -2.646603,-4.634982 -0.891268,-1.553379 -1.795117,-3.015559 -2.59175,-3.990473 -0.697053,-0.85305 -1.293718,-1.14567 -1.371296,-1.206741 z"
-     style="fill:url(#linearGradient4811);fill-opacity:1;fill-rule:nonzero;stroke:none"
-     inkscape:connector-curvature="0" /><path
-     sodipodi:nodetypes="cccccc"
-     id="path3842"
-     d="m 10.934957,92.786686 c 0.537109,1.299985 0.899782,1.904053 2.676242,1.551444 l -0.285721,-1.36267 -0.683932,0.08273 -0.358975,-0.800921 -1.347614,0.529421 z"
-     style="opacity:0.7715356;fill:url(#linearGradient4813);fill-opacity:1;fill-rule:evenodd;stroke:none"
-     inkscape:connector-curvature="0" /><path
-     sodipodi:nodetypes="cssssssssssssssscssssssscssssssscsssssssc"
-     id="path3375"
-     d="m 28.019915,45.450131 c -0.07626,0.06069 -0.67642,0.351921 -1.371296,1.206741 -0.79415,0.976938 -1.690727,2.448544 -2.578037,4.004186 -0.88731,1.555641 -1.767788,3.200624 -2.632889,4.634982 -0.865106,1.434357 -1.595101,2.650879 -2.756306,3.496805 -1.16121,0.845926 -2.538224,1.179606 -4.168741,1.563278 -1.630518,0.383673 -3.471873,0.701989 -5.2246396,1.069611 -1.752767,0.367624 -3.434187,0.77779 -4.607556,1.234167 -1.1302336,0.439598 -1.5567178,0.971003 -1.563278,0.932482 0.034206,0.09101 0.1285332,0.747958 0.726787,1.672981 0.6837176,1.057171 1.7978291,2.364185 3.0031394,3.688788 1.2053103,1.324601 2.4959744,2.669618 3.5927962,3.93562 1.096822,1.266004 2.022643,2.336722 2.468334,3.702501 0.445691,1.365778 0.330945,2.787439 0.191981,4.456713 -0.138964,1.669275 -0.383941,3.526338 -0.575944,5.306917 -0.192004,1.780584 -0.318281,3.487714 -0.246833,4.744686 0.06252,1.099845 0.372009,1.688954 0.397675,1.782685 0.09848,-0.0039 0.74549,0.104855 1.810112,-0.178269 1.216706,-0.323568 2.810767,-0.977131 4.443,-1.71412 1.632229,-0.736994 3.311411,-1.555862 4.854389,-2.207787 1.542979,-0.651926 2.8555,-1.191198 4.292158,-1.193028 1.436658,-0.0018 2.733812,0.531317 4.278445,1.179315 1.544633,0.647993 3.234,1.46124 4.868102,2.194074 1.634103,0.732838 3.225465,1.393645 4.443001,1.714121 1.065337,0.280411 1.725608,0.160873 1.823824,0.164555 0.02644,-0.09448 0.32424,-0.682677 0.383962,-1.782685 0.06825,-1.257148 -0.06401,-2.964598 -0.260546,-4.744686 -0.196536,-1.780092 -0.446454,-3.638 -0.589657,-5.306917 -0.143212,-1.668915 -0.263952,-3.076094 0.178268,-4.443 0.442212,-1.366908 1.361019,-2.447422 2.454621,-3.716213 1.093596,-1.268792 2.39086,-2.621671 3.592796,-3.949334 1.201936,-1.327665 2.308399,-2.643594 2.989426,-3.7025 0.595898,-0.926544 0.70536,-1.567968 0.7405,-1.659269 -0.08241,-0.05452 -0.562995,-0.535766 -1.590703,-0.932482 -1.174532,-0.453389 -2.840151,-0.857292 -4.593843,-1.220453 -1.753698,-0.363163 -3.593156,-0.69009 -5.224639,-1.069612 -1.631488,-0.379522 -3.00539,-0.706597 -4.168741,-1.549565 -1.163356,-0.842967 -1.901267,-2.05094 -2.770019,-3.483092 -0.868753,-1.432152 -1.755338,-3.081604 -2.646602,-4.634982 -0.891268,-1.553379 -1.795117,-3.015559 -2.59175,-3.990473 -0.697053,-0.85305 -1.293719,-1.14567 -1.371297,-1.206741 z"
-     style="fill:none;stroke:url(#linearGradient4815);stroke-width:0.8776297;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:4"
-     inkscape:connector-curvature="0" /><path
-     style="fill:none;stroke:url(#linearGradient4817);stroke-width:0.52657783;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:4"
-     d="m 28.019915,45.450131 c -0.07626,0.06069 -0.67642,0.351921 -1.371296,1.206741 -0.79415,0.976938 -1.690727,2.448544 -2.578037,4.004186 -0.88731,1.555641 -1.767788,3.200624 -2.632889,4.634982 -0.865106,1.434357 -1.595101,2.650879 -2.756306,3.496805 -1.16121,0.845926 -2.538224,1.179606 -4.168741,1.563278 -1.630518,0.383673 -3.471873,0.701989 -5.2246396,1.069611 -1.752767,0.367624 -3.434187,0.77779 -4.607556,1.234167 -1.1302336,0.439598 -1.5567178,0.971003 -1.563278,0.932482 0.034206,0.09101 0.1285332,0.747958 0.726787,1.672981 0.6837176,1.057171 1.7978291,2.364185 3.0031394,3.688788 1.2053103,1.324601 2.4959744,2.669618 3.5927962,3.93562 1.096822,1.266004 2.022643,2.336722 2.468334,3.702501 0.445691,1.365778 0.330945,2.787439 0.191981,4.456713 -0.138964,1.669275 -0.383941,3.526338 -0.575944,5.306917 -0.192004,1.780584 -0.318281,3.487714 -0.246833,4.744686 0.06252,1.099845 0.372009,1.688954 0.397675,1.782685 0.09848,-0.0039 0.74549,0.104855 1.810112,-0.178269 1.216706,-0.323568 2.810767,-0.977131 4.443,-1.71412 1.632229,-0.736994 3.311411,-1.555862 4.854389,-2.207787 1.542979,-0.651926 2.8555,-1.191198 4.292158,-1.193028 1.436658,-0.0018 2.733812,0.531317 4.278445,1.179315 1.544633,0.647993 3.234,1.46124 4.868102,2.194074 1.634103,0.732838 3.225465,1.393645 4.443001,1.714121 1.065337,0.280411 1.725608,0.160873 1.823824,0.164555 0.02644,-0.09448 0.32424,-0.682677 0.383962,-1.782685 0.06825,-1.257148 -0.06401,-2.964598 -0.260546,-4.744686 -0.196536,-1.780092 -0.446454,-3.638 -0.589657,-5.306917 -0.143212,-1.668915 -0.263952,-3.076094 0.178268,-4.443 0.442212,-1.366908 1.361019,-2.447422 2.454621,-3.716213 1.093596,-1.268792 2.39086,-2.621671 3.592796,-3.949334 1.201936,-1.327665 2.308399,-2.643594 2.989426,-3.7025 0.595898,-0.926544 0.70536,-1.567968 0.7405,-1.659269 -0.08241,-0.05452 -0.562995,-0.535766 -1.590703,-0.932482 -1.174532,-0.453389 -2.840151,-0.857292 -4.593843,-1.220453 -1.753698,-0.363163 -3.593156,-0.69009 -5.224639,-1.069612 -1.631488,-0.379522 -3.00539,-0.706597 -4.168741,-1.549565 -1.163356,-0.842967 -1.901267,-2.05094 -2.770019,-3.483092 -0.868753,-1.432152 -1.755338,-3.081604 -2.646602,-4.634982 -0.891268,-1.553379 -1.795117,-3.015559 -2.59175,-3.990473 -0.697053,-0.85305 -1.293719,-1.14567 -1.371297,-1.206741 z"
-     id="path3395"
-     sodipodi:nodetypes="cssssssssssssssscssssssscssssssscsssssssc"
-     inkscape:connector-curvature="0" /><path
-     style="opacity:0.7715356;fill:url(#linearGradient4819);fill-opacity:1;fill-rule:evenodd;stroke:none"
-     d="m 45.041311,92.786686 c -0.537109,1.299985 -0.899782,1.904053 -2.676242,1.551444 l 0.28572,-1.36267 0.683933,0.08273 0.358975,-0.800921 1.347614,0.529421 z"
-     id="path3932"
-     sodipodi:nodetypes="cccccc"
-     inkscape:connector-curvature="0" /></g></svg>
+/*
+--------------------------------------------------------------------------
+SPI - Serial Peripheral Interface
+--------------------------------------------------------------------------
+*/
+
+/* Serial Peripheral Interface */
+typedef struct SPI_struct
+{
+    register8_t CTRL;  /* Control Register */
+    register8_t INTCTRL;  /* Interrupt Control Register */
+    register8_t STATUS;  /* Status Register */
+    register8_t DATA;  /* Data Register */
+} SPI_t;
+
+/* SPI Mode */
+typedef enum SPI_MODE_enum
+{
+    SPI_MODE_0_gc = (0x00<<2),  /* SPI Mode 0 */
+    SPI_MODE_1_gc = (0x01<<2),  /* SPI Mode 1 */
+    SPI_MODE_2_gc = (0x02<<2),  /* SPI Mode 2 */
+    SPI_MODE_3_gc = (0x03<<2),  /* SPI Mode 3 */
+} SPI_MODE_t;
+
+/* Prescaler setting */
+typedef enum SPI_PRESCALER_enum
+{
+    SPI_PRESCALER_DIV4_gc = (0x00<<0),  /* System Clock / 4 */
+    SPI_PRESCALER_DIV16_gc = (0x01<<0),  /* System Clock / 16 */
+    SPI_PRESCALER_DIV64_gc = (0x02<<0),  /* System Clock / 64 */
+    SPI_PRESCALER_DIV128_gc = (0x03<<0),  /* System Clock / 128 */
+} SPI_PRESCALER_t;
+
+/* Interrupt level */
+typedef enum SPI_INTLVL_enum
+{
+    SPI_INTLVL_OFF_gc = (0x00<<0),  /* Interrupt Disabled */
+    SPI_INTLVL_LO_gc = (0x01<<0),  /* Low Level */
+    SPI_INTLVL_MED_gc = (0x02<<0),  /* Medium Level */
+    SPI_INTLVL_HI_gc = (0x03<<0),  /* High Level */
+} SPI_INTLVL_t;
+
+
+/*
+--------------------------------------------------------------------------
+IRCOM - IR Communication Module
+--------------------------------------------------------------------------
+*/
+
+/* IR Communication Module */
+typedef struct IRCOM_struct
+{
+    register8_t CTRL;  /* Control Register */
+    register8_t TXPLCTRL;  /* IrDA Transmitter Pulse Length Control Register */
+    register8_t RXPLCTRL;  /* IrDA Receiver Pulse Length Control Register */
+} IRCOM_t;
+
+/* Event channel selection */
+typedef enum IRDA_EVSEL_enum
+{
+    IRDA_EVSEL_OFF_gc = (0x00<<0),  /* No Event Source */
+    IRDA_EVSEL_0_gc = (0x08<<0),  /* Event Channel 0 */
+    IRDA_EVSEL_1_gc = (0x09<<0),  /* Event Channel 1 */
+    IRDA_EVSEL_2_gc = (0x0A<<0),  /* Event Channel 2 */
+    IRDA_EVSEL_3_gc = (0x0B<<0),  /* Event Channel 3 */
+} IRDA_EVSEL_t;
+
+
+/*
+--------------------------------------------------------------------------
+FUSE - Fuses and Lockbits
+--------------------------------------------------------------------------
+*/
+
+/* Fuses */
+typedef struct NVM_FUSES_struct
+{
+    register8_t reserved_0x00;
+    register8_t FUSEBYTE1;  /* Watchdog Configuration */
+    register8_t FUSEBYTE2;  /* Reset Configuration */
+    register8_t reserved_0x03;
+    register8_t FUSEBYTE4;  /* Start-up Configuration */
+    register8_t FUSEBYTE5;  /* EESAVE and BOD Level */
+} NVM_FUSES_t;
+
+/* Boot Loader Section Reset Vector */
+typedef enum BOOTRST_enum
+{
+    BOOTRST_BOOTLDR_gc = (0x00<<6),  /* Boot Loader Reset */
+    BOOTRST_APPLICATION_gc = (0x01<<6),  /* Application Reset */
+} BOOTRST_t;
+
+/* Timer Oscillator pin location */
+typedef enum TOSCSEL_enum
+{
+    TOSCSEL_ALTERNATE_gc = (0x00<<5),  /* TOSC1 / TOSC2 on separate pins */
+    TOSCSEL_XTAL_gc = (0x01<<5),  /* TOSC1 / TOSC2 shared with XTAL1 / XTAL2 */
+} TOSCSEL_t;
+
+/* BOD operation */
+typedef enum BOD_enum
+{
+    BOD_SAMPLED_gc = (0x01<<0),  /* BOD enabled in sampled mode */
+    BOD_CONTINUOUS_gc = (0x02<<0),  /* BOD enabled continuously */
+    BOD_DISABLED_gc = (0x03<<0),  /* BOD Disabled */
+} BOD_t;
+
+/* BOD operation */
+typedef enum BODACT_enum
+{
+    BODACT_SAMPLED_gc = (0x01<<4),  /* BOD enabled in sampled mode */
+    BODACT_CONTINUOUS_gc = (0x02<<4),  /* BOD enabled continuously */
+    BODACT_DISABLED_gc = (0x03<<4),  /* BOD Disabled */
+} BODACT_t;
+
+/* Watchdog (Window) Timeout Period */
+typedef enum WD_enum
+{
+    WD_8CLK_gc = (0x00<<4),  /* 8 cycles (8ms @ 3.3V) */
+    WD_16CLK_gc = (0x01<<4),  /* 16 cycles (16ms @ 3.3V) */
+    WD_32CLK_gc = (0x02<<4),  /* 32 cycles (32ms @ 3.3V) */
+    WD_64CLK_gc = (0x03<<4),  /* 64 cycles (64ms @ 3.3V) */
+    WD_128CLK_gc = (0x04<<4),  /* 128 cycles (0.125s @ 3.3V) */
+    WD_256CLK_gc = (0x05<<4),  /* 256 cycles (0.25s @ 3.3V) */
+    WD_512CLK_gc = (0x06<<4),  /* 512 cycles (0.5s @ 3.3V) */
+    WD_1KCLK_gc = (0x07<<4),  /* 1K cycles (1s @ 3.3V) */
+    WD_2KCLK_gc = (0x08<<4),  /* 2K cycles (2s @ 3.3V) */
+    WD_4KCLK_gc = (0x09<<4),  /* 4K cycles (4s @ 3.3V) */
+    WD_8KCLK_gc = (0x0A<<4),  /* 8K cycles (8s @ 3.3V) */
+} WD_t;
+
+/* Watchdog (Window) Timeout Period */
+typedef enum WDP_enum
+{
+    WDP_8CLK_gc = (0x00<<0),  /* 8 cycles (8ms @ 3.3V) */
+    WDP_16CLK_gc = (0x01<<0),  /* 16 cycles (16ms @ 3.3V) */
+    WDP_32CLK_gc = (0x02<<0),  /* 32 cycles (32ms @ 3.3V) */
+    WDP_64CLK_gc = (0x03<<0),  /* 64 cycles (64ms @ 3.3V) */
+    WDP_128CLK_gc = (0x04<<0),  /* 128 cycles (0.125s @ 3.3V) */
+    WDP_256CLK_gc = (0x05<<0),  /* 256 cycles (0.25s @ 3.3V) */
+    WDP_512CLK_gc = (0x06<<0),  /* 512 cycles (0.5s @ 3.3V) */
+    WDP_1KCLK_gc = (0x07<<0),  /* 1K cycles (1s @ 3.3V) */
+    WDP_2KCLK_gc = (0x08<<0),  /* 2K cycles (2s @ 3.3V) */
+    WDP_4KCLK_gc = (0x09<<0),  /* 4K cycles (4s @ 3.3V) */
+    WDP_8KCLK_gc = (0x0A<<0),  /* 8K cycles (8s @ 3.3V) */
+} WDP_t;
+
+/* Start-up Time */
+typedef enum SUT_enum
+{
+    SUT_0MS_gc = (0x03<<2),  /* 0 ms */
+    SUT_4MS_gc = (0x01<<2),  /* 4 ms */
+    SUT_64MS_gc = (0x00<<2),  /* 64 ms */
+} SUT_t;
+
+/* Brownout Detection Voltage Level */
+typedef enum BODLVL_enum
+{
+    BODLVL_1V6_gc = (0x07<<0),  /* 1.6 V */
+    BODLVL_1V8_gc = (0x06<<0),  /* 1.8 V */
+    BODLVL_2V0_gc = (0x05<<0),  /* 2.0 V */
+    BODLVL_2V2_gc = (0x04<<0),  /* 2.2 V */
+    BODLVL_2V4_gc = (0x03<<0),  /* 2.4 V */
+    BODLVL_2V6_gc = (0x02<<0),  /* 2.6 V */
+    BODLVL_2V8_gc = (0x01<<0),  /* 2.8 V */
+    BODLVL_3V0_gc = (0x00<<0),  /* 3.0 V */
+} BODLVL_t;
+
+
+/*
+--------------------------------------------------------------------------
+LOCKBIT - Fuses and Lockbits
+--------------------------------------------------------------------------
+*/
+
+/* Lock Bits */
+typedef struct NVM_LOCKBITS_struct
+{
+    register8_t LOCKBITS;  /* Lock Bits */
+} NVM_LOCKBITS_t;
+
+/* Boot lock bits - boot setcion */
+typedef enum FUSE_BLBB_enum
+{
+    FUSE_BLBB_RWLOCK_gc = (0x00<<6),  /* Read and write not allowed */
+    FUSE_BLBB_RLOCK_gc = (0x01<<6),  /* Read not allowed */
+    FUSE_BLBB_WLOCK_gc = (0x02<<6),  /* Write not allowed */
+    FUSE_BLBB_NOLOCK_gc = (0x03<<6),  /* No locks */
+} FUSE_BLBB_t;
+
+/* Boot lock bits - application section */
+typedef enum FUSE_BLBA_enum
+{
+    FUSE_BLBA_RWLOCK_gc = (0x00<<4),  /* Read and write not allowed */
+    FUSE_BLBA_RLOCK_gc = (0x01<<4),  /* Read not allowed */
+    FUSE_BLBA_WLOCK_gc = (0x02<<4),  /* Write not allowed */
+    FUSE_BLBA_NOLOCK_gc = (0x03<<4),  /* No locks */
+} FUSE_BLBA_t;
+
+/* Boot lock bits - application table section */
+typedef enum FUSE_BLBAT_enum
+{
+    FUSE_BLBAT_RWLOCK_gc = (0x00<<2),  /* Read and write not allowed */
+    FUSE_BLBAT_RLOCK_gc = (0x01<<2),  /* Read not allowed */
+    FUSE_BLBAT_WLOCK_gc = (0x02<<2),  /* Write not allowed */
+    FUSE_BLBAT_NOLOCK_gc = (0x03<<2),  /* No locks */
+} FUSE_BLBAT_t;
+
+/* Lock bits */
+typedef enum FUSE_LB_enum
+{
+    FUSE_LB_RWLOCK_gc = (0x00<<0),  /* Read and write not allowed */
+    FUSE_LB_WLOCK_gc = (0x02<<0),  /* Write not allowed */
+    FUSE_LB_NOLOCK_gc = (0x03<<0),  /* No locks */
+} FUSE_LB_t;
+
+
+/*
+--------------------------------------------------------------------------
+SIGROW - Signature Row
+--------------------------------------------------------------------------
+*/
+
+/* Production Signatures */
+typedef struct NVM_PROD_SIGNATURES_struct
+{
+    register8_t RCOSC2M;  /* RCOSC 2 MHz Calibration Value B */
+    register8_t RCOSC2MA;  /* RCOSC 2 MHz Calibration Value A */
+    register8_t RCOSC32K;  /* RCOSC 32.768 kHz Calibration Value */
+    register8_t RCOSC32M;  /* RCOSC 32 MHz Calibration Value B */
+    register8_t RCOSC32MA;  /* RCOSC 32 MHz Calibration Value A */
+    register8_t reserved_0x05;
+    register8_t reserved_0x06;
+    register8_t reserved_0x07;
+    register8_t LOTNUM0;  /* Lot Number Byte 0, ASCII */
+    register8_t LOTNUM1;  /* Lot Number Byte 1, ASCII */
+    register8_t LOTNUM2;  /* Lot Number Byte 2, ASCII */
+    register8_t LOTNUM3;  /* Lot Number Byte 3, ASCII */
+    register8_t LOTNUM4;  /* Lot Number Byte 4, ASCII */
+    register8_t LOTNUM5;  /* Lot Number Byte 5, ASCII */
+    register8_t reserved_0x0E;
+    register8_t reserved_0x0F;
+    register8_t WAFNUM;  /* Wafer Number */
+    register8_t reserved_0x11;
+    register8_t COORDX0;  /* Wafer Coordinate X Byte 0 */
+    register8_t COORDX1;  /* Wafer Coordinate X Byte 1 */
+    register8_t COORDY0;  /* Wafer Coordinate Y Byte 0 */
+    register8_t COORDY1;  /* Wafer Coordinate Y Byte 1 */
+    register8_t reserved_0x16;
+    register8_t reserved_0x17;
+    register8_t reserved_0x18;
+    register8_t reserved_0x19;
+    register8_t USBCAL0;  /* USB Calibration Byte 0 */
+    register8_t USBCAL1;  /* USB Calibration Byte 1 */
+    register8_t USBRCOSC;  /* USB RCOSC Calibration Value B */
+    register8_t USBRCOSCA;  /* USB RCOSC Calibration Value A */
+    register8_t reserved_0x1E;
+    register8_t reserved_0x1F;
+    register8_t ADCACAL0;  /* ADCA Calibration Byte 0 */
+    register8_t ADCACAL1;  /* ADCA Calibration Byte 1 */
+    register8_t reserved_0x22;
+    register8_t reserved_0x23;
+    register8_t reserved_0x24;
+    register8_t reserved_0x25;
+    register8_t reserved_0x26;
+    register8_t reserved_0x27;
+    register8_t reserved_0x28;
+    register8_t reserved_0x29;
+    register8_t reserved_0x2A;
+    register8_t reserved_0x2B;
+    register8_t reserved_0x2C;
+    register8_t reserved_0x2D;
+    register8_t TEMPSENSE0;  /* Temperature Sensor Calibration Byte 0 */
+    register8_t TEMPSENSE1;  /* Temperature Sensor Calibration Byte 1 */
+    register8_t reserved_0x30;
+    register8_t reserved_0x31;
+    register8_t reserved_0x32;
+    register8_t reserved_0x33;
+    register8_t reserved_0x34;
+    register8_t reserved_0x35;
+    register8_t reserved_0x36;
+    register8_t reserved_0x37;
+    register8_t reserved_0x38;
+    register8_t reserved_0x39;
+    register8_t reserved_0x3A;
+    register8_t reserved_0x3B;
+    register8_t reserved_0x3C;
+    register8_t reserved_0x3D;
+    register8_t reserved_0x3E;
+    register8_t reserved_0x3F;
+} NVM_PROD_SIGNATURES_t;
+
+/*
+==========================================================================
+IO Module Instances. Mapped to memory.
+==========================================================================
+*/
+
+#define VPORT0    (*(VPORT_t *) 0x0010)  /* Virtual Port */
+#define VPORT1    (*(VPORT_t *) 0x0014)  /* Virtual Port */
+#define VPORT2    (*(VPORT_t *) 0x0018)  /* Virtual Port */
+#define VPORT3    (*(VPORT_t *) 0x001C)  /* Virtual Port */
+#define OCD    (*(OCD_t *) 0x002E)  /* On-Chip Debug System */
+#define CLK    (*(CLK_t *) 0x0040)  /* Clock System */
+#define SLEEP    (*(SLEEP_t *) 0x0048)  /* Sleep Controller */
+#define OSC    (*(OSC_t *) 0x0050)  /* Oscillator */
+#define DFLLRC32M    (*(DFLL_t *) 0x0060)  /* DFLL */
+#define DFLLRC2M    (*(DFLL_t *) 0x0068)  /* DFLL */
+#define PR    (*(PR_t *) 0x0070)  /* Power Reduction */
+#define RST    (*(RST_t *) 0x0078)  /* Reset */
+#define WDT    (*(WDT_t *) 0x0080)  /* Watch-Dog Timer */
+#define MCU    (*(MCU_t *) 0x0090)  /* MCU Control */
+#define PMIC    (*(PMIC_t *) 0x00A0)  /* Programmable Multi-level Interrupt Controller */
+#define PORTCFG    (*(PORTCFG_t *) 0x00B0)  /* I/O port Configuration */
+#define CRC    (*(CRC_t *) 0x00D0)  /* Cyclic Redundancy Checker */
+#define EVSYS    (*(EVSYS_t *) 0x0180)  /* Event System */
+#define NVM    (*(NVM_t *) 0x01C0)  /* Non-volatile Memory Controller */
+#define ADCA    (*(ADC_t *) 0x0200)  /* Analog-to-Digital Converter */
+#define ACA    (*(AC_t *) 0x0380)  /* Analog Comparator */
+#define RTC    (*(RTC_t *) 0x0400)  /* Real-Time Counter */
+#define TWIC    (*(TWI_t *) 0x0480)  /* Two-Wire Interface */
+#define TWIE    (*(TWI_t *) 0x04A0)  /* Two-Wire Interface */
+#define USB    (*(USB_t *) 0x04C0)  /* Universal Serial Bus */
+#define PORTA    (*(PORT_t *) 0x0600)  /* I/O Ports */
+#define PORTB    (*(PORT_t *) 0x0620)  /* I/O Ports */
+#define PORTC    (*(PORT_t *) 0x0640)  /* I/O Ports */
+#define PORTD    (*(PORT_t *) 0x0660)  /* I/O Ports */
+#define PORTE    (*(PORT_t *) 0x0680)  /* I/O Ports */
+#define PORTF    (*(PORT_t *) 0x06A0)  /* I/O Ports */
+#define PORTR    (*(PORT_t *) 0x07E0)  /* I/O Ports */
+#define TCC0    (*(TC0_t *) 0x0800)  /* 16-bit Timer/Counter 0 */
+#define TCC2    (*(TC2_t *) 0x0800)  /* 16-bit Timer/Counter type 2 */
+#define TCC1    (*(TC1_t *) 0x0840)  /* 16-bit Timer/Counter 1 */
+#define AWEXC    (*(AWEX_t *) 0x0880)  /* Advanced Waveform Extension */
+#define HIRESC    (*(HIRES_t *) 0x0890)  /* High-Resolution Extension */
+#define USARTC0    (*(USART_t *) 0x08A0)  /* Universal Synchronous/Asynchronous Receiver/Transmitter */
+#define SPIC    (*(SPI_t *) 0x08C0)  /* Serial Peripheral Interface */
+#define IRCOM    (*(IRCOM_t *) 0x08F8)  /* IR Communication Module */
+#define TCD0    (*(TC0_t *) 0x0900)  /* 16-bit Timer/Counter 0 */
+#define TCD2    (*(TC2_t *) 0x0900)  /* 16-bit Timer/Counter type 2 */
+#define USARTD0    (*(USART_t *) 0x09A0)  /* Universal Synchronous/Asynchronous Receiver/Transmitter */
+#define SPID    (*(SPI_t *) 0x09C0)  /* Serial Peripheral Interface */
+#define TCE0    (*(TC0_t *) 0x0A00)  /* 16-bit Timer/Counter 0 */
+#define TCE2    (*(TC2_t *) 0x0A00)  /* 16-bit Timer/Counter type 2 */
+#define USARTE0    (*(USART_t *) 0x0AA0)  /* Universal Synchronous/Asynchronous Receiver/Transmitter */
+#define TCF0    (*(TC0_t *) 0x0B00)  /* 16-bit Timer/Counter 0 */
+#define TCF2    (*(TC2_t *) 0x0B00)  /* 16-bit Timer/Counter type 2 */
+
+
+#endif /* !defined (__ASSEMBLER__) */
+
+
+/* ========== Flattened fully qualified IO register names ========== */
+
+/* GPIO - General Purpose IO Registers */
+#define GPIO_GPIOR0  _SFR_MEM8(0x0000)
+#define GPIO_GPIOR1  _SFR_MEM8(0x0001)
+#define GPIO_GPIOR2  _SFR_MEM8(0x0002)
+#define GPIO_GPIOR3  _SFR_MEM8(0x0003)
+
+/* Deprecated */
+#define GPIO_GPIO0  _SFR_MEM8(0x0000)
+#define GPIO_GPIO1  _SFR_MEM8(0x0001)
+#define GPIO_GPIO2  _SFR_MEM8(0x0002)
+#define GPIO_GPIO3  _SFR_MEM8(0x0003)
+
+/* NVM_FUSES - Fuses */
+#define FUSE_FUSEBYTE1  _SFR_MEM8(0x0001)
+#define FUSE_FUSEBYTE2  _SFR_MEM8(0x0002)
+#define FUSE_FUSEBYTE4  _SFR_MEM8(0x0004)
+#define FUSE_FUSEBYTE5  _SFR_MEM8(0x0005)
+
+/* NVM_LOCKBITS - Lock Bits */
+#define LOCKBIT_LOCKBITS  _SFR_MEM8(0x0000)
+
+/* NVM_PROD_SIGNATURES - Production Signatures */
+#define PRODSIGNATURES_RCOSC2M  _SFR_MEM8(0x0000)
+#define PRODSIGNATURES_RCOSC2MA  _SFR_MEM8(0x0001)
+#define PRODSIGNATURES_RCOSC32K  _SFR_MEM8(0x0002)
+#define PRODSIGNATURES_RCOSC32M  _SFR_MEM8(0x0003)
+#define PRODSIGNATURES_RCOSC32MA  _SFR_MEM8(0x0004)
+#define PRODSIGNATURES_LOTNUM0  _SFR_MEM8(0x0008)
+#define PRODSIGNATURES_LOTNUM1  _SFR_MEM8(0x0009)
+#define PRODSIGNATURES_LOTNUM2  _SFR_MEM8(0x000A)
+#define PRODSIGNATURES_LOTNUM3  _SFR_MEM8(0x000B)
+#define PRODSIGNATURES_LOTNUM4  _SFR_MEM8(0x000C)
+#define PRODSIGNATURES_LOTNUM5  _SFR_MEM8(0x000D)
+#define PRODSIGNATURES_WAFNUM  _SFR_MEM8(0x0010)
+#define PRODSIGNATURES_COORDX0  _SFR_MEM8(0x0012)
+#define PRODSIGNATURES_COORDX1  _SFR_MEM8(0x0013)
+#define PRODSIGNATURES_COORDY0  _SFR_MEM8(0x0014)
+#define PRODSIGNATURES_COORDY1  _SFR_MEM8(0x0015)
+#define PRODSIGNATURES_USBCAL0  _SFR_MEM8(0x001A)
+#define PRODSIGNATURES_USBCAL1  _SFR_MEM8(0x001B)
+#define PRODSIGNATURES_USBRCOSC  _SFR_MEM8(0x001C)
+#define PRODSIGNATURES_USBRCOSCA  _SFR_MEM8(0x001D)
+#define PRODSIGNATURES_ADCACAL0  _SFR_MEM8(0x0020)
+#define PRODSIGNATURES_ADCACAL1  _SFR_MEM8(0x0021)
+#define PRODSIGNATURES_TEMPSENSE0  _SFR_MEM8(0x002E)
+#define PRODSIGNATURES_TEMPSENSE1  _SFR_MEM8(0x002F)
+
+/* VPORT - Virtual Port */
+#define VPORT0_DIR  _SFR_MEM8(0x0010)
+#define VPORT0_OUT  _SFR_MEM8(0x0011)
+#define VPORT0_IN  _SFR_MEM8(0x0012)
+#define VPORT0_INTFLAGS  _SFR_MEM8(0x0013)
+
+/* VPORT - Virtual Port */
+#define VPORT1_DIR  _SFR_MEM8(0x0014)
+#define VPORT1_OUT  _SFR_MEM8(0x0015)
+#define VPORT1_IN  _SFR_MEM8(0x0016)
+#define VPORT1_INTFLAGS  _SFR_MEM8(0x0017)
+
+/* VPORT - Virtual Port */
+#define VPORT2_DIR  _SFR_MEM8(0x0018)
+#define VPORT2_OUT  _SFR_MEM8(0x0019)
+#define VPORT2_IN  _SFR_MEM8(0x001A)
+#define VPORT2_INTFLAGS  _SFR_MEM8(0x001B)
+
+/* VPORT - Virtual Port */
+#define VPORT3_DIR  _SFR_MEM8(0x001C)
+#define VPORT3_OUT  _SFR_MEM8(0x001D)
+#define VPORT3_IN  _SFR_MEM8(0x001E)
+#define VPORT3_INTFLAGS  _SFR_MEM8(0x001F)
+
+/* OCD - On-Chip Debug System */
+#define OCD_OCDR0  _SFR_MEM8(0x002E)
+#define OCD_OCDR1  _SFR_MEM8(0x002F)
+
+/* CPU - CPU registers */
+#define CPU_CCP  _SFR_MEM8(0x0034)
+#define CPU_RAMPD  _SFR_MEM8(0x0038)
+#define CPU_RAMPX  _SFR_MEM8(0x0039)
+#define CPU_RAMPY  _SFR_MEM8(0x003A)
+#define CPU_RAMPZ  _SFR_MEM8(0x003B)
+#define CPU_EIND  _SFR_MEM8(0x003C)
+#define CPU_SPL  _SFR_MEM8(0x003D)
+#define CPU_SPH  _SFR_MEM8(0x003E)
+#define CPU_SREG  _SFR_MEM8(0x003F)
+
+/* CLK - Clock System */
+#define CLK_CTRL  _SFR_MEM8(0x0040)
+#define CLK_PSCTRL  _SFR_MEM8(0x0041)
+#define CLK_LOCK  _SFR_MEM8(0x0042)
+#define CLK_RTCCTRL  _SFR_MEM8(0x0043)
+#define CLK_USBCTRL  _SFR_MEM8(0x0044)
+
+/* SLEEP - Sleep Controller */
+#define SLEEP_CTRL  _SFR_MEM8(0x0048)
+
+/* OSC - Oscillator */
+#define OSC_CTRL  _SFR_MEM8(0x0050)
+#define OSC_STATUS  _SFR_MEM8(0x0051)
+#define OSC_XOSCCTRL  _SFR_MEM8(0x0052)
+#define OSC_XOSCFAIL  _SFR_MEM8(0x0053)
+#define OSC_RC32KCAL  _SFR_MEM8(0x0054)
+#define OSC_PLLCTRL  _SFR_MEM8(0x0055)
+#define OSC_DFLLCTRL  _SFR_MEM8(0x0056)
+
+/* DFLL - DFLL */
+#define DFLLRC32M_CTRL  _SFR_MEM8(0x0060)
+#define DFLLRC32M_CALA  _SFR_MEM8(0x0062)
+#define DFLLRC32M_CALB  _SFR_MEM8(0x0063)
+#define DFLLRC32M_COMP0  _SFR_MEM8(0x0064)
+#define DFLLRC32M_COMP1  _SFR_MEM8(0x0065)
+#define DFLLRC32M_COMP2  _SFR_MEM8(0x0066)
+
+/* DFLL - DFLL */
+#define DFLLRC2M_CTRL  _SFR_MEM8(0x0068)
+#define DFLLRC2M_CALA  _SFR_MEM8(0x006A)
+#define DFLLRC2M_CALB  _SFR_MEM8(0x006B)
+#define DFLLRC2M_COMP0  _SFR_MEM8(0x006C)
+#define DFLLRC2M_COMP1  _SFR_MEM8(0x006D)
+#define DFLLRC2M_COMP2  _SFR_MEM8(0x006E)
+
+/* PR - Power Reduction */
+#define PR_PRGEN  _SFR_MEM8(0x0070)
+#define PR_PRPA  _SFR_MEM8(0x0071)
+#define PR_PRPC  _SFR_MEM8(0x0073)
+#define PR_PRPD  _SFR_MEM8(0x0074)
+#define PR_PRPE  _SFR_MEM8(0x0075)
+#define PR_PRPF  _SFR_MEM8(0x0076)
+
+/* RST - Reset */
+#define RST_STATUS  _SFR_MEM8(0x0078)
+#define RST_CTRL  _SFR_MEM8(0x0079)
+
+/* WDT - Watch-Dog Timer */
+#define WDT_CTRL  _SFR_MEM8(0x0080)
+#define WDT_WINCTRL  _SFR_MEM8(0x0081)
+#define WDT_STATUS  _SFR_MEM8(0x0082)
+
+/* MCU - MCU Control */
+#define MCU_DEVID0  _SFR_MEM8(0x0090)
+#define MCU_DEVID1  _SFR_MEM8(0x0091)
+#define MCU_DEVID2  _SFR_MEM8(0x0092)
+#define MCU_REVID  _SFR_MEM8(0x0093)
+#define MCU_ANAINIT  _SFR_MEM8(0x0097)
+#define MCU_EVSYSLOCK  _SFR_MEM8(0x0098)
+#define MCU_AWEXLOCK  _SFR_MEM8(0x0099)
+
+/* PMIC - Programmable Multi-level Interrupt Controller */
+#define PMIC_STATUS  _SFR_MEM8(0x00A0)
+#define PMIC_INTPRI  _SFR_MEM8(0x00A1)
+#define PMIC_CTRL  _SFR_MEM8(0x00A2)
+
+/* PORTCFG - I/O port Configuration */
+#define PORTCFG_MPCMASK  _SFR_MEM8(0x00B0)
+#define PORTCFG_VPCTRLA  _SFR_MEM8(0x00B2)
+#define PORTCFG_VPCTRLB  _SFR_MEM8(0x00B3)
+#define PORTCFG_CLKEVOUT  _SFR_MEM8(0x00B4)
+#define PORTCFG_EVOUTSEL  _SFR_MEM8(0x00B6)
+
+/* CRC - Cyclic Redundancy Checker */
+#define CRC_CTRL  _SFR_MEM8(0x00D0)
+#define CRC_STATUS  _SFR_MEM8(0x00D1)
+#define CRC_DATAIN  _SFR_MEM8(0x00D3)
+#define CRC_CHECKSUM0  _SFR_MEM8(0x00D4)
+#define CRC_CHECKSUM1  _SFR_MEM8(0x00D5)
+#define CRC_CHECKSUM2  _SFR_MEM8(0x00D6)
+#define CRC_CHECKSUM3  _SFR_MEM8(0x00D7)
+
+/* EVSYS - Event System */
+#define EVSYS_CH0MUX  _SFR_MEM8(0x0180)
+#define EVSYS_CH1MUX  _SFR_MEM8(0x0181)
+#define EVSYS_CH2MUX  _SFR_MEM8(0x0182)
+#define EVSYS_CH3MUX  _SFR_MEM8(0x0183)
+#define EVSYS_CH0CTRL  _SFR_MEM8(0x0188)
+#define EVSYS_CH1CTRL  _SFR_MEM8(0x0189)
+#define EVSYS_CH2CTRL  _SFR_MEM8(0x018A)
+#define EVSYS_CH3CTRL  _SFR_MEM8(0x018B)
+#define EVSYS_STROBE  _SFR_MEM8(0x0190)
+#define EVSYS_DATA  _SFR_MEM8(0x0191)
+
+/* NVM - Non-volatile Memory Controller */
+#define NVM_ADDR0  _SFR_MEM8(0x01C0)
+#define NVM_ADDR1  _SFR_MEM8(0x01C1)
+#define NVM_ADDR2  _SFR_MEM8(0x01C2)
+#define NVM_DATA0  _SFR_MEM8(0x01C4)
+#define NVM_DATA1  _SFR_MEM8(0x01C5)
+#define NVM_DATA2  _SFR_MEM8(0x01C6)
+#define NVM_CMD  _SFR_MEM8(0x01CA)
+#define NVM_CTRLA  _SFR_MEM8(0x01CB)
+#define NVM_CTRLB  _SFR_MEM8(0x01CC)
+#define NVM_INTCTRL  _SFR_MEM8(0x01CD)
+#define NVM_STATUS  _SFR_MEM8(0x01CF)
+#define NVM_LOCKBITS  _SFR_MEM8(0x01D0)
+
+/* ADC - Analog-to-Digital Converter */
+#define ADCA_CTRLA  _SFR_MEM8(0x0200)
+#define ADCA_CTRLB  _SFR_MEM8(0x0201)
+#define ADCA_REFCTRL  _SFR_MEM8(0x0202)
+#define ADCA_EVCTRL  _SFR_MEM8(0x0203)
+#define ADCA_PRESCALER  _SFR_MEM8(0x0204)
+#define ADCA_INTFLAGS  _SFR_MEM8(0x0206)
+#define ADCA_TEMP  _SFR_MEM8(0x0207)
+#define ADCA_CAL  _SFR_MEM16(0x020C)
+#define ADCA_CH0RES  _SFR_MEM16(0x0210)
+#define ADCA_CMP  _SFR_MEM16(0x0218)
+#define ADCA_CH0_CTRL  _SFR_MEM8(0x0220)
+#define ADCA_CH0_MUXCTRL  _SFR_MEM8(0x0221)
+#define ADCA_CH0_INTCTRL  _SFR_MEM8(0x0222)
+#define ADCA_CH0_INTFLAGS  _SFR_MEM8(0x0223)
+#define ADCA_CH0_RES  _SFR_MEM16(0x0224)
+#define ADCA_CH0_SCAN  _SFR_MEM8(0x0226)
+
+/* AC - Analog Comparator */
+#define ACA_AC0CTRL  _SFR_MEM8(0x0380)
+#define ACA_AC1CTRL  _SFR_MEM8(0x0381)
+#define ACA_AC0MUXCTRL  _SFR_MEM8(0x0382)
+#define ACA_AC1MUXCTRL  _SFR_MEM8(0x0383)
+#define ACA_CTRLA  _SFR_MEM8(0x0384)
+#define ACA_CTRLB  _SFR_MEM8(0x0385)
+#define ACA_WINCTRL  _SFR_MEM8(0x0386)
+#define ACA_STATUS  _SFR_MEM8(0x0387)
+
+/* RTC - Real-Time Counter */
+#define RTC_CTRL  _SFR_MEM8(0x0400)
+#define RTC_STATUS  _SFR_MEM8(0x0401)
+#define RTC_INTCTRL  _SFR_MEM8(0x0402)
+#define RTC_INTFLAGS  _SFR_MEM8(0x0403)
+#define RTC_TEMP  _SFR_MEM8(0x0404)
+#define RTC_CNT  _SFR_MEM16(0x0408)
+#define RTC_PER  _SFR_MEM16(0x040A)
+#define RTC_COMP  _SFR_MEM16(0x040C)
+
+/* TWI - Two-Wire Interface */
+#define TWIC_CTRL  _SFR_MEM8(0x0480)
+#define TWIC_MASTER_CTRLA  _SFR_MEM8(0x0481)
+#define TWIC_MASTER_CTRLB  _SFR_MEM8(0x0482)
+#define TWIC_MASTER_CTRLC  _SFR_MEM8(0x0483)
+#define TWIC_MASTER_STATUS  _SFR_MEM8(0x0484)
+#define TWIC_MASTER_BAUD  _SFR_MEM8(0x0485)
+#define TWIC_MASTER_ADDR  _SFR_MEM8(0x0486)
+#define TWIC_MASTER_DATA  _SFR_MEM8(0x0487)
+#define TWIC_SLAVE_CTRLA  _SFR_MEM8(0x0488)
+#define TWIC_SLAVE_CTRLB  _SFR_MEM8(0x0489)
+#define TWIC_SLAVE_STATUS  _SFR_MEM8(0x048A)
+#define TWIC_SLAVE_ADDR  _SFR_MEM8(0x048B)
+#define TWIC_SLAVE_DATA  _SFR_MEM8(0x048C)
+#define TWIC_SLAVE_ADDRMASK  _SFR_MEM8(0x048D)
+
+/* TWI - Two-Wire Interface */
+#define TWIE_CTRL  _SFR_MEM8(0x04A0)
+#define TWIE_MASTER_CTRLA  _SFR_MEM8(0x04A1)
+#define TWIE_MASTER_CTRLB  _SFR_MEM8(0x04A2)
+#define TWIE_MASTER_CTRLC  _SFR_MEM8(0x04A3)
+#define TWIE_MASTER_STATUS  _SFR_MEM8(0x04A4)
+#define TWIE_MASTER_BAUD  _SFR_MEM8(0x04A5)
+#define TWIE_MASTER_ADDR  _SFR_MEM8(0x04A6)
+#define TWIE_MASTER_DATA  _SFR_MEM8(0x04A7)
+#define TWIE_SLAVE_CTRLA  _SFR_MEM8(0x04A8)
+#define TWIE_SLAVE_CTRLB  _SFR_MEM8(0x04A9)
+#define TWIE_SLAVE_STATUS  _SFR_MEM8(0x04AA)
+#define TWIE_SLAVE_ADDR  _SFR_MEM8(0x04AB)
+#define TWIE_SLAVE_DATA  _SFR_MEM8(0x04AC)
+#define TWIE_SLAVE_ADDRMASK  _SFR_MEM8(0x04AD)
+
+/* USB - Universal Serial Bus */
+#define USB_CTRLA  _SFR_MEM8(0x04C0)
+#define USB_CTRLB  _SFR_MEM8(0x04C1)
+#define USB_STATUS  _SFR_MEM8(0x04C2)
+#define USB_ADDR  _SFR_MEM8(0x04C3)
+#define USB_FIFOWP  _SFR_MEM8(0x04C4)
+#define USB_FIFORP  _SFR_MEM8(0x04C5)
+#define USB_EPPTR  _SFR_MEM16(0x04C6)
+#define USB_INTCTRLA  _SFR_MEM8(0x04C8)
+#define USB_INTCTRLB  _SFR_MEM8(0x04C9)
+#define USB_INTFLAGSACLR  _SFR_MEM8(0x04CA)
+#define USB_INTFLAGSASET  _SFR_MEM8(0x04CB)
+#define USB_INTFLAGSBCLR  _SFR_MEM8(0x04CC)
+#define USB_INTFLAGSBSET  _SFR_MEM8(0x04CD)
+#define USB_CAL0  _SFR_MEM8(0x04FA)
+#define USB_CAL1  _SFR_MEM8(0x04FB)
+
+/* PORT - I/O Ports */
+#define PORTA_DIR  _SFR_MEM8(0x0600)
+#define PORTA_DIRSET  _SFR_MEM8(0x0601)
+#define PORTA_DIRCLR  _SFR_MEM8(0x0602)
+#define PORTA_DIRTGL  _SFR_MEM8(0x0603)
+#define PORTA_OUT  _SFR_MEM8(0x0604)
+#define PORTA_OUTSET  _SFR_MEM8(0x0605)
+#define PORTA_OUTCLR  _SFR_MEM8(0x0606)
+#define PORTA_OUTTGL  _SFR_MEM8(0x0607)
+#define PORTA_IN  _SFR_MEM8(0x0608)
+#define PORTA_INTCTRL  _SFR_MEM8(0x0609)
+#define PORTA_INT0MASK  _SFR_MEM8(0x060A)
+#define PORTA_INT1MASK  _SFR_MEM8(0x060B)
+#define PORTA_INTFLAGS  _SFR_MEM8(0x060C)
+#define PORTA_REMAP  _SFR_MEM8(0x060E)
+#define PORTA_PIN0CTRL  _SFR_MEM8(0x0610)
+#define PORTA_PIN1CTRL  _SFR_MEM8(0x0611)
+#define PORTA_PIN2CTRL  _SFR_MEM8(0x0612)
+#define PORTA_PIN3CTRL  _SFR_MEM8(0x0613)
+#define PORTA_PIN4CTRL  _SFR_MEM8(0x0614)
+#define PORTA_PIN5CTRL  _SFR_MEM8(0x0615)
+#define PORTA_PIN6CTRL  _SFR_MEM8(0x0616)
+#define PORTA_PIN7CTRL  _SFR_MEM8(0x0617)
+
+/* PORT - I/O Ports */
+#define PORTB_DIR  _SFR_MEM8(0x0620)
+#define PORTB_DIRSET  _SFR_MEM8(0x0621)
+#define PORTB_DIRCLR  _SFR_MEM8(0x0622)
+#define PORTB_DIRTGL  _SFR_MEM8(0x0623)
+#define PORTB_OUT  _SFR_MEM8(0x0624)
+#define PORTB_OUTSET  _SFR_MEM8(0x0625)
+#define PORTB_OUTCLR  _SFR_MEM8(0x0626)
+#define PORTB_OUTTGL  _SFR_MEM8(0x0627)
+#define PORTB_IN  _SFR_MEM8(0x0628)
+#define PORTB_INTCTRL  _SFR_MEM8(0x0629)
+#define PORTB_INT0MASK  _SFR_MEM8(0x062A)
+#define PORTB_INT1MASK  _SFR_MEM8(0x062B)
+#define PORTB_INTFLAGS  _SFR_MEM8(0x062C)
+#define PORTB_REMAP  _SFR_MEM8(0x062E)
+#define PORTB_PIN0CTRL  _SFR_MEM8(0x0630)
+#define PORTB_PIN1CTRL  _SFR_MEM8(0x0631)
+#define PORTB_PIN2CTRL  _SFR_MEM8(0x0632)
+#define PORTB_PIN3CTRL  _SFR_MEM8(0x0633)
+#define PORTB_PIN4CTRL  _SFR_MEM8(0x0634)
+#define PORTB_PIN5CTRL  _SFR_MEM8(0x0635)
+#define PORTB_PIN6CTRL  _SFR_MEM8(0x0636)
+#define PORTB_PIN7CTRL  _SFR_MEM8(0x0637)
+
+/* PORT - I/O Ports */
+#define PORTC_DIR  _SFR_MEM8(0x0640)
+#define PORTC_DIRSET  _SFR_MEM8(0x0641)
+#define PORTC_DIRCLR  _SFR_MEM8(0x0642)
+#define PORTC_DIRTGL  _SFR_MEM8(0x0643)
+#define PORTC_OUT  _SFR_MEM8(0x0644)
+#define PORTC_OUTSET  _SFR_MEM8(0x0645)
+#define PORTC_OUTCLR  _SFR_MEM8(0x0646)
+#define PORTC_OUTTGL  _SFR_MEM8(0x0647)
+#define PORTC_IN  _SFR_MEM8(0x0648)
+#define PORTC_INTCTRL  _SFR_MEM8(0x0649)
+#define PORTC_INT0MASK  _SFR_MEM8(0x064A)
+#define PORTC_INT1MASK  _SFR_MEM8(0x064B)
+#define PORTC_INTFLAGS  _SFR_MEM8(0x064C)
+#define PORTC_REMAP  _SFR_MEM8(0x064E)
+#define PORTC_PIN0CTRL  _SFR_MEM8(0x0650)
+#define PORTC_PIN1CTRL  _SFR_MEM8(0x0651)
+#define PORTC_PIN2CTRL  _SFR_MEM8(0x0652)
+#define PORTC_PIN3CTRL  _SFR_MEM8(0x0653)
+#define PORTC_PIN4CTRL  _SFR_MEM8(0x0654)
+#define PORTC_PIN5CTRL  _SFR_MEM8(0x0655)
+#define PORTC_PIN6CTRL  _SFR_MEM8(0x0656)
+#define PORTC_PIN7CTRL  _SFR_MEM8(0x0657)
+
+/* PORT - I/O Ports */
+#define PORTD_DIR  _SFR_MEM8(0x0660)
+#define PORTD_DIRSET  _SFR_MEM8(0x0661)
+#define PORTD_DIRCLR  _SFR_MEM8(0x0662)
+#define PORTD_DIRTGL  _SFR_MEM8(0x0663)
+#define PORTD_OUT  _SFR_MEM8(0x0664)
+#define PORTD_OUTSET  _SFR_MEM8(0x0665)
+#define PORTD_OUTCLR  _SFR_MEM8(0x0666)
+#define PORTD_OUTTGL  _SFR_MEM8(0x0667)
+#define PORTD_IN  _SFR_MEM8(0x0668)
+#define PORTD_INTCTRL  _SFR_MEM8(0x0669)
+#define PORTD_INT0MASK  _SFR_MEM8(0x066A)
+#define PORTD_INT1MASK  _SFR_MEM8(0x066B)
+#define PORTD_INTFLAGS  _SFR_MEM8(0x066C)
+#define PORTD_REMAP  _SFR_MEM8(0x066E)
+#define PORTD_PIN0CTRL  _SFR_MEM8(0x0670)
+#define PORTD_PIN1CTRL  _SFR_MEM8(0x0671)
+#define PORTD_PIN2CTRL  _SFR_MEM8(0x0672)
+#define PORTD_PIN3CTRL  _SFR_MEM8(0x0673)
+#define PORTD_PIN4CTRL  _SFR_MEM8(0x0674)
+#define PORTD_PIN5CTRL  _SFR_MEM8(0x0675)
+#define PORTD_PIN6CTRL  _SFR_MEM8(0x0676)
+#define PORTD_PIN7CTRL  _SFR_MEM8(0x0677)
+
+/* PORT - I/O Ports */
+#define PORTE_DIR  _SFR_MEM8(0x0680)
+#define PORTE_DIRSET  _SFR_MEM8(0x0681)
+#define PORTE_DIRCLR  _SFR_MEM8(0x0682)
+#define PORTE_DIRTGL  _SFR_MEM8(0x0683)
+#define PORTE_OUT  _SFR_MEM8(0x0684)
+#define PORTE_OUTSET  _SFR_MEM8(0x0685)
+#define PORTE_OUTCLR  _SFR_MEM8(0x0686)
+#define PORTE_OUTTGL  _SFR_MEM8(0x0687)
+#define PORTE_IN  _SFR_MEM8(0x0688)
+#define PORTE_INTCTRL  _SFR_MEM8(0x0689)
+#define PORTE_INT0MASK  _SFR_MEM8(0x068A)
+#define PORTE_INT1MASK  _SFR_MEM8(0x068B)
+#define PORTE_INTFLAGS  _SFR_MEM8(0x068C)
+#define PORTE_REMAP  _SFR_MEM8(0x068E)
+#define PORTE_PIN0CTRL  _SFR_MEM8(0x0690)
+#define PORTE_PIN1CTRL  _SFR_MEM8(0x0691)
+#define PORTE_PIN2CTRL  _SFR_MEM8(0x0692)
+#define PORTE_PIN3CTRL  _SFR_MEM8(0x0693)
+#define PORTE_PIN4CTRL  _SFR_MEM8(0x0694)
+#define PORTE_PIN5CTRL  _SFR_MEM8(0x0695)
+#define PORTE_PIN6CTRL  _SFR_MEM8(0x0696)
+#define PORTE_PIN7CTRL  _SFR_MEM8(0x0697)
+
+/* PORT - I/O Ports */
+#define PORTF_DIR  _SFR_MEM8(0x06A0)
+#define PORTF_DIRSET  _SFR_MEM8(0x06A1)
+#define PORTF_DIRCLR  _SFR_MEM8(0x06A2)
+#define PORTF_DIRTGL  _SFR_MEM8(0x06A3)
+#define PORTF_OUT  _SFR_MEM8(0x06A4)
+#define PORTF_OUTSET  _SFR_MEM8(0x06A5)
+#define PORTF_OUTCLR  _SFR_MEM8(0x06A6)
+#define PORTF_OUTTGL  _SFR_MEM8(0x06A7)
+#define PORTF_IN  _SFR_MEM8(0x06A8)
+#define PORTF_INTCTRL  _SFR_MEM8(0x06A9)
+#define PORTF_INT0MASK  _SFR_MEM8(0x06AA)
+#define PORTF_INT1MASK  _SFR_MEM8(0x06AB)
+#define PORTF_INTFLAGS  _SFR_MEM8(0x06AC)
+#define PORTF_REMAP  _SFR_MEM8(0x06AE)
+#define PORTF_PIN0CTRL  _SFR_MEM8(0x06B0)
+#define PORTF_PIN1CTRL  _SFR_MEM8(0x06B1)
+#define PORTF_PIN2CTRL  _SFR_MEM8(0x06B2)
+#define PORTF_PIN3CTRL  _SFR_MEM8(0x06B3)
+#define PORTF_PIN4CTRL  _SFR_MEM8(0x06B4)
+#define PORTF_PIN5CTRL  _SFR_MEM8(0x06B5)
+#define PORTF_PIN6CTRL  _SFR_MEM8(0x06B6)
+#define PORTF_PIN7CTRL  _SFR_MEM8(0x06B7)
+
+/* PORT - I/O Ports */
+#define PORTR_DIR  _SFR_MEM8(0x07E0)
+#define PORTR_DIRSET  _SFR_MEM8(0x07E1)
+#define PORTR_DIRCLR  _SFR_MEM8(0x07E2)
+#define PORTR_DIRTGL  _SFR_MEM8(0x07E3)
+#define PORTR_OUT  _SFR_MEM8(0x07E4)
+#define PORTR_OUTSET  _SFR_MEM8(0x07E5)
+#define PORTR_OUTCLR  _SFR_MEM8(0x07E6)
+#define PORTR_OUTTGL  _SFR_MEM8(0x07E7)
+#define PORTR_IN  _SFR_MEM8(0x07E8)
+#define PORTR_INTCTRL  _SFR_MEM8(0x07E9)
+#define PORTR_INT0MASK  _SFR_MEM8(0x07EA)
+#define PORTR_INT1MASK  _SFR_MEM8(0x07EB)
+#define PORTR_INTFLAGS  _SFR_MEM8(0x07EC)
+#define PORTR_REMAP  _SFR_MEM8(0x07EE)
+#define PORTR_PIN0CTRL  _SFR_MEM8(0x07F0)
+#define PORTR_PIN1CTRL  _SFR_MEM8(0x07F1)
+#define PORTR_PIN2CTRL  _SFR_MEM8(0x07F2)
+#define PORTR_PIN3CTRL  _SFR_MEM8(0x07F3)
+#define PORTR_PIN4CTRL  _SFR_MEM8(0x07F4)
+#define PORTR_PIN5CTRL  _SFR_MEM8(0x07F5)
+#define PORTR_PIN6CTRL  _SFR_MEM8(0x07F6)
+#define PORTR_PIN7CTRL  _SFR_MEM8(0x07F7)
+
+/* TC0 - 16-bit Timer/Counter 0 */
+#define TCC0_CTRLA  _SFR_MEM8(0x0800)
+#define TCC0_CTRLB  _SFR_MEM8(0x0801)
+#define TCC0_CTRLC  _SFR_MEM8(0x0802)
+#define TCC0_CTRLD  _SFR_MEM8(0x0803)
+#define TCC0_CTRLE  _SFR_MEM8(0x0804)
+#define TCC0_INTCTRLA  _SFR_MEM8(0x0806)
+#define TCC0_INTCTRLB  _SFR_MEM8(0x0807)
+#define TCC0_CTRLFCLR  _SFR_MEM8(0x0808)
+#define TCC0_CTRLFSET  _SFR_MEM8(0x0809)
+#define TCC0_CTRLGCLR  _SFR_MEM8(0x080A)
+#define TCC0_CTRLGSET  _SFR_MEM8(0x080B)
+#define TCC0_INTFLAGS  _SFR_MEM8(0x080C)
+#define TCC0_TEMP  _SFR_MEM8(0x080F)
+#define TCC0_CNT  _SFR_MEM16(0x0820)
+#define TCC0_PER  _SFR_MEM16(0x0826)
+#define TCC0_CCA  _SFR_MEM16(0x0828)
+#define TCC0_CCB  _SFR_MEM16(0x082A)
+#define TCC0_CCC  _SFR_MEM16(0x082C)
+#define TCC0_CCD  _SFR_MEM16(0x082E)
+#define TCC0_PERBUF  _SFR_MEM16(0x0836)
+#define TCC0_CCABUF  _SFR_MEM16(0x0838)
+#define TCC0_CCBBUF  _SFR_MEM16(0x083A)
+#define TCC0_CCCBUF  _SFR_MEM16(0x083C)
+#define TCC0_CCDBUF  _SFR_MEM16(0x083E)
+
+/* TC2 - 16-bit Timer/Counter type 2 */
+#define TCC2_CTRLA  _SFR_MEM8(0x0800)
+#define TCC2_CTRLB  _SFR_MEM8(0x0801)
+#define TCC2_CTRLC  _SFR_MEM8(0x0802)
+#define TCC2_CTRLE  _SFR_MEM8(0x0804)
+#define TCC2_INTCTRLA  _SFR_MEM8(0x0806)
+#define TCC2_INTCTRLB  _SFR_MEM8(0x0807)
+#define TCC2_CTRLF  _SFR_MEM8(0x0809)
+#define TCC2_INTFLAGS  _SFR_MEM8(0x080C)
+#define TCC2_LCNT  _SFR_MEM8(0x0820)
+#define TCC2_HCNT  _SFR_MEM8(0x0821)
+#define TCC2_LPER  _SFR_MEM8(0x0826)
+#define TCC2_HPER  _SFR_MEM8(0x0827)
+#define TCC2_LCMPA  _SFR_MEM8(0x0828)
+#define TCC2_HCMPA  _SFR_MEM8(0x0829)
+#define TCC2_LCMPB  _SFR_MEM8(0x082A)
+#define TCC2_HCMPB  _SFR_MEM8(0

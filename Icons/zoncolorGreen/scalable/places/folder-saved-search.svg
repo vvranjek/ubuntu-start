@@ -130,203 +130,257 @@
        x1="71.999496"
        y1="14.2578"
        x2="71.999496"
-       y2="19.9583" />
-    <linearGradient
-       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)"
-       y2="19.9583"
-       x2="71.999496"
-       y1="14.2578"
-       x1="71.999496"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient9101-0">
-      <stop
-         id="stop9103-9"
-         style="stop-color:#51751e;stop-opacity:0;"
-         offset="0.25" />
-      <stop
-         id="stop9105-1"
-         style="stop-color:#51751e;stop-opacity:1;"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9073-9-3"
-       id="linearGradient3259"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.7031318,0,0,0.7105376,-69.874472,-254.68002)"
-       x1="167.64111"
-       y1="328.87747"
-       x2="167.64111"
-       y2="407.69193" />
-    <linearGradient
-       id="linearGradient9073-9-3">
-      <stop
-         id="stop9075-9-0"
-         offset="0"
-         style="stop-color:#aacb7d;stop-opacity:1" />
-      <stop
-         id="stop9077-5-8"
-         offset="1"
-         style="stop-color:#709937;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9087-5-0"
-       id="linearGradient3261"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,2,-365.99542,-54)"
-       x1="206.99738"
-       y1="16.499895"
-       x2="206.99738"
-       y2="44.50021" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient9087-5-0">
-      <stop
-         style="stop-color:#709937;stop-opacity:1"
-         offset="0"
-         id="stop9089-5-7" />
-      <stop
-         style="stop-color:#51751e;stop-opacity:1"
-         offset="1"
-         id="stop9091-1-6" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient10176-0"
-       id="linearGradient3256"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.9204022,0,0,1.885618,-11.468937,-87.058428)"
-       x1="7.2379346"
-       y1="36.005047"
-       x2="122.17093"
-       y2="36.005047" />
-    <linearGradient
-       id="linearGradient10176-0"
-       gradientUnits="userSpaceOnUse"
-       x1="71.999496"
-       y1="14.2578"
-       x2="71.999496"
-       y2="19.9583"
-       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)">
-      <stop
-         offset="0.00445589"
-         style="stop-color:#eaeaea;stop-opacity:0;"
-         id="stop10178-00" />
-      <stop
-         id="stop10180-1"
-         style="stop-color:#ffffff;stop-opacity:0.52941179;"
-         offset="0.46138024" />
-      <stop
-         offset="1"
-         style="stop-color:#f5f5f5;stop-opacity:0"
-         id="stop10182-15" />
-    </linearGradient>
-  </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="6.09375"
-     inkscape:cx="48"
-     inkscape:cy="48"
-     inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:grid-bbox="true"
-     inkscape:document-units="px"
-     inkscape:window-width="1044"
-     inkscape:window-height="797"
-     inkscape:window-x="166"
-     inkscape:window-y="25"
-     inkscape:window-maximized="0"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
-  <metadata
-     id="metadata7373">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     id="layer1"
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     transform="translate(0,48)">
-    <g
-       id="g3274">
-      <g
-         id="g3269">
-        <rect
-           style="opacity:0.40206185;fill:url(#linearGradient3247);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-           id="rect13073"
-           width="60.699482"
-           height="21.000004"
-           x="17.650259"
-           y="21" />
-        <path
-           style="opacity:0.40206185;fill:url(#radialGradient3244);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-           d="m 78.349742,21.000718 c 0,0 0,20.998846 0,20.998846 C 84.823444,42.039084 94.000004,37.294788 94,31.49879 94,25.70279 86.775836,21.00072 78.349742,21.000718 z"
-           id="path13075"
-           sodipodi:nodetypes="cccc"
-           inkscape:connector-curvature="0" />
-        <path
-           sodipodi:nodetypes="cccc"
-           id="path13077"
-           d="m 17.65026,21.000718 c 0,0 0,20.998846 0,20.998846 -6.473703,0.03952 -15.6502598,-4.704776 -15.6502598,-10.500774 0,-5.796 7.224163,-10.49807 15.6502598,-10.498072 z"
-           style="opacity:0.40206185;fill:url(#radialGradient3241);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-           inkscape:connector-curvature="0" />
-      </g>
-      <g
-         id="g3263">
-        <path
-           style="color:#000000;fill:url(#linearGradient3230);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3232);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 63,-32 c -1.108,0 -2.0895,0.4645 -2.8125,1.1875 L 56.375,-27 11,-27 c -2.216,0 -4,1.784 -4,4 l 0,56 c 0,1.108 0.892,2 2,2 l 78,0 c 1.108,0 2,-0.892 2,-2 l 0,-61 c 0,-2.216 -1.784,-4 -4,-4 z"
-           id="rect3142"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="sscsccccccss" />
-        <path
-           style="opacity:0.5;fill:url(#linearGradient3227);fill-opacity:1;display:inline;enable-background:new"
-           id="path39053"
-           d="m 7.5014969,-23.5 c 0.00626,0.583332 0.012514,1.251666 0.018752,2 l 80.9609801,0 c 0.0063,-0.748334 0.01256,-1.416668 0.01883,-2 l -80.9999993,0 0.0015,0 z"
-           inkscape:connector-curvature="0" />
-        <path
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="cccccccccc"
-           style="opacity:0.9;color:#000000;fill:url(#linearGradient3259);fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient3261);stroke-width:0.99958181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
-           id="path3300"
-           d="m 90.493984,33 c -0.06074,1.170968 -1.335732,2.000418 -2.499686,2.000418 l -79.9899374,0 c -1.163934,0 -2.438312,-0.82945 -2.499686,-2.000418 l -2.499684,-51.999792 c -0.08468,-1.168834 0.835794,-2.000416 1.999748,-2.000416 l 85.9891834,0 c 1.163954,0 2.088616,0.831582 1.999748,2.000416 L 90.493984,33 z" />
-        <rect
-           style="fill:url(#linearGradient3256);fill-opacity:1;stroke:none;display:inline;enable-background:new"
-           id="rect3521-5"
-           width="89"
-           height="2"
-           x="3.4999948"
-           y="-20.5"
-           rx="0"
-           ry="0" />
-      </g>
-    </g>
-    <path
-       style="opacity:0.6;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.296875;marker:none;visibility:visible;display:inline;overflow:visible"
-       d="M 44.72602,-8.033738 C 38.197368,-7.531182 33,-2.010704 33,4.638776 c -2e-6,6.976506 5.74859,12.725098 12.725098,12.725098 3.420122,0 6.541388,-1.349884 8.833952,-3.575648 0.141,0.35993 0.374344,0.70548 0.630996,0.999078 0.233454,0.25685 0.528364,0.504978 0.841328,0.68358 l 8.413288,5.047972 c 1.597244,0.958348 3.66896,0.440418 4.627308,-1.156826 0.958348,-1.597244 0.440418,-3.668962 -1.156828,-4.627308 L 59.501856,9.686748 c -0.568904,-0.354006 -1.228838,-0.548338 -1.89299,-0.52583 0.53605,-1.400446 0.788746,-2.941528 0.788746,-4.522142 0,-6.976504 -5.696008,-12.672514 -12.672514,-12.672514 -0.327026,0 -0.677998,-0.02472 -0.999078,0 z m 0.683578,5.047972 c 0.09852,-0.0036 0.216002,0 0.3155,0 4.245234,2e-6 7.624542,3.379306 7.624542,7.624542 -2e-6,4.245238 -3.379308,7.624542 -7.624542,7.624542 -4.245238,0 -7.624542,-3.379304 -7.624542,-7.624542 -2e-6,-4.145738 3.204342,-7.471246 7.309042,-7.624542 z"
-       id="path2347"
-       inkscape:r_cx="true"
-       inkscape:r_cy="true"
-       inkscape:connector-curvature="0" />
-    <path
-       style="opacity:0.25;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.296875;marker:none;visibility:visible;display:inline;overflow:visible"
-       d="M 44.75,-9.0625 C 38.221348,-8.559944 33,-3.02448 33,3.625 c 0,0.249584 0.048,0.503766 0.0625,0.75 0.594908,-6.08734 5.566888,-10.966354 11.6875,-11.4375 0.32108,-0.02472 0.672974,0 1,0 6.759034,0 12.285114,5.384968 12.625,12.0625 0.04342,-0.450078 0,-0.915768 0,-1.375 0,-6.976504 -5.648494,-12.6875 -12.625,-12.6875 -0.327026,0 -0.67892,-0.02472 -1,0 z M 38.1875,4.625 c -0.04302,0.332176 -0.0625,0.655118 -0.0625,1 0,4.245238 3.379762,7.625 7.625,7.625 4.245234,0 7.624998,-3.379762 7.625,-7.625 0,-0.33982 -0.08298,-0.672566 -0.125,-1 -0.482888,3.763068 -3.594586,6.625 -7.5,6.625 -3.906092,0 -7.080458,-2.860972 -7.5625,-6.625 z M 58.125,8.25 c -0.12822,0.64756 -0.269026,1.334072 -0.5,1.9375 0.664152,-0.0225 1.306096,0.146 1.875,0.5 l 8.4375,5.0625 c 0.756494,0.453896 1.207404,1.1528 1.4375,1.9375 0.484342,-1.464874 -0.0591,-3.110466 -1.4375,-3.9375 L 59.5,8.6875 C 59.082638,8.427792 58.60607,8.315262 58.125,8.25 z"
-       id="path3132"
-       inkscape:connector-curvature="0" />
-  </g>
-</svg>
+       y2="19.9583/*****************************************************************************
+ *
+ * Copyright (C) 2014 Atmel Corporation
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * * Redistributions of source code must retain the above copyright
+ *   notice, this list of conditions and the following disclaimer.
+ *
+ * * Redistributions in binary form must reproduce the above copyright
+ *   notice, this list of conditions and the following disclaimer in
+ *   the documentation and/or other materials provided with the
+ *   distribution.
+ *
+ * * Neither the name of the copyright holders nor the names of
+ *   contributors may be used to endorse or promote products derived
+ *   from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ ****************************************************************************/
+
+
+#ifndef _AVR_IO_H_
+#  error "Include <avr/io.h> instead of this file."
+#endif
+
+#ifndef _AVR_IOXXX_H_
+#  define _AVR_IOXXX_H_ "iox32a4u.h"
+#else
+#  error "Attempt to include more than one <avr/ioXXX.h> file."
+#endif
+
+#ifndef _AVR_ATXMEGA32A4U_H_INCLUDED
+#define _AVR_ATXMEGA32A4U_H_INCLUDED
+
+/* Ungrouped common registers */
+#define GPIOR0  _SFR_MEM8(0x0000)  /* General Purpose IO Register 0 */
+#define GPIOR1  _SFR_MEM8(0x0001)  /* General Purpose IO Register 1 */
+#define GPIOR2  _SFR_MEM8(0x0002)  /* General Purpose IO Register 2 */
+#define GPIOR3  _SFR_MEM8(0x0003)  /* General Purpose IO Register 3 */
+#define GPIOR4  _SFR_MEM8(0x0004)  /* General Purpose IO Register 4 */
+#define GPIOR5  _SFR_MEM8(0x0005)  /* General Purpose IO Register 5 */
+#define GPIOR6  _SFR_MEM8(0x0006)  /* General Purpose IO Register 6 */
+#define GPIOR7  _SFR_MEM8(0x0007)  /* General Purpose IO Register 7 */
+#define GPIOR8  _SFR_MEM8(0x0008)  /* General Purpose IO Register 8 */
+#define GPIOR9  _SFR_MEM8(0x0009)  /* General Purpose IO Register 9 */
+#define GPIORA  _SFR_MEM8(0x000A)  /* General Purpose IO Register 10 */
+#define GPIORB  _SFR_MEM8(0x000B)  /* General Purpose IO Register 11 */
+#define GPIORC  _SFR_MEM8(0x000C)  /* General Purpose IO Register 12 */
+#define GPIORD  _SFR_MEM8(0x000D)  /* General Purpose IO Register 13 */
+#define GPIORE  _SFR_MEM8(0x000E)  /* General Purpose IO Register 14 */
+#define GPIORF  _SFR_MEM8(0x000F)  /* General Purpose IO Register 15 */
+
+/* Deprecated */
+#define GPIO0  _SFR_MEM8(0x0000)  /* General Purpose IO Register 0 */
+#define GPIO1  _SFR_MEM8(0x0001)  /* General Purpose IO Register 1 */
+#define GPIO2  _SFR_MEM8(0x0002)  /* General Purpose IO Register 2 */
+#define GPIO3  _SFR_MEM8(0x0003)  /* General Purpose IO Register 3 */
+#define GPIO4  _SFR_MEM8(0x0004)  /* General Purpose IO Register 4 */
+#define GPIO5  _SFR_MEM8(0x0005)  /* General Purpose IO Register 5 */
+#define GPIO6  _SFR_MEM8(0x0006)  /* General Purpose IO Register 6 */
+#define GPIO7  _SFR_MEM8(0x0007)  /* General Purpose IO Register 7 */
+#define GPIO8  _SFR_MEM8(0x0008)  /* General Purpose IO Register 8 */
+#define GPIO9  _SFR_MEM8(0x0009)  /* General Purpose IO Register 9 */
+#define GPIOA  _SFR_MEM8(0x000A)  /* General Purpose IO Register 10 */
+#define GPIOB  _SFR_MEM8(0x000B)  /* General Purpose IO Register 11 */
+#define GPIOC  _SFR_MEM8(0x000C)  /* General Purpose IO Register 12 */
+#define GPIOD  _SFR_MEM8(0x000D)  /* General Purpose IO Register 13 */
+#define GPIOE  _SFR_MEM8(0x000E)  /* General Purpose IO Register 14 */
+#define GPIOF  _SFR_MEM8(0x000F)  /* General Purpose IO Register 15 */
+
+#define CCP  _SFR_MEM8(0x0034)  /* Configuration Change Protection */
+#define RAMPD  _SFR_MEM8(0x0038)  /* Ramp D */
+#define RAMPX  _SFR_MEM8(0x0039)  /* Ramp X */
+#define RAMPY  _SFR_MEM8(0x003A)  /* Ramp Y */
+#define RAMPZ  _SFR_MEM8(0x003B)  /* Ramp Z */
+#define EIND  _SFR_MEM8(0x003C)  /* Extended Indirect Jump */
+#define SPL  _SFR_MEM8(0x003D)  /* Stack Pointer Low */
+#define SPH  _SFR_MEM8(0x003E)  /* Stack Pointer High */
+#define SREG  _SFR_MEM8(0x003F)  /* Status Register */
+
+/* C Language Only */
+#if !defined (__ASSEMBLER__)
+
+#include <stdint.h>
+
+typedef volatile uint8_t register8_t;
+typedef volatile uint16_t register16_t;
+typedef volatile uint32_t register32_t;
+
+
+#ifdef _WORDREGISTER
+#undef _WORDREGISTER
+#endif
+#define _WORDREGISTER(regname)   \
+    __extension__ union \
+    { \
+        register16_t regname; \
+        struct \
+        { \
+            register8_t regname ## L; \
+            register8_t regname ## H; \
+        }; \
+    }
+
+#ifdef _DWORDREGISTER
+#undef _DWORDREGISTER
+#endif
+#define _DWORDREGISTER(regname)  \
+    __extension__ union \
+    { \
+        register32_t regname; \
+        struct \
+        { \
+            register8_t regname ## 0; \
+            register8_t regname ## 1; \
+            register8_t regname ## 2; \
+            register8_t regname ## 3; \
+        }; \
+    }
+
+
+/*
+==========================================================================
+IO Module Structures
+==========================================================================
+*/
+
+
+/*
+--------------------------------------------------------------------------
+VPORT - Virtual Ports
+--------------------------------------------------------------------------
+*/
+
+/* Virtual Port */
+typedef struct VPORT_struct
+{
+    register8_t DIR;  /* I/O Port Data Direction */
+    register8_t OUT;  /* I/O Port Output */
+    register8_t IN;  /* I/O Port Input */
+    register8_t INTFLAGS;  /* Interrupt Flag Register */
+} VPORT_t;
+
+
+/*
+--------------------------------------------------------------------------
+XOCD - On-Chip Debug System
+--------------------------------------------------------------------------
+*/
+
+/* On-Chip Debug System */
+typedef struct OCD_struct
+{
+    register8_t OCDR0;  /* OCD Register 0 */
+    register8_t OCDR1;  /* OCD Register 1 */
+} OCD_t;
+
+
+/*
+--------------------------------------------------------------------------
+CPU - CPU
+--------------------------------------------------------------------------
+*/
+
+/* CCP signatures */
+typedef enum CCP_enum
+{
+    CCP_SPM_gc = (0x9D<<0),  /* SPM Instruction Protection */
+    CCP_IOREG_gc = (0xD8<<0),  /* IO Register Protection */
+} CCP_t;
+
+
+/*
+--------------------------------------------------------------------------
+CLK - Clock System
+--------------------------------------------------------------------------
+*/
+
+/* Clock System */
+typedef struct CLK_struct
+{
+    register8_t CTRL;  /* Control Register */
+    register8_t PSCTRL;  /* Prescaler Control Register */
+    register8_t LOCK;  /* Lock register */
+    register8_t RTCCTRL;  /* RTC Control Register */
+    register8_t USBCTRL;  /* USB Control Register */
+} CLK_t;
+
+
+/* Power Reduction */
+typedef struct PR_struct
+{
+    register8_t PRGEN;  /* General Power Reduction */
+    register8_t PRPA;  /* Power Reduction Port A */
+    register8_t PRPB;  /* Power Reduction Port B */
+    register8_t PRPC;  /* Power Reduction Port C */
+    register8_t PRPD;  /* Power Reduction Port D */
+    register8_t PRPE;  /* Power Reduction Port E */
+    register8_t PRPF;  /* Power Reduction Port F */
+} PR_t;
+
+/* System Clock Selection */
+typedef enum CLK_SCLKSEL_enum
+{
+    CLK_SCLKSEL_RC2M_gc = (0x00<<0),  /* Internal 2 MHz RC Oscillator */
+    CLK_SCLKSEL_RC32M_gc = (0x01<<0),  /* Internal 32 MHz RC Oscillator */
+    CLK_SCLKSEL_RC32K_gc = (0x02<<0),  /* Internal 32.768 kHz RC Oscillator */
+    CLK_SCLKSEL_XOSC_gc = (0x03<<0),  /* External Crystal Oscillator or Clock */
+    CLK_SCLKSEL_PLL_gc = (0x04<<0),  /* Phase Locked Loop */
+} CLK_SCLKSEL_t;
+
+/* Prescaler A Division Factor */
+typedef enum CLK_PSADIV_enum
+{
+    CLK_PSADIV_1_gc = (0x00<<2),  /* Divide by 1 */
+    CLK_PSADIV_2_gc = (0x01<<2),  /* Divide by 2 */
+    CLK_PSADIV_4_gc = (0x03<<2),  /* Divide by 4 */
+    CLK_PSADIV_8_gc = (0x05<<2),  /* Divide by 8 */
+    CLK_PSADIV_16_gc = (0x07<<2),  /* Divide by 16 */
+    CLK_PSADIV_32_gc = (0x09<<2),  /* Divide by 32 */
+    CLK_PSADIV_64_gc = (0x0B<<2),  /* Divide by 64 */
+    CLK_PSADIV_128_gc = (0x0D<<2),  /* Divide by 128 */
+    CLK_PSADIV_256_gc = (0x0F<<2),  /* Divide by 256 */
+    CLK_PSADIV_512_gc = (0x11<<2),  /* Divide by 512 */
+} CLK_PSADIV_t;
+
+/* Prescaler B and C Division Factor */
+typedef enum CLK_PSBCDIV_enum
+{
+    CLK_PSBCDIV_1_1_gc = (0x00<<0),  /* Divide B by 1 and C by 1 */
+    CLK_PSBCDIV_1_2_gc = (0x01<<0),  /* Divide B by 1 and C by 2 */
+    CLK_PSBCDIV_4_1_gc = (0x02<<0),  /* Divide B by 4 and C by 1 */
+    CLK_PSBCDIV_2_2_gc = (0x03<<0),  /* Divide B by 2 and C by 2 */
+} CLK_PSBCDIV_t;
+
+/* RTC Clock Source */
+typedef enum CLK_RTCSRC_enum
+{
+    CLK_RTCSRC_ULP_gc = (0x00<<1),  /* 1.024 kHz from internal 32kHz ULP */
+    CLK_RTCSRC_TOSC_gc = (0x01<<1),  /* 1.024 kHz from 32.768 kHz crystal oscillator on TOSC */
+    CLK_RTCSRC

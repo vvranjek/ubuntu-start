@@ -1,2 +1,2 @@
-[Icon Data]
-AttachPoints=24,24|24,8|8,8|8,24
+<<5)  /* Period bit 3 mask. */
+#define WDT_P

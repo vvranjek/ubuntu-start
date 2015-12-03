@@ -1,58 +1,155 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg id="svg3272" xmlns="http://www.w3.org/2000/svg" height="24" width="24" version="1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
- <defs id="defs3274">
-  <linearGradient id="linearGradient2438" y2="24.628" gradientUnits="userSpaceOnUse" x2="20.055" gradientTransform="matrix(.44503 0 0 .30102 2.8555 8.5638)" y1="16.408" x1="18.031">
-   <stop id="stop2687" style="stop-color:#fff;stop-opacity:.27451" offset="0"/>
-   <stop id="stop2689" style="stop-color:#fff;stop-opacity:.078431" offset="1"/>
-  </linearGradient>
-  <radialGradient id="radialGradient2441" gradientUnits="userSpaceOnUse" cy="5.5927" cx="4.02" gradientTransform="matrix(-.016802 1.0431 -1.7966 -.016197 14.189 7.2971)" r="10.273">
-   <stop id="stop3754" style="stop-color:#fff" offset="0"/>
-   <stop id="stop3760" style="stop-color:#fff" offset=".84754"/>
-   <stop id="stop3756" style="stop-color:#fff;stop-opacity:0" offset="1"/>
-  </radialGradient>
-  <linearGradient id="linearGradient2446" y2="4.303" gradientUnits="userSpaceOnUse" x2="9.7046" gradientTransform="matrix(.99458 0 0 .74406 -.30296 6.9688)" y1="20.882" x1="9.7046">
-   <stop id="stop3624" style="stop-color:#5D636F" offset="0"/>
-   <stop id="stop3626" style="stop-color:#757C88" offset="1"/>
-  </linearGradient>
-  <radialGradient id="radialGradient2444" gradientUnits="userSpaceOnUse" cy="8.5609" cx="7.8186" gradientTransform="matrix(1.69 0 0 .78074 -5.4127 6.4032)" r="11.268">
-   <stop id="stop3618" style="stop-color:#757C88" offset="0"/>
-   <stop id="stop3270" style="stop-color:#757C88" offset=".5"/>
-   <stop id="stop3620" style="stop-color:#5D636F" offset="1"/>
-  </radialGradient>
-  <linearGradient id="linearGradient2458" y2="23.062" gradientUnits="userSpaceOnUse" x2="9.8764" gradientTransform="translate(.036304)" y1="2.6015" x1="9.8764">
-   <stop id="stop5159" style="stop-color:#c1c1c1" offset="0"/>
-   <stop id="stop5161" style="stop-color:#909090" offset="1"/>
-  </linearGradient>
-  <linearGradient id="linearGradient2456" y2="37.503" gradientUnits="userSpaceOnUse" x2="-28.531" gradientTransform="translate(34.414 -14.501)" y1="17.956" x1="-28.531">
-   <stop id="stop11113" style="stop-color:#fff" offset="0"/>
-   <stop id="stop11115" style="stop-color:#cdcdcd" offset=".91014"/>
-   <stop id="stop11117" style="stop-color:#a1a1a1" offset="1"/>
-  </linearGradient>
-  <radialGradient id="radialGradient2621" xlink:href="#linearGradient5060" gradientUnits="userSpaceOnUse" cy="486.65" cx="605.71" gradientTransform="matrix(-2.7744 0 0 1.9697 112.76 -872.89)" r="117.14"/>
-  <radialGradient id="radialGradient2619" xlink:href="#linearGradient5060" gradientUnits="userSpaceOnUse" cy="486.65" cx="605.71" gradientTransform="matrix(2.7744 0 0 1.9697 -1891.6 -872.89)" r="117.14"/>
-  <linearGradient id="linearGradient2617" y2="609.51" gradientUnits="userSpaceOnUse" x2="302.86" gradientTransform="matrix(2.7744 0 0 1.9697 -1892.2 -872.89)" y1="366.65" x1="302.86">
-   <stop id="stop5050" style="stop-opacity:0" offset="0"/>
-   <stop id="stop5056" offset=".5"/>
-   <stop id="stop5052" style="stop-opacity:0" offset="1"/>
-  </linearGradient>
-  <linearGradient id="linearGradient5060">
-   <stop id="stop5062" offset="0"/>
-   <stop id="stop5064" style="stop-opacity:0" offset="1"/>
-  </linearGradient>
- </defs>
- <g id="layer1">
-  <g id="g7902" style="stroke-width:1.8826" transform="matrix(.54593 0 0 .51685 -.96573 -.57818)">
-   <g id="g7904" style="stroke-width:104.96" transform="matrix(.021652 0 0 .014857 43.008 42.685)">
-    <rect id="rect7906" style="opacity:.40206;fill:url(#linearGradient2617)" height="478.36" width="1339.6" y="-150.7" x="-1559.3"/>
-    <path id="path7908" style="opacity:.40206;fill:url(#radialGradient2619)" d="m-219.62-150.68v478.33c142.88 0.9 345.4-107.17 345.4-239.2 0-132.02-159.44-239.13-345.4-239.13z"/>
-    <path id="path7910" style="opacity:.40206;fill:url(#radialGradient2621)" d="m-1559.3-150.68v478.33c-142.8 0.9-345.4-107.17-345.4-239.2 0-132.02 159.5-239.13 345.4-239.13z"/>
-   </g>
-  </g>
-  <path id="path7912" style="stroke-linejoin:round;stroke:url(#linearGradient2458);stroke-linecap:round;stroke-width:1.0111;fill:url(#linearGradient2456)" d="m0.71358 2.5695c-0.08553 0-0.15886 0.0927-0.15886 0.1885 0 5.8692-0.04308 12.244-0.04915 18.225 0.02909 0.895 0.53723 1.505 0.88963 1.508 1.0128 0.009 0.5393-0.004 1.0486 0 6.4703-0.016 13.579-0.078 20.049-0.094 0.054 0.007-1.477-0.108-1.462-1.446 0-4.673-0.502-11.187-0.502-15.86 0-0.1865-0.015-0.2905-0.031-0.3767-0.013-0.0666-0.029-0.0989-0.064-0.1257-0.028-0.0244-0.054-0.057-0.095-0.0628h-8.82c-0.816 0-1.002-1.992-2.2141-1.992l-8.5913 0.0357h-0.00002z"/>
-  <rect id="rect7914" style="display:block;fill:#757C88" rx=".53846" ry=".5" height="1" width="7" y="4" x="2"/>
-  <path id="path7916" style="stroke-linejoin:round;stroke:url(#linearGradient2446);stroke-linecap:round;fill:url(#radialGradient2444)" d="m3.5357 10.582c10.57 0 13.03 0 19.993-0.021 0 1.175 0.258 12-0.484 12-0.714 0-14.046-0.07-21.009-0.05 1.472 0 1.4997-0.465 1.4997-11.929z"/>
-  <path id="path7918" style="opacity:.4;stroke:url(#radialGradient2441);stroke-width:.98119;fill:none" d="m22.975 11.376s-16.832 0.07-18.397-0.069c-0.0826 10.346-0.5006 10.802-0.5006 10.802"/>
-  <path id="path7920" style="fill:url(#linearGradient2438);fill-rule:evenodd" d="m4.288 10.172c-0.6849 0-1.2517 0.384-1.2517 0.847v4.816c0.0026 0.086 0.0661 0.185 0.1669 0.245s0.2297 0.085 0.3755 0.075h0.0139l20.026-2.145c0.232-0.024 0.414-0.16 0.417-0.319v-2.672c0-0.463-0.566-0.847-1.251-0.847h-18.497z"/>
- </g>
-</svg>
+
+#define ADCA_CH0_vect_num  71
+#define ADCA_CH0_vect      _VECTOR(71)  /* Interrupt 0 */
+
+/* TCD0 interrupt vectors */
+#define TCD0_OVF_vect_num  77
+#define TCD0_OVF_vect      _VECTOR(77)  /* Overflow Interrupt */
+
+/* TCD2 interrupt vectors */
+#define TCD2_LUNF_vect_num  77
+#define TCD2_LUNF_vect      _VECTOR(77)  /* Low Byte Underflow Interrupt */
+
+/* TCD0 interrupt vectors */
+#define TCD0_ERR_vect_num  78
+#define TCD0_ERR_vect      _VECTOR(78)  /* Error Interrupt */
+
+/* TCD2 interrupt vectors */
+#define TCD2_HUNF_vect_num  78
+#define TCD2_HUNF_vect      _VECTOR(78)  /* High Byte Underflow Interrupt */
+
+/* TCD0 interrupt vectors */
+#define TCD0_CCA_vect_num  79
+#define TCD0_CCA_vect      _VECTOR(79)  /* Compare or Capture A Interrupt */
+
+/* TCD2 interrupt vectors */
+#define TCD2_LCMPA_vect_num  79
+#define TCD2_LCMPA_vect      _VECTOR(79)  /* Low Byte Compare A Interrupt */
+
+/* TCD0 interrupt vectors */
+#define TCD0_CCB_vect_num  80
+#define TCD0_CCB_vect      _VECTOR(80)  /* Compare or Capture B Interrupt */
+
+/* TCD2 interrupt vectors */
+#define TCD2_LCMPB_vect_num  80
+#define TCD2_LCMPB_vect      _VECTOR(80)  /* Low Byte Compare B Interrupt */
+
+/* TCD0 interrupt vectors */
+#define TCD0_CCC_vect_num  81
+#define TCD0_CCC_vect      _VECTOR(81)  /* Compare or Capture C Interrupt */
+
+/* TCD2 interrupt vectors */
+#define TCD2_LCMPC_vect_num  81
+#define TCD2_LCMPC_vect      _VECTOR(81)  /* Low Byte Compare C Interrupt */
+
+/* TCD0 interrupt vectors */
+#define TCD0_CCD_vect_num  82
+#define TCD0_CCD_vect      _VECTOR(82)  /* Compare or Capture D Interrupt */
+
+/* TCD2 interrupt vectors */
+#define TCD2_LCMPD_vect_num  82
+#define TCD2_LCMPD_vect      _VECTOR(82)  /* Low Byte Compare D Interrupt */
+
+/* SPID interrupt vectors */
+#define SPID_INT_vect_num  87
+#define SPID_INT_vect      _VECTOR(87)  /* SPI Interrupt */
+
+/* USARTD0 interrupt vectors */
+#define USARTD0_RXC_vect_num  88
+#define USARTD0_RXC_vect      _VECTOR(88)  /* Reception Complete Interrupt */
+#define USARTD0_DRE_vect_num  89
+#define USARTD0_DRE_vect      _VECTOR(89)  /* Data Register Empty Interrupt */
+#define USARTD0_TXC_vect_num  90
+#define USARTD0_TXC_vect      _VECTOR(90)  /* Transmission Complete Interrupt */
+
+/* PORTF interrupt vectors */
+#define PORTF_INT0_vect_num  104
+#define PORTF_INT0_vect      _VECTOR(104)  /* External Interrupt 0 */
+#define PORTF_INT1_vect_num  105
+#define PORTF_INT1_vect      _VECTOR(105)  /* External Interrupt 1 */
+
+/* TCF0 interrupt vectors */
+#define TCF0_OVF_vect_num  108
+#define TCF0_OVF_vect      _VECTOR(108)  /* Overflow Interrupt */
+
+/* TCF2 interrupt vectors */
+#define TCF2_LUNF_vect_num  108
+#define TCF2_LUNF_vect      _VECTOR(108)  /* Low Byte Underflow Interrupt */
+
+/* TCF0 interrupt vectors */
+#define TCF0_ERR_vect_num  109
+#define TCF0_ERR_vect      _VECTOR(109)  /* Error Interrupt */
+
+/* TCF2 interrupt vectors */
+#define TCF2_HUNF_vect_num  109
+#define TCF2_HUNF_vect      _VECTOR(109)  /* High Byte Underflow Interrupt */
+
+/* TCF0 interrupt vectors */
+#define TCF0_CCA_vect_num  110
+#define TCF0_CCA_vect      _VECTOR(110)  /* Compare or Capture A Interrupt */
+
+/* TCF2 interrupt vectors */
+#define TCF2_LCMPA_vect_num  110
+#define TCF2_LCMPA_vect      _VECTOR(110)  /* Low Byte Compare A Interrupt */
+
+/* TCF0 interrupt vectors */
+#define TCF0_CCB_vect_num  111
+#define TCF0_CCB_vect      _VECTOR(111)  /* Compare or Capture B Interrupt */
+
+/* TCF2 interrupt vectors */
+#define TCF2_LCMPB_vect_num  111
+#define TCF2_LCMPB_vect      _VECTOR(111)  /* Low Byte Compare B Interrupt */
+
+/* TCF0 interrupt vectors */
+#define TCF0_CCC_vect_num  112
+#define TCF0_CCC_vect      _VECTOR(112)  /* Compare or Capture C Interrupt */
+
+/* TCF2 interrupt vectors */
+#define TCF2_LCMPC_vect_num  112
+#define TCF2_LCMPC_vect      _VECTOR(112)  /* Low Byte Compare C Interrupt */
+
+/* TCF0 interrupt vectors */
+#define TCF0_CCD_vect_num  113
+#define TCF0_CCD_vect      _VECTOR(113)  /* Compare or Capture D Interrupt */
+
+/* TCF2 interrupt vectors */
+#define TCF2_LCMPD_vect_num  113
+#define TCF2_LCMPD_vect      _VECTOR(113)  /* Low Byte Compare D Interrupt */
+
+/* USB interrupt vectors */
+#define USB_BUSEVENT_vect_num  125
+#define USB_BUSEVENT_vect      _VECTOR(125)  /* SOF, suspend, resume, reset bus event interrupts, crc, underflow, overflow and stall error interrupts */
+#define USB_TRNCOMPL_vect_num  126
+#define USB_TRNCOMPL_vect      _VECTOR(126)  /* Transaction complete interrupt */
+
+#define _VECTOR_SIZE 4 /* Size of individual vector. */
+#define _VECTORS_SIZE (127 * _VECTOR_SIZE)
+
+
+/* ========== Constants ========== */
+
+#define PROGMEM_START     (0x0000)
+#define PROGMEM_SIZE      (270336)
+#define PROGMEM_END       (PROGMEM_START + PROGMEM_SIZE - 1)
+
+#define APP_SECTION_START     (0x0000)
+#define APP_SECTION_SIZE      (262144)
+#define APP_SECTION_PAGE_SIZE (512)
+#define APP_SECTION_END       (APP_SECTION_START + APP_SECTION_SIZE - 1)
+
+#define APPTABLE_SECTION_START     (0x3E000)
+#define APPTABLE_SECTION_SIZE      (8192)
+#define APPTABLE_SECTION_PAGE_SIZE (512)
+#define APPTABLE_SECTION_END       (APPTABLE_SECTION_START + APPTABLE_SECTION_SIZE - 1)
+
+#define BOOT_SECTION_START     (0x40000)
+#define BOOT_SECTION_SIZE      (8192)
+#define BOOT_SECTION_PAGE_SIZE (512)
+#define BOOT_SECTION_END       (BOOT_SECTION_START + BOOT_SECTION_SIZE - 1)
+
+#define DATAMEM_START     (0x0000)
+#define DATAMEM_SIZE      (24576)
+#define DATAMEM_END       (DATAMEM_START + DATAMEM_SIZE - 1)
+
+#define IO_START     (0x0000)
+#

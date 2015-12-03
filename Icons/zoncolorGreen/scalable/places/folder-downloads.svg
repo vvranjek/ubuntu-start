@@ -1,348 +1,277 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+/
+#define CLK_PSBCDIV1_bp  1  /* Prescaler B and C Division factor bit 1 position. */
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="96"
-   height="96"
-   id="svg7428"
-   sodipodi:version="0.32"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="folder-downloads.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   version="1.1"
-   inkscape:export-filename="folder-downloads.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
-  <defs
-     id="defs7430">
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5048-7"
-       id="linearGradient3247"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.125709,0,0,0.0864706,2.5651808,-10.70427)"
-       x1="302.85715"
-       y1="366.64789"
-       x2="302.85715"
-       y2="609.50507" />
-    <linearGradient
-       id="linearGradient5048-7">
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="0"
-         id="stop5050-1" />
-      <stop
-         id="stop5056-7"
-         offset="0.5"
-         style="stop-color:black;stop-opacity:1;" />
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="1"
-         id="stop5052-6" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5060-6"
-       id="radialGradient3244"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.125709,0,0,0.0864706,2.5899204,-10.70427)"
-       cx="605.71429"
-       cy="486.64789"
-       fx="605.71429"
-       fy="486.64789"
-       r="117.14286" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient5060-6">
-      <stop
-         style="stop-color:black;stop-opacity:1;"
-         offset="0"
-         id="stop5062-1" />
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="1"
-         id="stop5064-4" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5060-6"
-       id="radialGradient3241"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-0.125709,0,0,0.0864706,93.410098,-10.70427)"
-       cx="605.71429"
-       cy="486.64789"
-       fx="605.71429"
-       fy="486.64789"
-       r="117.14286" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4064-7-7"
-       id="linearGradient3230"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,2,-94,-48)"
-       x1="71"
-       y1="8"
-       x2="71"
-       y2="41.5" />
-    <linearGradient
-       id="linearGradient4064-7-7">
-      <stop
-         style="stop-color:#709937;stop-opacity:1;"
-         offset="0"
-         id="stop4066-4-5" />
-      <stop
-         style="stop-color:#709937;stop-opacity:0.50196081;"
-         offset="1"
-         id="stop4068-8-1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4054-7-0"
-       id="linearGradient3232"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,2,-94,-48)"
-       x1="71"
-       y1="8"
-       x2="71"
-       y2="41.5" />
-    <linearGradient
-       id="linearGradient4054-7-0">
-      <stop
-         style="stop-color:#51751e;stop-opacity:1;"
-         offset="0"
-         id="stop4056-0-2" />
-      <stop
-         style="stop-color:#51751e;stop-opacity:0.50196081;"
-         offset="1"
-         id="stop4058-9-7" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9101-65"
-       id="linearGradient3227"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.75086228,0,0,0.3333332,-6.0605797,-28.166666)"
-       x1="71.999496"
-       y1="14.2578"
-       x2="71.999496"
-       y2="19.9583" />
-    <linearGradient
-       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)"
-       y2="19.9583"
-       x2="71.999496"
-       y1="14.2578"
-       x1="71.999496"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient9101-65">
-      <stop
-         id="stop9103-72"
-         style="stop-color:#51751e;stop-opacity:0;"
-         offset="0.25" />
-      <stop
-         id="stop9105-59"
-         style="stop-color:#51751e;stop-opacity:1;"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9073-9-7"
-       id="linearGradient3259"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.7031318,0,0,0.7105376,-69.874472,-254.68002)"
-       x1="167.64111"
-       y1="328.87747"
-       x2="167.64111"
-       y2="407.69193" />
-    <linearGradient
-       id="linearGradient9073-9-7">
-      <stop
-         id="stop9075-9-6"
-         offset="0"
-         style="stop-color:#aacb7d;stop-opacity:1" />
-      <stop
-         id="stop9077-5-5"
-         offset="1"
-         style="stop-color:#709937;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9087-5-5"
-       id="linearGradient3261"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,2,-365.99542,-54)"
-       x1="206.99738"
-       y1="16.499895"
-       x2="206.99738"
-       y2="44.50021" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient9087-5-5">
-      <stop
-         style="stop-color:#709937;stop-opacity:1"
-         offset="0"
-         id="stop9089-5-6" />
-      <stop
-         style="stop-color:#51751e;stop-opacity:1"
-         offset="1"
-         id="stop9091-1-0" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient10176-4"
-       id="linearGradient3256"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.9204022,0,0,1.885618,-11.468937,-87.058428)"
-       x1="7.2379346"
-       y1="36.005047"
-       x2="122.17093"
-       y2="36.005047" />
-    <linearGradient
-       id="linearGradient10176-4"
-       gradientUnits="userSpaceOnUse"
-       x1="71.999496"
-       y1="14.2578"
-       x2="71.999496"
-       y2="19.9583"
-       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)">
-      <stop
-         offset="0.00445589"
-         style="stop-color:#eaeaea;stop-opacity:0;"
-         id="stop10178-2" />
-      <stop
-         id="stop10180-9"
-         style="stop-color:#ffffff;stop-opacity:0.52941179;"
-         offset="0.46138024" />
-      <stop
-         offset="1"
-         style="stop-color:#f5f5f5;stop-opacity:0"
-         id="stop10182-3" />
-    </linearGradient>
-  </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="6"
-     inkscape:cx="48"
-     inkscape:cy="48"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:grid-bbox="true"
-     inkscape:document-units="px"
-     inkscape:window-width="1082"
-     inkscape:window-height="788"
-     inkscape:window-x="163"
-     inkscape:window-y="24"
-     inkscape:window-maximized="0"
-     inkscape:object-paths="true"
-     inkscape:snap-intersection-paths="true"
-     inkscape:snap-grids="true"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0">
-    <inkscape:grid
-       type="xygrid"
-       id="grid3066"
-       empspacing="10"
-       visible="true"
-       enabled="true"
-       snapvisiblegridlinesonly="true"
-       dotted="false"
-       originx="0px"
-       originy="0px" />
-  </sodipodi:namedview>
-  <metadata
-     id="metadata7433">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     id="layer1"
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     transform="translate(0,48)">
-    <g
-       id="g3274">
-      <g
-         id="g3269">
-        <rect
-           style="opacity:0.40206185;fill:url(#linearGradient3247);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-           id="rect13073"
-           width="60.699482"
-           height="21.000004"
-           x="17.650259"
-           y="21" />
-        <path
-           style="opacity:0.40206185;fill:url(#radialGradient3244);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-           d="m 78.349742,21.000718 c 0,0 0,20.998846 0,20.998846 C 84.823444,42.039084 94.000004,37.294788 94,31.49879 94,25.70279 86.775836,21.00072 78.349742,21.000718 z"
-           id="path13075"
-           sodipodi:nodetypes="cccc"
-           inkscape:connector-curvature="0" />
-        <path
-           sodipodi:nodetypes="cccc"
-           id="path13077"
-           d="m 17.65026,21.000718 c 0,0 0,20.998846 0,20.998846 -6.473703,0.03952 -15.6502598,-4.704776 -15.6502598,-10.500774 0,-5.796 7.224163,-10.49807 15.6502598,-10.498072 z"
-           style="opacity:0.40206185;fill:url(#radialGradient3241);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-           inkscape:connector-curvature="0" />
-      </g>
-      <g
-         id="g3263">
-        <path
-           style="color:#000000;fill:url(#linearGradient3230);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3232);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 63,-32 c -1.108,0 -2.0895,0.4645 -2.8125,1.1875 L 56.375,-27 11,-27 c -2.216,0 -4,1.784 -4,4 l 0,56 c 0,1.108 0.892,2 2,2 l 78,0 c 1.108,0 2,-0.892 2,-2 l 0,-61 c 0,-2.216 -1.784,-4 -4,-4 z"
-           id="rect3142"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="sscsccccccss" />
-        <path
-           style="opacity:0.5;fill:url(#linearGradient3227);fill-opacity:1;display:inline;enable-background:new"
-           id="path39053"
-           d="m 7.5014969,-23.5 c 0.00626,0.583332 0.012514,1.251666 0.018752,2 l 80.9609801,0 c 0.0063,-0.748334 0.01256,-1.416668 0.01883,-2 l -80.9999993,0 0.0015,0 z"
-           inkscape:connector-curvature="0" />
-        <path
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="cccccccccc"
-           style="opacity:0.9;color:#000000;fill:url(#linearGradient3259);fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient3261);stroke-width:0.99958181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
-           id="path3300"
-           d="m 90.493984,33 c -0.06074,1.170968 -1.335732,2.000418 -2.499686,2.000418 l -79.9899374,0 c -1.163934,0 -2.438312,-0.82945 -2.499686,-2.000418 l -2.499684,-51.999792 c -0.08468,-1.168834 0.835794,-2.000416 1.999748,-2.000416 l 85.9891834,0 c 1.163954,0 2.088616,0.831582 1.999748,2.000416 L 90.493984,33 z" />
-        <rect
-           style="fill:url(#linearGradient3256);fill-opacity:1;stroke:none;display:inline;enable-background:new"
-           id="rect3521-5"
-           width="89"
-           height="2"
-           x="3.4999948"
-           y="-20.5"
-           rx="0"
-           ry="0" />
-      </g>
-    </g>
-    <path
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:0.6;color:#000000;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.60000002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-       d="M 44,-10 42.1875,7.9375 37.125,2.875 a 1.60016,1.60016 0 0 0 -1.3125,-0.5 1.60016,1.60016 0 0 0 -0.9375,2.75 l 12,12 a 1.60016,1.60016 0 0 0 2.25,0 l 12,-12 a 1.60016,1.60016 0 1 0 -2.25,-2.25 L 53.8125,7.9375 52,-10 44,-10 z M 33,15 c -0.554,0 -1,0.446 -1,1 l 0,5 c 0,0.554 0.446,1 1,1 l 30,0 c 0.554,0 1,-0.446 1,-1 l 0,-5 c 0,-0.554 -0.446,-1 -1,-1 -0.554,0 -1,0.446 -1,1 l 0,4 -28,0 0,-4 c 0,-0.554 -0.446,-1 -1,-1 z"
-       id="path3074"
-       inkscape:connector-curvature="0" />
-    <path
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:0.25;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.60000002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-       d="M 44,-11 42.1875,6.9375 37.125,1.875 A 1.60016,1.60016 0 0 0 35.8125,1.375 1.60016,1.60016 0 0 0 34.75,4 1.60016,1.60016 0 0 1 35.8125,3.375 1.60016,1.60016 0 0 1 37.125,3.875 L 42.1875,8.9375 44,-9 52,-9 53.8125,8.9375 58.875,3.875 a 1.60016,1.60016 0 0 1 2.5,0 1.6007811,1.6007811 0 1 0 -2.5,-2 L 53.8125,6.9375 52,-11 44,-11 z M 33,14 c -0.554,0 -1,0.446 -1,1 l 0,2 c 0,-0.554 0.446,-1 1,-1 0.554,0 1,0.446 1,1 l 0,-2 c 0,-0.554 -0.446,-1 -1,-1 z m 30,0 c -0.554,0 -1,0.446 -1,1 l 0,2 c 0,-0.554 0.446,-1 1,-1 0.554,0 1,0.446 1,1 l 0,-2 c 0,-0.554 -0.446,-1 -1,-1 z m -29,5 0,2 28,0 0,-2 -28,0 z"
-       id="path3872"
-       inkscape:connector-curvature="0" />
-  </g>
-</svg>
+/* CLK.LOCK  bit masks and bit positions */
+#define CLK_LOCK_bm  0x01  /* Clock System Lock bit mask. */
+#define CLK_LOCK_bp  0  /* Clock System Lock bit position. */
+
+/* CLK.RTCCTRL  bit masks and bit positions */
+#define CLK_RTCSRC_gm  0x0E  /* Clock Source group mask. */
+#define CLK_RTCSRC_gp  1  /* Clock Source group position. */
+#define CLK_RTCSRC0_bm  (1<<1)  /* Clock Source bit 0 mask. */
+#define CLK_RTCSRC0_bp  1  /* Clock Source bit 0 position. */
+#define CLK_RTCSRC1_bm  (1<<2)  /* Clock Source bit 1 mask. */
+#define CLK_RTCSRC1_bp  2  /* Clock Source bit 1 position. */
+#define CLK_RTCSRC2_bm  (1<<3)  /* Clock Source bit 2 mask. */
+#define CLK_RTCSRC2_bp  3  /* Clock Source bit 2 position. */
+
+#define CLK_RTCEN_bm  0x01  /* Clock Source Enable bit mask. */
+#define CLK_RTCEN_bp  0  /* Clock Source Enable bit position. */
+
+/* CLK.USBCTRL  bit masks and bit positions */
+#define CLK_USBPSDIV_gm  0x38  /* Prescaler Division Factor group mask. */
+#define CLK_USBPSDIV_gp  3  /* Prescaler Division Factor group position. */
+#define CLK_USBPSDIV0_bm  (1<<3)  /* Prescaler Division Factor bit 0 mask. */
+#define CLK_USBPSDIV0_bp  3  /* Prescaler Division Factor bit 0 position. */
+#define CLK_USBPSDIV1_bm  (1<<4)  /* Prescaler Division Factor bit 1 mask. */
+#define CLK_USBPSDIV1_bp  4  /* Prescaler Division Factor bit 1 position. */
+#define CLK_USBPSDIV2_bm  (1<<5)  /* Prescaler Division Factor bit 2 mask. */
+#define CLK_USBPSDIV2_bp  5  /* Prescaler Division Factor bit 2 position. */
+
+#define CLK_USBSRC_gm  0x06  /* Clock Source group mask. */
+#define CLK_USBSRC_gp  1  /* Clock Source group position. */
+#define CLK_USBSRC0_bm  (1<<1)  /* Clock Source bit 0 mask. */
+#define CLK_USBSRC0_bp  1  /* Clock Source bit 0 position. */
+#define CLK_USBSRC1_bm  (1<<2)  /* Clock Source bit 1 mask. */
+#define CLK_USBSRC1_bp  2  /* Clock Source bit 1 position. */
+
+#define CLK_USBSEN_bm  0x01  /* Clock Source Enable bit mask. */
+#define CLK_USBSEN_bp  0  /* Clock Source Enable bit position. */
+
+/* PR.PRGEN  bit masks and bit positions */
+#define PR_USB_bm  0x40  /* USB bit mask. */
+#define PR_USB_bp  6  /* USB bit position. */
+
+#define PR_AES_bm  0x10  /* AES bit mask. */
+#define PR_AES_bp  4  /* AES bit position. */
+
+#define PR_RTC_bm  0x04  /* Real-time Counter bit mask. */
+#define PR_RTC_bp  2  /* Real-time Counter bit position. */
+
+#define PR_EVSYS_bm  0x02  /* Event System bit mask. */
+#define PR_EVSYS_bp  1  /* Event System bit position. */
+
+#define PR_DMA_bm  0x01  /* DMA-Controller bit mask. */
+#define PR_DMA_bp  0  /* DMA-Controller bit position. */
+
+/* PR.PRPA  bit masks and bit positions */
+#define PR_ADC_bm  0x02  /* Port A ADC bit mask. */
+#define PR_ADC_bp  1  /* Port A ADC bit position. */
+
+#define PR_AC_bm  0x01  /* Port A Analog Comparator bit mask. */
+#define PR_AC_bp  0  /* Port A Analog Comparator bit position. */
+
+/* PR.PRPC  bit masks and bit positions */
+#define PR_TWI_bm  0x40  /* Port C Two-wire Interface bit mask. */
+#define PR_TWI_bp  6  /* Port C Two-wire Interface bit position. */
+
+#define PR_USART1_bm  0x20  /* Port C USART1 bit mask. */
+#define PR_USART1_bp  5  /* Port C USART1 bit position. */
+
+#define PR_USART0_bm  0x10  /* Port C USART0 bit mask. */
+#define PR_USART0_bp  4  /* Port C USART0 bit position. */
+
+#define PR_SPI_bm  0x08  /* Port C SPI bit mask. */
+#define PR_SPI_bp  3  /* Port C SPI bit position. */
+
+#define PR_HIRES_bm  0x04  /* Port C AWEX bit mask. */
+#define PR_HIRES_bp  2  /* Port C AWEX bit position. */
+
+#define PR_TC1_bm  0x02  /* Port C Timer/Counter1 bit mask. */
+#define PR_TC1_bp  1  /* Port C Timer/Counter1 bit position. */
+
+#define PR_TC0_bm  0x01  /* Port C Timer/Counter0 bit mask. */
+#define PR_TC0_bp  0  /* Port C Timer/Counter0 bit position. */
+
+/* PR.PRPD  bit masks and bit positions */
+/* PR_USART0  Predefined. */
+/* PR_USART0  Predefined. */
+
+/* PR_SPI  Predefined. */
+/* PR_SPI  Predefined. */
+
+/* PR_TC0  Predefined. */
+/* PR_TC0  Predefined. */
+
+/* PR.PRPE  bit masks and bit positions */
+/* PR_TWI  Predefined. */
+/* PR_TWI  Predefined. */
+
+/* PR_USART0  Predefined. */
+/* PR_USART0  Predefined. */
+
+/* PR_TC0  Predefined. */
+/* PR_TC0  Predefined. */
+
+/* PR.PRPF  bit masks and bit positions */
+/* PR_USART0  Predefined. */
+/* PR_USART0  Predefined. */
+
+/* PR_TC0  Predefined. */
+/* PR_TC0  Predefined. */
+
+/* SLEEP - Sleep Controller */
+/* SLEEP.CTRL  bit masks and bit positions */
+#define SLEEP_SMODE_gm  0x0E  /* Sleep Mode group mask. */
+#define SLEEP_SMODE_gp  1  /* Sleep Mode group position. */
+#define SLEEP_SMODE0_bm  (1<<1)  /* Sleep Mode bit 0 mask. */
+#define SLEEP_SMODE0_bp  1  /* Sleep Mode bit 0 position. */
+#define SLEEP_SMODE1_bm  (1<<2)  /* Sleep Mode bit 1 mask. */
+#define SLEEP_SMODE1_bp  2  /* Sleep Mode bit 1 position. */
+#define SLEEP_SMODE2_bm  (1<<3)  /* Sleep Mode bit 2 mask. */
+#define SLEEP_SMODE2_bp  3  /* Sleep Mode bit 2 position. */
+
+#define SLEEP_SEN_bm  0x01  /* Sleep Enable bit mask. */
+#define SLEEP_SEN_bp  0  /* Sleep Enable bit position. */
+
+/* OSC - Oscillator */
+/* OSC.CTRL  bit masks and bit positions */
+#define OSC_PLLEN_bm  0x10  /* PLL Enable bit mask. */
+#define OSC_PLLEN_bp  4  /* PLL Enable bit position. */
+
+#define OSC_XOSCEN_bm  0x08  /* External Oscillator Enable bit mask. */
+#define OSC_XOSCEN_bp  3  /* External Oscillator Enable bit position. */
+
+#define OSC_RC32KEN_bm  0x04  /* Internal 32.768 kHz RC Oscillator Enable bit mask. */
+#define OSC_RC32KEN_bp  2  /* Internal 32.768 kHz RC Oscillator Enable bit position. */
+
+#define OSC_RC32MEN_bm  0x02  /* Internal 32 MHz RC Oscillator Enable bit mask. */
+#define OSC_RC32MEN_bp  1  /* Internal 32 MHz RC Oscillator Enable bit position. */
+
+#define OSC_RC2MEN_bm  0x01  /* Internal 2 MHz RC Oscillator Enable bit mask. */
+#define OSC_RC2MEN_bp  0  /* Internal 2 MHz RC Oscillator Enable bit position. */
+
+/* OSC.STATUS  bit masks and bit positions */
+#define OSC_PLLRDY_bm  0x10  /* PLL Ready bit mask. */
+#define OSC_PLLRDY_bp  4  /* PLL Ready bit position. */
+
+#define OSC_XOSCRDY_bm  0x08  /* External Oscillator Ready bit mask. */
+#define OSC_XOSCRDY_bp  3  /* External Oscillator Ready bit position. */
+
+#define OSC_RC32KRDY_bm  0x04  /* Internal 32.768 kHz RC Oscillator Ready bit mask. */
+#define OSC_RC32KRDY_bp  2  /* Internal 32.768 kHz RC Oscillator Ready bit position. */
+
+#define OSC_RC32MRDY_bm  0x02  /* Internal 32 MHz RC Oscillator Ready bit mask. */
+#define OSC_RC32MRDY_bp  1  /* Internal 32 MHz RC Oscillator Ready bit position. */
+
+#define OSC_RC2MRDY_bm  0x01  /* Internal 2 MHz RC Oscillator Ready bit mask. */
+#define OSC_RC2MRDY_bp  0  /* Internal 2 MHz RC Oscillator Ready bit position. */
+
+/* OSC.XOSCCTRL  bit masks and bit positions */
+#define OSC_FRQRANGE_gm  0xC0  /* Frequency Range group mask. */
+#define OSC_FRQRANGE_gp  6  /* Frequency Range group position. */
+#define OSC_FRQRANGE0_bm  (1<<6)  /* Frequency Range bit 0 mask. */
+#define OSC_FRQRANGE0_bp  6  /* Frequency Range bit 0 position. */
+#define OSC_FRQRANGE1_bm  (1<<7)  /* Frequency Range bit 1 mask. */
+#define OSC_FRQRANGE1_bp  7  /* Frequency Range bit 1 position. */
+
+#define OSC_X32KLPM_bm  0x20  /* 32.768 kHz XTAL OSC Low-power Mode bit mask. */
+#define OSC_X32KLPM_bp  5  /* 32.768 kHz XTAL OSC Low-power Mode bit position. */
+
+#define OSC_XOSCPWR_bm  0x10  /* 16 MHz Crystal Oscillator High Power mode bit mask. */
+#define OSC_XOSCPWR_bp  4  /* 16 MHz Crystal Oscillator High Power mode bit position. */
+
+#define OSC_XOSCSEL_gm  0x0F  /* External Oscillator Selection and Startup Time group mask. */
+#define OSC_XOSCSEL_gp  0  /* External Oscillator Selection and Startup Time group position. */
+#define OSC_XOSCSEL0_bm  (1<<0)  /* External Oscillator Selection and Startup Time bit 0 mask. */
+#define OSC_XOSCSEL0_bp  0  /* External Oscillator Selection and Startup Time bit 0 position. */
+#define OSC_XOSCSEL1_bm  (1<<1)  /* External Oscillator Selection and Startup Time bit 1 mask. */
+#define OSC_XOSCSEL1_bp  1  /* External Oscillator Selection and Startup Time bit 1 position. */
+#define OSC_XOSCSEL2_bm  (1<<2)  /* External Oscillator Selection and Startup Time bit 2 mask. */
+#define OSC_XOSCSEL2_bp  2  /* External Oscillator Selection and Startup Time bit 2 position. */
+#define OSC_XOSCSEL3_bm  (1<<3)  /* External Oscillator Selection and Startup Time bit 3 mask. */
+#define OSC_XOSCSEL3_bp  3  /* External Oscillator Selection and Startup Time bit 3 position. */
+
+/* OSC.XOSCFAIL  bit masks and bit positions */
+#define OSC_PLLFDIF_bm  0x08  /* PLL Failure Detection Interrupt Flag bit mask. */
+#define OSC_PLLFDIF_bp  3  /* PLL Failure Detection Interrupt Flag bit position. */
+
+#define OSC_PLLFDEN_bm  0x04  /* PLL Failure Detection Enable bit mask. */
+#define OSC_PLLFDEN_bp  2  /* PLL Failure Detection Enable bit position. */
+
+#define OSC_XOSCFDIF_bm  0x02  /* XOSC Failure Detection Interrupt Flag bit mask. */
+#define OSC_XOSCFDIF_bp  1  /* XOSC Failure Detection Interrupt Flag bit position. */
+
+#define OSC_XOSCFDEN_bm  0x01  /* XOSC Failure Detection Enable bit mask. */
+#define OSC_XOSCFDEN_bp  0  /* XOSC Failure Detection Enable bit position. */
+
+/* OSC.PLLCTRL  bit masks and bit positions */
+#define OSC_PLLSRC_gm  0xC0  /* Clock Source group mask. */
+#define OSC_PLLSRC_gp  6  /* Clock Source group position. */
+#define OSC_PLLSRC0_bm  (1<<6)  /* Clock Source bit 0 mask. */
+#define OSC_PLLSRC0_bp  6  /* Clock Source bit 0 position. */
+#define OSC_PLLSRC1_bm  (1<<7)  /* Clock Source bit 1 mask. */
+#define OSC_PLLSRC1_bp  7  /* Clock Source bit 1 position. */
+
+#define OSC_PLLDIV_bm  0x20  /* Divide by 2 bit mask. */
+#define OSC_PLLDIV_bp  5  /* Divide by 2 bit position. */
+
+#define OSC_PLLFAC_gm  0x1F  /* Multiplication Factor group mask. */
+#define OSC_PLLFAC_gp  0  /* Multiplication Factor group position. */
+#define OSC_PLLFAC0_bm  (1<<0)  /* Multiplication Factor bit 0 mask. */
+#define OSC_PLLFAC0_bp  0  /* Multiplication Factor bit 0 position. */
+#define OSC_PLLFAC1_bm  (1<<1)  /* Multiplication Factor bit 1 mask. */
+#define OSC_PLLFAC1_bp  1  /* Multiplication Factor bit 1 position. */
+#define OSC_PLLFAC2_bm  (1<<2)  /* Multiplication Factor bit 2 mask. */
+#define OSC_PLLFAC2_bp  2  /* Multiplication Factor bit 2 position. */
+#define OSC_PLLFAC3_bm  (1<<3)  /* Multiplication Factor bit 3 mask. */
+#define OSC_PLLFAC3_bp  3  /* Multiplication Factor bit 3 position. */
+#define OSC_PLLFAC4_bm  (1<<4)  /* Multiplication Factor bit 4 mask. */
+#define OSC_PLLFAC4_bp  4  /* Multiplication Factor bit 4 position. */
+
+/* OSC.DFLLCTRL  bit masks and bit positions */
+#define OSC_RC32MCREF_gm  0x06  /* 32 MHz DFLL Calibration Reference group mask. */
+#define OSC_RC32MCREF_gp  1  /* 32 MHz DFLL Calibration Reference group position. */
+#define OSC_RC32MCREF0_bm  (1<<1)  /* 32 MHz DFLL Calibration Reference bit 0 mask. */
+#define OSC_RC32MCREF0_bp  1  /* 32 MHz DFLL Calibration Reference bit 0 position. */
+#define OSC_RC32MCREF1_bm  (1<<2)  /* 32 MHz DFLL Calibration Reference bit 1 mask. */
+#define OSC_RC32MCREF1_bp  2  /* 32 MHz DFLL Calibration Reference bit 1 position. */
+
+#define OSC_RC2MCREF_bm  0x01  /* 2 MHz DFLL Calibration Reference bit mask. */
+#define OSC_RC2MCREF_bp  0  /* 2 MHz DFLL Calibration Reference bit position. */
+
+/* DFLL - DFLL */
+/* DFLL.CTRL  bit masks and bit positions */
+#define DFLL_ENABLE_bm  0x01  /* DFLL Enable bit mask. */
+#define DFLL_ENABLE_bp  0  /* DFLL Enable bit position. */
+
+/* DFLL.CALA  bit masks and bit positions */
+#define DFLL_CALL_gm  0x7F  /* DFLL Calibration Value A group mask. */
+#define DFLL_CALL_gp  0  /* DFLL Calibration Value A group position. */
+#define DFLL_CALL0_bm  (1<<0)  /* DFLL Calibration Value A bit 0 mask. */
+#define DFLL_CALL0_bp  0  /* DFLL Calibration Value A bit 0 position. */
+#define DFLL_CALL1_bm  (1<<1)  /* DFLL Calibration Value A bit 1 mask. */
+#define DFLL_CALL1_bp  1  /* DFLL Calibration Value A bit 1 position. */
+#define DFLL_CALL2_bm  (1<<2)  /* DFLL Calibration Value A bit 2 mask. */
+#define DFLL_CALL2_bp  2  /* DFLL Calibration Value A bit 2 position. */
+#define DFLL_CALL3_bm  (1<<3)  /* DFLL Calibration Value A bit 3 mask. */
+#define DFLL_CALL3_bp  3  /* DFLL Calibration Value A bit 3 position. */
+#define DFLL_CALL4_bm  (1<<4)  /* DFLL Calibration Value A bit 4 mask. */
+#define DFLL_CALL4_bp  4  /* DFLL Calibration Value A bit 4 position. */
+#define DFLL_CALL5_bm  (1<<5)  /* DFLL Calibration Value A bit 5 mask. */
+#define DFLL_CALL5_bp  5  /* DFLL Calibration Value A bit 5 position. */
+#define DFLL_CALL6_bm  (1<<6)  /* DFLL Calibration Value A bit 6 mask. */
+#define DFLL_CALL6_bp  6  /* DFLL Calibration Value A bit 6 position. */
+
+/* DFLL.CALB  bit masks and bit positions */
+#define DFLL_CALH_gm  0x3F  /* DFLL Calibration Value B group mask. */
+#define DFLL_CALH_gp  0  /* DFLL Calibration Value B group position. */
+#define DFLL_CALH0_bm  (1<<0)  /* DFLL Calibration Value B bit 0 mask. */
+#define DFLL_CALH0_bp  0  /* DFLL Calibration Value B bit 0 position. */
+#define DFLL_CALH1_bm  (1<<1)  /* DFLL Calibration Value B bit 1 mask. */
+#define DFLL_CALH1_bp  1  /* DFLL Calibration Value B bit 1 position. */
+#define DFLL_CALH2_bm  (1<<2)  /* DFLL Calibration Value B bit 2 mask. */
+#define DFLL_CALH2_bp  2  /* DFLL Calibration Value B bit 2 position. */
+#define DFLL_CALH3_bm  (1<<3)  /* DFLL Calibration Value B bit 3 mask. */
+#define DFLL_CALH3_bp  3  /* DFLL Calibration Value B bit 3 position. */
+#define DFLL_CALH4_bm  (1<<4)  /* DFLL Calibration Value B bit 4 mask. */
+#define DFLL_CALH4_bp  4  /* DFLL Calibration Value B bit 4 position. */
+#define DFLL_CALH5_bm  (1<<5)  /* DFLL Calibration Value B bit 5 mask. */
+#define DFLL_CALH5_bp  5  /* DFLL Calibration Value B bit 5 position. */
+
+/* RST - Reset */
+/* RST.STATUS  bit masks and bit positions */
+#define RST_SDRF_bm  0x40  /* Spike Detection Reset Flag bit mask. */
+#define RST_SDRF_bp  6  /* Spike Detection Reset Flag bit position. */
+
+#define RST_SRF_bm  0x20  /* Software Reset Flag b

@@ -1,130 +1,91 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+HMUX_TCF1_CCB_gc = (0xFD<<0),  /* Timer/Counter F1 Compare or Capture B */
+} EVSYS_CHMUX_t;
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="96"
-   height="96"
-   id="svg7186"
-   sodipodi:version="0.32"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="go-previous.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   version="1.1">
-  <defs
-     id="defs7188">
-    <linearGradient
-       id="linearGradient3162">
-      <stop
-         style="stop-color:#badb8d;stop-opacity:1;"
-         offset="0"
-         id="stop3164" />
-      <stop
-         style="stop-color:#709937;stop-opacity:1;"
-         offset="1"
-         id="stop3166" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient5113-7">
-      <stop
-         style="stop-color:white;stop-opacity:1;"
-         offset="0"
-         id="stop5115-9" />
-      <stop
-         style="stop-color:white;stop-opacity:0;"
-         offset="1"
-         id="stop5117-7" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5113-7"
-       id="linearGradient3015"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-2.242915,0,0,2.2325582,106.95296,-58.200028)"
-       x1="32.871559"
-       y1="11.133183"
-       x2="16.378149"
-       y2="40.718758" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3162"
-       id="linearGradient3018"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2.2325582,0,0,2.2325582,-0.30817982,-58.217614)"
-       x1="16.375017"
-       y1="15.21466"
-       x2="16.375017"
-       y2="36.714661" />
-  </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="5.2083333"
-     inkscape:cx="48"
-     inkscape:cy="48"
-     inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:grid-bbox="true"
-     inkscape:document-units="px"
-     inkscape:window-width="1002"
-     inkscape:window-height="714"
-     inkscape:window-x="90"
-     inkscape:window-y="19"
-     inkscape:window-maximized="0"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0">
-    <inkscape:grid
-       type="xygrid"
-       id="grid3011"
-       empspacing="4"
-       visible="true"
-       enabled="true"
-       snapvisiblegridlinesonly="true"
-       originx="0px"
-       originy="0px" />
-  </sodipodi:namedview>
-  <metadata
-     id="metadata7191">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     id="layer1"
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     transform="translate(-0.25,48.25)">
-    <path
-       inkscape:connector-curvature="0"
-       style="fill:url(#linearGradient3018);fill-opacity:1;fill-rule:nonzero;stroke:#51751e;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
-       d="m 60.25,-30.25 -48,30 48,30 0,-16 24,0 0,-28 -24,0 z"
-       id="path4348"
-       sodipodi:nodetypes="cccccccc" />
-    <path
-       inkscape:connector-curvature="0"
-       style="opacity:0.35400008;fill:none;stroke:url(#linearGradient3015);stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
-       d="m 59.25,-28.25 -45,28 45,28 0,-15 24,0 0,-26 -24,0 z"
-       id="path4360"
-       sodipodi:nodetypes="cccccccc" />
-  </g>
-</svg>
+
+/*
+--------------------------------------------------------------------------
+NVM - Non Volatile Memory Controller
+--------------------------------------------------------------------------
+*/
+
+/* Non-volatile Memory Controller */
+typedef struct NVM_struct
+{
+    register8_t ADDR0;  /* Address Register 0 */
+    register8_t ADDR1;  /* Address Register 1 */
+    register8_t ADDR2;  /* Address Register 2 */
+    register8_t reserved_0x03;
+    register8_t DATA0;  /* Data Register 0 */
+    register8_t DATA1;  /* Data Register 1 */
+    register8_t DATA2;  /* Data Register 2 */
+    register8_t reserved_0x07;
+    register8_t reserved_0x08;
+    register8_t reserved_0x09;
+    register8_t CMD;  /* Command */
+    register8_t CTRLA;  /* Control Register A */
+    register8_t CTRLB;  /* Control Register B */
+    register8_t INTCTRL;  /* Interrupt Control */
+    register8_t reserved_0x0E;
+    register8_t STATUS;  /* Status */
+    register8_t LOCKBITS;  /* Lock Bits */
+} NVM_t;
+
+/* NVM Command */
+typedef enum NVM_CMD_enum
+{
+    NVM_CMD_NO_OPERATION_gc = (0x00<<0),  /* Noop/Ordinary LPM */
+    NVM_CMD_READ_USER_SIG_ROW_gc = (0x01<<0),  /* Read user signature row */
+    NVM_CMD_READ_CALIB_ROW_gc = (0x02<<0),  /* Read calibration row */
+    NVM_CMD_READ_EEPROM_gc = (0x06<<0),  /* Read EEPROM */
+    NVM_CMD_READ_FUSES_gc = (0x07<<0),  /* Read fuse byte */
+    NVM_CMD_WRITE_LOCK_BITS_gc = (0x08<<0),  /* Write lock bits */
+    NVM_CMD_ERASE_USER_SIG_ROW_gc = (0x18<<0),  /* Erase user signature row */
+    NVM_CMD_WRITE_USER_SIG_ROW_gc = (0x1A<<0),  /* Write user signature row */
+    NVM_CMD_ERASE_APP_gc = (0x20<<0),  /* Erase Application Section */
+    NVM_CMD_ERASE_APP_PAGE_gc = (0x22<<0),  /* Erase Application Section page */
+    NVM_CMD_LOAD_FLASH_BUFFER_gc = (0x23<<0),  /* Load Flash page buffer */
+    NVM_CMD_WRITE_APP_PAGE_gc = (0x24<<0),  /* Write Application Section page */
+    NVM_CMD_ERASE_WRITE_APP_PAGE_gc = (0x25<<0),  /* Erase-and-write Application Section page */
+    NVM_CMD_ERASE_FLASH_BUFFER_gc = (0x26<<0),  /* Erase/flush Flash page buffer */
+    NVM_CMD_ERASE_BOOT_PAGE_gc = (0x2A<<0),  /* Erase Boot Section page */
+    NVM_CMD_ERASE_FLASH_PAGE_gc = (0x2B<<0),  /* Erase Flash Page */
+    NVM_CMD_WRITE_BOOT_PAGE_gc = (0x2C<<0),  /* Write Boot Section page */
+    NVM_CMD_ERASE_WRITE_BOOT_PAGE_gc = (0x2D<<0),  /* Erase-and-write Boot Section page */
+    NVM_CMD_WRITE_FLASH_PAGE_gc = (0x2E<<0),  /* Write Flash Page */
+    NVM_CMD_ERASE_WRITE_FLASH_PAGE_gc = (0x2F<<0),  /* Erase-and-write Flash Page */
+    NVM_CMD_ERASE_EEPROM_gc = (0x30<<0),  /* Erase EEPROM */
+    NVM_CMD_ERASE_EEPROM_PAGE_gc = (0x32<<0),  /* Erase EEPROM page */
+    NVM_CMD_LOAD_EEPROM_BUFFER_gc = (0x33<<0),  /* Load EEPROM page buffer */
+    NVM_CMD_WRITE_EEPROM_PAGE_gc = (0x34<<0),  /* Write EEPROM page */
+    NVM_CMD_ERASE_WRITE_EEPROM_PAGE_gc = (0x35<<0),  /* Erase-and-write EEPROM page */
+    NVM_CMD_ERASE_EEPROM_BUFFER_gc = (0x36<<0),  /* Erase/flush EEPROM page buffer */
+    NVM_CMD_APP_CRC_gc = (0x38<<0),  /* Application section CRC */
+    NVM_CMD_BOOT_CRC_gc = (0x39<<0),  /*  Boot Section CRC */
+    NVM_CMD_FLASH_RANGE_CRC_gc = (0x3A<<0),  /* Flash Range CRC */
+    NVM_CMD_CHIP_ERASE_gc = (0x40<<0),  /* Erase Chip */
+    NVM_CMD_READ_NVM_gc = (0x43<<0),  /* Read NVM */
+    NVM_CMD_WRITE_FUSE_gc = (0x4C<<0),  /* Write Fuse byte */
+    NVM_CMD_ERASE_BOOT_gc = (0x68<<0),  /* Erase Boot Section */
+    NVM_CMD_FLASH_CRC_gc = (0x78<<0),  /* Flash CRC */
+} NVM_CMD_t;
+
+/* SPM ready interrupt level */
+typedef enum NVM_SPMLVL_enum
+{
+    NVM_SPMLVL_OFF_gc = (0x00<<2),  /* Interrupt disabled */
+    NVM_SPMLVL_LO_gc = (0x01<<2),  /* Low level */
+    NVM_SPMLVL_MED_gc = (0x02<<2),  /* Medium level */
+    NVM_SPMLVL_HI_gc = (0x03<<2),  /* High level */
+} NVM_SPMLVL_t;
+
+/* EEPROM ready interrupt level */
+typedef enum NVM_EELVL_enum
+{
+    NVM_EELVL_OFF_gc = (0x00<<0),  /* Interrupt disabled */
+    NVM_EELVL_LO_gc = (0x01<<0),  /* Low level */
+    NVM_EELVL_MED_gc = (0x02<<0),  /* Medium level */
+    NVM_EELVL_HI_gc = (0x03<<0),  /* High level */
+} NVM_EELVL_t;
+
+/* Boot lock bits - boot setcion */
+typedef en

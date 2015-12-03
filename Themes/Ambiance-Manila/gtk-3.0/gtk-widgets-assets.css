@@ -1,588 +1,261 @@
-/***************
- * Resize grip *
- ***************/
-
-.grip {
-    background-color: transparent;
-    /*background-image: url("assets/resize-grip.svg");*/
-}
-
-/*************************
- * Check and Radio items *
- *************************/
-
-/* draw regular check and radio items using our SVG assets */
-.radio,
-.check {
-    /*background-clip: border-box;*/
-}
-
-.check {
-    background-image: url("assets/check-unselected.png");
-}
-
-.check:hover {
-    background-image: url("assets/check-unselected-hover.png");
-}
-
-.check row,
-.check row:selected,
-.check row:selected:focus {
-    background-image: url("assets/check-unselected-alt.png");
-}
-
-.check row:hover,
-.check row:selected:hover,
-.check row:selected:focus:hover {
-    background-image: url("assets/check-unselected-hover-alt.png");
-}
-
-.check:insensitive {
-    background-image: url("assets/check-unselected-disabled.png");
-}
-
-.check row:insensitive {
-    background-color: transparent;
-}
-
-.check row:insensitive,
-.check row:selected:insensitive,
-.check row:selected:focus:insensitive {
-    background-color: transparent;
-    background-image: url("assets/check-unselected-disabled-alt.png");
-}
-
-.check:backdrop {
-    background-image: url("assets/backdrop-check-unselected.png");
-}
-
-.check:hover:backdrop {
-    background-image: url("assets/backdrop-check-unselected-hover.png");
-}
-
-.check row:backdrop,
-.check row:selected:backdrop {
-    background-image: url("assets/backdrop-check-unselected-alt.png");
-}
-
-.check row:hover:backdrop,
-.check row:selected:hover:backdrop {
-    background-image: url("assets/backdrop-check-unselected-hover-alt.png");
-}
-
-.check:insensitive:backdrop {
-    background-image: url("assets/backdrop-check-unselected-disabled.png");
-}
-
-.check row:selected:insensitive:backdrop {
-    background-image: url("assets/backdrop-check-unselected-disabled-alt.png");
-}
-
-.check:active {
-    background-image: url("assets/check-selected.png");
-}
-
-.check:active:hover {
-    background-image: url("assets/check-selected-hover.png");
-}
-
-.check row:active,
-.check row:selected:active,
-.check row:selected:focus:active {
-    background-image: url("assets/check-selected-alt.png");
-}
-
-.check row:active:hover,
-.check row:selected:active:hover,
-.check row:selected:active:focus:hover {
-    background-image: url("assets/check-selected-hover-alt.png");
-}
-
-.check:active:insensitive {
-    background-image: url("assets/check-selected-disabled.png");
-}
-
-.check row:active:insensitive,
-.check row:selected:active:insensitive,
-.check row:selected:focus:active:insensitive {
-    background-image: url("assets/check-selected-disabled-alt.png");
-}
-
-.check:active:backdrop {
-    background-image: url("assets/backdrop-check-selected.png");
-}
-
-.check:active:backdrop {
-    background-image: url("assets/backdrop-check-selected-hover.png");
-}
-
-.check row:active:backdrop,
-.check row:selected:active:backdrop {
-    background-image: url("assets/backdrop-check-selected-alt.png");
-}
-
-.check row:active:hover:backdrop,
-.check row:selected:active:hover:backdrop {
-    background-image: url("assets/backdrop-check-selected-hover-alt.png");
-}
-
-.check:active:insensitive:backdrop {
-    background-image: url("assets/backdrop-check-selected-disabled.png");
-}
-
-.check row:selected:active:insensitive:backdrop {
-    background-image: url("assets/backdrop-check-selected-disabled-alt.png");
-}
-
-.check:inconsistent {
-    background-image: url("assets/check-mixed.png");
-}
-
-.check:inconsistent:hover {
-    background-image: url("assets/check-mixed-hover.png");
-}
-
-.check row:inconsistent,
-.check row:selected:inconsistent,
-.check row:selected:focus:inconsistent {
-    background-image: url("assets/check-mixed-alt.png");
-}
-
-.check row:inconsistent:hover,
-.check row:selected:inconsistent:hover,
-.check row:selected:focus:inconsistent:hover {
-    background-image: url("assets/check-mixed-hover-alt.png");
-}
-
-.check:inconsistent:insensitive {
-    background-image: url("assets/check-mixed-disabled.png");
-}
-
-.check row:inconsistent:insensitive,
-.check row:selected:inconsistent:insensitive,
-.check row:selected:focus:inconsistent:insensitive {
-    background-image: url("assets/check-mixed-disabled-alt.png");
-}
-
-.check:inconsistent:backdrop {
-    background-image: url("assets/backdrop-check-mixed.png");
-}
-
-.check:inconsistent:hover:backdrop {
-    background-image: url("assets/backdrop-check-mixed-hover.png");
-}
-
-.check row:inconsistent:backdrop,
-.check row:selected:inconsistent:backdrop {
-    background-image: url("assets/backdrop-check-mixed-alt.png");
-}
-
-.check row:inconsistent:hover:backdrop,
-.check row:selected:inconsistent:hover:backdrop {
-    background-image: url("assets/backdrop-check-mixed-hover-alt.png");
-}
-
-.check:inconsistent:insensitive:backdrop {
-    background-image: url("assets/backdrop-check-mixed-disabled.png");
-}
-
-.check row:selected:inconsistent:insensitive:backdrop {
-    background-image: url("assets/backdrop-check-mixed-disabled-alt.png");
-}
-
-.radio {
-    background-image: url("assets/radio-unselected.png");
-}
-
-.radio:hover {
-    background-image: url("assets/radio-unselected-hover.png");
-}
-
-.radio row,
-.radio row:selected,
-.radio row:selected:focus {
-    background-image: url("assets/radio-unselected-alt.png");
-}
-
-.radio row:hover,
-.radio row:selected:hover,
-.radio row:selected:focus:hover {
-    background-image: url("assets/radio-unselected-hover-alt.png");
-}
-
-.radio:insensitive {
-    background-image: url("assets/radio-unselected-disabled.png");
-}
-
-.radio row:insensitive {
-    background-color: transparent;
-}
-
-.radio row:insensitive,
-.radio row:selected:insensitive,
-.radio row:selected:focus:insensitive {
-    background-image: url("assets/radio-unselected-disabled-alt.png");
-}
-
-.radio:backdrop {
-    background-image: url("assets/backdrop-radio-unselected.png");
-}
-
-.radio:hover:backdrop {
-    background-image: url("assets/backdrop-radio-unselected-hover.png");
-}
-
-.radio row:backdrop,
-.radio row:selected:backdrop {
-    background-image: url("assets/backdrop-radio-unselected-alt.png");
-}
-
-.radio row:hover:backdrop,
-.radio row:selected:hover:backdrop {
-    background-image: url("assets/backdrop-radio-unselected-hover-alt.png");
-}
-
-.radio:insensitive:backdrop {
-    background-image: url("assets/backdrop-radio-unselected-disabled.png");
-}
-
-.radio row:selected:insensitive:backdrop {
-    background-image: url("assets/backdrop-radio-unselected-disabled-alt.png");
-}
-
-.radio:active {
-    background-image: url("assets/radio-selected.png");
-}
-
-.radio:active:hover {
-    background-image: url("assets/radio-selected-hover.png");
-}
-
-.radio row:active,
-.radio row:selected:active,
-.radio row:selected:focus:active {
-    background-image: url("assets/radio-selected-alt.png");
-}
-
-.radio row:active:hover,
-.radio row:selected:active:hover,
-.radio row:selected:focus:active:hover {
-    background-image: url("assets/radio-selected-hover-alt.png");
-}
-
-.radio:active:insensitive {
-    background-image: url("assets/radio-selected-disabled.png");
-}
-
-.radio row:insensitive,
-.radio row:selected:active:insensitive,
-.radio row:selected:focus:active:insensitive {
-    background-image: url("assets/radio-selected-disabled-alt.png");
-}
-
-.radio:active:backdrop {
-    background-image: url("assets/backdrop-radio-selected.png");
-}
-
-.radio:active:hover:backdrop {
-    background-image: url("assets/backdrop-radio-selected-hover.png");
-}
-
-.radio row:active:backdrop,
-.radio row:selected:active:backdrop {
-    background-image: url("assets/backdrop-radio-selected-alt.png");
-}
-
-.radio row:active:hover:backdrop,
-.radio row:selected:active:hover:backdrop {
-    background-image: url("assets/backdrop-radio-selected-hover-alt.png");
-}
-
-.radio:active:insensitive:backdrop {
-    background-image: url("assets/backdrop-radio-selected-disabled.png");
-}
-
-.radio row:selected:active:insensitive:backdrop {
-    background-image: url("assets/backdrop-radio-selected-disabled-alt.png");
-}
-
-.radio:inconsistent {
-    background-image: url("assets/radio-mixed.png");
-}
-
-.radio:inconsistent:hover {
-    background-image: url("assets/radio-mixed-hover.png");
-}
-
-.radio row:inconsistent,
-.radio row:selected:inconsistent,
-.radio row:selected:focus:inconsistent {
-    background-image: url("assets/radio-mixed-alt.png");
-}
-
-.radio row:inconsistent:hover,
-.radio row:selected:inconsistent:hover,
-.radio row:selected:focus:inconsistent:hover {
-    background-image: url("assets/radio-mixed-hover-alt.png");
-}
-
-.radio:inconsistent:insensitive {
-    background-image: url("assets/radio-mixed-disabled.png");
-}
-
-.radio row:inconsistent:insensitive,
-.radio row:selected:inconsistent:insensitive,
-.radio row:selected:focus:inconsistent:insensitive {
-    background-image: url("assets/radio-mixed-disabled-alt.png");
-}
-
-.radio:inconsistent:backdrop {
-    background-image: url("assets/backdrop-radio-mixed.png");
-}
-
-.radio:inconsistent:hover:backdrop {
-    background-image: url("assets/backdrop-radio-mixed-hover.png");
-}
-
-.radio row:inconsistent:backdrop,
-.radio row:selected:inconsistent:backdrop {
-    background-image: url("assets/backdrop-radio-mixed-alt.png");
-}
-
-.radio row:inconsistent:hover:backdrop,
-.radio row:selected:inconsistent:hover:backdrop {
-    background-image: url("assets/backdrop-radio-mixed-hover-alt.png");
-}
-
-.radio:inconsistent:insensitive:backdrop {
-    background-image: url("assets/backdrop-radio-mixed-disabled.png");
-}
-
-.radio row:selected:inconsistent:insensitive:backdrop {
-    background-image: url("assets/backdrop-radio-mixed-disabled-alt.png");
-}
-
-/*.sidebar .radio:active,
-.sidebar .radio:active:focus,
-.sidebar .radio:active:hover {
-    background-image: url("assets/sidebar-radio-selected.svg");
-}
-
-.sidebar .radio:hover {
-    background-image: url("assets/sidebar-radio-prelight.svg");
-}
-
-.sidebar .radio:active:selected,
-.sidebar .radio:active:selected:focus {
-    background-image: url("assets/sidebar-radio-selected.svg");
-}
-
-.sidebar .radio:selected:hover,
-.sidebar .radio:selected:focus {
-    background-image: url("assets/sidebar-radio-selected-prelight.svg");
-}*/
-
-.primary-toolbar .menu .check,
-.menubar.toolbar .menu .check,
-.header-bar .menu .check,
-.menu .check {
-    background-image: url("assets/check-menuitem-unselected.png");
-}
-
-.primary-toolbar .menu .radio,
-.menubar.toolbar .menu .radio,
-.header-bar .menu .radio,
-.menu .radio {
-    background-image: url("assets/check-menuitem-unselected.png");
-}
-
-.primary-toolbar .menu .check:active,
-.menubar.toolbar .menu .check:active,
-.header-bar .menu .check:active,
-.toolbar .menu .check:active:hover,
-.menu .check:active,
-.menu .check:active:hover {
-    background-image: url("assets/check-menuitem.png");
-}
-
-.primary-toolbar .menu .check:active:insensitive,
-.menubar.toolbar .menu .check:active:insensitive,
-.header-bar .menu .check:active:insensitive,
-.toolbar .menu .check:active:hover:insensitive,
-.menu .check:active:insensitive,
-.menu .check:active:hover:insensitive {
-    background-image: url("assets/check-menuitem-insensitive.png");
-}
-
-.primary-toolbar .menu .radio:active,
-.menubar.toolbar .menu .radio:active,
-.header-bar .menu .radio:active,
-.toolbar .menu .radio:active:hover,
-.menu .radio:active,
-.menu .radio:active:hover {
-    background-image: url("assets/radio-menuitem.png");
-}
-
-.primary-toolbar .menu .radio:active:insensitive,
-.menubar.toolbar .menu .radio:active:insensitive,
-.header-bar .menu .radio:active:insensitive,
-.toolbar .menu .radio:active:hover:insensitive,
-.menu .radio:active:insensitive,
-.menu .radio:active:hover:insensitive {
-    background-image: url("assets/radio-menuitem-insensitive.png");
-}
-
-.toolbar .menu .check {
-    background-image: url("assets/check-menuitem-unselected.png");
-}
-
-.toolbar .menu .radio {
-    background-image: url("assets/check-menuitem-unselected.png");
-}
-
-.toolbar .menu .check:active {
-    background-image: url("assets/check-menuitem-dark.png");
-}
-
-.toolbar .menu .check:active:insensitive {
-    background-image: url("assets/check-menuitem-insensitive-dark.png");
-}
-
-.toolbar .menu .radio:active {
-    background-image: url("assets/radio-menuitem-dark.png");
-}
-
-.toolbar .menu .radio:active:insensitive {
-    background-image: url("assets/radio-menuitem-insensitive-dark.png");
-}
-
-/*********************
- * GtkScale's slider *
- *********************/
-.scale.slider,
-.scale.slider.horizontal {
-    background-image: url("assets/slider-horizontal.png");
-}
-
-.scale.slider:backdrop,
-.scale.slider.horizontal:backdrop {
-    /*background-image: url("assets/slider-horizontal-disabled.png");*/
-}
-
-.scale.slider:hover,
-.scale.slider.horizontal:hover {
-    background-image: url("assets/slider-horizontal-hover.png");
-}
-
-.scale.slider:focused,
-.scale.slider.horizontal:focused {
-    background-image: url("assets/slider-horizontal-focused.png");
-}
-
-.scale.slider:hover:focused,
-.scale.slider.horizontal:hover:focused {
-    background-image: url("assets/slider-horizontal-focused-hover.png");
-}
-
-.scale.slider:insensitive,
-.scale.slider.horizontal:insensitive {
-    background-image: url("assets/slider-horizontal-disabled.png");
-}
-
-.scale.slider:insensitive:backdrop,
-.scale.slider.horizontal:insensitive:backdrop {
-    /*background-image: url("assets/slider-horizontal-backdrop-disabled.png");*/
-}
-
-.scale.slider.vertical {
-    background-image: url("assets/slider-vertical.png");
-}
-
-.scale.slider.vertical:backdrop {
-    /*background-image: url("assets/slider-vertical-backdrop.png");*/
-}
-
-.scale.slider.vertical:hover {
-    background-image: url("assets/slider-vertical-hover.png");
-}
-
-.scale.slider.vertical:focused {
-    background-image: url("assets/slider-vertical-focused.png");
-}
-
-.scale.slider.vertical:hover:focused {
-    background-image: url("assets/slider-vertical-focused-hover.png");
-}
-
-.scale.slider.vertical:insensitive {
-    background-image: url("assets/slider-vertical-disabled.png");
-}
-
-.scale.slider.vertical:insensitive:backdrop {
-    /*background-image: url("assets/slider-vertical-backdrop-disabled.png");*/
-}
-
-/*.scale.scale-has-marks-above.slider.horizontal {
-    background-image: url("assets/slider-up.png");
-}
-
-.scale.scale-has-marks-above.slider.horizontal:insensitive {
-    background-image: url("assets/slider-up-disabled.png");
-}
-
-.scale.scale-has-marks-above.slider.horizontal:backdrop {
-    background-image: url("assets/slider-up-backdrop.png");
-}
-
-.scale.scale-has-marks-above.slider.horizontal:backdrop:insensitive {
-    background-image: url("assets/slider-up-backdrop-disabled.png");
-}
-
-.scale.scale-has-marks-above.slider.vertical {
-    background-image: url("assets/slider-left.png");
-}
-
-.scale.scale-has-marks-above.slider.vertical:insensitive {
-    background-image: url("assets/slider-left-disabled.png");
-}
-
-.scale.scale-has-marks-above.slider.vertical:backdrop {
-    background-image: url("assets/slider-left-backdrop.png");
-}
-
-.scale.scale-has-marks-above.slider.vertical:backdrop:insensitive {
-    background-image: url("assets/slider-left-backdrop-disabled.png");
-}
-
-.scale.scale-has-marks-below.slider.horizontal {
-    background-image: url("assets/slider-down.png");
-}
-
-.scale.scale-has-marks-below.slider.horizontal:insensitive {
-    background-image: url("assets/slider-down-disabled.png");
-}
-
-.scale.scale-has-marks-below.slider.horizontal:backdrop {
-    background-image: url("assets/slider-down-backdrop.png");
-}
-
-.scale.scale-has-marks-below.slider.horizontal:backdrop:insensitive {
-    background-image: url("assets/slider-down-backdrop-disabled.png");
-}
-
-.scale.scale-has-marks-below.slider.vertical {
-    background-image: url("assets/slider-right.png");
-}
-
-.scale.scale-has-marks-below.slider.vertical:insensitive {
-    background-image: url("assets/slider-right-disabled.png");
-}
-
-.scale.scale-has-marks-below.slider.vertical:backdrop {
-    background-image: url("assets/slider-right-backdrop.png");
-}
-
-.scale.scale-has-marks-below.slider.vertical:backdrop:insensitive {
-    background-image: url("assets/slider-right-backdrop-disabled.png");
-}*/
-
+masks and bit positions */
+#define PORTCFG_VP3MAP_gm  0xF0  /* Virtual Port 3 Mapping group mask. */
+#define PORTCFG_VP3MAP_gp  4  /* Virtual Port 3 Mapping group position. */
+#define PORTCFG_VP3MAP0_bm  (1<<4)  /* Virtual Port 3 Mapping bit 0 mask. */
+#define PORTCFG_VP3MAP0_bp  4  /* Virtual Port 3 Mapping bit 0 position. */
+#define PORTCFG_VP3MAP1_bm  (1<<5)  /* Virtual Port 3 Mapping bit 1 mask. */
+#define PORTCFG_VP3MAP1_bp  5  /* Virtual Port 3 Mapping bit 1 position. */
+#define PORTCFG_VP3MAP2_bm  (1<<6)  /* Virtual Port 3 Mapping bit 2 mask. */
+#define PORTCFG_VP3MAP2_bp  6  /* Virtual Port 3 Mapping bit 2 position. */
+#define PORTCFG_VP3MAP3_bm  (1<<7)  /* Virtual Port 3 Mapping bit 3 mask. */
+#define PORTCFG_VP3MAP3_bp  7  /* Virtual Port 3 Mapping bit 3 position. */
+
+#define PORTCFG_VP2MAP_gm  0x0F  /* Virtual Port 2 Mapping group mask. */
+#define PORTCFG_VP2MAP_gp  0  /* Virtual Port 2 Mapping group position. */
+#define PORTCFG_VP2MAP0_bm  (1<<0)  /* Virtual Port 2 Mapping bit 0 mask. */
+#define PORTCFG_VP2MAP0_bp  0  /* Virtual Port 2 Mapping bit 0 position. */
+#define PORTCFG_VP2MAP1_bm  (1<<1)  /* Virtual Port 2 Mapping bit 1 mask. */
+#define PORTCFG_VP2MAP1_bp  1  /* Virtual Port 2 Mapping bit 1 position. */
+#define PORTCFG_VP2MAP2_bm  (1<<2)  /* Virtual Port 2 Mapping bit 2 mask. */
+#define PORTCFG_VP2MAP2_bp  2  /* Virtual Port 2 Mapping bit 2 position. */
+#define PORTCFG_VP2MAP3_bm  (1<<3)  /* Virtual Port 2 Mapping bit 3 mask. */
+#define PORTCFG_VP2MAP3_bp  3  /* Virtual Port 2 Mapping bit 3 position. */
+
+/* PORTCFG.CLKEVOUT  bit masks and bit positions */
+#define PORTCFG_CLKOUT_gm  0x03  /* Peripheral Clock Output Port group mask. */
+#define PORTCFG_CLKOUT_gp  0  /* Peripheral Clock Output Port group position. */
+#define PORTCFG_CLKOUT0_bm  (1<<0)  /* Peripheral Clock Output Port bit 0 mask. */
+#define PORTCFG_CLKOUT0_bp  0  /* Peripheral Clock Output Port bit 0 position. */
+#define PORTCFG_CLKOUT1_bm  (1<<1)  /* Peripheral Clock Output Port bit 1 mask. */
+#define PORTCFG_CLKOUT1_bp  1  /* Peripheral Clock Output Port bit 1 position. */
+
+#define PORTCFG_CLKOUTSEL_gm  0x0C  /* Peripheral Clock Output Select group mask. */
+#define PORTCFG_CLKOUTSEL_gp  2  /* Peripheral Clock Output Select group position. */
+#define PORTCFG_CLKOUTSEL0_bm  (1<<2)  /* Peripheral Clock Output Select bit 0 mask. */
+#define PORTCFG_CLKOUTSEL0_bp  2  /* Peripheral Clock Output Select bit 0 position. */
+#define PORTCFG_CLKOUTSEL1_bm  (1<<3)  /* Peripheral Clock Output Select bit 1 mask. */
+#define PORTCFG_CLKOUTSEL1_bp  3  /* Peripheral Clock Output Select bit 1 position. */
+
+#define PORTCFG_EVOUT_gm  0x30  /* Event Output Port group mask. */
+#define PORTCFG_EVOUT_gp  4  /* Event Output Port group position. */
+#define PORTCFG_EVOUT0_bm  (1<<4)  /* Event Output Port bit 0 mask. */
+#define PORTCFG_EVOUT0_bp  4  /* Event Output Port bit 0 position. */
+#define PORTCFG_EVOUT1_bm  (1<<5)  /* Event Output Port bit 1 mask. */
+#define PORTCFG_EVOUT1_bp  5  /* Event Output Port bit 1 position. */
+
+#define PORTCFG_RTCOUT_bm  0x40  /* RTC Clock Output bit mask. */
+#define PORTCFG_RTCOUT_bp  6  /* RTC Clock Output bit position. */
+
+#define PORTCFG_CLKEVPIN_bm  0x80  /* Peripheral Clock and Event Output pin Select bit mask. */
+#define PORTCFG_CLKEVPIN_bp  7  /* Peripheral Clock and Event Output pin Select bit position. */
+
+/* PORTCFG.EBIOUT  bit masks and bit positions */
+#define PORTCFG_EBICSOUT_gm  0x03  /* EBI Chip Select Output group mask. */
+#define PORTCFG_EBICSOUT_gp  0  /* EBI Chip Select Output group position. */
+#define PORTCFG_EBICSOUT0_bm  (1<<0)  /* EBI Chip Select Output bit 0 mask. */
+#define PORTCFG_EBICSOUT0_bp  0  /* EBI Chip Select Output bit 0 position. */
+#define PORTCFG_EBICSOUT1_bm  (1<<1)  /* EBI Chip Select Output bit 1 mask. */
+#define PORTCFG_EBICSOUT1_bp  1  /* EBI Chip Select Output bit 1 position. */
+
+#define PORTCFG_EBIADROUT_gm  0x0C  /* EBI Address Output group mask. */
+#define PORTCFG_EBIADROUT_gp  2  /* EBI Address Output group position. */
+#define PORTCFG_EBIADROUT0_bm  (1<<2)  /* EBI Address Output bit 0 mask. */
+#define PORTCFG_EBIADROUT0_bp  2  /* EBI Address Output bit 0 position. */
+#define PORTCFG_EBIADROUT1_bm  (1<<3)  /* EBI Address Output bit 1 mask. */
+#define PORTCFG_EBIADROUT1_bp  3  /* EBI Address Output bit 1 position. */
+
+/* PORTCFG.EVOUTSEL  bit masks and bit positions */
+#define PORTCFG_EVOUTSEL_gm  0x07  /* Event Output Select group mask. */
+#define PORTCFG_EVOUTSEL_gp  0  /* Event Output Select group position. */
+#define PORTCFG_EVOUTSEL0_bm  (1<<0)  /* Event Output Select bit 0 mask. */
+#define PORTCFG_EVOUTSEL0_bp  0  /* Event Output Select bit 0 position. */
+#define PORTCFG_EVOUTSEL1_bm  (1<<1)  /* Event Output Select bit 1 mask. */
+#define PORTCFG_EVOUTSEL1_bp  1  /* Event Output Select bit 1 position. */
+#define PORTCFG_EVOUTSEL2_bm  (1<<2)  /* Event Output Select bit 2 mask. */
+#define PORTCFG_EVOUTSEL2_bp  2  /* Event Output Select bit 2 position. */
+
+/* AES - AES Module */
+/* AES.CTRL  bit masks and bit positions */
+#define AES_START_bm  0x80  /* Start/Run bit mask. */
+#define AES_START_bp  7  /* Start/Run bit position. */
+
+#define AES_AUTO_bm  0x40  /* Auto Start Trigger bit mask. */
+#define AES_AUTO_bp  6  /* Auto Start Trigger bit position. */
+
+#define AES_RESET_bm  0x20  /* AES Software Reset bit mask. */
+#define AES_RESET_bp  5  /* AES Software Reset bit position. */
+
+#define AES_DECRYPT_bm  0x10  /* Decryption / Direction bit mask. */
+#define AES_DECRYPT_bp  4  /* Decryption / Direction bit position. */
+
+#define AES_XOR_bm  0x04  /* State XOR Load Enable bit mask. */
+#define AES_XOR_bp  2  /* State XOR Load Enable bit position. */
+
+/* AES.STATUS  bit masks and bit positions */
+#define AES_ERROR_bm  0x80  /* AES Error bit mask. */
+#define AES_ERROR_bp  7  /* AES Error bit position. */
+
+#define AES_SRIF_bm  0x01  /* State Ready Interrupt Flag bit mask. */
+#define AES_SRIF_bp  0  /* State Ready Interrupt Flag bit position. */
+
+/* AES.INTCTRL  bit masks and bit positions */
+#define AES_INTLVL_gm  0x03  /* Interrupt level group mask. */
+#define AES_INTLVL_gp  0  /* Interrupt level group position. */
+#define AES_INTLVL0_bm  (1<<0)  /* Interrupt level bit 0 mask. */
+#define AES_INTLVL0_bp  0  /* Interrupt level bit 0 position. */
+#define AES_INTLVL1_bm  (1<<1)  /* Interrupt level bit 1 mask. */
+#define AES_INTLVL1_bp  1  /* Interrupt level bit 1 position. */
+
+/* CRC - Cyclic Redundancy Checker */
+/* CRC.CTRL  bit masks and bit positions */
+#define CRC_RESET_gm  0xC0  /* Reset group mask. */
+#define CRC_RESET_gp  6  /* Reset group position. */
+#define CRC_RESET0_bm  (1<<6)  /* Reset bit 0 mask. */
+#define CRC_RESET0_bp  6  /* Reset bit 0 position. */
+#define CRC_RESET1_bm  (1<<7)  /* Reset bit 1 mask. */
+#define CRC_RESET1_bp  7  /* Reset bit 1 position. */
+
+#define CRC_CRC32_bm  0x20  /* CRC Mode bit mask. */
+#define CRC_CRC32_bp  5  /* CRC Mode bit position. */
+
+#define CRC_SOURCE_gm  0x0F  /* Input Source group mask. */
+#define CRC_SOURCE_gp  0  /* Input Source group position. */
+#define CRC_SOURCE0_bm  (1<<0)  /* Input Source bit 0 mask. */
+#define CRC_SOURCE0_bp  0  /* Input Source bit 0 position. */
+#define CRC_SOURCE1_bm  (1<<1)  /* Input Source bit 1 mask. */
+#define CRC_SOURCE1_bp  1  /* Input Source bit 1 position. */
+#define CRC_SOURCE2_bm  (1<<2)  /* Input Source bit 2 mask. */
+#define CRC_SOURCE2_bp  2  /* Input Source bit 2 position. */
+#define CRC_SOURCE3_bm  (1<<3)  /* Input Source bit 3 mask. */
+#define CRC_SOURCE3_bp  3  /* Input Source bit 3 position. */
+
+/* CRC.STATUS  bit masks and bit positions */
+#define CRC_ZERO_bm  0x02  /* Zero detection bit mask. */
+#define CRC_ZERO_bp  1  /* Zero detection bit position. */
+
+#define CRC_BUSY_bm  0x01  /* Busy bit mask. */
+#define CRC_BUSY_bp  0  /* Busy bit position. */
+
+/* DMA - DMA Controller */
+/* DMA_CH.CTRLA  bit masks and bit positions */
+#define DMA_CH_ENABLE_bm  0x80  /* Channel Enable bit mask. */
+#define DMA_CH_ENABLE_bp  7  /* Channel Enable bit position. */
+
+#define DMA_CH_RESET_bm  0x40  /* Channel Software Reset bit mask. */
+#define DMA_CH_RESET_bp  6  /* Channel Software Reset bit position. */
+
+#define DMA_CH_REPEAT_bm  0x20  /* Channel Repeat Mode bit mask. */
+#define DMA_CH_REPEAT_bp  5  /* Channel Repeat Mode bit position. */
+
+#define DMA_CH_TRFREQ_bm  0x10  /* Channel Transfer Request bit mask. */
+#define DMA_CH_TRFREQ_bp  4  /* Channel Transfer Request bit position. */
+
+#define DMA_CH_SINGLE_bm  0x04  /* Channel Single Shot Data Transfer bit mask. */
+#define DMA_CH_SINGLE_bp  2  /* Channel Single Shot Data Transfer bit position. */
+
+#define DMA_CH_BURSTLEN_gm  0x03  /* Channel Transfer Mode group mask. */
+#define DMA_CH_BURSTLEN_gp  0  /* Channel Transfer Mode group position. */
+#define DMA_CH_BURSTLEN0_bm  (1<<0)  /* Channel Transfer Mode bit 0 mask. */
+#define DMA_CH_BURSTLEN0_bp  0  /* Channel Transfer Mode bit 0 position. */
+#define DMA_CH_BURSTLEN1_bm  (1<<1)  /* Channel Transfer Mode bit 1 mask. */
+#define DMA_CH_BURSTLEN1_bp  1  /* Channel Transfer Mode bit 1 position. */
+
+/* DMA_CH.CTRLB  bit masks and bit positions */
+#define DMA_CH_CHBUSY_bm  0x80  /* Block Transfer Busy bit mask. */
+#define DMA_CH_CHBUSY_bp  7  /* Block Transfer Busy bit position. */
+
+#define DMA_CH_CHPEND_bm  0x40  /* Block Transfer Pending bit mask. */
+#define DMA_CH_CHPEND_bp  6  /* Block Transfer Pending bit position. */
+
+#define DMA_CH_ERRIF_bm  0x20  /* Block Transfer Error Interrupt Flag bit mask. */
+#define DMA_CH_ERRIF_bp  5  /* Block Transfer Error Interrupt Flag bit position. */
+
+#define DMA_CH_TRNIF_bm  0x10  /* Transaction Complete Interrup Flag bit mask. */
+#define DMA_CH_TRNIF_bp  4  /* Transaction Complete Interrup Flag bit position. */
+
+#define DMA_CH_ERRINTLVL_gm  0x0C  /* Transfer Error Interrupt Level group mask. */
+#define DMA_CH_ERRINTLVL_gp  2  /* Transfer Error Interrupt Level group position. */
+#define DMA_CH_ERRINTLVL0_bm  (1<<2)  /* Transfer Error Interrupt Level bit 0 mask. */
+#define DMA_CH_ERRINTLVL0_bp  2  /* Transfer Error Interrupt Level bit 0 position. */
+#define DMA_CH_ERRINTLVL1_bm  (1<<3)  /* Transfer Error Interrupt Level bit 1 mask. */
+#define DMA_CH_ERRINTLVL1_bp  3  /* Transfer Error Interrupt Level bit 1 position. */
+
+#define DMA_CH_TRNINTLVL_gm  0x03  /* Transaction Complete Interrupt Level group mask. */
+#define DMA_CH_TRNINTLVL_gp  0  /* Transaction Complete Interrupt Level group position. */
+#define DMA_CH_TRNINTLVL0_bm  (1<<0)  /* Transaction Complete Interrupt Level bit 0 mask. */
+#define DMA_CH_TRNINTLVL0_bp  0  /* Transaction Complete Interrupt Level bit 0 position. */
+#define DMA_CH_TRNINTLVL1_bm  (1<<1)  /* Transaction Complete Interrupt Level bit 1 mask. */
+#define DMA_CH_TRNINTLVL1_bp  1  /* Transaction Complete Interrupt Level bit 1 position. */
+
+/* DMA_CH.ADDRCTRL  bit masks and bit positions */
+#define DMA_CH_SRCRELOAD_gm  0xC0  /* Channel Source Address Reload group mask. */
+#define DMA_CH_SRCRELOAD_gp  6  /* Channel Source Address Reload group position. */
+#define DMA_CH_SRCRELOAD0_bm  (1<<6)  /* Channel Source Address Reload bit 0 mask. */
+#define DMA_CH_SRCRELOAD0_bp  6  /* Channel Source Address Reload bit 0 position. */
+#define DMA_CH_SRCRELOAD1_bm  (1<<7)  /* Channel Source Address Reload bit 1 mask. */
+#define DMA_CH_SRCRELOAD1_bp  7  /* Channel Source Address Reload bit 1 position. */
+
+#define DMA_CH_SRCDIR_gm  0x30  /* Channel Source Address Mode group mask. */
+#define DMA_CH_SRCDIR_gp  4  /* Channel Source Address Mode group position. */
+#define DMA_CH_SRCDIR0_bm  (1<<4)  /* Channel Source Address Mode bit 0 mask. */
+#define DMA_CH_SRCDIR0_bp  4  /* Channel Source Address Mode bit 0 position. */
+#define DMA_CH_SRCDIR1_bm  (1<<5)  /* Channel Source Address Mode bit 1 mask. */
+#define DMA_CH_SRCDIR1_bp  5  /* Channel Source Address Mode bit 1 position. */
+
+#define DMA_CH_DESTRELOAD_gm  0x0C  /* Channel Destination Address Reload group mask. */
+#define DMA_CH_DESTRELOAD_gp  2  /* Channel Destination Address Reload group position. */
+#define DMA_CH_DESTRELOAD0_bm  (1<<2)  /* Channel Destination Address Reload bit 0 mask. */
+#define DMA_CH_DESTRELOAD0_bp  2  /* Channel Destination Address Reload bit 0 position. */
+#define DMA_CH_DESTRELOAD1_bm  (1<<3)  /* Channel Destination Address Reload bit 1 mask. */
+#define DMA_CH_DESTRELOAD1_bp  3  /* Channel Destination Address Reload bit 1 position. */
+
+#define DMA_CH_DESTDIR_gm  0x03  /* Channel Destination Address Mode group mask. */
+#define DMA_CH_DESTDIR_gp  0  /* Channel Destination Address Mode group position. */
+#define DMA_CH_DESTDIR0_bm  (1<<0)  /* Channel Destination Address Mode bit 0 mask. */
+#define DMA_CH_DESTDIR0_bp  0  /* Channel Destination Address Mode bit 0 position. */
+#define DMA_CH_DESTDIR1_bm  (1<<1)  /* Channel Destination Address Mode bit 1 mask. */
+#define DMA_CH_DESTDIR1_bp  1  /* Channel Destination Address Mode bit 1 position. */
+
+/* DMA_CH.TRIGSRC  bit masks and bit positions */
+#define DMA_CH_TRIGSRC_gm  0xFF  /* Channel Trigger Source group mask. */
+#define DMA_CH_TRIGSRC_gp  0  /* Channel Trigger Source group position. */
+#define DMA_CH_TRIGSRC0_bm  (1<<0)  /* Channel Trigger Source bit 0 mask. */
+#define DMA_CH_TRIGSRC0_bp  0  /* Channel Trigger Source bit 0 position. */
+#define DMA_CH_TRIGSRC1_bm  (1<<1)  /* Channel Trigger Source bit 1 mask. */
+#define DMA_CH_TRIGSRC1_bp  1  /* Channel Trigger Source bit 1 position. */
+#define DMA_CH_TRIGSRC2_bm  (1<<2)  /* Channel Trigger Source bit 2 mask. */
+#define DMA_CH_TRIGSRC2_bp  2  /* Channel Trigger Source bit 2 position. */
+#define DMA_CH_TRIGSRC3_bm  (1<<3)  /* Channel Trigger Source bit 3 mask. */
+#define DMA_CH_TRIGSRC3_bp  3  /* Channel Trigger Source bit 3 position. */
+#define DMA_CH_TRIGSRC4_bm  (1<<4)  /* Channel Trigger Source bit 4 mask. */
+#define DMA_CH_TRIGSRC4_bp  4  /* Channel Trigger Source bit 4 position. */
+#define DMA_CH_TRIGSRC5_bm  (1<<5)  /* Channel Trigger Source bit 5 mask. */
+#define DMA_CH_TRIGSRC5_bp  5  /* Channel Trigger Source bit 5 position. */
+#define DMA_CH_TRIGSRC6_bm  (1<<6)  /* Channel Trigger Source bit 6 mask. */
+#define DMA_CH_TRIGSRC6_bp  6  /* Channel Trigger Source bit 6 position. */
+#define DMA_CH_TRIGSRC7_bm  (1<<7)  /* Channel Trigger Source bit 7 mask. */
+#define DMA_CH_TRIGSRC7_bp  7  /* Channel Trigger Source bit 7 position. */
+
+/* DMA.CTRL  bit masks and bit positions */
+#define DMA_ENABLE_bm  0x80  /* Enable bit mask. */
+#define DMA_ENABLE_bp  7  /* Enable bit position. */
+
+#define DMA_RESET_bm  0x40  /* Software Reset bit mask. */
+#define DMA_RESET_bp  6  /* Software Reset bit position. */
+
+#define DMA_DBUFMODE_gm  0x0C  /* Double Buffering Mode group mask. */
+#define DMA_DBUFMODE_gp  2  /* Double Buffering Mode group position. */
+#define DMA_DBUFMODE0_bm  (1<<2)  /* Double Buffering Mode bit 0 mask. */
+#define DMA_DBUFMODE0_bp  2  /* Double Buffering Mode bit 0 position. */
+#define DMA_DBUFMODE1_bm  (1<<3)  /* Double Buffering Mode bit 1 mask. */
+#define DMA_DBUFMODE1_bp  3  /* Double Buffering Mode bit 1 position. */
+
+#define DMA_PRIMODE_gm  0x03  /* Channel Priority Mode group mask. */
+#define DMA_PRIMODE_gp  0  /* Channel Priority Mode group position. */
+#define DMA_PRIMODE0_bm  (1<<0)  /* Channel Priority Mode bit 0 mask. */
+#define DMA_PRIMODE0_bp  0  /* Channel Priority Mode bit 0 position. */
+#define DMA_PRIMODE1_bm  (1<<1)  /* Channel Priority Mode bit 1 mask. */
+#define DMA_PRIMODE1_bp  1  /* Channel Priority Mode bit 1 position. */
+
+/* DMA.INTFLAGS  bit masks and bit positions */
+#define DMA_CH3ERRIF_bm  0x80  /* Channel 3 Block

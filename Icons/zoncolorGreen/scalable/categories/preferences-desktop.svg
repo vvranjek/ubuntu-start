@@ -1,743 +1,892 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+PIN5CTRL;  /* Pin 5 Control Register */
+    register8_t PIN6CTRL;  /* Pin 6 Control Register */
+    register8_t PIN7CTRL;  /* Pin 7 Control Register */
+} PORT_t;
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="96"
-   height="95.999992"
-   id="svg8025"
-   sodipodi:version="0.32"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="preferences-desktop.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   version="1.1">
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="4.7708337"
-     inkscape:cx="48"
-     inkscape:cy="47.999996"
-     inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:grid-bbox="true"
-     inkscape:document-units="px"
-     inkscape:window-width="1016"
-     inkscape:window-height="678"
-     inkscape:window-x="6"
-     inkscape:window-y="24"
-     inkscape:object-paths="true"
-     inkscape:snap-midpoints="true"
-     inkscape:window-maximized="0"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
-     inkscape:snap-global="false"
-     inkscape:object-nodes="true"
-     inkscape:snap-intersection-paths="true"
-     inkscape:snap-smooth-nodes="true" />
-  <defs
-     id="defs8027">
-    <mask
-       id="mask10545"
-       maskUnits="userSpaceOnUse">
-      <path
-         d="M -0.051,18.554 -0.847,9.66 c 0,0 8.988,-5.178 11.227,-6.467 C 3.985,-0.79 -3.654,1.07 -3.741,1.093 c -7.162,1.903 -12.167,7.772 -12.167,14.129 0,0.239 0.007,0.479 0.021,0.718 0,0.001 0,0.001 0,0.002 0,0.357 -0.363,20.788 -3.366,26.896 -1.081,2.198 -11.148,15.342 -22.805,30.562 -12.137,15.847 -27.242,35.568 -28.24,38.04 -0.541,1.338 -0.781,2.686 -0.781,3.995 0,3.786 2.019,7.228 4.596,9.186 0.4,-0.701 0.828,-1.443 1.286,-2.229 -1.823,-1.291 -3.266,-3.318 -3.698,-5.609 -0.396,-2.096 0.064,-4.303 1.264,-6.057 1.171,-1.713 2.972,-2.871 5.07,-3.263 1.626,-0.303 3.379,0.13 4.94,1.219 0.193,0.135 0.376,0.284 0.558,0.436 10.748,-16.885 29.125,-43.768 60.258,-85.294 -1.872,-3.04 -3.246,-5.27 -3.246,-5.27 z"
-         id="path10547"
-         style="fill:url(#linearGradient10549)"
-         inkscape:connector-curvature="0" />
-    </mask>
-    <linearGradient
-       y2="108.3428"
-       x2="24.9356"
-       y1="125.7861"
-       x1="15.7207"
-       gradientTransform="translate(-80,0)"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient10549"
-       xlink:href="#XMLID_5_"
-       inkscape:collect="always" />
-    <linearGradient
-       gradientTransform="translate(-80,0)"
-       y2="108.3428"
-       x2="24.9356"
-       y1="125.7861"
-       x1="15.7207"
-       gradientUnits="userSpaceOnUse"
-       id="XMLID_5_">
-      <stop
-         id="stop75"
-         style="stop-color:#000000"
-         offset="0" />
-      <stop
-         id="stop77"
-         style="stop-color:#FFFFFF"
-         offset="0.8935" />
-    </linearGradient>
-    <clipPath
-       id="clipPath4092"
-       clipPathUnits="userSpaceOnUse">
-      <path
-         id="path4094"
-         sodipodi:nodetypes="csssscc"
-         inkscape:r_cx="true"
-         inkscape:r_cy="true"
-         d="m 59.849,42.398 c -2.256,4.589 -49.132,63.861 -51.075,68.668 -4.104,10.152 7.657,22.367 17.215,13.203 6.302,-6.042 40.97,-68.158 46.14,-72.854 3.494,-3.174 22.875,-10.332 22.875,-10.332 L 80.924,18.23 c 0,0 -18.2,18.322 -21.075,24.168 z"
-         style="fill:#9c0f56"
-         inkscape:connector-curvature="0" />
-    </clipPath>
-    <filter
-       id="filter4503"
-       inkscape:collect="always"
-       color-interpolation-filters="sRGB">
-      <feGaussianBlur
-         id="feGaussianBlur4505"
-         stdDeviation="0.43775175"
-         inkscape:collect="always" />
-    </filter>
-    <linearGradient
-       y2="-287.6532"
-       x2="286.16019"
-       y1="-326.0903"
-       x1="258.88379"
-       gradientTransform="matrix(-0.40463723,-0.03471902,0.03492863,-0.40551566,160.44423,-115.55795)"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient3343-554-329-158"
-       xlink:href="#rect25493_1_-861-714-168"
-       inkscape:collect="always" />
-    <linearGradient
-       gradientTransform="matrix(0.9065,-0.2414,-0.2421,-0.9089,10.723991,214.40698)"
-       y2="-287.6532"
-       x2="286.16019"
-       y1="-326.0903"
-       x1="258.88379"
-       gradientUnits="userSpaceOnUse"
-       id="rect25493_1_-861-714-168">
-      <stop
-         id="stop6051"
-         style="stop-color:#595959"
-         offset="0" />
-      <stop
-         id="stop6053"
-         style="stop-color:#989898"
-         offset="0.6864" />
-    </linearGradient>
-    <linearGradient
-       y2="-17.989599"
-       x2="107.7549"
-       y1="124.6768"
-       x1="14.9214"
-       gradientTransform="matrix(-0.42636364,0.0751794,0.07513919,0.42613569,81.415083,-17.456499)"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient3336-797-632-864"
-       xlink:href="#path2388_1_-919-354-817"
-       inkscape:collect="always" />
-    <linearGradient
-       gradientTransform="translate(229.83849,405.96228)"
-       y2="-17.989599"
-       x2="107.7549"
-       y1="124.6768"
-       x1="14.9214"
-       gradientUnits="userSpaceOnUse"
-       id="path2388_1_-919-354-817">
-      <stop
-         id="stop6057"
-         style="stop-color:#ffffff"
-         offset="0" />
-      <stop
-         id="stop6059"
-         style="stop-color:#989898"
-         offset="0.6864" />
-      <stop
-         id="stop6061"
-         style="stop-color:#ffffff"
-         offset="0.8935" />
-    </linearGradient>
-    <linearGradient
-       y2="64.646004"
-       x2="52.981899"
-       y1="55.75"
-       x1="40.527802"
-       gradientTransform="translate(-80,0)"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient3297-874-978-583"
-       xlink:href="#XMLID_4_-598-304-695"
-       inkscape:collect="always" />
-    <linearGradient
-       gradientTransform="translate(-80,0)"
-       y2="64.646004"
-       x2="52.981899"
-       y1="55.75"
-       x1="40.527802"
-       gradientUnits="userSpaceOnUse"
-       id="XMLID_4_-598-304-695">
-      <stop
-         id="stop6065"
-         style="stop-color:#ffffff;stop-opacity:0;"
-         offset="0" />
-      <stop
-         id="stop6067"
-         style="stop-color:#ffffff"
-         offset="0.8935" />
-    </linearGradient>
-    <radialGradient
-       r="64.405701"
-       fy="13.140214"
-       fx="77.004028"
-       cy="13.140214"
-       cx="77.004028"
-       gradientTransform="matrix(-0.1515321,0.22193076,0.35735472,0.24399823,56.543575,-26.363618)"
-       gradientUnits="userSpaceOnUse"
-       id="radialGradient3332-594-99-45"
-       xlink:href="#XMLID_6_-885-797-624"
-       inkscape:collect="always" />
-    <radialGradient
-       fy="13.140214"
-       fx="77.004028"
-       gradientTransform="translate(229.83849,405.96228)"
-       gradientUnits="userSpaceOnUse"
-       r="64.405701"
-       cy="13.140214"
-       cx="77.004028"
-       id="XMLID_6_-885-797-624">
-      <stop
-         id="stop6071"
-         style="stop-color:#ffffff"
-         offset="0" />
-      <stop
-         offset="0.5"
-         style="stop-color:#e0e2df;stop-opacity:1;"
-         id="stop6073" />
-      <stop
-         id="stop6075"
-         style="stop-color:#0b0b0b;stop-opacity:1;"
-         offset="1" />
-    </radialGradient>
-    <radialGradient
-       r="14.3205"
-       cy="44.608398"
-       cx="78.776398"
-       gradientUnits="userSpaceOnUse"
-       id="radialGradient3301-623-798-958"
-       xlink:href="#rect10551_3_-927-396-943"
-       inkscape:collect="always" />
-    <radialGradient
-       gradientUnits="userSpaceOnUse"
-       r="14.3205"
-       cy="44.608398"
-       cx="78.776398"
-       id="rect10551_3_-927-396-943">
-      <stop
-         id="stop6079"
-         style="stop-color:#2a2f31"
-         offset="0" />
-      <stop
-         id="stop6081"
-         style="stop-color:#0b0b0b;stop-opacity:1;"
-         offset="0.72189999" />
-      <stop
-         id="stop6083"
-         style="stop-color:#2a2f31"
-         offset="1" />
-    </radialGradient>
-    <radialGradient
-       r="4.1451998"
-       cy="20.4307"
-       cx="92.734398"
-       gradientTransform="matrix(0.6131,-0.2916,-5.2659,-7.9645,125.0096,227.992)"
-       gradientUnits="userSpaceOnUse"
-       id="radialGradient3303-959-966-767"
-       xlink:href="#rect14950_1_-730-455-203"
-       inkscape:collect="always" />
-    <radialGradient
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.6131,-0.2916,-5.2659,-7.9645,125.0096,227.992)"
-       r="4.1451998"
-       cy="20.4307"
-       cx="92.734398"
-       id="rect14950_1_-730-455-203">
-      <stop
-         id="stop6087"
-         style="stop-color:#ffffff"
-         offset="0" />
-      <stop
-         id="stop6089"
-         style="stop-color:#d5dad0"
-         offset="0.5266" />
-      <stop
-         id="stop6091"
-         style="stop-color:#989a94"
-         offset="1" />
-    </radialGradient>
-    <linearGradient
-       y2="80.899803"
-       x2="48.5495"
-       y1="75.171898"
-       x1="40.711899"
-       gradientTransform="matrix(-0.42636364,0.0751794,0.07513919,0.42613569,81.415083,-17.456499)"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient3327-38-730-870"
-       xlink:href="#XMLID_7_-36-826-338"
-       inkscape:collect="always" />
-    <linearGradient
-       gradientTransform="translate(229.83849,405.96228)"
-       y2="80.899803"
-       x2="48.5495"
-       y1="75.171898"
-       x1="40.711899"
-       gradientUnits="userSpaceOnUse"
-       id="XMLID_7_-36-826-338">
-      <stop
-         id="stop6095"
-         style="stop-color:#595a57"
-         offset="0.213" />
-      <stop
-         id="stop6097"
-         style="stop-color:#0b0b0b"
-         offset="1" />
-    </linearGradient>
-    <radialGradient
-       r="19.6182"
-       cy="15.9429"
-       cx="64.988297"
-       gradientTransform="matrix(-0.42636364,0.0751794,0.07513919,0.42613569,81.415083,-17.456499)"
-       gradientUnits="userSpaceOnUse"
-       id="radialGradient3324-810-327-243"
-       xlink:href="#XMLID_8_-158-620-846"
-       inkscape:collect="always" />
-    <radialGradient
-       gradientTransform="translate(229.83849,405.96228)"
-       gradientUnits="userSpaceOnUse"
-       r="19.6182"
-       cy="15.9429"
-       cx="64.988297"
-       id="XMLID_8_-158-620-846">
-      <stop
-         id="stop6101"
-         style="stop-color:#ffffff"
-         offset="0" />
-      <stop
-         id="stop6103"
-         style="stop-color:#989a94"
-         offset="1" />
-    </radialGradient>
-    <linearGradient
-       y2="107.20945"
-       x2="18.875885"
-       y1="123.23078"
-       x1="17.509325"
-       gradientTransform="matrix(-0.42636364,0.0751794,0.07513919,0.42613569,81.415083,-17.456499)"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient3321-283-849-699"
-       xlink:href="#XMLID_10_-616-770-928"
-       inkscape:collect="always" />
-    <linearGradient
-       gradientTransform="translate(229.83849,405.96228)"
-       y2="109.8655"
-       x2="12.7283"
-       y1="120.7646"
-       x1="23.9844"
-       gradientUnits="userSpaceOnUse"
-       id="XMLID_10_-616-770-928">
-      <stop
-         id="stop6107"
-         style="stop-color:#ffffff"
-         offset="0" />
-      <stop
-         id="stop6109"
-         style="stop-color:#575757;stop-opacity:1;"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       y2="44.057598"
-       x2="98.418404"
-       y1="119.0576"
-       x1="11.9185"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient3311-428-514-739"
-       xlink:href="#XMLID_3_-817-30-476"
-       inkscape:collect="always" />
-    <linearGradient
-       y2="44.057598"
-       x2="98.418404"
-       y1="119.0576"
-       x1="11.9185"
-       gradientUnits="userSpaceOnUse"
-       id="XMLID_3_-817-30-476">
-      <stop
-         id="stop6113"
-         style="stop-color:#e8e8e8"
-         offset="0" />
-      <stop
-         id="stop6115"
-         style="stop-color:#cbcbcb"
-         offset="0.0229" />
-      <stop
-         id="stop6117"
-         style="stop-color:#b4b4b4"
-         offset="0.05" />
-      <stop
-         id="stop6119"
-         style="stop-color:#a4a4a4"
-         offset="0.0819" />
-      <stop
-         id="stop6121"
-         style="stop-color:#9a9a9a"
-         offset="0.1225" />
-      <stop
-         id="stop6123"
-         style="stop-color:#989898"
-         offset="0.2012" />
-      <stop
-         id="stop6125"
-         style="stop-color:#707070;stop-opacity:1;"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       y2="-288.60791"
-       x2="261.97269"
-       y1="-288.60791"
-       x1="247.60249"
-       gradientTransform="matrix(-0.42084309,-0.03612353,0.03492863,-0.40551566,162.49237,-115.49043)"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient3317-599-251-516"
-       xlink:href="#rect22846_1_-777-565-286"
-       inkscape:collect="always" />
-    <linearGradient
-       gradientTransform="matrix(0.9428,-0.2511,-0.2421,-0.9089,6.0921912,215.38258)"
-       y2="-288.60791"
-       x2="261.97269"
-       y1="-288.60791"
-       x1="247.60249"
-       gradientUnits="userSpaceOnUse"
-       id="rect22846_1_-777-565-286">
-      <stop
-         id="stop6129"
-         style="stop-color:#989898"
-         offset="0" />
-      <stop
-         id="stop6131"
-         style="stop-color:#595959"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5048-5-0"
-       id="linearGradient3081-6"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2.774389,0,0,1.969706,-1892.179,-872.8854)"
-       x1="302.85715"
-       y1="366.64789"
-       x2="302.85715"
-       y2="609.50507" />
-    <linearGradient
-       id="linearGradient5048-5-0">
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="0"
-         id="stop5050-6-7" />
-      <stop
-         id="stop5056-8-8"
-         offset="0.5"
-         style="stop-color:black;stop-opacity:1;" />
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="1"
-         id="stop5052-5-5" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5060-8-8"
-       id="radialGradient3083-0"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2.774389,0,0,1.969706,-1891.633,-872.8854)"
-       cx="605.71429"
-       cy="486.64789"
-       fx="605.71429"
-       fy="486.64789"
-       r="117.14286" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient5060-8-8">
-      <stop
-         style="stop-color:black;stop-opacity:1;"
-         offset="0"
-         id="stop5062-4-5" />
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="1"
-         id="stop5064-3-3" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5060-8-8"
-       id="radialGradient3085-3"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-2.774389,0,0,1.969706,112.7623,-872.8854)"
-       cx="605.71429"
-       cy="486.64789"
-       fx="605.71429"
-       fy="486.64789"
-       r="117.14286" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2699-8"
-       id="linearGradient3017"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.9090906,0,0,1.8749999,-2.2300954,44.871573)"
-       x1="-45.955624"
-       y1="-11.072424"
-       x2="-1.9915352"
-       y2="-39.003159" />
-    <linearGradient
-       id="linearGradient2699-8">
-      <stop
-         style="stop-color:#badb8d;stop-opacity:1"
-         offset="0"
-         id="stop2701-2" />
-      <stop
-         style="stop-color:#709937;stop-opacity:1;"
-         offset="1"
-         id="stop2703-8" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5687-7"
-       id="radialGradient3014"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2.333333,0,0,1.6666665,-7.9999972,-41.333332)"
-       cx="24"
-       cy="44"
-       fx="24"
-       fy="44"
-       r="18" />
-    <linearGradient
-       id="linearGradient5687-7">
-      <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
-         offset="0"
-         id="stop5689-4" />
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0;"
-         offset="1"
-         id="stop5691-1" />
-    </linearGradient>
-  </defs>
-  <metadata
-     id="metadata8030">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     transform="translate(5.3561751e-6,47.999989)"
-     inkscape:groupmode="layer"
-     inkscape:label="Layer 1"
-     id="layer1">
-    <g
-       id="g3045">
-      <g
-         style="display:inline"
-         transform="matrix(0.04728054,0,0,0.04390026,90.052984,27.615633)"
-         id="g13071">
-        <rect
-           style="opacity:0.40206185;fill:url(#linearGradient3081-6);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-           id="rect13073"
-           width="1339.6335"
-           height="478.35718"
-           x="-1559.2523"
-           y="-150.69685" />
-        <path
-           style="opacity:0.40206185;fill:url(#radialGradient3083-0);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-           d="m -219.61876,-150.68038 c 0,0 0,478.33079 0,478.33079 142.874166,0.90045 345.40022,-107.16966 345.40014,-239.196175 0,-132.026537 -159.436816,-239.134595 -345.40014,-239.134615 z"
-           id="path13075"
-           sodipodi:nodetypes="cccc"
-           inkscape:connector-curvature="0" />
-        <path
-           sodipodi:nodetypes="cccc"
-           id="path13077"
-           d="m -1559.2523,-150.68038 c 0,0 0,478.33079 0,478.33079 -142.8742,0.90045 -345.4002,-107.16966 -345.4002,-239.196175 0,-132.026537 159.4368,-239.134595 345.4002,-239.134615 z"
-           style="opacity:0.40206185;fill:url(#radialGradient3085-3);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-           inkscape:connector-curvature="0" />
-      </g>
-      <g
-         id="g3036">
-        <rect
-           style="opacity:0.1;fill:#000000;fill-opacity:1;stroke:none"
-           id="rect3047"
-           transform="matrix(-0.99999878,0.00156153,-0.0010661,-0.99999943,0,0)"
-           y="-35.013905"
-           x="-92.968971"
-           height="65.877884"
-           width="89.942261"
-           ry="5.8127556"
-           rx="5.8657999" />
-        <g
-           id="g3025">
-          <rect
-             style="fill:#51751e;fill-opacity:1;stroke:none"
-             id="rect3803"
-             transform="matrix(-0.9999988,0.00154862,-0.00107499,-0.99999942,0,0)"
-             y="-34.015121"
-             x="-91.969597"
-             height="63.881588"
-             width="87.943535"
-             ry="5.6366115"
-             rx="5.7354484" />
-          <rect
-             rx="3.9072537"
-             ry="3.7505727"
-             width="83.943741"
-             height="59.882195"
-             x="-89.969696"
-             y="-32.015381"
-             transform="matrix(-0.9999988,0.00154764,-0.00107568,-0.99999942,0,0)"
-             id="rect3580"
-             style="fill:url(#linearGradient3017);fill-opacity:1;stroke:none" />
-          <path
-             id="rect3466"
-             d="m 6.0000018,-27.999998 83.9999952,0 0,59.999994 -83.9999952,0 z"
-             style="opacity:0.25;fill:url(#radialGradient3014);fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline;enable-background:new"
-             inkscape:connector-curvature="0" />
-          <path
-             sodipodi:nodetypes="csssscc"
-             inkscape:connector-curvature="0"
-             id="rect3909"
-             d="M 4.059033,7.1663415 4.000004,-25.867245 c -0.00396,-2.216334 1.821389,-4.003486 4.0890821,-4.007059 L 87.843429,-29.99998 c 2.267693,-0.0036 4.086239,1.777851 4.097535,3.994159 l 0.05904,11.582971 z"
-             style="opacity:0.25;fill:#ffffff;fill-opacity:1;stroke:none" />
-          <path
-             inkscape:connector-curvature="0"
-             id="rect3871"
-             d="m 86.249999,-29.999997 -76.499992,0.125 c -3.1774337,0.0049 -5.7533548,2.50232 -5.7499988,5.625 l 0.0625,52.624992 c 0.00336,3.122682 2.5725652,5.62992 5.7499989,5.625 l 76.4999919,-0.125 c 3.177433,-0.005 5.690855,-2.502318 5.687499,-5.625 l -0.0625,-52.624992 c -0.0034,-3.12268 -2.510066,-5.62992 -5.687499,-5.625 z m -0.1875,2 c 2.164616,-0.0033 3.872763,1.672184 3.874999,3.75 l 0.0625,52.374992 c 0.0022,2.077816 -1.710383,3.74665 -3.874999,3.75 l -76.124992,0.125 c -2.1646158,0.0034 -3.9352637,-1.672184 -3.9374997,-3.75 l -0.0625,-52.374992 c -0.0022,-2.077816 1.7728838,-3.74665 3.9374996,-3.75 l 76.1249921,-0.125 z"
-             style="opacity:0.25;fill:#000000;fill-opacity:1;stroke:none" />
-        </g>
-      </g>
-    </g>
-    <g
-       id="g3091">
-      <path
-         style="opacity:0.1;fill:#000000"
-         d="m 47.622299,-13.668076 c -2.539365,0.09309 -4.35763,0.996426 -6.62656,2.903508 -3.747873,3.1501626 1.294718,3.9893953 3.010356,5.0265916 1.715638,1.0371963 2.061928,2.0777824 1.18242,3.0981377 -0.879508,1.0203553 -3.592041,0.2717321 -4.934227,-0.7639145 -2.704921,-2.0871487 -4.846003,1.8764307 -3.469777,5.250993 1.397194,3.425978 4.015245,6.8730447 7.965581,7.6672464 3.91483,0.7870628 7.68815,0.6226258 12.083503,5.5835418 7.346836,8.292175 14.466437,17.029737 20.4699,23.017637 4.215408,4.187521 8.394153,2.034535 10.11274,-0.206875 1.718588,-2.241411 3.011084,-6.124183 -1.899811,-10.853876 C 79.115911,20.890568 71.130063,14.087144 66.652935,9.7356112 62.175806,5.3840795 61.484775,4.7204798 60.011558,1.8404797 57.605713,-2.8627225 58.123625,-8.5828241 55.306542,-11.070144 c -2.817082,-2.48732 -5.144878,-2.69102 -7.684243,-2.597932 z m 35.122268,45.880704 c 0.90218,0.578063 -0.0401,2.034841 -0.902013,1.269018 -0.861915,-0.765823 -1.66e-4,-1.847081 0.902013,-1.269018 z"
-         id="path4152"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="zszzssssczszszzzzz" />
-      <path
-         style="opacity:0.25;fill:#000000"
-         d="m 41.936685,-10.315399 c -0.809543,0.7851617 -2.498484,1.9352549 1.196856,3.287431 4.659473,1.7049658 4.109839,3.0780668 3.120727,4.6876858 -0.989113,1.60961896 -3.173224,2.09558843 -6.680215,-0.2340326 -1.544853,-1.0262139 -2.245393,0.9566812 -1.762942,3.033478 0.482451,2.0767967 1.230239,3.6016841 3.834118,6.3048086 3.691133,3.8318182 9.724613,0.6190389 14.65233,6.2234732 7.550949,8.587911 14.532742,17.055248 21.69473,24.445032 2.945499,3.039184 6.889825,2.084261 8.512949,-0.08867 C 88.128362,35.170874 88.868395,31.896261 86.079757,29.0394 77.762044,20.518197 69.804868,14.042709 62.247774,6.6222211 59.752224,4.1717818 58.774328,2.3034144 57.90979,-0.969082 c -1.33662,-5.0594522 -1.152603,-10.133501 -7.412496,-11.480233 -3.314836,-0.713142 -6.662397,0.292873 -8.560609,2.133916 z m 41.07784,41.920149 c 1.571855,1.262912 -0.213577,4.281228 -1.829611,2.903398 -1.616034,-1.37783 0.257756,-4.16631 1.829611,-2.903398 z"
-         id="path4005"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="sszszssszssssszzz" />
-      <g
-         id="g3353"
-         style="stroke:none">
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:url(#linearGradient3343-554-329-158);stroke:none"
-           d="m 44.773745,5.8305962 c -1.64238,-0.2565601 -4.928824,-3.439523 -5.92082,-7.5121402 -0.04424,-0.1811331 -0.145481,0.85784733 0.02806,1.8422208 1.004007,3.7567784 3.380438,6.2416428 5.113979,7.0326774 l 0.77875,-1.362758 z"
-           inkscape:r_cy="true"
-           inkscape:r_cx="true"
-           sodipodi:nodetypes="csssc"
-           id="rect25493" />
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:#989a94;stroke:none"
-           d="m 38.852925,-1.681544 5.326592,2.4018599 3.497795,-2.8013756 C 48.071996,-1.505637 47.855547,6.9230199 45.957209,6.8104555 42.482559,6.6041163 40.0283,2.9448781 38.852925,-1.681544 z"
-           inkscape:r_cy="true"
-           inkscape:r_cx="true"
-           sodipodi:nodetypes="cccsc"
-           id="path3285" />
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:#ececec;stroke:none"
-           id="path23"
-           d="m 44.096452,0.8650215 0.229451,3.7795524 -0.572152,1.5121897 C 42.810964,5.6393188 41.97516,4.8385019 41.254271,3.8267292 40.294414,2.3922229 39.550009,0.5814016 39.043191,-1.4127959 l 5.053261,2.2778174 z"
-           enable-background="new    " />
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:url(#linearGradient3336-797-632-864);stroke:none"
-           d="m 49.019709,-11.68852 c 3.544225,0.301721 6.336475,2.7563253 6.687735,5.7955666 0.0024,0.013636 1.710894,8.7281192 3.375953,11.0031677 1.30669,1.7859321 25.746561,23.5197397 26.93618,25.4220987 2.512609,4.017589 -1.584029,10.107023 -6.347788,6.920483 C 76.530855,35.351863 57.082335,11.488338 54.525183,9.8758832 52.796978,8.7860048 43.995775,7.1927777 43.995775,7.1927777 L 48.281816,-3.6042271 47.98518,-7.0766664 42.29539,-9.1398691 c 2.598473,-2.8928119 6.696604,-2.5512339 6.724319,-2.5486509 z m 33.030613,41.769967 c -1.43242,-0.01327 -2.750642,1.546127 -2.739817,3.322849 0.009,1.469481 1.437314,2.935621 2.87016,2.948794 1.432921,0.0136 2.82208,-1.602217 2.841964,-3.21475 0.01869,-1.549495 -1.161468,-3.039183 -2.972307,-3.056893 z"
-           inkscape:r_cy="true"
-           inkscape:r_cx="true"
-           sodipodi:nodetypes="cccssssccccssssccssss"
-           id="path2388" />
-        <path
-           inkscape:connector-curvature="0"
-           transform="matrix(-0.42636364,0.0751794,0.07513919,0.42613569,47.305992,-11.442147)"
-           mask="url(#mask10545)"
-           style="fill:url(#linearGradient3297-874-978-583);stroke:none"
-           id="path72"
-           d="M -0.051,18.554 -0.847,9.66 c 0,0 8.988,-5.178 11.227,-6.467 C 3.985,-0.79 -3.654,1.07 -3.741,1.093 c -7.162,1.903 -12.167,7.772 -12.167,14.129 0,0.239 0.007,0.479 0.021,0.718 0,0.001 0,0.001 0,0.002 0,0.357 -0.363,20.788 -3.366,26.896 -1.081,2.198 -11.148,15.342 -22.805,30.562 -12.137,15.847 -27.242,35.568 -28.24,38.04 -0.541,1.338 -0.781,2.686 -0.781,3.995 0,3.786 2.019,7.228 4.596,9.186 0.4,-0.701 0.828,-1.443 1.286,-2.229 -1.823,-1.291 -3.266,-3.318 -3.698,-5.609 -0.396,-2.096 0.064,-4.303 1.264,-6.057 1.171,-1.713 2.972,-2.871 5.07,-3.263 1.626,-0.303 3.379,0.13 4.94,1.219 0.193,0.135 0.376,0.284 0.558,0.436 10.748,-16.885 29.125,-43.768 60.258,-85.294 -1.872,-3.04 -3.246,-5.27 -3.246,-5.27 z" />
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:url(#radialGradient3332-594-99-45);stroke:none"
-           id="path86"
-           d="M 48.281816,-3.6042271 47.98518,-7.0766664 42.29539,-9.1398691 c 0.710601,-0.8067846 1.638761,-1.4643119 2.707041,-1.9105969 1.358093,-0.248696 2.780821,-0.290414 3.826959,-0.131717 3.494388,0.5302 5.64805,2.6641717 6.094964,5.580215 L 52.295522,1.3820363 51.024575,0.868411 49.173181,5.951201 50.220356,6.4273911 49.059449,8.2257384 43.995848,7.1932037 48.281816,-3.6042271 z" />
-        <polygon
-           transform="matrix(-0.42636364,0.0751794,0.07513919,0.42613569,81.415083,-17.456499)"
-           style="fill:url(#radialGradient3301-623-798-958);stroke:none"
-           points="65.82,36.446 76.487,29.791 83.179,40.128 72.511,46.783 65.82,36.446 "
-           inkscape:r_cy="true"
-           inkscape:r_cx="true"
-           id="rect10551" />
-        <polygon
-           transform="matrix(-0.42636364,0.0751794,0.07513919,0.42613569,81.415083,-17.456499)"
-           style="fill:url(#radialGradient3303-959-966-767);stroke:none"
-           points="68.311,35.653 74.616,32.078 80.237,40.809 73.932,44.384 68.311,35.653 "
-           inkscape:r_cy="true"
-           inkscape:r_cx="true"
-           id="rect14950" />
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:url(#linearGradient3327-38-730-870);stroke:none"
-           id="path159"
-           d="M 58.551142,7.9282505 C 59.792524,8.7454303 71.76747,20.117764 80.337211,28.349167 79.78055,28.580454 79.24573,28.933113 78.777816,29.415901 78.129841,30.08422 77.705891,30.893623 77.484499,31.732345 72.776949,26.889953 58.15088,10.741906 57.272205,9.3339492 c -0.02948,-0.07741 -0.05419,-0.155215 -0.06779,-0.2323458 -0.06252,-0.3545447 0.04091,-0.6979274 0.296906,-0.9539704 0.284414,-0.2843416 0.674614,-0.3601748 1.049816,-0.2193825 z" />
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:url(#radialGradient3324-810-327-243);stroke:none"
-           id="path166"
-           d="m 54.896775,-5.5290001 c 0.272498,1.3584215 1.846305,8.9076779 3.487646,11.1504393 0.04397,0.059914 0.111846,0.1406537 0.193057,0.2322263 C 58.352968,5.6375306 58.18919,5.4691251 58.104923,5.3627132 56.555054,3.411832 54.385506,-1.916302 54.052268,-3.2851042 l 0.844507,-2.2438959 z" />
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:url(#linearGradient3321-283-849-699);stroke:none"
-           id="path180"
-           d="m 78.877487,33.406832 c -0.0065,-1.064351 0.427918,-2.135727 1.161855,-2.867539 0.5833,-0.581338 1.298682,-0.897295 2.014641,-0.890844 0.923965,0.0093 1.778431,0.367458 2.406843,1.009324 0.642929,0.656875 1.00539,1.563125 0.994041,2.486075 -0.02316,1.888162 -1.616371,3.658167 -3.278716,3.642392 -1.65437,-0.01545 -3.288571,-1.689113 -3.298664,-3.379408 z m 3.303178,2.946258 c 1.432921,0.0136 2.82208,-1.602217 2.841964,-3.21475 0.01904,-1.549997 -1.161117,-3.039685 -2.972307,-3.056893 -1.43242,-0.01327 -2.750642,1.546127 -2.739817,3.322849 0.009,1.469481 1.437314,2.935621 2.87016,2.948794 z" />
-        <path
-           inkscape:connector-curvature="0"
-           transform="matrix(-0.42636364,0.0751794,0.07513919,0.42613569,81.415083,-17.456499)"
-           clip-path="url(#clipPath4092)"
-           style="fill:url(#linearGradient3311-428-514-739);stroke:none;filter:url(#filter4503)"
-           id="path65"
-           d="m 72.13,49.416 c -5.17,4.696 -39.838,66.812 -46.14,72.854 -7.9,7.574 -17.295,0.543 -18.004,-7.856 -0.779,9.204 9.482,18.026 18.004,9.856 6.302,-6.042 40.97,-68.158 46.14,-72.854 3.494,-3.174 22.875,-10.332 22.875,-10.332 l -1.001,-1.625 c -3.999,1.506 -18.857,7.215 -21.874,9.957 z" />
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:url(#linearGradient3317-599-251-516);stroke:none"
-           d="m 47.98518,-7.0766664 -5.68979,-2.0632027 -0.09357,0.760817 5.902985,2.2026829 -0.119623,-0.9002972 z"
-           inkscape:r_cy="true"
-           inkscape:r_cx="true"
-           sodipodi:nodetypes="ccccc"
-           id="rect22846" />
-        <path
-           inkscape:connector-curvature="0"
-           id="path4213"
-           d="m 57.954421,7.6715168 c 0.221446,-0.045538 0.458315,-0.021646 0.680985,0.061908 l 0.02064,0 0.02064,0.020636 c 0.184714,0.121594 0.484205,0.3771114 0.949251,0.7841643 0.465047,0.4070529 1.079076,0.9541271 1.795324,1.6095999 1.432497,1.310945 3.316756,3.06832 5.427242,5.055796 4.220973,3.974953 9.355052,8.863888 13.640332,12.979983 l 0.226995,0.247631 -0.288903,0.123815 c -0.530035,0.220227 -1.038571,0.549727 -1.485785,1.011159 -0.620027,0.639496 -1.025393,1.422656 -1.238154,2.228678 l -0.103179,0.371446 -0.268267,-0.288902 C 74.972042,29.450345 70.131233,24.212122 65.775436,19.392709 63.597538,16.983003 61.54621,14.681246 59.976748,12.8924 59.192016,11.997977 58.531814,11.230766 58.036973,10.643087 57.542132,10.055407 57.219755,9.6577702 57.087721,9.4462042 l 0,-0.02064 -0.02064,-0.02064 c -0.03233,-0.08489 -0.06549,-0.171494 -0.08254,-0.268266 -0.07375,-0.4182768 0.06766,-0.8311276 0.371446,-1.1349746 0.170399,-0.1703561 0.376995,-0.2846361 0.598441,-0.3301744 z m 0.515898,0.4539899 c -0.0018,-0.00125 -0.01884,0.00119 -0.02064,0 -0.296892,-0.1037078 -0.582253,-0.057404 -0.8048,0.1650872 -0.208198,0.208239 -0.278273,0.472716 -0.226995,0.7635284 0.008,0.045359 0.02254,0.1115209 0.04127,0.1650869 0.005,0.01432 0.01502,0.02652 0.02064,0.04127 0.09944,0.152716 0.411009,0.528002 0.887343,1.0937028 0.491595,0.583824 1.156193,1.356201 1.939775,2.249313 1.567164,1.786226 3.621792,4.091711 5.798689,6.50031 4.267752,4.721998 8.911619,9.76098 11.308475,12.23709 0.248452,-0.747766 0.631101,-1.479399 1.217518,-2.084226 0.407881,-0.420847 0.882611,-0.691068 1.36197,-0.928616 C 75.745748,24.248839 70.699443,19.431152 66.538957,15.51316 64.429317,13.52648 62.562099,11.765794 61.13235,10.457363 60.417476,9.8031482 59.81858,9.2718382 59.357663,8.8683992 58.913992,8.4800566 58.605938,8.2185611 58.470319,8.1255067 z"
-           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#0b0b0b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.65544933;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
-      </g>
-    </g>
-  </g>
-</svg>
+/* Port Interrupt 0 Level */
+typedef enum PORT_INT0LVL_enum
+{
+    PORT_INT0LVL_OFF_gc = (0x00<<0),  /* Interrupt Disabled */
+    PORT_INT0LVL_LO_gc = (0x01<<0),  /* Low Level */
+    PORT_INT0LVL_MED_gc = (0x02<<0),  /* Medium Level */
+    PORT_INT0LVL_HI_gc = (0x03<<0),  /* High Level */
+} PORT_INT0LVL_t;
+
+/* Port Interrupt 1 Level */
+typedef enum PORT_INT1LVL_enum
+{
+    PORT_INT1LVL_OFF_gc = (0x00<<2),  /* Interrupt Disabled */
+    PORT_INT1LVL_LO_gc = (0x01<<2),  /* Low Level */
+    PORT_INT1LVL_MED_gc = (0x02<<2),  /* Medium Level */
+    PORT_INT1LVL_HI_gc = (0x03<<2),  /* High Level */
+} PORT_INT1LVL_t;
+
+/* Output/Pull Configuration */
+typedef enum PORT_OPC_enum
+{
+    PORT_OPC_TOTEM_gc = (0x00<<3),  /* Totempole */
+    PORT_OPC_BUSKEEPER_gc = (0x01<<3),  /* Totempole w/ Bus keeper on Input and Output */
+    PORT_OPC_PULLDOWN_gc = (0x02<<3),  /* Totempole w/ Pull-down on Input */
+    PORT_OPC_PULLUP_gc = (0x03<<3),  /* Totempole w/ Pull-up on Input */
+    PORT_OPC_WIREDOR_gc = (0x04<<3),  /* Wired OR */
+    PORT_OPC_WIREDAND_gc = (0x05<<3),  /* Wired AND */
+    PORT_OPC_WIREDORPULL_gc = (0x06<<3),  /* Wired OR w/ Pull-down */
+    PORT_OPC_WIREDANDPULL_gc = (0x07<<3),  /* Wired AND w/ Pull-up */
+} PORT_OPC_t;
+
+/* Input/Sense Configuration */
+typedef enum PORT_ISC_enum
+{
+    PORT_ISC_BOTHEDGES_gc = (0x00<<0),  /* Sense Both Edges */
+    PORT_ISC_RISING_gc = (0x01<<0),  /* Sense Rising Edge */
+    PORT_ISC_FALLING_gc = (0x02<<0),  /* Sense Falling Edge */
+    PORT_ISC_LEVEL_gc = (0x03<<0),  /* Sense Level (Transparent For Events) */
+    PORT_ISC_INPUT_DISABLE_gc = (0x07<<0),  /* Disable Digital Input Buffer */
+} PORT_ISC_t;
+
+
+/*
+--------------------------------------------------------------------------
+TC - 16-bit Timer/Counter With PWM
+--------------------------------------------------------------------------
+*/
+
+/* 16-bit Timer/Counter 0 */
+typedef struct TC0_struct
+{
+    register8_t CTRLA;  /* Control  Register A */
+    register8_t CTRLB;  /* Control Register B */
+    register8_t CTRLC;  /* Control register C */
+    register8_t CTRLD;  /* Control Register D */
+    register8_t CTRLE;  /* Control Register E */
+    register8_t reserved_0x05;
+    register8_t INTCTRLA;  /* Interrupt Control Register A */
+    register8_t INTCTRLB;  /* Interrupt Control Register B */
+    register8_t CTRLFCLR;  /* Control Register F Clear */
+    register8_t CTRLFSET;  /* Control Register F Set */
+    register8_t CTRLGCLR;  /* Control Register G Clear */
+    register8_t CTRLGSET;  /* Control Register G Set */
+    register8_t INTFLAGS;  /* Interrupt Flag Register */
+    register8_t reserved_0x0D;
+    register8_t reserved_0x0E;
+    register8_t TEMP;  /* Temporary Register For 16-bit Access */
+    register8_t reserved_0x10;
+    register8_t reserved_0x11;
+    register8_t reserved_0x12;
+    register8_t reserved_0x13;
+    register8_t reserved_0x14;
+    register8_t reserved_0x15;
+    register8_t reserved_0x16;
+    register8_t reserved_0x17;
+    register8_t reserved_0x18;
+    register8_t reserved_0x19;
+    register8_t reserved_0x1A;
+    register8_t reserved_0x1B;
+    register8_t reserved_0x1C;
+    register8_t reserved_0x1D;
+    register8_t reserved_0x1E;
+    register8_t reserved_0x1F;
+    _WORDREGISTER(CNT);  /* Count */
+    register8_t reserved_0x22;
+    register8_t reserved_0x23;
+    register8_t reserved_0x24;
+    register8_t reserved_0x25;
+    _WORDREGISTER(PER);  /* Period */
+    _WORDREGISTER(CCA);  /* Compare or Capture A */
+    _WORDREGISTER(CCB);  /* Compare or Capture B */
+    _WORDREGISTER(CCC);  /* Compare or Capture C */
+    _WORDREGISTER(CCD);  /* Compare or Capture D */
+    register8_t reserved_0x30;
+    register8_t reserved_0x31;
+    register8_t reserved_0x32;
+    register8_t reserved_0x33;
+    register8_t reserved_0x34;
+    register8_t reserved_0x35;
+    _WORDREGISTER(PERBUF);  /* Period Buffer */
+    _WORDREGISTER(CCABUF);  /* Compare Or Capture A Buffer */
+    _WORDREGISTER(CCBBUF);  /* Compare Or Capture B Buffer */
+    _WORDREGISTER(CCCBUF);  /* Compare Or Capture C Buffer */
+    _WORDREGISTER(CCDBUF);  /* Compare Or Capture D Buffer */
+} TC0_t;
+
+
+/* 16-bit Timer/Counter 1 */
+typedef struct TC1_struct
+{
+    register8_t CTRLA;  /* Control  Register A */
+    register8_t CTRLB;  /* Control Register B */
+    register8_t CTRLC;  /* Control register C */
+    register8_t CTRLD;  /* Control Register D */
+    register8_t CTRLE;  /* Control Register E */
+    register8_t reserved_0x05;
+    register8_t INTCTRLA;  /* Interrupt Control Register A */
+    register8_t INTCTRLB;  /* Interrupt Control Register B */
+    register8_t CTRLFCLR;  /* Control Register F Clear */
+    register8_t CTRLFSET;  /* Control Register F Set */
+    register8_t CTRLGCLR;  /* Control Register G Clear */
+    register8_t CTRLGSET;  /* Control Register G Set */
+    register8_t INTFLAGS;  /* Interrupt Flag Register */
+    register8_t reserved_0x0D;
+    register8_t reserved_0x0E;
+    register8_t TEMP;  /* Temporary Register For 16-bit Access */
+    register8_t reserved_0x10;
+    register8_t reserved_0x11;
+    register8_t reserved_0x12;
+    register8_t reserved_0x13;
+    register8_t reserved_0x14;
+    register8_t reserved_0x15;
+    register8_t reserved_0x16;
+    register8_t reserved_0x17;
+    register8_t reserved_0x18;
+    register8_t reserved_0x19;
+    register8_t reserved_0x1A;
+    register8_t reserved_0x1B;
+    register8_t reserved_0x1C;
+    register8_t reserved_0x1D;
+    register8_t reserved_0x1E;
+    register8_t reserved_0x1F;
+    _WORDREGISTER(CNT);  /* Count */
+    register8_t reserved_0x22;
+    register8_t reserved_0x23;
+    register8_t reserved_0x24;
+    register8_t reserved_0x25;
+    _WORDREGISTER(PER);  /* Period */
+    _WORDREGISTER(CCA);  /* Compare or Capture A */
+    _WORDREGISTER(CCB);  /* Compare or Capture B */
+    register8_t reserved_0x2C;
+    register8_t reserved_0x2D;
+    register8_t reserved_0x2E;
+    register8_t reserved_0x2F;
+    register8_t reserved_0x30;
+    register8_t reserved_0x31;
+    register8_t reserved_0x32;
+    register8_t reserved_0x33;
+    register8_t reserved_0x34;
+    register8_t reserved_0x35;
+    _WORDREGISTER(PERBUF);  /* Period Buffer */
+    _WORDREGISTER(CCABUF);  /* Compare Or Capture A Buffer */
+    _WORDREGISTER(CCBBUF);  /* Compare Or Capture B Buffer */
+} TC1_t;
+
+/* Clock Selection */
+typedef enum TC_CLKSEL_enum
+{
+    TC_CLKSEL_OFF_gc = (0x00<<0),  /* Timer Off */
+    TC_CLKSEL_DIV1_gc = (0x01<<0),  /* System Clock */
+    TC_CLKSEL_DIV2_gc = (0x02<<0),  /* System Clock / 2 */
+    TC_CLKSEL_DIV4_gc = (0x03<<0),  /* System Clock / 4 */
+    TC_CLKSEL_DIV8_gc = (0x04<<0),  /* System Clock / 8 */
+    TC_CLKSEL_DIV64_gc = (0x05<<0),  /* System Clock / 64 */
+    TC_CLKSEL_DIV256_gc = (0x06<<0),  /* System Clock / 256 */
+    TC_CLKSEL_DIV1024_gc = (0x07<<0),  /* System Clock / 1024 */
+    TC_CLKSEL_EVCH0_gc = (0x08<<0),  /* Event Channel 0 */
+    TC_CLKSEL_EVCH1_gc = (0x09<<0),  /* Event Channel 1 */
+    TC_CLKSEL_EVCH2_gc = (0x0A<<0),  /* Event Channel 2 */
+    TC_CLKSEL_EVCH3_gc = (0x0B<<0),  /* Event Channel 3 */
+} TC_CLKSEL_t;
+
+/* Waveform Generation Mode */
+typedef enum TC_WGMODE_enum
+{
+    TC_WGMODE_NORMAL_gc = (0x00<<0),  /* Normal Mode */
+    TC_WGMODE_FRQ_gc = (0x01<<0),  /* Frequency Generation Mode */
+    TC_WGMODE_SINGLESLOPE_gc = (0x03<<0),  /* Single Slope */
+    TC_WGMODE_SS_gc = (0x03<<0),  /* Single Slope */
+    TC_WGMODE_DSTOP_gc = (0x05<<0),  /* Dual Slope, Update on TOP */
+    TC_WGMODE_DS_T_gc = (0x05<<0),  /* Dual Slope, Update on TOP */
+    TC_WGMODE_DSBOTH_gc = (0x06<<0),  /* Dual Slope, Update on both TOP and BOTTOM */
+    TC_WGMODE_DS_TB_gc = (0x06<<0),  /* Dual Slope, Update on both TOP and BOTTOM */
+    TC_WGMODE_DSBOTTOM_gc = (0x07<<0),  /* Dual Slope, Update on BOTTOM */
+    TC_WGMODE_DS_B_gc = (0x07<<0),  /* Dual Slope, Update on BOTTOM */
+} TC_WGMODE_t;
+
+/* Byte Mode */
+typedef enum TC_BYTEM_enum
+{
+    TC_BYTEM_NORMAL_gc = (0x00<<0),  /* 16-bit mode */
+    TC_BYTEM_BYTEMODE_gc = (0x01<<0),  /* Timer/Counter operating in byte mode only */
+    TC_BYTEM_SPLITMODE_gc = (0x02<<0),  /* Timer/Counter split into two 8-bit Counters (TC2) */
+} TC_BYTEM_t;
+
+/* Event Action */
+typedef enum TC_EVACT_enum
+{
+    TC_EVACT_OFF_gc = (0x00<<5),  /* No Event Action */
+    TC_EVACT_CAPT_gc = (0x01<<5),  /* Input Capture */
+    TC_EVACT_UPDOWN_gc = (0x02<<5),  /* Externally Controlled Up/Down Count */
+    TC_EVACT_QDEC_gc = (0x03<<5),  /* Quadrature Decode */
+    TC_EVACT_RESTART_gc = (0x04<<5),  /* Restart */
+    TC_EVACT_FRQ_gc = (0x05<<5),  /* Frequency Capture */
+    TC_EVACT_PW_gc = (0x06<<5),  /* Pulse-width Capture */
+} TC_EVACT_t;
+
+/* Event Selection */
+typedef enum TC_EVSEL_enum
+{
+    TC_EVSEL_OFF_gc = (0x00<<0),  /* No Event Source */
+    TC_EVSEL_CH0_gc = (0x08<<0),  /* Event Channel 0 */
+    TC_EVSEL_CH1_gc = (0x09<<0),  /* Event Channel 1 */
+    TC_EVSEL_CH2_gc = (0x0A<<0),  /* Event Channel 2 */
+    TC_EVSEL_CH3_gc = (0x0B<<0),  /* Event Channel 3 */
+} TC_EVSEL_t;
+
+/* Error Interrupt Level */
+typedef enum TC_ERRINTLVL_enum
+{
+    TC_ERRINTLVL_OFF_gc = (0x00<<2),  /* Interrupt Disabled */
+    TC_ERRINTLVL_LO_gc = (0x01<<2),  /* Low Level */
+    TC_ERRINTLVL_MED_gc = (0x02<<2),  /* Medium Level */
+    TC_ERRINTLVL_HI_gc = (0x03<<2),  /* High Level */
+} TC_ERRINTLVL_t;
+
+/* Overflow Interrupt Level */
+typedef enum TC_OVFINTLVL_enum
+{
+    TC_OVFINTLVL_OFF_gc = (0x00<<0),  /* Interrupt Disabled */
+    TC_OVFINTLVL_LO_gc = (0x01<<0),  /* Low Level */
+    TC_OVFINTLVL_MED_gc = (0x02<<0),  /* Medium Level */
+    TC_OVFINTLVL_HI_gc = (0x03<<0),  /* High Level */
+} TC_OVFINTLVL_t;
+
+/* Compare or Capture D Interrupt Level */
+typedef enum TC_CCDINTLVL_enum
+{
+    TC_CCDINTLVL_OFF_gc = (0x00<<6),  /* Interrupt Disabled */
+    TC_CCDINTLVL_LO_gc = (0x01<<6),  /* Low Level */
+    TC_CCDINTLVL_MED_gc = (0x02<<6),  /* Medium Level */
+    TC_CCDINTLVL_HI_gc = (0x03<<6),  /* High Level */
+} TC_CCDINTLVL_t;
+
+/* Compare or Capture C Interrupt Level */
+typedef enum TC_CCCINTLVL_enum
+{
+    TC_CCCINTLVL_OFF_gc = (0x00<<4),  /* Interrupt Disabled */
+    TC_CCCINTLVL_LO_gc = (0x01<<4),  /* Low Level */
+    TC_CCCINTLVL_MED_gc = (0x02<<4),  /* Medium Level */
+    TC_CCCINTLVL_HI_gc = (0x03<<4),  /* High Level */
+} TC_CCCINTLVL_t;
+
+/* Compare or Capture B Interrupt Level */
+typedef enum TC_CCBINTLVL_enum
+{
+    TC_CCBINTLVL_OFF_gc = (0x00<<2),  /* Interrupt Disabled */
+    TC_CCBINTLVL_LO_gc = (0x01<<2),  /* Low Level */
+    TC_CCBINTLVL_MED_gc = (0x02<<2),  /* Medium Level */
+    TC_CCBINTLVL_HI_gc = (0x03<<2),  /* High Level */
+} TC_CCBINTLVL_t;
+
+/* Compare or Capture A Interrupt Level */
+typedef enum TC_CCAINTLVL_enum
+{
+    TC_CCAINTLVL_OFF_gc = (0x00<<0),  /* Interrupt Disabled */
+    TC_CCAINTLVL_LO_gc = (0x01<<0),  /* Low Level */
+    TC_CCAINTLVL_MED_gc = (0x02<<0),  /* Medium Level */
+    TC_CCAINTLVL_HI_gc = (0x03<<0),  /* High Level */
+} TC_CCAINTLVL_t;
+
+/* Timer/Counter Command */
+typedef enum TC_CMD_enum
+{
+    TC_CMD_NONE_gc = (0x00<<2),  /* No Command */
+    TC_CMD_UPDATE_gc = (0x01<<2),  /* Force Update */
+    TC_CMD_RESTART_gc = (0x02<<2),  /* Force Restart */
+    TC_CMD_RESET_gc = (0x03<<2),  /* Force Hard Reset */
+} TC_CMD_t;
+
+
+/*
+--------------------------------------------------------------------------
+TC2 - 16-bit Timer/Counter type 2
+--------------------------------------------------------------------------
+*/
+
+/* 16-bit Timer/Counter type 2 */
+typedef struct TC2_struct
+{
+    register8_t CTRLA;  /* Control Register A */
+    register8_t CTRLB;  /* Control Register B */
+    register8_t CTRLC;  /* Control register C */
+    register8_t reserved_0x03;
+    register8_t CTRLE;  /* Control Register E */
+    register8_t reserved_0x05;
+    register8_t INTCTRLA;  /* Interrupt Control Register A */
+    register8_t INTCTRLB;  /* Interrupt Control Register B */
+    register8_t reserved_0x08;
+    register8_t CTRLF;  /* Control Register F */
+    register8_t reserved_0x0A;
+    register8_t reserved_0x0B;
+    register8_t INTFLAGS;  /* Interrupt Flag Register */
+    register8_t reserved_0x0D;
+    register8_t reserved_0x0E;
+    register8_t reserved_0x0F;
+    register8_t reserved_0x10;
+    register8_t reserved_0x11;
+    register8_t reserved_0x12;
+    register8_t reserved_0x13;
+    register8_t reserved_0x14;
+    register8_t reserved_0x15;
+    register8_t reserved_0x16;
+    register8_t reserved_0x17;
+    register8_t reserved_0x18;
+    register8_t reserved_0x19;
+    register8_t reserved_0x1A;
+    register8_t reserved_0x1B;
+    register8_t reserved_0x1C;
+    register8_t reserved_0x1D;
+    register8_t reserved_0x1E;
+    register8_t reserved_0x1F;
+    register8_t LCNT;  /* Low Byte Count */
+    register8_t HCNT;  /* High Byte Count */
+    register8_t reserved_0x22;
+    register8_t reserved_0x23;
+    register8_t reserved_0x24;
+    register8_t reserved_0x25;
+    register8_t LPER;  /* Low Byte Period */
+    register8_t HPER;  /* High Byte Period */
+    register8_t LCMPA;  /* Low Byte Compare A */
+    register8_t HCMPA;  /* High Byte Compare A */
+    register8_t LCMPB;  /* Low Byte Compare B */
+    register8_t HCMPB;  /* High Byte Compare B */
+    register8_t LCMPC;  /* Low Byte Compare C */
+    register8_t HCMPC;  /* High Byte Compare C */
+    register8_t LCMPD;  /* Low Byte Compare D */
+    register8_t HCMPD;  /* High Byte Compare D */
+} TC2_t;
+
+/* Clock Selection */
+typedef enum TC2_CLKSEL_enum
+{
+    TC2_CLKSEL_OFF_gc = (0x00<<0),  /* Timer Off */
+    TC2_CLKSEL_DIV1_gc = (0x01<<0),  /* System Clock */
+    TC2_CLKSEL_DIV2_gc = (0x02<<0),  /* System Clock / 2 */
+    TC2_CLKSEL_DIV4_gc = (0x03<<0),  /* System Clock / 4 */
+    TC2_CLKSEL_DIV8_gc = (0x04<<0),  /* System Clock / 8 */
+    TC2_CLKSEL_DIV64_gc = (0x05<<0),  /* System Clock / 64 */
+    TC2_CLKSEL_DIV256_gc = (0x06<<0),  /* System Clock / 256 */
+    TC2_CLKSEL_DIV1024_gc = (0x07<<0),  /* System Clock / 1024 */
+    TC2_CLKSEL_EVCH0_gc = (0x08<<0),  /* Event Channel 0 */
+    TC2_CLKSEL_EVCH1_gc = (0x09<<0),  /* Event Channel 1 */
+    TC2_CLKSEL_EVCH2_gc = (0x0A<<0),  /* Event Channel 2 */
+    TC2_CLKSEL_EVCH3_gc = (0x0B<<0),  /* Event Channel 3 */
+} TC2_CLKSEL_t;
+
+/* Byte Mode */
+typedef enum TC2_BYTEM_enum
+{
+    TC2_BYTEM_NORMAL_gc = (0x00<<0),  /* 16-bit mode */
+    TC2_BYTEM_BYTEMODE_gc = (0x01<<0),  /* Timer/Counter operating in byte mode only (TC2) */
+    TC2_BYTEM_SPLITMODE_gc = (0x02<<0),  /* Timer/Counter split into two 8-bit Counters */
+} TC2_BYTEM_t;
+
+/* High Byte Underflow Interrupt Level */
+typedef enum TC2_HUNFINTLVL_enum
+{
+    TC2_HUNFINTLVL_OFF_gc = (0x00<<2),  /* Interrupt Disabled */
+    TC2_HUNFINTLVL_LO_gc = (0x01<<2),  /* Low Level */
+    TC2_HUNFINTLVL_MED_gc = (0x02<<2),  /* Medium Level */
+    TC2_HUNFINTLVL_HI_gc = (0x03<<2),  /* High Level */
+} TC2_HUNFINTLVL_t;
+
+/* Low Byte Underflow Interrupt Level */
+typedef enum TC2_LUNFINTLVL_enum
+{
+    TC2_LUNFINTLVL_OFF_gc = (0x00<<0),  /* Interrupt Disabled */
+    TC2_LUNFINTLVL_LO_gc = (0x01<<0),  /* Low Level */
+    TC2_LUNFINTLVL_MED_gc = (0x02<<0),  /* Medium Level */
+    TC2_LUNFINTLVL_HI_gc = (0x03<<0),  /* High Level */
+} TC2_LUNFINTLVL_t;
+
+/* Low Byte Compare D Interrupt Level */
+typedef enum TC2_LCMPDINTLVL_enum
+{
+    TC2_LCMPDINTLVL_OFF_gc = (0x00<<6),  /* Interrupt Disabled */
+    TC2_LCMPDINTLVL_LO_gc = (0x01<<6),  /* Low Level */
+    TC2_LCMPDINTLVL_MED_gc = (0x02<<6),  /* Medium Level */
+    TC2_LCMPDINTLVL_HI_gc = (0x03<<6),  /* High Level */
+} TC2_LCMPDINTLVL_t;
+
+/* Low Byte Compare C Interrupt Level */
+typedef enum TC2_LCMPCINTLVL_enum
+{
+    TC2_LCMPCINTLVL_OFF_gc = (0x00<<4),  /* Interrupt Disabled */
+    TC2_LCMPCINTLVL_LO_gc = (0x01<<4),  /* Low Level */
+    TC2_LCMPCINTLVL_MED_gc = (0x02<<4),  /* Medium Level */
+    TC2_LCMPCINTLVL_HI_gc = (0x03<<4),  /* High Level */
+} TC2_LCMPCINTLVL_t;
+
+/* Low Byte Compare B Interrupt Level */
+typedef enum TC2_LCMPBINTLVL_enum
+{
+    TC2_LCMPBINTLVL_OFF_gc = (0x00<<2),  /* Interrupt Disabled */
+    TC2_LCMPBINTLVL_LO_gc = (0x01<<2),  /* Low Level */
+    TC2_LCMPBINTLVL_MED_gc = (0x02<<2),  /* Medium Level */
+    TC2_LCMPBINTLVL_HI_gc = (0x03<<2),  /* High Level */
+} TC2_LCMPBINTLVL_t;
+
+/* Low Byte Compare A Interrupt Level */
+typedef enum TC2_LCMPAINTLVL_enum
+{
+    TC2_LCMPAINTLVL_OFF_gc = (0x00<<0),  /* Interrupt Disabled */
+    TC2_LCMPAINTLVL_LO_gc = (0x01<<0),  /* Low Level */
+    TC2_LCMPAINTLVL_MED_gc = (0x02<<0),  /* Medium Level */
+    TC2_LCMPAINTLVL_HI_gc = (0x03<<0),  /* High Level */
+} TC2_LCMPAINTLVL_t;
+
+/* Timer/Counter Command */
+typedef enum TC2_CMD_enum
+{
+    TC2_CMD_NONE_gc = (0x00<<2),  /* No Command */
+    TC2_CMD_RESTART_gc = (0x02<<2),  /* Force Restart */
+    TC2_CMD_RESET_gc = (0x03<<2),  /* Force Hard Reset */
+} TC2_CMD_t;
+
+/* Timer/Counter Command */
+typedef enum TC2_CMDEN_enum
+{
+    TC2_CMDEN_LOW_gc = (0x01<<0),  /* Low Byte Timer/Counter */
+    TC2_CMDEN_HIGH_gc = (0x02<<0),  /* High Byte Timer/Counter */
+    TC2_CMDEN_BOTH_gc = (0x03<<0),  /* Both Low Byte and High Byte Timer/Counters */
+} TC2_CMDEN_t;
+
+
+/*
+--------------------------------------------------------------------------
+AWEX - Timer/Counter Advanced Waveform Extension
+--------------------------------------------------------------------------
+*/
+
+/* Advanced Waveform Extension */
+typedef struct AWEX_struct
+{
+    register8_t CTRL;  /* Control Register */
+    register8_t reserved_0x01;
+    register8_t FDEMASK;  /* Fault Detection Event Mask */
+    register8_t FDCTRL;  /* Fault Detection Control Register */
+    register8_t STATUS;  /* Status Register */
+    register8_t STATUSSET;  /* Status Set Register */
+    register8_t DTBOTH;  /* Dead Time Both Sides */
+    register8_t DTBOTHBUF;  /* Dead Time Both Sides Buffer */
+    register8_t DTLS;  /* Dead Time Low Side */
+    register8_t DTHS;  /* Dead Time High Side */
+    register8_t DTLSBUF;  /* Dead Time Low Side Buffer */
+    register8_t DTHSBUF;  /* Dead Time High Side Buffer */
+    register8_t OUTOVEN;  /* Output Override Enable */
+} AWEX_t;
+
+/* Fault Detect Action */
+typedef enum AWEX_FDACT_enum
+{
+    AWEX_FDACT_NONE_gc = (0x00<<0),  /* No Fault Protection */
+    AWEX_FDACT_CLEAROE_gc = (0x01<<0),  /* Clear Output Enable Bits */
+    AWEX_FDACT_CLEARDIR_gc = (0x03<<0),  /* Clear I/O Port Direction Bits */
+} AWEX_FDACT_t;
+
+
+/*
+--------------------------------------------------------------------------
+HIRES - Timer/Counter High-Resolution Extension
+--------------------------------------------------------------------------
+*/
+
+/* High-Resolution Extension */
+typedef struct HIRES_struct
+{
+    register8_t CTRLA;  /* Control Register */
+} HIRES_t;
+
+/* High Resolution Enable */
+typedef enum HIRES_HREN_enum
+{
+    HIRES_HREN_NONE_gc = (0x00<<0),  /* No Fault Protection */
+    HIRES_HREN_TC0_gc = (0x01<<0),  /* Enable High Resolution on Timer/Counter 0 */
+    HIRES_HREN_TC1_gc = (0x02<<0),  /* Enable High Resolution on Timer/Counter 1 */
+    HIRES_HREN_BOTH_gc = (0x03<<0),  /* Enable High Resolution both Timer/Counters */
+} HIRES_HREN_t;
+
+
+/*
+--------------------------------------------------------------------------
+USART - Universal Asynchronous Receiver-Transmitter
+--------------------------------------------------------------------------
+*/
+
+/* Universal Synchronous/Asynchronous Receiver/Transmitter */
+typedef struct USART_struct
+{
+    register8_t DATA;  /* Data Register */
+    register8_t STATUS;  /* Status Register */
+    register8_t reserved_0x02;
+    register8_t CTRLA;  /* Control Register A */
+    register8_t CTRLB;  /* Control Register B */
+    register8_t CTRLC;  /* Control Register C */
+    register8_t BAUDCTRLA;  /* Baud Rate Control Register A */
+    register8_t BAUDCTRLB;  /* Baud Rate Control Register B */
+} USART_t;
+
+/* Receive Complete Interrupt level */
+typedef enum USART_RXCINTLVL_enum
+{
+    USART_RXCINTLVL_OFF_gc = (0x00<<4),  /* Interrupt Disabled */
+    USART_RXCINTLVL_LO_gc = (0x01<<4),  /* Low Level */
+    USART_RXCINTLVL_MED_gc = (0x02<<4),  /* Medium Level */
+    USART_RXCINTLVL_HI_gc = (0x03<<4),  /* High Level */
+} USART_RXCINTLVL_t;
+
+/* Transmit Complete Interrupt level */
+typedef enum USART_TXCINTLVL_enum
+{
+    USART_TXCINTLVL_OFF_gc = (0x00<<2),  /* Interrupt Disabled */
+    USART_TXCINTLVL_LO_gc = (0x01<<2),  /* Low Level */
+    USART_TXCINTLVL_MED_gc = (0x02<<2),  /* Medium Level */
+    USART_TXCINTLVL_HI_gc = (0x03<<2),  /* High Level */
+} USART_TXCINTLVL_t;
+
+/* Data Register Empty Interrupt level */
+typedef enum USART_DREINTLVL_enum
+{
+    USART_DREINTLVL_OFF_gc = (0x00<<0),  /* Interrupt Disabled */
+    USART_DREINTLVL_LO_gc = (0x01<<0),  /* Low Level */
+    USART_DREINTLVL_MED_gc = (0x02<<0),  /* Medium Level */
+    USART_DREINTLVL_HI_gc = (0x03<<0),  /* High Level */
+} USART_DREINTLVL_t;
+
+/* Character Size */
+typedef enum USART_CHSIZE_enum
+{
+    USART_CHSIZE_5BIT_gc = (0x00<<0),  /* Character size: 5 bit */
+    USART_CHSIZE_6BIT_gc = (0x01<<0),  /* Character size: 6 bit */
+    USART_CHSIZE_7BIT_gc = (0x02<<0),  /* Character size: 7 bit */
+    USART_CHSIZE_8BIT_gc = (0x03<<0),  /* Character size: 8 bit */
+    USART_CHSIZE_9BIT_gc = (0x07<<0),  /* Character size: 9 bit */
+} USART_CHSIZE_t;
+
+/* Communication Mode */
+typedef enum USART_CMODE_enum
+{
+    USART_CMODE_ASYNCHRONOUS_gc = (0x00<<6),  /* Asynchronous Mode */
+    USART_CMODE_SYNCHRONOUS_gc = (0x01<<6),  /* Synchronous Mode */
+    USART_CMODE_IRDA_gc = (0x02<<6),  /* IrDA Mode */
+    USART_CMODE_MSPI_gc = (0x03<<6),  /* Master SPI Mode */
+} USART_CMODE_t;
+
+/* Parity Mode */
+typedef enum USART_PMODE_enum
+{
+    USART_PMODE_DISABLED_gc = (0x00<<4),  /* No Parity */
+    USART_PMODE_EVEN_gc = (0x02<<4),  /* Even Parity */
+    USART_PMODE_ODD_gc = (0x03<<4),  /* Odd Parity */
+} USART_PMODE_t;
+
+
+/*
+--------------------------------------------------------------------------
+SPI - Serial Peripheral Interface
+--------------------------------------------------------------------------
+*/
+
+/* Serial Peripheral Interface */
+typedef struct SPI_struct
+{
+    register8_t CTRL;  /* Control Register */
+    register8_t INTCTRL;  /* Interrupt Control Register */
+    register8_t STATUS;  /* Status Register */
+    register8_t DATA;  /* Data Register */
+} SPI_t;
+
+/* SPI Mode */
+typedef enum SPI_MODE_enum
+{
+    SPI_MODE_0_gc = (0x00<<2),  /* SPI Mode 0 */
+    SPI_MODE_1_gc = (0x01<<2),  /* SPI Mode 1 */
+    SPI_MODE_2_gc = (0x02<<2),  /* SPI Mode 2 */
+    SPI_MODE_3_gc = (0x03<<2),  /* SPI Mode 3 */
+} SPI_MODE_t;
+
+/* Prescaler setting */
+typedef enum SPI_PRESCALER_enum
+{
+    SPI_PRESCALER_DIV4_gc = (0x00<<0),  /* System Clock / 4 */
+    SPI_PRESCALER_DIV16_gc = (0x01<<0),  /* System Clock / 16 */
+    SPI_PRESCALER_DIV64_gc = (0x02<<0),  /* System Clock / 64 */
+    SPI_PRESCALER_DIV128_gc = (0x03<<0),  /* System Clock / 128 */
+} SPI_PRESCALER_t;
+
+/* Interrupt level */
+typedef enum SPI_INTLVL_enum
+{
+    SPI_INTLVL_OFF_gc = (0x00<<0),  /* Interrupt Disabled */
+    SPI_INTLVL_LO_gc = (0x01<<0),  /* Low Level */
+    SPI_INTLVL_MED_gc = (0x02<<0),  /* Medium Level */
+    SPI_INTLVL_HI_gc = (0x03<<0),  /* High Level */
+} SPI_INTLVL_t;
+
+
+/*
+--------------------------------------------------------------------------
+IRCOM - IR Communication Module
+--------------------------------------------------------------------------
+*/
+
+/* IR Communication Module */
+typedef struct IRCOM_struct
+{
+    register8_t CTRL;  /* Control Register */
+    register8_t TXPLCTRL;  /* IrDA Transmitter Pulse Length Control Register */
+    register8_t RXPLCTRL;  /* IrDA Receiver Pulse Length Control Register */
+} IRCOM_t;
+
+/* Event channel selection */
+typedef enum IRDA_EVSEL_enum
+{
+    IRDA_EVSEL_OFF_gc = (0x00<<0),  /* No Event Source */
+    IRDA_EVSEL_0_gc = (0x08<<0),  /* Event Channel 0 */
+    IRDA_EVSEL_1_gc = (0x09<<0),  /* Event Channel 1 */
+    IRDA_EVSEL_2_gc = (0x0A<<0),  /* Event Channel 2 */
+    IRDA_EVSEL_3_gc = (0x0B<<0),  /* Event Channel 3 */
+} IRDA_EVSEL_t;
+
+
+/*
+--------------------------------------------------------------------------
+FUSE - Fuses and Lockbits
+--------------------------------------------------------------------------
+*/
+
+/* Fuses */
+typedef struct NVM_FUSES_struct
+{
+    register8_t reserved_0x00;
+    register8_t FUSEBYTE1;  /* Watchdog Configuration */
+    register8_t FUSEBYTE2;  /* Reset Configuration */
+    register8_t reserved_0x03;
+    register8_t FUSEBYTE4;  /* Start-up Configuration */
+    register8_t FUSEBYTE5;  /* EESAVE and BOD Level */
+} NVM_FUSES_t;
+
+/* Boot Loader Section Reset Vector */
+typedef enum BOOTRST_enum
+{
+    BOOTRST_BOOTLDR_gc = (0x00<<6),  /* Boot Loader Reset */
+    BOOTRST_APPLICATION_gc = (0x01<<6),  /* Application Reset */
+} BOOTRST_t;
+
+/* Timer Oscillator pin location */
+typedef enum TOSCSEL_enum
+{
+    TOSCSEL_ALTERNATE_gc = (0x00<<5),  /* TOSC1 / TOSC2 on separate pins */
+    TOSCSEL_XTAL_gc = (0x01<<5),  /* TOSC1 / TOSC2 shared with XTAL1 / XTAL2 */
+} TOSCSEL_t;
+
+/* BOD operation */
+typedef enum BOD_enum
+{
+    BOD_SAMPLED_gc = (0x01<<0),  /* BOD enabled in sampled mode */
+    BOD_CONTINUOUS_gc = (0x02<<0),  /* BOD enabled continuously */
+    BOD_DISABLED_gc = (0x03<<0),  /* BOD Disabled */
+} BOD_t;
+
+/* BOD operation */
+typedef enum BODACT_enum
+{
+    BODACT_SAMPLED_gc = (0x01<<4),  /* BOD enabled in sampled mode */
+    BODACT_CONTINUOUS_gc = (0x02<<4),  /* BOD enabled continuously */
+    BODACT_DISABLED_gc = (0x03<<4),  /* BOD Disabled */
+} BODACT_t;
+
+/* Watchdog (Window) Timeout Period */
+typedef enum WD_enum
+{
+    WD_8CLK_gc = (0x00<<4),  /* 8 cycles (8ms @ 3.3V) */
+    WD_16CLK_gc = (0x01<<4),  /* 16 cycles (16ms @ 3.3V) */
+    WD_32CLK_gc = (0x02<<4),  /* 32 cycles (32ms @ 3.3V) */
+    WD_64CLK_gc = (0x03<<4),  /* 64 cycles (64ms @ 3.3V) */
+    WD_128CLK_gc = (0x04<<4),  /* 128 cycles (0.125s @ 3.3V) */
+    WD_256CLK_gc = (0x05<<4),  /* 256 cycles (0.25s @ 3.3V) */
+    WD_512CLK_gc = (0x06<<4),  /* 512 cycles (0.5s @ 3.3V) */
+    WD_1KCLK_gc = (0x07<<4),  /* 1K cycles (1s @ 3.3V) */
+    WD_2KCLK_gc = (0x08<<4),  /* 2K cycles (2s @ 3.3V) */
+    WD_4KCLK_gc = (0x09<<4),  /* 4K cycles (4s @ 3.3V) */
+    WD_8KCLK_gc = (0x0A<<4),  /* 8K cycles (8s @ 3.3V) */
+} WD_t;
+
+/* Watchdog (Window) Timeout Period */
+typedef enum WDP_enum
+{
+    WDP_8CLK_gc = (0x00<<0),  /* 8 cycles (8ms @ 3.3V) */
+    WDP_16CLK_gc = (0x01<<0),  /* 16 cycles (16ms @ 3.3V) */
+    WDP_32CLK_gc = (0x02<<0),  /* 32 cycles (32ms @ 3.3V) */
+    WDP_64CLK_gc = (0x03<<0),  /* 64 cycles (64ms @ 3.3V) */
+    WDP_128CLK_gc = (0x04<<0),  /* 128 cycles (0.125s @ 3.3V) */
+    WDP_256CLK_gc = (0x05<<0),  /* 256 cycles (0.25s @ 3.3V) */
+    WDP_512CLK_gc = (0x06<<0),  /* 512 cycles (0.5s @ 3.3V) */
+    WDP_1KCLK_gc = (0x07<<0),  /* 1K cycles (1s @ 3.3V) */
+    WDP_2KCLK_gc = (0x08<<0),  /* 2K cycles (2s @ 3.3V) */
+    WDP_4KCLK_gc = (0x09<<0),  /* 4K cycles (4s @ 3.3V) */
+    WDP_8KCLK_gc = (0x0A<<0),  /* 8K cycles (8s @ 3.3V) */
+} WDP_t;
+
+/* Start-up Time */
+typedef enum SUT_enum
+{
+    SUT_0MS_gc = (0x03<<2),  /* 0 ms */
+    SUT_4MS_gc = (0x01<<2),  /* 4 ms */
+    SUT_64MS_gc = (0x00<<2),  /* 64 ms */
+} SUT_t;
+
+/* Brownout Detection Voltage Level */
+typedef enum BODLVL_enum
+{
+    BODLVL_1V6_gc = (0x07<<0),  /* 1.6 V */
+    BODLVL_1V8_gc = (0x06<<0),  /* 1.8 V */
+    BODLVL_2V0_gc = (0x05<<0),  /* 2.0 V */
+    BODLVL_2V2_gc = (0x04<<0),  /* 2.2 V */
+    BODLVL_2V4_gc = (0x03<<0),  /* 2.4 V */
+    BODLVL_2V6_gc = (0x02<<0),  /* 2.6 V */
+    BODLVL_2V8_gc = (0x01<<0),  /* 2.8 V */
+    BODLVL_3V0_gc = (0x00<<0),  /* 3.0 V */
+} BODLVL_t;
+
+
+/*
+--------------------------------------------------------------------------
+LOCKBIT - Fuses and Lockbits
+--------------------------------------------------------------------------
+*/
+
+/* Lock Bits */
+typedef struct NVM_LOCKBITS_struct
+{
+    register8_t LOCKBITS;  /* Lock Bits */
+} NVM_LOCKBITS_t;
+
+/* Boot lock bits - boot setcion */
+typedef enum FUSE_BLBB_enum
+{
+    FUSE_BLBB_RWLOCK_gc = (0x00<<6),  /* Read and write not allowed */
+    FUSE_BLBB_RLOCK_gc = (0x01<<6),  /* Read not allowed */
+    FUSE_BLBB_WLOCK_gc = (0x02<<6),  /* Write not allowed */
+    FUSE_BLBB_NOLOCK_gc = (0x03<<6),  /* No locks */
+} FUSE_BLBB_t;
+
+/* Boot lock bits - application section */
+typedef enum FUSE_BLBA_enum
+{
+    FUSE_BLBA_RWLOCK_gc = (0x00<<4),  /* Read and write not allowed */
+    FUSE_BLBA_RLOCK_gc = (0x01<<4),  /* Read not allowed */
+    FUSE_BLBA_WLOCK_gc = (0x02<<4),  /* Write not allowed */
+    FUSE_BLBA_NOLOCK_gc = (0x03<<4),  /* No locks */
+} FUSE_BLBA_t;
+
+/* Boot lock bits - application table section */
+typedef enum FUSE_BLBAT_enum
+{
+    FUSE_BLBAT_RWLOCK_gc = (0x00<<2),  /* Read and write not allowed */
+    FUSE_BLBAT_RLOCK_gc = (0x01<<2),  /* Read not allowed */
+    FUSE_BLBAT_WLOCK_gc = (0x02<<2),  /* Write not allowed */
+    FUSE_BLBAT_NOLOCK_gc = (0x03<<2),  /* No locks */
+} FUSE_BLBAT_t;
+
+/* Lock bits */
+typedef enum FUSE_LB_enum
+{
+    FUSE_LB_RWLOCK_gc = (0x00<<0),  /* Read and write not allowed */
+    FUSE_LB_WLOCK_gc = (0x02<<0),  /* Write not allowed */
+    FUSE_LB_NOLOCK_gc = (0x03<<0),  /* No locks */
+} FUSE_LB_t;
+
+
+/*
+--------------------------------------------------------------------------
+SIGROW - Signature Row
+--------------------------------------------------------------------------
+*/
+
+/* Production Signatures */
+typedef struct NVM_PROD_SIGNATURES_struct
+{
+    register8_t RCOSC2M;  /* RCOSC 2 MHz Calibration Value B */
+    register8_t RCOSC2MA;  /* RCOSC 2 MHz Calibration Value A */
+    register8_t RCOSC32K;  /* RCOSC 32.768 kHz Calibration Value */
+    register8_t RCOSC32M;  /* RCOSC 32 MHz Calibration Value B */
+    register8_t RCOSC32MA;  /* RCOSC 32 MHz Calibration Value A */
+    register8_t reserved_0x05;
+    register8_t reserved_0x06;
+    register8_t reserved_0x07;
+    register8_t LOTNUM0;  /* Lot Number Byte 0, ASCII */
+    register8_t LOTNUM1;  /* Lot Number Byte 1, ASCII */
+    register8_t LOTNUM2;  /* Lot Number Byte 2, ASCII */
+    register8_t LOTNUM3;  /* Lot Number Byte 3, ASCII */
+    register8_t LOTNUM4;  /* Lot Number Byte 4, ASCII */
+    register8_t LOTNUM5;  /* Lot Number Byte 5, ASCII */
+    register8_t reserved_0x0E;
+    register8_t reserved_0x0F;
+    register8_t WAFNUM;  /* Wafer Number */
+    register8_t reserved_0x11;
+    register8_t COORDX0;  /* Wafer Coordinate X Byte 0 */
+    register8_t COORDX1;  /* Wafer Coordinate X Byte 1 */
+    register8_t COORDY0;  /* Wafer Coordinate Y Byte 0 */
+    register8_t COORDY1;  /* Wafer Coordinate Y Byte 1 */
+    register8_t reserved_0x16;
+    register8_t reserved_0x17;
+    register8_t reserved_0x18;
+    register8_t reserved_0x19;
+    register8_t USBCAL0;  /* USB Calibration Byte 0 */
+    register8_t USBCAL1;  /* USB Calibration Byte 1 */
+    register8_t USBRCOSC;  /* USB RCOSC Calibration Value B */
+    register8_t USBRCOSCA;  /* USB RCOSC Calibration Value A */
+    register8_t reserved_0x1E;
+    register8_t reserved_0x1F;
+    register8_t ADCACAL0;  /* ADCA Calibration Byte 0 */
+    register8_t ADCACAL1;  /* ADCA Calibration Byte 1 */
+    register8_t reserved_0x22;
+    register8_t reserved_0x23;
+    register8_t reserved_0x24;
+    register8_t reserved_0x25;
+    register8_t reserved_0x26;
+    register8_t reserved_0x27;
+    register8_t reserved_0x28;
+    register8_t reserved_0x29;
+    register8_t reserved_0x2A;
+    register8_t reserved_0x2B;
+    register8_t reserved_0x2C;
+    register8_t reserved_0x2D;
+    register8_t TEMPSENSE0;  /* Temperature Sensor Calibration Byte 0 */
+    register8_t TEMPSENSE1;  /* Temperature Sensor Calibration Byte 1 */
+    register8_t reserved_0x30;
+    register8_t reserved_0x31;
+    register8_t reserved_0x32;
+    register8_t reserved_0x33;
+    register8_t reserved_0x34;
+    register8_t reserved_0x35;
+    register8_t reserved_0x36;
+    register8_t reserved_0x37;
+    register8_t reserved_0x38;
+    register8_t reserved_0x39;
+    register8_t reserved_0x3A;
+    register8_t reserved_0x3B;
+    register8_t reserved_0x3C;
+    register8_t reserved_0x3D;
+    register8_t reserved_0x3E;
+    register8_t reserved_0x3F;
+} NVM_PROD_SIGNATURES_t;
+
+/*
+==========================================================================
+IO Module Instances. Mapped to memory.
+==========================================================================
+*/
+
+#define VPORT0    (*(VPORT_t *) 0x0010)  /* Virtual Port */
+#define VPORT1    (*(VPORT_t *) 0x0014)  /* Virtual Port */
+#define VPORT2    (*(VPORT_t *) 0x0018)  /* Virtual Port */
+#define VPORT3    (*(VPORT_t *) 0x001C)  /* Virtual Port */
+#define OCD    (*(OCD_t *) 0x002E)  /* On-Chip Debug System */
+#define CLK    (*(CLK_t *) 0x0040)  /* Clock System */
+#define SLEEP    (*(SLEEP_t *) 0x0048)  /* Sleep Controller */
+#define OSC    (*(OSC_t *) 0x0050)  /* Oscillator */
+#define DFLLRC32M    (*(DFLL_t *) 0x0060)  /* DFLL */
+#define DFLLRC2M    (*(DFLL_t *) 0x0068)  /* DFLL */
+#define PR    (*(PR_t *) 0x0070)  /* Power Reduction */
+#define RST    (*(RST_t *) 0x0078)  /* Reset */
+#define WDT    (*(WDT_t *) 0x0080)  /* Watch-Dog Timer */
+#define MCU

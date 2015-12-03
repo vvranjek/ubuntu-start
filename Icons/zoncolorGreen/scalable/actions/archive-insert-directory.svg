@@ -1,585 +1,511 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+*/
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="96"
-   height="96"
-   id="svg7733"
-   sodipodi:version="0.32"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="add-folder-to-archive.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   version="1.1"
-   inkscape:export-filename="add-folder-to-archive.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
-  <defs
-     id="defs7735">
-    <filter
-       color-interpolation-filters="sRGB"
-       inkscape:collect="always"
-       id="filter3533"
-       x="-0.054145049"
-       width="1.1082901"
-       y="-0.33451256"
-       height="1.6690251">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="2.5436893"
-         id="feGaussianBlur3535" />
-    </filter>
-    <filter
-       color-interpolation-filters="sRGB"
-       inkscape:collect="always"
-       id="filter3410"
-       x="-0.016920328"
-       width="1.0338407"
-       y="-0.10453518"
-       height="1.2090704">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.79490291"
-         id="feGaussianBlur3412" />
-    </filter>
-    <radialGradient
-       gradientUnits="userSpaceOnUse"
-       r="126.4133"
-       cy="8.3301001"
-       cx="7.5"
-       id="XMLID_15_">
-      <stop
-         id="stop4"
-         style="stop-color:#DBC298"
-         offset="0.2722" />
-      <stop
-         id="stop6"
-         style="stop-color:#C7B08A"
-         offset="0.4545" />
-      <stop
-         id="stop8"
-         style="stop-color:#b99c6f;stop-opacity:1;"
-         offset="0.71829998" />
-      <stop
-         id="stop10"
-         style="stop-color:#b09469;stop-opacity:1;"
-         offset="0.88169998" />
-      <stop
-         id="stop12"
-         style="stop-color:#a48a5f;stop-opacity:1;"
-         offset="1" />
-    </radialGradient>
-    <linearGradient
-       y2="13.2949"
-       x2="104.25"
-       y1="13.2949"
-       x1="0.25"
-       gradientUnits="userSpaceOnUse"
-       id="XMLID_17_">
-      <stop
-         id="stop28"
-         style="stop-color:#8F6B32"
-         offset="0" />
-      <stop
-         id="stop30"
-         style="stop-color:#000000"
-         offset="0.5" />
-      <stop
-         id="stop32"
-         style="stop-color:#8F6B32"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       y2="21.1523"
-       x2="62.901402"
-       y1="4.5991001"
-       x1="91.572304"
-       gradientUnits="userSpaceOnUse"
-       id="XMLID_18_">
-      <stop
-         id="stop6378"
-         style="stop-color:#AD9C80"
-         offset="0.0118" />
-      <stop
-         id="stop41"
-         style="stop-color:#FFE6BC"
-         offset="0.0414" />
-      <stop
-         id="stop43"
-         style="stop-color:#C4B091"
-         offset="0.0828" />
-      <stop
-         id="stop45"
-         style="stop-color:#DEC8A4"
-         offset="0.1361" />
-      <stop
-         id="stop47"
-         style="stop-color:#B39E7C"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       y2="26.3501"
-       x2="50.6035"
-       y1="4.1034999"
-       x1="12.0713"
-       gradientUnits="userSpaceOnUse"
-       id="XMLID_20_">
-      <stop
-         id="stop59"
-         style="stop-color:#AD9C80"
-         offset="0.0118" />
-      <stop
-         id="stop61"
-         style="stop-color:#FFE6BC"
-         offset="0.0414" />
-      <stop
-         id="stop63"
-         style="stop-color:#C4B091"
-         offset="0.0828" />
-      <stop
-         id="stop65"
-         style="stop-color:#DEC8A4"
-         offset="0.1361" />
-      <stop
-         id="stop67"
-         style="stop-color:#B39E7C"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient2378">
-      <stop
-         id="stop2380"
-         offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
-      <stop
-         style="stop-color:#eefede;stop-opacity:0.91836733;"
-         offset="0.25"
-         id="stop4146" />
-      <stop
-         style="stop-color:#8df528;stop-opacity:1;"
-         offset="0.5"
-         id="stop2386" />
-      <stop
-         id="stop2382"
-         offset="1"
-         style="stop-color:#90f52d;stop-opacity:0.12234043;" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient5958-5"
-       gradientUnits="userSpaceOnUse"
-       x1="-84.002403"
-       y1="-383.9971"
-       x2="-12.0029"
-       y2="-383.9971"
-       gradientTransform="matrix(0,1,-1,0,-39.9985,140.0029)">
-      <stop
-         offset="0"
-         style="stop-color:#7fff01;stop-opacity:1;"
-         id="stop5960-5" />
-      <stop
-         offset="1"
-         style="stop-color:#3f8000;stop-opacity:1;"
-         id="stop5962-5" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient3711"
-       gradientUnits="userSpaceOnUse"
-       x1="-84.002403"
-       y1="-383.9971"
-       x2="-23.516129"
-       y2="-383.9975"
-       gradientTransform="matrix(0,1,-1,0,-39.9985,140.0029)">
-      <stop
-         offset="0"
-         style="stop-color:white;stop-opacity:1;"
-         id="stop3713" />
-      <stop
-         offset="1"
-         style="stop-color:white;stop-opacity:0;"
-         id="stop3715" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient4064-7-5">
-      <stop
-         style="stop-color:#709937;stop-opacity:1;"
-         offset="0"
-         id="stop4066-4-4" />
-      <stop
-         style="stop-color:#709937;stop-opacity:0.50196081;"
-         offset="1"
-         id="stop4068-8-7" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient4054-7-7">
-      <stop
-         style="stop-color:#51751e;stop-opacity:1;"
-         offset="0"
-         id="stop4056-0-3" />
-      <stop
-         style="stop-color:#51751e;stop-opacity:0.50196081;"
-         offset="1"
-         id="stop4058-9-8" />
-    </linearGradient>
-    <linearGradient
-       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)"
-       y2="19.9583"
-       x2="71.999496"
-       y1="14.2578"
-       x1="71.999496"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient9101-5">
-      <stop
-         id="stop9103-7"
-         style="stop-color:#51751e;stop-opacity:0;"
-         offset="0.25" />
-      <stop
-         id="stop9105-4"
-         style="stop-color:#51751e;stop-opacity:1;"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient9073-9-5">
-      <stop
-         id="stop9075-9-8"
-         offset="0"
-         style="stop-color:#aacb7d;stop-opacity:1" />
-      <stop
-         id="stop9077-5-0"
-         offset="1"
-         style="stop-color:#709937;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient9087-5-8">
-      <stop
-         style="stop-color:#709937;stop-opacity:1"
-         offset="0"
-         id="stop9089-5-8" />
-      <stop
-         style="stop-color:#51751e;stop-opacity:1"
-         offset="1"
-         id="stop9091-1-2" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient10176-3"
-       gradientUnits="userSpaceOnUse"
-       x1="71.999496"
-       y1="14.2578"
-       x2="71.999496"
-       y2="19.9583"
-       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)">
-      <stop
-         offset="0.00445589"
-         style="stop-color:#eaeaea;stop-opacity:0;"
-         id="stop10178-6" />
-      <stop
-         id="stop10180-4"
-         style="stop-color:#ffffff;stop-opacity:0.52941179;"
-         offset="0.46138024" />
-      <stop
-         offset="1"
-         style="stop-color:#f5f5f5;stop-opacity:0"
-         id="stop10182-6" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#XMLID_15_"
-       id="radialGradient3361"
-       gradientUnits="userSpaceOnUse"
-       cx="7.5"
-       cy="8.3301001"
-       r="126.4133" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#XMLID_15_"
-       id="radialGradient3363"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-1.1589375,0,0,1.1589375,124.51974,8.0154104)"
-       cx="27.848034"
-       cy="8.6778336"
-       fx="27.848034"
-       fy="8.6778336"
-       r="126.4133" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#XMLID_17_"
-       id="linearGradient3365"
-       gradientUnits="userSpaceOnUse"
-       x1="0.25"
-       y1="13.2949"
-       x2="104.25"
-       y2="13.2949" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#XMLID_18_"
-       id="linearGradient3367"
-       gradientUnits="userSpaceOnUse"
-       x1="91.572304"
-       y1="4.5991001"
-       x2="63.635544"
-       y2="22.620584" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#XMLID_20_"
-       id="linearGradient3369"
-       gradientUnits="userSpaceOnUse"
-       x1="12.0713"
-       y1="4.1034999"
-       x2="49.135216"
-       y2="27.573669" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2378"
-       id="radialGradient3371"
-       gradientUnits="userSpaceOnUse"
-       cx="38.658855"
-       cy="9.3411446"
-       fx="38.658855"
-       fy="9.3411446"
-       r="8.341651" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5958-5"
-       id="linearGradient3373"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-6.8562897e-8,-0.66650081,0.66650123,9.6201965e-8,301.9348,10.006078)"
-       x1="-36.435585"
-       y1="-421.27908"
-       x2="-65.122627"
-       y2="-411.77975" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3711"
-       id="linearGradient3375"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0,0.55944034,-0.55944074,0,-45.5596,39.682094)"
-       x1="-80.00296"
-       y1="-131.93112"
-       x2="-45.096584"
-       y2="-131.93112" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9101-5"
-       id="linearGradient3416"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.55619934,0,0,0.25000217,-1.5452377,-36.250205)"
-       x1="71.999496"
-       y1="14.2578"
-       x2="71.999496"
-       y2="19.9583" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4064-7-5"
-       id="linearGradient3419"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.5000136,0,0,1.5000136,-68.000967,-51.250337)"
-       x1="71"
-       y1="8"
-       x2="71"
-       y2="41.5" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4054-7-7"
-       id="linearGradient3421"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.5000136,0,0,1.5000136,-68.000967,-51.250337)"
-       x1="71"
-       y1="8"
-       x2="71"
-       y2="41.5" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient10176-3"
-       id="linearGradient3430"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.68255164,0,0,1.4142263,-5.6009609,-80.66942)"
-       x1="7.2379346"
-       y1="36.005047"
-       x2="122.17093"
-       y2="36.005047" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9073-9-5"
-       id="linearGradient3433"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.52735363,0,0,0.53290803,-49.906657,-206.26176)"
-       x1="167.64111"
-       y1="328.87747"
-       x2="167.64111"
-       y2="407.69193" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9087-5-8"
-       id="linearGradient3435"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.5000136,0,0,1.5000136,-271.99938,-55.750378)"
-       x1="206.99738"
-       y1="16.499895"
-       x2="206.99738"
-       y2="44.50021" />
-  </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="5.71875"
-     inkscape:cx="48"
-     inkscape:cy="48"
-     inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:grid-bbox="true"
-     inkscape:document-units="px"
-     inkscape:window-width="1076"
-     inkscape:window-height="761"
-     inkscape:window-x="5"
-     inkscape:window-y="24"
-     inkscape:window-maximized="0"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
-  <metadata
-     id="metadata7738">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     id="layer1"
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     transform="translate(0,48)">
-    <path
-       sodipodi:nodetypes="sscsccccccss"
-       inkscape:connector-curvature="0"
-       id="path3373"
-       d="m 49.750101,-39.250228 c -0.831008,0 -1.567139,0.348378 -2.109394,0.890633 l -2.859401,2.859401 -34.031559,0 c -1.6620147,0 -3.0000268,1.338012 -3.0000268,3.000027 l 0,42.0003808 c 0,0.8310072 0.6690061,1.5000132 1.5000136,1.5000132 l 58.5005302,0 c 0.831008,0 1.500014,-0.669006 1.500014,-1.5000132 l 0,-45.7504148 c 0,-1.662015 -1.338012,-3.000027 -3.000027,-3.000027 z"
-       style="color:#000000;fill:url(#linearGradient3419);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3421);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       inkscape:connector-curvature="0"
-       d="m 8.5008364,-32.750174 c 0.00464,0.437503 0.00927,0.938758 0.01389,1.500014 l 59.9716426,0 c 0.0046,-0.561256 0.0093,-1.062511 0.01395,-1.500014 l -60.0005462,0 0.00111,0 z"
-       id="path3375"
-       style="opacity:0.5;fill:url(#linearGradient3416);fill-opacity:1;display:inline;enable-background:new" />
-    <path
-       d="m 70.370776,9.5002138 c -0.04556,0.8782342 -1.001808,1.5003272 -1.874782,1.5003272 l -59.9929965,0 c -0.8729584,0 -1.8287506,-0.622093 -1.8747815,-1.5003272 L 4.753436,-29.499984 c -0.063511,-0.876633 0.6268512,-1.500325 1.4998246,-1.500325 l 64.4924724,0 c 0.872973,0 1.566476,0.623692 1.499824,1.500325 L 70.370776,9.5002138 z"
-       id="path3379"
-       style="opacity:0.9;color:#000000;fill:url(#linearGradient3433);fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient3435);stroke-width:0.99958181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
-       sodipodi:nodetypes="cccccccccc"
-       inkscape:connector-curvature="0" />
-    <rect
-       ry="0"
-       rx="0"
-       y="-30.750147"
-       x="5.4996958"
-       height="1.5000136"
-       width="66.000595"
-       id="rect3381"
-       style="fill:url(#linearGradient3430);fill-opacity:1;stroke:none;display:inline;enable-background:new" />
-    <g
-       transform="matrix(0.41696536,0,0,0.41696536,36.472954,-8.821246)"
-       id="g3991">
-      <path
-         inkscape:connector-curvature="0"
-         style="fill:#5a492b;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3533)"
-         d="M 9.25,119.65 121,119.4 l -7.25,-17 -94.75,0 -9.75,17.25 z"
-         id="path3431"
-         transform="matrix(0.9980065,0,0,0.9980065,-0.870425,0.6770145)" />
-      <path
-         inkscape:connector-curvature="0"
-         transform="matrix(0.9980065,0,0,0.9980065,-0.870425,0.6770145)"
-         id="path3388"
-         d="M 9.25,119.65 121,119.4 l -7.25,-17 -94.75,0 -9.75,17.25 z"
-         style="fill:#000000;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3410)" />
-      <polygon
-         transform="matrix(1.1589375,0,0,1.1589375,3.5903842,8.0029358)"
-         style="fill:url(#radialGradient3361)"
-         id="polygon14"
-         points="0.25,24.795 104.25,24.795 104.25,24.795 100.25,96.58 4.25,96.58 " />
-      <path
-         inkscape:connector-curvature="0"
-         style="fill:url(#radialGradient3363)"
-         d="m 4.6975479,36.736238 4.6469686,83.208792 -0.9980068,0 -4.6469684,-83.208792 0.9980066,0 z"
-         id="path3425" />
-      <polygon
-         transform="matrix(1.1589375,0,0,1.1589375,3.5903842,8.0029358)"
-         style="fill:url(#linearGradient3365)"
-         id="polygon34"
-         points="52.25,25.795 0.25,24.795 16.25,0.795 88.25,0.795 104.25,24.795 52.25,25.795 " />
-      <polygon
-         transform="matrix(1.1589375,0,0,1.1589375,3.5903842,8.0029358)"
-         points="52.25,0 88.096,0.58 104.25,24.58 52.25,23.5 52.25,0 "
-         id="polygon49"
-         style="fill:url(#linearGradient3367)" />
-      <polygon
-         transform="matrix(1.1589375,0,0,1.1589375,3.5903842,8.0029358)"
-         style="fill:url(#linearGradient3369)"
-         id="polygon69"
-         points="52.25,0 52.25,23.5 52.25,23.5 0.25,24.58 16.406,0.58 " />
-      <path
-         inkscape:connector-curvature="0"
-         id="polygon3414"
-         d="m 123.37515,36.736238 -4.64697,83.208792 0.99801,0 4.64697,-83.208792 -0.99801,0 z"
-         style="fill:#7d6947;fill-opacity:0.53475934" />
-      <path
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccccc"
-         id="path2565"
-         d="m 3.8800139,36.73858 60.4085651,1.240786 60.114971,-1.248219 0,0.212707 0,0 L 64.0047,38.391008 3.8622884,36.93356 3.8800139,36.73858 z"
-         style="fill:#ffffff;fill-opacity:0.82352941;fill-rule:evenodd;stroke:none" />
-    </g>
-    <g
-       id="g3931"
-       transform="matrix(2,0,0,2,30,-44)">
-      <path
-         sodipodi:type="arc"
-         style="fill:url(#radialGradient3371);fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline"
-         id="path2388"
-         sodipodi:cx="38.658855"
-         sodipodi:cy="9.3411446"
-         sodipodi:rx="8.341651"
-         sodipodi:ry="8.341651"
-         d="m 47.000506,9.3411446 c 0,4.6069664 -3.734684,8.3416514 -8.341651,8.3416514 -4.606966,0 -8.341651,-3.734685 -8.341651,-8.3416514 0,-4.6069667 3.734685,-8.341651 8.341651,-8.341651 4.606967,0 8.341651,3.7346843 8.341651,8.341651 z"
-         transform="matrix(1.1988035,0,0,1.1988219,-32.344371,2.8014775)" />
-      <g
-         transform="matrix(0.33333333,0,0,0.33333333,4.5714286,8.666513)"
-         id="g3150">
-        <path
-           sodipodi:type="arc"
-           style="color:#000000;fill:url(#linearGradient3373);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.41949013;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           id="path4594"
-           sodipodi:cx="24.298161"
-           sodipodi:cy="43.856728"
-           sodipodi:rx="10.067763"
-           sodipodi:ry="10.067763"
-           d="m 34.365924,43.856728 c 0,5.560272 -4.507491,10.067763 -10.067763,10.067763 -5.560273,0 -10.067764,-4.507491 -10.067764,-10.067763 0,-5.560273 4.507491,-10.067764 10.067764,-10.067764 5.560272,0 10.067763,4.507491 10.067763,10.067764 z"
-           transform="matrix(2.3838463,0,0,2.3838463,-29.637365,-88.547698)" />
-        <path
-           style="opacity:0.8;fill:url(#linearGradient3375);fill-opacity:1;stroke:none"
-           d="m 28.285721,-5.074759 c -8.591109,0 -15.769765,6.066476 -17.500006,14.143351 3.448846,3.215042 9.992836,5.384612 17.500006,5.384612 7.50717,0 14.051149,-2.16957 17.499994,-5.384612 C 44.055473,0.991717 36.876828,-5.074759 28.285721,-5.074759 z"
-           id="circle16776"
-           inkscape:connector-curvature="0" />
-        <path
-           style="fill:#ffffff;fill-rule:evenodd;stroke:#377000;stroke-width:0.5;stroke-opacity:1"
-           d="m 24.285715,1.6e-5 0,12 -12,0 0,8 12,0 0,12 8,0 0,-12 12,0 0,-8 -12,0 0,-12 -8,0 z"
-           id="rect4557"
-           inkscape:connector-curvature="0" />
-      </g>
-    </g>
-  </g>
-</svg>
+/* NVM_FUSES.FUSEBYTE4  bit masks and bit positions */
+#define NVM_FUSES_RSTDISBL_bm  0x10  /* External Reset Disable bit mask. */
+#define NVM_FUSES_RSTDISBL_bp  4  /* External Reset Disable bit position. */
+
+#define NVM_FUSES_SUT_gm  0x0C  /* Start-up Time group mask. */
+#define NVM_FUSES_SUT_gp  2  /* Start-up Time group position. */
+#define NVM_FUSES_SUT0_bm  (1<<2)  /* Start-up Time bit 0 mask. */
+#define NVM_FUSES_SUT0_bp  2  /* Start-up Time bit 0 position. */
+#define NVM_FUSES_SUT1_bm  (1<<3)  /* Start-up Time bit 1 mask. */
+#define NVM_FUSES_SUT1_bp  3  /* Start-up Time bit 1 position. */
+
+#define NVM_FUSES_WDLOCK_bm  0x02  /* Watchdog Timer Lock bit mask. */
+#define NVM_FUSES_WDLOCK_bp  1  /* Watchdog Timer Lock bit position. */
+
+/* NVM_FUSES.FUSEBYTE5  bit masks and bit positions */
+#define NVM_FUSES_BODACT_gm  0x30  /* BOD Operation in Active Mode group mask. */
+#define NVM_FUSES_BODACT_gp  4  /* BOD Operation in Active Mode group position. */
+#define NVM_FUSES_BODACT0_bm  (1<<4)  /* BOD Operation in Active Mode bit 0 mask. */
+#define NVM_FUSES_BODACT0_bp  4  /* BOD Operation in Active Mode bit 0 position. */
+#define NVM_FUSES_BODACT1_bm  (1<<5)  /* BOD Operation in Active Mode bit 1 mask. */
+#define NVM_FUSES_BODACT1_bp  5  /* BOD Operation in Active Mode bit 1 position. */
+
+#define NVM_FUSES_EESAVE_bm  0x08  /* Preserve EEPROM Through Chip Erase bit mask. */
+#define NVM_FUSES_EESAVE_bp  3  /* Preserve EEPROM Through Chip Erase bit position. */
+
+#define NVM_FUSES_BODLVL_gm  0x07  /* Brownout Detection Voltage Level group mask. */
+#define NVM_FUSES_BODLVL_gp  0  /* Brownout Detection Voltage Level group position. */
+#define NVM_FUSES_BODLVL0_bm  (1<<0)  /* Brownout Detection Voltage Level bit 0 mask. */
+#define NVM_FUSES_BODLVL0_bp  0  /* Brownout Detection Voltage Level bit 0 position. */
+#define NVM_FUSES_BODLVL1_bm  (1<<1)  /* Brownout Detection Voltage Level bit 1 mask. */
+#define NVM_FUSES_BODLVL1_bp  1  /* Brownout Detection Voltage Level bit 1 position. */
+#define NVM_FUSES_BODLVL2_bm  (1<<2)  /* Brownout Detection Voltage Level bit 2 mask. */
+#define NVM_FUSES_BODLVL2_bp  2  /* Brownout Detection Voltage Level bit 2 position. */
+
+/* LOCKBIT - Fuses and Lockbits */
+/* NVM_LOCKBITS.LOCKBITS  bit masks and bit positions */
+#define NVM_LOCKBITS_BLBB_gm  0xC0  /* Boot Lock Bits - Boot Section group mask. */
+#define NVM_LOCKBITS_BLBB_gp  6  /* Boot Lock Bits - Boot Section group position. */
+#define NVM_LOCKBITS_BLBB0_bm  (1<<6)  /* Boot Lock Bits - Boot Section bit 0 mask. */
+#define NVM_LOCKBITS_BLBB0_bp  6  /* Boot Lock Bits - Boot Section bit 0 position. */
+#define NVM_LOCKBITS_BLBB1_bm  (1<<7)  /* Boot Lock Bits - Boot Section bit 1 mask. */
+#define NVM_LOCKBITS_BLBB1_bp  7  /* Boot Lock Bits - Boot Section bit 1 position. */
+
+#define NVM_LOCKBITS_BLBA_gm  0x30  /* Boot Lock Bits - Application Section group mask. */
+#define NVM_LOCKBITS_BLBA_gp  4  /* Boot Lock Bits - Application Section group position. */
+#define NVM_LOCKBITS_BLBA0_bm  (1<<4)  /* Boot Lock Bits - Application Section bit 0 mask. */
+#define NVM_LOCKBITS_BLBA0_bp  4  /* Boot Lock Bits - Application Section bit 0 position. */
+#define NVM_LOCKBITS_BLBA1_bm  (1<<5)  /* Boot Lock Bits - Application Section bit 1 mask. */
+#define NVM_LOCKBITS_BLBA1_bp  5  /* Boot Lock Bits - Application Section bit 1 position. */
+
+#define NVM_LOCKBITS_BLBAT_gm  0x0C  /* Boot Lock Bits - Application Table group mask. */
+#define NVM_LOCKBITS_BLBAT_gp  2  /* Boot Lock Bits - Application Table group position. */
+#define NVM_LOCKBITS_BLBAT0_bm  (1<<2)  /* Boot Lock Bits - Application Table bit 0 mask. */
+#define NVM_LOCKBITS_BLBAT0_bp  2  /* Boot Lock Bits - Application Table bit 0 position. */
+#define NVM_LOCKBITS_BLBAT1_bm  (1<<3)  /* Boot Lock Bits - Application Table bit 1 mask. */
+#define NVM_LOCKBITS_BLBAT1_bp  3  /* Boot Lock Bits - Application Table bit 1 position. */
+
+#define NVM_LOCKBITS_LB_gm  0x03  /* Lock Bits group mask. */
+#define NVM_LOCKBITS_LB_gp  0  /* Lock Bits group position. */
+#define NVM_LOCKBITS_LB0_bm  (1<<0)  /* Lock Bits bit 0 mask. */
+#define NVM_LOCKBITS_LB0_bp  0  /* Lock Bits bit 0 position. */
+#define NVM_LOCKBITS_LB1_bm  (1<<1)  /* Lock Bits bit 1 mask. */
+#define NVM_LOCKBITS_LB1_bp  1  /* Lock Bits bit 1 position. */
+
+
+
+// Generic Port Pins
+
+#define PIN0_bm 0x01
+#define PIN0_bp 0
+#define PIN1_bm 0x02
+#define PIN1_bp 1
+#define PIN2_bm 0x04
+#define PIN2_bp 2
+#define PIN3_bm 0x08
+#define PIN3_bp 3
+#define PIN4_bm 0x10
+#define PIN4_bp 4
+#define PIN5_bm 0x20
+#define PIN5_bp 5
+#define PIN6_bm 0x40
+#define PIN6_bp 6
+#define PIN7_bm 0x80
+#define PIN7_bp 7
+
+/* ========== Interrupt Vector Definitions ========== */
+/* Vector 0 is the reset vector */
+
+/* OSC interrupt vectors */
+#define OSC_OSCF_vect_num  1
+#define OSC_OSCF_vect      _VECTOR(1)  /* Oscillator Failure Interrupt (NMI) */
+
+/* PORTC interrupt vectors */
+#define PORTC_INT0_vect_num  2
+#define PORTC_INT0_vect      _VECTOR(2)  /* External Interrupt 0 */
+#define PORTC_INT1_vect_num  3
+#define PORTC_INT1_vect      _VECTOR(3)  /* External Interrupt 1 */
+
+/* PORTR interrupt vectors */
+#define PORTR_INT0_vect_num  4
+#define PORTR_INT0_vect      _VECTOR(4)  /* External Interrupt 0 */
+#define PORTR_INT1_vect_num  5
+#define PORTR_INT1_vect      _VECTOR(5)  /* External Interrupt 1 */
+
+/* RTC interrupt vectors */
+#define RTC_OVF_vect_num  10
+#define RTC_OVF_vect      _VECTOR(10)  /* Overflow Interrupt */
+#define RTC_COMP_vect_num  11
+#define RTC_COMP_vect      _VECTOR(11)  /* Compare Interrupt */
+
+/* TWIC interrupt vectors */
+#define TWIC_TWIS_vect_num  12
+#define TWIC_TWIS_vect      _VECTOR(12)  /* TWI Slave Interrupt */
+#define TWIC_TWIM_vect_num  13
+#define TWIC_TWIM_vect      _VECTOR(13)  /* TWI Master Interrupt */
+
+/* TCC0 interrupt vectors */
+#define TCC0_OVF_vect_num  14
+#define TCC0_OVF_vect      _VECTOR(14)  /* Overflow Interrupt */
+
+/* TCC2 interrupt vectors */
+#define TCC2_LUNF_vect_num  14
+#define TCC2_LUNF_vect      _VECTOR(14)  /* Low Byte Underflow Interrupt */
+
+/* TCC0 interrupt vectors */
+#define TCC0_ERR_vect_num  15
+#define TCC0_ERR_vect      _VECTOR(15)  /* Error Interrupt */
+
+/* TCC2 interrupt vectors */
+#define TCC2_HUNF_vect_num  15
+#define TCC2_HUNF_vect      _VECTOR(15)  /* High Byte Underflow Interrupt */
+
+/* TCC0 interrupt vectors */
+#define TCC0_CCA_vect_num  16
+#define TCC0_CCA_vect      _VECTOR(16)  /* Compare or Capture A Interrupt */
+
+/* TCC2 interrupt vectors */
+#define TCC2_LCMPA_vect_num  16
+#define TCC2_LCMPA_vect      _VECTOR(16)  /* Low Byte Compare A Interrupt */
+
+/* TCC0 interrupt vectors */
+#define TCC0_CCB_vect_num  17
+#define TCC0_CCB_vect      _VECTOR(17)  /* Compare or Capture B Interrupt */
+
+/* TCC2 interrupt vectors */
+#define TCC2_LCMPB_vect_num  17
+#define TCC2_LCMPB_vect      _VECTOR(17)  /* Low Byte Compare B Interrupt */
+
+/* TCC0 interrupt vectors */
+#define TCC0_CCC_vect_num  18
+#define TCC0_CCC_vect      _VECTOR(18)  /* Compare or Capture C Interrupt */
+
+/* TCC2 interrupt vectors */
+#define TCC2_LCMPC_vect_num  18
+#define TCC2_LCMPC_vect      _VECTOR(18)  /* Low Byte Compare C Interrupt */
+
+/* TCC0 interrupt vectors */
+#define TCC0_CCD_vect_num  19
+#define TCC0_CCD_vect      _VECTOR(19)  /* Compare or Capture D Interrupt */
+
+/* TCC2 interrupt vectors */
+#define TCC2_LCMPD_vect_num  19
+#define TCC2_LCMPD_vect      _VECTOR(19)  /* Low Byte Compare D Interrupt */
+
+/* TCC1 interrupt vectors */
+#define TCC1_OVF_vect_num  20
+#define TCC1_OVF_vect      _VECTOR(20)  /* Overflow Interrupt */
+#define TCC1_ERR_vect_num  21
+#define TCC1_ERR_vect      _VECTOR(21)  /* Error Interrupt */
+#define TCC1_CCA_vect_num  22
+#define TCC1_CCA_vect      _VECTOR(22)  /* Compare or Capture A Interrupt */
+#define TCC1_CCB_vect_num  23
+#define TCC1_CCB_vect      _VECTOR(23)  /* Compare or Capture B Interrupt */
+
+/* SPIC interrupt vectors */
+#define SPIC_INT_vect_num  24
+#define SPIC_INT_vect      _VECTOR(24)  /* SPI Interrupt */
+
+/* USARTC0 interrupt vectors */
+#define USARTC0_RXC_vect_num  25
+#define USARTC0_RXC_vect      _VECTOR(25)  /* Reception Complete Interrupt */
+#define USARTC0_DRE_vect_num  26
+#define USARTC0_DRE_vect      _VECTOR(26)  /* Data Register Empty Interrupt */
+#define USARTC0_TXC_vect_num  27
+#define USARTC0_TXC_vect      _VECTOR(27)  /* Transmission Complete Interrupt */
+
+/* NVM interrupt vectors */
+#define NVM_EE_vect_num  32
+#define NVM_EE_vect      _VECTOR(32)  /* EE Interrupt */
+#define NVM_SPM_vect_num  33
+#define NVM_SPM_vect      _VECTOR(33)  /* SPM Interrupt */
+
+/* PORTB interrupt vectors */
+#define PORTB_INT0_vect_num  34
+#define PORTB_INT0_vect      _VECTOR(34)  /* External Interrupt 0 */
+#define PORTB_INT1_vect_num  35
+#define PORTB_INT1_vect      _VECTOR(35)  /* External Interrupt 1 */
+
+/* PORTE interrupt vectors */
+#define PORTE_INT0_vect_num  43
+#define PORTE_INT0_vect      _VECTOR(43)  /* External Interrupt 0 */
+#define PORTE_INT1_vect_num  44
+#define PORTE_INT1_vect      _VECTOR(44)  /* External Interrupt 1 */
+
+/* TWIE interrupt vectors */
+#define TWIE_TWIS_vect_num  45
+#define TWIE_TWIS_vect      _VECTOR(45)  /* TWI Slave Interrupt */
+#define TWIE_TWIM_vect_num  46
+#define TWIE_TWIM_vect      _VECTOR(46)  /* TWI Master Interrupt */
+
+/* TCE0 interrupt vectors */
+#define TCE0_OVF_vect_num  47
+#define TCE0_OVF_vect      _VECTOR(47)  /* Overflow Interrupt */
+
+/* TCE2 interrupt vectors */
+#define TCE2_LUNF_vect_num  47
+#define TCE2_LUNF_vect      _VECTOR(47)  /* Low Byte Underflow Interrupt */
+
+/* TCE0 interrupt vectors */
+#define TCE0_ERR_vect_num  48
+#define TCE0_ERR_vect      _VECTOR(48)  /* Error Interrupt */
+
+/* TCE2 interrupt vectors */
+#define TCE2_HUNF_vect_num  48
+#define TCE2_HUNF_vect      _VECTOR(48)  /* High Byte Underflow Interrupt */
+
+/* TCE0 interrupt vectors */
+#define TCE0_CCA_vect_num  49
+#define TCE0_CCA_vect      _VECTOR(49)  /* Compare or Capture A Interrupt */
+
+/* TCE2 interrupt vectors */
+#define TCE2_LCMPA_vect_num  49
+#define TCE2_LCMPA_vect      _VECTOR(49)  /* Low Byte Compare A Interrupt */
+
+/* TCE0 interrupt vectors */
+#define TCE0_CCB_vect_num  50
+#define TCE0_CCB_vect      _VECTOR(50)  /* Compare or Capture B Interrupt */
+
+/* TCE2 interrupt vectors */
+#define TCE2_LCMPB_vect_num  50
+#define TCE2_LCMPB_vect      _VECTOR(50)  /* Low Byte Compare B Interrupt */
+
+/* TCE0 interrupt vectors */
+#define TCE0_CCC_vect_num  51
+#define TCE0_CCC_vect      _VECTOR(51)  /* Compare or Capture C Interrupt */
+
+/* TCE2 interrupt vectors */
+#define TCE2_LCMPC_vect_num  51
+#define TCE2_LCMPC_vect      _VECTOR(51)  /* Low Byte Compare C Interrupt */
+
+/* TCE0 interrupt vectors */
+#define TCE0_CCD_vect_num  52
+#define TCE0_CCD_vect      _VECTOR(52)  /* Compare or Capture D Interrupt */
+
+/* TCE2 interrupt vectors */
+#define TCE2_LCMPD_vect_num  52
+#define TCE2_LCMPD_vect      _VECTOR(52)  /* Low Byte Compare D Interrupt */
+
+/* USARTE0 interrupt vectors */
+#define USARTE0_RXC_vect_num  58
+#define USARTE0_RXC_vect      _VECTOR(58)  /* Reception Complete Interrupt */
+#define USARTE0_DRE_vect_num  59
+#define USARTE0_DRE_vect      _VECTOR(59)  /* Data Register Empty Interrupt */
+#define USARTE0_TXC_vect_num  60
+#define USARTE0_TXC_vect      _VECTOR(60)  /* Transmission Complete Interrupt */
+
+/* PORTD interrupt vectors */
+#define PORTD_INT0_vect_num  64
+#define PORTD_INT0_vect      _VECTOR(64)  /* External Interrupt 0 */
+#define PORTD_INT1_vect_num  65
+#define PORTD_INT1_vect      _VECTOR(65)  /* External Interrupt 1 */
+
+/* PORTA interrupt vectors */
+#define PORTA_INT0_vect_num  66
+#define PORTA_INT0_vect      _VECTOR(66)  /* External Interrupt 0 */
+#define PORTA_INT1_vect_num  67
+#define PORTA_INT1_vect      _VECTOR(67)  /* External Interrupt 1 */
+
+/* ACA interrupt vectors */
+#define ACA_AC0_vect_num  68
+#define ACA_AC0_vect      _VECTOR(68)  /* AC0 Interrupt */
+#define ACA_AC1_vect_num  69
+#define ACA_AC1_vect      _VECTOR(69)  /* AC1 Interrupt */
+#define ACA_ACW_vect_num  70
+#define ACA_ACW_vect      _VECTOR(70)  /* ACW Window Mode Interrupt */
+
+/* ADCA interrupt vectors */
+#define ADCA_CH0_vect_num  71
+#define ADCA_CH0_vect      _VECTOR(71)  /* Interrupt 0 */
+
+/* TCD0 interrupt vectors */
+#define TCD0_OVF_vect_num  77
+#define TCD0_OVF_vect      _VECTOR(77)  /* Overflow Interrupt */
+
+/* TCD2 interrupt vectors */
+#define TCD2_LUNF_vect_num  77
+#define TCD2_LUNF_vect      _VECTOR(77)  /* Low Byte Underflow Interrupt */
+
+/* TCD0 interrupt vectors */
+#define TCD0_ERR_vect_num  78
+#define TCD0_ERR_vect      _VECTOR(78)  /* Error Interrupt */
+
+/* TCD2 interrupt vectors */
+#define TCD2_HUNF_vect_num  78
+#define TCD2_HUNF_vect      _VECTOR(78)  /* High Byte Underflow Interrupt */
+
+/* TCD0 interrupt vectors */
+#define TCD0_CCA_vect_num  79
+#define TCD0_CCA_vect      _VECTOR(79)  /* Compare or Capture A Interrupt */
+
+/* TCD2 interrupt vectors */
+#define TCD2_LCMPA_vect_num  79
+#define TCD2_LCMPA_vect      _VECTOR(79)  /* Low Byte Compare A Interrupt */
+
+/* TCD0 interrupt vectors */
+#define TCD0_CCB_vect_num  80
+#define TCD0_CCB_vect      _VECTOR(80)  /* Compare or Capture B Interrupt */
+
+/* TCD2 interrupt vectors */
+#define TCD2_LCMPB_vect_num  80
+#define TCD2_LCMPB_vect      _VECTOR(80)  /* Low Byte Compare B Interrupt */
+
+/* TCD0 interrupt vectors */
+#define TCD0_CCC_vect_num  81
+#define TCD0_CCC_vect      _VECTOR(81)  /* Compare or Capture C Interrupt */
+
+/* TCD2 interrupt vectors */
+#define TCD2_LCMPC_vect_num  81
+#define TCD2_LCMPC_vect      _VECTOR(81)  /* Low Byte Compare C Interrupt */
+
+/* TCD0 interrupt vectors */
+#define TCD0_CCD_vect_num  82
+#define TCD0_CCD_vect      _VECTOR(82)  /* Compare or Capture D Interrupt */
+
+/* TCD2 interrupt vectors */
+#define TCD2_LCMPD_vect_num  82
+#define TCD2_LCMPD_vect      _VECTOR(82)  /* Low Byte Compare D Interrupt */
+
+/* SPID interrupt vectors */
+#define SPID_INT_vect_num  87
+#define SPID_INT_vect      _VECTOR(87)  /* SPI Interrupt */
+
+/* USARTD0 interrupt vectors */
+#define USARTD0_RXC_vect_num  88
+#define USARTD0_RXC_vect      _VECTOR(88)  /* Reception Complete Interrupt */
+#define USARTD0_DRE_vect_num  89
+#define USARTD0_DRE_vect      _VECTOR(89)  /* Data Register Empty Interrupt */
+#define USARTD0_TXC_vect_num  90
+#define USARTD0_TXC_vect      _VECTOR(90)  /* Transmission Complete Interrupt */
+
+/* PORTF interrupt vectors */
+#define PORTF_INT0_vect_num  104
+#define PORTF_INT0_vect      _VECTOR(104)  /* External Interrupt 0 */
+#define PORTF_INT1_vect_num  105
+#define PORTF_INT1_vect      _VECTOR(105)  /* External Interrupt 1 */
+
+/* TCF0 interrupt vectors */
+#define TCF0_OVF_vect_num  108
+#define TCF0_OVF_vect      _VECTOR(108)  /* Overflow Interrupt */
+
+/* TCF2 interrupt vectors */
+#define TCF2_LUNF_vect_num  108
+#define TCF2_LUNF_vect      _VECTOR(108)  /* Low Byte Underflow Interrupt */
+
+/* TCF0 interrupt vectors */
+#define TCF0_ERR_vect_num  109
+#define TCF0_ERR_vect      _VECTOR(109)  /* Error Interrupt */
+
+/* TCF2 interrupt vectors */
+#define TCF2_HUNF_vect_num  109
+#define TCF2_HUNF_vect      _VECTOR(109)  /* High Byte Underflow Interrupt */
+
+/* TCF0 interrupt vectors */
+#define TCF0_CCA_vect_num  110
+#define TCF0_CCA_vect      _VECTOR(110)  /* Compare or Capture A Interrupt */
+
+/* TCF2 interrupt vectors */
+#define TCF2_LCMPA_vect_num  110
+#define TCF2_LCMPA_vect      _VECTOR(110)  /* Low Byte Compare A Interrupt */
+
+/* TCF0 interrupt vectors */
+#define TCF0_CCB_vect_num  111
+#define TCF0_CCB_vect      _VECTOR(111)  /* Compare or Capture B Interrupt */
+
+/* TCF2 interrupt vectors */
+#define TCF2_LCMPB_vect_num  111
+#define TCF2_LCMPB_vect      _VECTOR(111)  /* Low Byte Compare B Interrupt */
+
+/* TCF0 interrupt vectors */
+#define TCF0_CCC_vect_num  112
+#define TCF0_CCC_vect      _VECTOR(112)  /* Compare or Capture C Interrupt */
+
+/* TCF2 interrupt vectors */
+#define TCF2_LCMPC_vect_num  112
+#define TCF2_LCMPC_vect      _VECTOR(112)  /* Low Byte Compare C Interrupt */
+
+/* TCF0 interrupt vectors */
+#define TCF0_CCD_vect_num  113
+#define TCF0_CCD_vect      _VECTOR(113)  /* Compare or Capture D Interrupt */
+
+/* TCF2 interrupt vectors */
+#define TCF2_LCMPD_vect_num  113
+#define TCF2_LCMPD_vect      _VECTOR(113)  /* Low Byte Compare D Interrupt */
+
+/* USB interrupt vectors */
+#define USB_BUSEVENT_vect_num  125
+#define USB_BUSEVENT_vect      _VECTOR(125)  /* SOF, suspend, resume, reset bus event interrupts, crc, underflow, overflow and stall error interrupts */
+#define USB_TRNCOMPL_vect_num  126
+#define USB_TRNCOMPL_vect      _VECTOR(126)  /* Transaction complete interrupt */
+
+#define _VECTOR_SIZE 4 /* Size of individual vector. */
+#define _VECTORS_SIZE (127 * _VECTOR_SIZE)
+
+
+/* ========== Constants ========== */
+
+#define PROGMEM_START     (0x0000)
+#define PROGMEM_SIZE      (204800)
+#define PROGMEM_END       (PROGMEM_START + PROGMEM_SIZE - 1)
+
+#define APP_SECTION_START     (0x0000)
+#define APP_SECTION_SIZE      (196608)
+#define APP_SECTION_PAGE_SIZE (512)
+#define APP_SECTION_END       (APP_SECTION_START + APP_SECTION_SIZE - 1)
+
+#define APPTABLE_SECTION_START     (0x2E000)
+#define APPTABLE_SECTION_SIZE      (8192)
+#define APPTABLE_SECTION_PAGE_SIZE (512)
+#define APPTABLE_SECTION_END       (APPTABLE_SECTION_START + APPTABLE_SECTION_SIZE - 1)
+
+#define BOOT_SECTION_START     (0x30000)
+#define BOOT_SECTION_SIZE      (8192)
+#define BOOT_SECTION_PAGE_SIZE (512)
+#define BOOT_SECTION_END       (BOOT_SECTION_START + BOOT_SECTION_SIZE - 1)
+
+#define DATAMEM_START     (0x0000)
+#define DATAMEM_SIZE      (16384)
+#define DATAMEM_END       (DATAMEM_START + DATAMEM_SIZE - 1)
+
+#define IO_START     (0x0000)
+#define IO_SIZE      (4096)
+#define IO_PAGE_SIZE (0)
+#define IO_END       (IO_START + IO_SIZE - 1)
+
+#define MAPPED_EEPROM_START     (0x1000)
+#define MAPPED_EEPROM_SIZE      (2048)
+#define MAPPED_EEPROM_PAGE_SIZE (0)
+#define MAPPED_EEPROM_END       (MAPPED_EEPROM_START + MAPPED_EEPROM_SIZE - 1)
+
+#define INTERNAL_SRAM_START     (0x2000)
+#define INTERNAL_SRAM_SIZE      (16384)
+#define INTERNAL_SRAM_PAGE_SIZE (0)
+#define INTERNAL_SRAM_END       (INTERNAL_SRAM_START + INTERNAL_SRAM_SIZE - 1)
+
+#define EEPROM_START     (0x0000)
+#define EEPROM_SIZE      (2048)
+#define EEPROM_PAGE_SIZE (32)
+#define EEPROM_END       (EEPROM_START + EEPROM_SIZE - 1)
+
+#define SIGNATURES_START     (0x0000)
+#define SIGNATURES_SIZE      (3)
+#define SIGNATURES_PAGE_SIZE (0)
+#define SIGNATURES_END       (SIGNATURES_START + SIGNATURES_SIZE - 1)
+
+#define FUSES_START     (0x0000)
+#define FUSES_SIZE      (6)
+#define FUSES_PAGE_SIZE (0)
+#define FUSES_END       (FUSES_START + FUSES_SIZE - 1)
+
+#define LOCKBITS_START     (0x0000)
+#define LOCKBITS_SIZE      (1)
+#define LOCKBITS_PAGE_SIZE (0)
+#define LOCKBITS_END       (LOCKBITS_START + LOCKBITS_SIZE - 1)
+
+#define USER_SIGNATURES_START     (0x0000)
+#define USER_SIGNATURES_SIZE      (512)
+#define USER_SIGNATURES_PAGE_SIZE (512)
+#define USER_SIGNATURES_END       (USER_SIGNATURES_START + USER_SIGNATURES_SIZE - 1)
+
+#define PROD_SIGNATURES_START     (0x0000)
+#define PROD_SIGNATURES_SIZE      (64)
+#define PROD_SIGNATURES_PAGE_SIZE (512)
+#define PROD_SIGNATURES_END       (PROD_SIGNATURES_START + PROD_SIGNATURES_SIZE - 1)
+
+#define FLASHSTART   PROGMEM_START
+#define FLASHEND     PROGMEM_END
+#define SPM_PAGESIZE 512
+#define RAMSTART     INTERNAL_SRAM_START
+#define RAMSIZE      INTERNAL_SRAM_SIZE
+#define RAMEND       INTERNAL_SRAM_END
+#define E2END        EEPROM_END
+#define E2PAGESIZE   EEPROM_PAGE_SIZE
+
+
+/* ========== Fuses ========== */
+#define FUSE_MEMORY_SIZE 6
+
+/* Fuse Byte 0 Reserved */
+
+/* Fuse Byte 1 */
+#define FUSE_WDP0  (unsigned char)~_BV(0)  /* Watchdog Timeout Period Bit 0 */
+#define FUSE_WDP1  (unsigned char)~_BV(1)  /* Watchdog Timeout Period Bit 1 */
+#define FUSE_WDP2  (unsigned char)~_BV(2)  /* Watchdog Timeout Period Bit 2 */
+#define FUSE_WDP3  (unsigned char)~_BV(3)  /* Watchdog Timeout Period Bit 3 */
+#define FUSE_WDWP0  (unsigned char)~_BV(4)  /* Watchdog Window Timeout Period Bit 0 */
+#define FUSE_WDWP1  (unsigned char)~_BV(5)  /* Watchdog Window Timeout Period Bit 1 */
+#define FUSE_WDWP2  (unsigned char)~_BV(6)  /* Watchdog Window Timeout Period Bit 2 */
+#define FUSE_WDWP3  (unsigned char)~_BV(7)  /* Watchdog Window Timeout Period Bit 3 */
+#d

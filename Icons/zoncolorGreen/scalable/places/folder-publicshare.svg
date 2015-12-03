@@ -1,338 +1,340 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+TCC0_CTRLA  _SFR_MEM8(0x0800)
+#define TCC0_CTRLB  _SFR_MEM8(0x0801)
+#define TCC0_CTRLC  _SFR_MEM8(0x0802)
+#define TCC0_CTRLD  _SFR_MEM8(0x0803)
+#define TCC0_CTRLE  _SFR_MEM8(0x0804)
+#define TCC0_INTCTRLA  _SFR_MEM8(0x0806)
+#define TCC0_INTCTRLB  _SFR_MEM8(0x0807)
+#define TCC0_CTRLFCLR  _SFR_MEM8(0x0808)
+#define TCC0_CTRLFSET  _SFR_MEM8(0x0809)
+#define TCC0_CTRLGCLR  _SFR_MEM8(0x080A)
+#define TCC0_CTRLGSET  _SFR_MEM8(0x080B)
+#define TCC0_INTFLAGS  _SFR_MEM8(0x080C)
+#define TCC0_TEMP  _SFR_MEM8(0x080F)
+#define TCC0_CNT  _SFR_MEM16(0x0820)
+#define TCC0_PER  _SFR_MEM16(0x0826)
+#define TCC0_CCA  _SFR_MEM16(0x0828)
+#define TCC0_CCB  _SFR_MEM16(0x082A)
+#define TCC0_CCC  _SFR_MEM16(0x082C)
+#define TCC0_CCD  _SFR_MEM16(0x082E)
+#define TCC0_PERBUF  _SFR_MEM16(0x0836)
+#define TCC0_CCABUF  _SFR_MEM16(0x0838)
+#define TCC0_CCBBUF  _SFR_MEM16(0x083A)
+#define TCC0_CCCBUF  _SFR_MEM16(0x083C)
+#define TCC0_CCDBUF  _SFR_MEM16(0x083E)
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="96"
-   height="96"
-   id="svg7447"
-   sodipodi:version="0.32"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="folder-publicshare.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   version="1.1"
-   inkscape:export-filename="folder-publicshare.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
-  <defs
-     id="defs7449">
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5048-7"
-       id="linearGradient3247"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.125709,0,0,0.0864706,2.5651808,-10.70427)"
-       x1="302.85715"
-       y1="366.64789"
-       x2="302.85715"
-       y2="609.50507" />
-    <linearGradient
-       id="linearGradient5048-7">
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="0"
-         id="stop5050-41" />
-      <stop
-         id="stop5056-2"
-         offset="0.5"
-         style="stop-color:black;stop-opacity:1;" />
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="1"
-         id="stop5052-4" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5060-8"
-       id="radialGradient3244"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.125709,0,0,0.0864706,2.5899204,-10.70427)"
-       cx="605.71429"
-       cy="486.64789"
-       fx="605.71429"
-       fy="486.64789"
-       r="117.14286" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient5060-8">
-      <stop
-         style="stop-color:black;stop-opacity:1;"
-         offset="0"
-         id="stop5062-52" />
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="1"
-         id="stop5064-0" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5060-8"
-       id="radialGradient3241"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-0.125709,0,0,0.0864706,93.410098,-10.70427)"
-       cx="605.71429"
-       cy="486.64789"
-       fx="605.71429"
-       fy="486.64789"
-       r="117.14286" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4064-7-7"
-       id="linearGradient3230"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,2,-94,-48)"
-       x1="71"
-       y1="8"
-       x2="71"
-       y2="41.5" />
-    <linearGradient
-       id="linearGradient4064-7-7">
-      <stop
-         style="stop-color:#709937;stop-opacity:1;"
-         offset="0"
-         id="stop4066-4-4" />
-      <stop
-         style="stop-color:#709937;stop-opacity:0.50196081;"
-         offset="1"
-         id="stop4068-8-3" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4054-7-1"
-       id="linearGradient3232"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,2,-94,-48)"
-       x1="71"
-       y1="8"
-       x2="71"
-       y2="41.5" />
-    <linearGradient
-       id="linearGradient4054-7-1">
-      <stop
-         style="stop-color:#51751e;stop-opacity:1;"
-         offset="0"
-         id="stop4056-0-6" />
-      <stop
-         style="stop-color:#51751e;stop-opacity:0.50196081;"
-         offset="1"
-         id="stop4058-9-62" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9101-4"
-       id="linearGradient3227"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.75086228,0,0,0.3333332,-6.0605797,-28.166666)"
-       x1="71.999496"
-       y1="14.2578"
-       x2="71.999496"
-       y2="19.9583" />
-    <linearGradient
-       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)"
-       y2="19.9583"
-       x2="71.999496"
-       y1="14.2578"
-       x1="71.999496"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient9101-4">
-      <stop
-         id="stop9103-7"
-         style="stop-color:#51751e;stop-opacity:0;"
-         offset="0.25" />
-      <stop
-         id="stop9105-6"
-         style="stop-color:#51751e;stop-opacity:1;"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9073-9-6"
-       id="linearGradient3259"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.7031318,0,0,0.7105376,-69.874472,-254.68002)"
-       x1="167.64111"
-       y1="328.87747"
-       x2="167.64111"
-       y2="407.69193" />
-    <linearGradient
-       id="linearGradient9073-9-6">
-      <stop
-         id="stop9075-9-1"
-         offset="0"
-         style="stop-color:#aacb7d;stop-opacity:1" />
-      <stop
-         id="stop9077-5-0"
-         offset="1"
-         style="stop-color:#709937;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9087-5-2"
-       id="linearGradient3261"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,2,-365.99542,-54)"
-       x1="206.99738"
-       y1="16.499895"
-       x2="206.99738"
-       y2="44.50021" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient9087-5-2">
-      <stop
-         style="stop-color:#709937;stop-opacity:1"
-         offset="0"
-         id="stop9089-5-0" />
-      <stop
-         style="stop-color:#51751e;stop-opacity:1"
-         offset="1"
-         id="stop9091-1-6" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient10176-5"
-       id="linearGradient3256"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.9204022,0,0,1.885618,-11.468937,-87.058428)"
-       x1="7.2379346"
-       y1="36.005047"
-       x2="122.17093"
-       y2="36.005047" />
-    <linearGradient
-       id="linearGradient10176-5"
-       gradientUnits="userSpaceOnUse"
-       x1="71.999496"
-       y1="14.2578"
-       x2="71.999496"
-       y2="19.9583"
-       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)">
-      <stop
-         offset="0.00445589"
-         style="stop-color:#eaeaea;stop-opacity:0;"
-         id="stop10178-2" />
-      <stop
-         id="stop10180-8"
-         style="stop-color:#ffffff;stop-opacity:0.52941179;"
-         offset="0.46138024" />
-      <stop
-         offset="1"
-         style="stop-color:#f5f5f5;stop-opacity:0"
-         id="stop10182-6" />
-    </linearGradient>
-  </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="6.90625"
-     inkscape:cx="48"
-     inkscape:cy="48"
-     inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:grid-bbox="true"
-     inkscape:document-units="px"
-     inkscape:window-width="1133"
-     inkscape:window-height="875"
-     inkscape:window-x="145"
-     inkscape:window-y="24"
-     inkscape:window-maximized="0"
-     inkscape:snap-midpoints="true"
-     inkscape:snap-object-midpoints="true"
-     inkscape:object-paths="true"
-     inkscape:snap-intersection-paths="true"
-     inkscape:snap-global="true"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
-  <metadata
-     id="metadata7452">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     id="layer1"
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     transform="translate(0,48)">
-    <g
-       id="g3274">
-      <g
-         id="g3269">
-        <rect
-           style="opacity:0.40206185;fill:url(#linearGradient3247);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-           id="rect13073"
-           width="60.699482"
-           height="21.000004"
-           x="17.650259"
-           y="21" />
-        <path
-           style="opacity:0.40206185;fill:url(#radialGradient3244);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-           d="m 78.349742,21.000718 c 0,0 0,20.998846 0,20.998846 C 84.823444,42.039084 94.000004,37.294788 94,31.49879 94,25.70279 86.775836,21.00072 78.349742,21.000718 z"
-           id="path13075"
-           sodipodi:nodetypes="cccc"
-           inkscape:connector-curvature="0" />
-        <path
-           sodipodi:nodetypes="cccc"
-           id="path13077"
-           d="m 17.65026,21.000718 c 0,0 0,20.998846 0,20.998846 -6.473703,0.03952 -15.6502598,-4.704776 -15.6502598,-10.500774 0,-5.796 7.224163,-10.49807 15.6502598,-10.498072 z"
-           style="opacity:0.40206185;fill:url(#radialGradient3241);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-           inkscape:connector-curvature="0" />
-      </g>
-      <g
-         id="g3263">
-        <path
-           style="color:#000000;fill:url(#linearGradient3230);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3232);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 63,-32 c -1.108,0 -2.0895,0.4645 -2.8125,1.1875 L 56.375,-27 11,-27 c -2.216,0 -4,1.784 -4,4 l 0,56 c 0,1.108 0.892,2 2,2 l 78,0 c 1.108,0 2,-0.892 2,-2 l 0,-61 c 0,-2.216 -1.784,-4 -4,-4 z"
-           id="rect3142"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="sscsccccccss" />
-        <path
-           style="opacity:0.5;fill:url(#linearGradient3227);fill-opacity:1;display:inline;enable-background:new"
-           id="path39053"
-           d="m 7.5014969,-23.5 c 0.00626,0.583332 0.012514,1.251666 0.018752,2 l 80.9609801,0 c 0.0063,-0.748334 0.01256,-1.416668 0.01883,-2 l -80.9999993,0 0.0015,0 z"
-           inkscape:connector-curvature="0" />
-        <path
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="cccccccccc"
-           style="opacity:0.9;color:#000000;fill:url(#linearGradient3259);fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient3261);stroke-width:0.99958181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
-           id="path3300"
-           d="m 90.493984,33 c -0.06074,1.170968 -1.335732,2.000418 -2.499686,2.000418 l -79.9899374,0 c -1.163934,0 -2.438312,-0.82945 -2.499686,-2.000418 l -2.499684,-51.999792 c -0.08468,-1.168834 0.835794,-2.000416 1.999748,-2.000416 l 85.9891834,0 c 1.163954,0 2.088616,0.831582 1.999748,2.000416 L 90.493984,33 z" />
-        <rect
-           style="fill:url(#linearGradient3256);fill-opacity:1;stroke:none;display:inline;enable-background:new"
-           id="rect3521-5"
-           width="89"
-           height="2"
-           x="3.4999948"
-           y="-20.5"
-           rx="0"
-           ry="0" />
-      </g>
-    </g>
-    <path
-       style="opacity:0.6;fill:#ffffff;fill-rule:evenodd;stroke:none"
-       d="m 59,-9 c -3.313708,0 -6,2.686292 -6,6 0,0.17476 0.04786,0.329028 0.0625,0.5 L 43.1875,2 C 41.72109,0.179998 39.51921,-1 37,-1 c -4.418278,0 -8,3.581722 -8,8 0,4.418278 3.581722,8 8,8 2.51921,0 4.72109,-1.179998 6.1875,-3 l 9.875,4.5 C 53.047858,16.670972 53,16.825236 53,17 c 0,3.313708 2.686292,6 6,6 3.313708,0 6,-2.686292 6,-6 0,-3.313708 -2.686292,-6 -6,-6 -1.705586,0 -3.22009,0.732426 -4.3125,1.875 l -9.875,-4.5 C 44.88975,7.928644 45,7.468434 45,7 45,6.531566 44.88974,6.071356 44.8125,5.625 l 9.875,-4.5 C 55.77991,2.267574 57.294414,3 59,3 c 3.313708,0 6,-2.686292 6,-6 0,-3.313708 -2.686292,-6 -6,-6 z"
-       id="path3310"
-       inkscape:connector-curvature="0" />
-    <path
-       style="opacity:0.25;fill:#000000;fill-rule:evenodd;stroke:none"
-       d="m 59,-10 c -3.313708,0 -6,2.686292 -6,6 0,0.17476 0.04786,0.329028 0.0625,0.5 L 43.1875,1 C 41.72109,-0.820002 39.51921,-2 37,-2 c -4.418278,0 -8,3.581722 -8,8 0,0.34024 0.08378,0.670936 0.125,1 0.494132,-3.944092 3.796962,-7 7.875,-7 2.51921,0 4.72109,1.179998 6.1875,3 l 9.875,-4.5 C 53.04786,-1.670972 53,-1.82524 53,-2 c 0,-3.313708 2.686292,-6 6,-6 2.96418,0 5.388568,2.174708 5.875,5 C 64.93236,-3.33315 65,-3.650472 65,-4 c 0,-3.313708 -2.686292,-6 -6,-6 z M 44.9375,6.5625 44.8125,6.625 C 44.83364,6.74722 44.85184,6.87581 44.875,7 44.90194,6.85558 44.91646,6.709244 44.9375,6.5625 z m 0,0.875 C 44.964446,7.625368 45,7.809016 45,8 45,8.468434 44.88974,8.928644 44.8125,9.375 l 9.875,4.5 C 55.77991,12.732426 57.294414,12 59,12 c 2.96418,0 5.388568,2.174708 5.875,5 C 64.93236,16.66685 65,16.349528 65,16 c 0,-3.313708 -2.686292,-6 -6,-6 -1.705586,0 -3.22009,0.732426 -4.3125,1.875 l -9.75,-4.4375 z"
-       id="path4134"
-       inkscape:connector-curvature="0" />
-  </g>
-</svg>
+/* TC2 - 16-bit Timer/Counter type 2 */
+#define TCC2_CTRLA  _SFR_MEM8(0x0800)
+#define TCC2_CTRLB  _SFR_MEM8(0x0801)
+#define TCC2_CTRLC  _SFR_MEM8(0x0802)
+#define TCC2_CTRLE  _SFR_MEM8(0x0804)
+#define TCC2_INTCTRLA  _SFR_MEM8(0x0806)
+#define TCC2_INTCTRLB  _SFR_MEM8(0x0807)
+#define TCC2_CTRLF  _SFR_MEM8(0x0809)
+#define TCC2_INTFLAGS  _SFR_MEM8(0x080C)
+#define TCC2_LCNT  _SFR_MEM8(0x0820)
+#define TCC2_HCNT  _SFR_MEM8(0x0821)
+#define TCC2_LPER  _SFR_MEM8(0x0826)
+#define TCC2_HPER  _SFR_MEM8(0x0827)
+#define TCC2_LCMPA  _SFR_MEM8(0x0828)
+#define TCC2_HCMPA  _SFR_MEM8(0x0829)
+#define TCC2_LCMPB  _SFR_MEM8(0x082A)
+#define TCC2_HCMPB  _SFR_MEM8(0x082B)
+#define TCC2_LCMPC  _SFR_MEM8(0x082C)
+#define TCC2_HCMPC  _SFR_MEM8(0x082D)
+#define TCC2_LCMPD  _SFR_MEM8(0x082E)
+#define TCC2_HCMPD  _SFR_MEM8(0x082F)
+
+/* TC1 - 16-bit Timer/Counter 1 */
+#define TCC1_CTRLA  _SFR_MEM8(0x0840)
+#define TCC1_CTRLB  _SFR_MEM8(0x0841)
+#define TCC1_CTRLC  _SFR_MEM8(0x0842)
+#define TCC1_CTRLD  _SFR_MEM8(0x0843)
+#define TCC1_CTRLE  _SFR_MEM8(0x0844)
+#define TCC1_INTCTRLA  _SFR_MEM8(0x0846)
+#define TCC1_INTCTRLB  _SFR_MEM8(0x0847)
+#define TCC1_CTRLFCLR  _SFR_MEM8(0x0848)
+#define TCC1_CTRLFSET  _SFR_MEM8(0x0849)
+#define TCC1_CTRLGCLR  _SFR_MEM8(0x084A)
+#define TCC1_CTRLGSET  _SFR_MEM8(0x084B)
+#define TCC1_INTFLAGS  _SFR_MEM8(0x084C)
+#define TCC1_TEMP  _SFR_MEM8(0x084F)
+#define TCC1_CNT  _SFR_MEM16(0x0860)
+#define TCC1_PER  _SFR_MEM16(0x0866)
+#define TCC1_CCA  _SFR_MEM16(0x0868)
+#define TCC1_CCB  _SFR_MEM16(0x086A)
+#define TCC1_PERBUF  _SFR_MEM16(0x0876)
+#define TCC1_CCABUF  _SFR_MEM16(0x0878)
+#define TCC1_CCBBUF  _SFR_MEM16(0x087A)
+
+/* AWEX - Advanced Waveform Extension */
+#define AWEXC_CTRL  _SFR_MEM8(0x0880)
+#define AWEXC_FDEMASK  _SFR_MEM8(0x0882)
+#define AWEXC_FDCTRL  _SFR_MEM8(0x0883)
+#define AWEXC_STATUS  _SFR_MEM8(0x0884)
+#define AWEXC_STATUSSET  _SFR_MEM8(0x0885)
+#define AWEXC_DTBOTH  _SFR_MEM8(0x0886)
+#define AWEXC_DTBOTHBUF  _SFR_MEM8(0x0887)
+#define AWEXC_DTLS  _SFR_MEM8(0x0888)
+#define AWEXC_DTHS  _SFR_MEM8(0x0889)
+#define AWEXC_DTLSBUF  _SFR_MEM8(0x088A)
+#define AWEXC_DTHSBUF  _SFR_MEM8(0x088B)
+#define AWEXC_OUTOVEN  _SFR_MEM8(0x088C)
+
+/* HIRES - High-Resolution Extension */
+#define HIRESC_CTRLA  _SFR_MEM8(0x0890)
+
+/* USART - Universal Synchronous/Asynchronous Receiver/Transmitter */
+#define USARTC0_DATA  _SFR_MEM8(0x08A0)
+#define USARTC0_STATUS  _SFR_MEM8(0x08A1)
+#define USARTC0_CTRLA  _SFR_MEM8(0x08A3)
+#define USARTC0_CTRLB  _SFR_MEM8(0x08A4)
+#define USARTC0_CTRLC  _SFR_MEM8(0x08A5)
+#define USARTC0_BAUDCTRLA  _SFR_MEM8(0x08A6)
+#define USARTC0_BAUDCTRLB  _SFR_MEM8(0x08A7)
+
+/* SPI - Serial Peripheral Interface */
+#define SPIC_CTRL  _SFR_MEM8(0x08C0)
+#define SPIC_INTCTRL  _SFR_MEM8(0x08C1)
+#define SPIC_STATUS  _SFR_MEM8(0x08C2)
+#define SPIC_DATA  _SFR_MEM8(0x08C3)
+
+/* IRCOM - IR Communication Module */
+#define IRCOM_CTRL  _SFR_MEM8(0x08F8)
+#define IRCOM_TXPLCTRL  _SFR_MEM8(0x08F9)
+#define IRCOM_RXPLCTRL  _SFR_MEM8(0x08FA)
+
+/* TC0 - 16-bit Timer/Counter 0 */
+#define TCD0_CTRLA  _SFR_MEM8(0x0900)
+#define TCD0_CTRLB  _SFR_MEM8(0x0901)
+#define TCD0_CTRLC  _SFR_MEM8(0x0902)
+#define TCD0_CTRLD  _SFR_MEM8(0x0903)
+#define TCD0_CTRLE  _SFR_MEM8(0x0904)
+#define TCD0_INTCTRLA  _SFR_MEM8(0x0906)
+#define TCD0_INTCTRLB  _SFR_MEM8(0x0907)
+#define TCD0_CTRLFCLR  _SFR_MEM8(0x0908)
+#define TCD0_CTRLFSET  _SFR_MEM8(0x0909)
+#define TCD0_CTRLGCLR  _SFR_MEM8(0x090A)
+#define TCD0_CTRLGSET  _SFR_MEM8(0x090B)
+#define TCD0_INTFLAGS  _SFR_MEM8(0x090C)
+#define TCD0_TEMP  _SFR_MEM8(0x090F)
+#define TCD0_CNT  _SFR_MEM16(0x0920)
+#define TCD0_PER  _SFR_MEM16(0x0926)
+#define TCD0_CCA  _SFR_MEM16(0x0928)
+#define TCD0_CCB  _SFR_MEM16(0x092A)
+#define TCD0_CCC  _SFR_MEM16(0x092C)
+#define TCD0_CCD  _SFR_MEM16(0x092E)
+#define TCD0_PERBUF  _SFR_MEM16(0x0936)
+#define TCD0_CCABUF  _SFR_MEM16(0x0938)
+#define TCD0_CCBBUF  _SFR_MEM16(0x093A)
+#define TCD0_CCCBUF  _SFR_MEM16(0x093C)
+#define TCD0_CCDBUF  _SFR_MEM16(0x093E)
+
+/* TC2 - 16-bit Timer/Counter type 2 */
+#define TCD2_CTRLA  _SFR_MEM8(0x0900)
+#define TCD2_CTRLB  _SFR_MEM8(0x0901)
+#define TCD2_CTRLC  _SFR_MEM8(0x0902)
+#define TCD2_CTRLE  _SFR_MEM8(0x0904)
+#define TCD2_INTCTRLA  _SFR_MEM8(0x0906)
+#define TCD2_INTCTRLB  _SFR_MEM8(0x0907)
+#define TCD2_CTRLF  _SFR_MEM8(0x0909)
+#define TCD2_INTFLAGS  _SFR_MEM8(0x090C)
+#define TCD2_LCNT  _SFR_MEM8(0x0920)
+#define TCD2_HCNT  _SFR_MEM8(0x0921)
+#define TCD2_LPER  _SFR_MEM8(0x0926)
+#define TCD2_HPER  _SFR_MEM8(0x0927)
+#define TCD2_LCMPA  _SFR_MEM8(0x0928)
+#define TCD2_HCMPA  _SFR_MEM8(0x0929)
+#define TCD2_LCMPB  _SFR_MEM8(0x092A)
+#define TCD2_HCMPB  _SFR_MEM8(0x092B)
+#define TCD2_LCMPC  _SFR_MEM8(0x092C)
+#define TCD2_HCMPC  _SFR_MEM8(0x092D)
+#define TCD2_LCMPD  _SFR_MEM8(0x092E)
+#define TCD2_HCMPD  _SFR_MEM8(0x092F)
+
+/* USART - Universal Synchronous/Asynchronous Receiver/Transmitter */
+#define USARTD0_DATA  _SFR_MEM8(0x09A0)
+#define USARTD0_STATUS  _SFR_MEM8(0x09A1)
+#define USARTD0_CTRLA  _SFR_MEM8(0x09A3)
+#define USARTD0_CTRLB  _SFR_MEM8(0x09A4)
+#define USARTD0_CTRLC  _SFR_MEM8(0x09A5)
+#define USARTD0_BAUDCTRLA  _SFR_MEM8(0x09A6)
+#define USARTD0_BAUDCTRLB  _SFR_MEM8(0x09A7)
+
+/* SPI - Serial Peripheral Interface */
+#define SPID_CTRL  _SFR_MEM8(0x09C0)
+#define SPID_INTCTRL  _SFR_MEM8(0x09C1)
+#define SPID_STATUS  _SFR_MEM8(0x09C2)
+#define SPID_DATA  _SFR_MEM8(0x09C3)
+
+/* TC0 - 16-bit Timer/Counter 0 */
+#define TCE0_CTRLA  _SFR_MEM8(0x0A00)
+#define TCE0_CTRLB  _SFR_MEM8(0x0A01)
+#define TCE0_CTRLC  _SFR_MEM8(0x0A02)
+#define TCE0_CTRLD  _SFR_MEM8(0x0A03)
+#define TCE0_CTRLE  _SFR_MEM8(0x0A04)
+#define TCE0_INTCTRLA  _SFR_MEM8(0x0A06)
+#define TCE0_INTCTRLB  _SFR_MEM8(0x0A07)
+#define TCE0_CTRLFCLR  _SFR_MEM8(0x0A08)
+#define TCE0_CTRLFSET  _SFR_MEM8(0x0A09)
+#define TCE0_CTRLGCLR  _SFR_MEM8(0x0A0A)
+#define TCE0_CTRLGSET  _SFR_MEM8(0x0A0B)
+#define TCE0_INTFLAGS  _SFR_MEM8(0x0A0C)
+#define TCE0_TEMP  _SFR_MEM8(0x0A0F)
+#define TCE0_CNT  _SFR_MEM16(0x0A20)
+#define TCE0_PER  _SFR_MEM16(0x0A26)
+#define TCE0_CCA  _SFR_MEM16(0x0A28)
+#define TCE0_CCB  _SFR_MEM16(0x0A2A)
+#define TCE0_CCC  _SFR_MEM16(0x0A2C)
+#define TCE0_CCD  _SFR_MEM16(0x0A2E)
+#define TCE0_PERBUF  _SFR_MEM16(0x0A36)
+#define TCE0_CCABUF  _SFR_MEM16(0x0A38)
+#define TCE0_CCBBUF  _SFR_MEM16(0x0A3A)
+#define TCE0_CCCBUF  _SFR_MEM16(0x0A3C)
+#define TCE0_CCDBUF  _SFR_MEM16(0x0A3E)
+
+/* TC2 - 16-bit Timer/Counter type 2 */
+#define TCE2_CTRLA  _SFR_MEM8(0x0A00)
+#define TCE2_CTRLB  _SFR_MEM8(0x0A01)
+#define TCE2_CTRLC  _SFR_MEM8(0x0A02)
+#define TCE2_CTRLE  _SFR_MEM8(0x0A04)
+#define TCE2_INTCTRLA  _SFR_MEM8(0x0A06)
+#define TCE2_INTCTRLB  _SFR_MEM8(0x0A07)
+#define TCE2_CTRLF  _SFR_MEM8(0x0A09)
+#define TCE2_INTFLAGS  _SFR_MEM8(0x0A0C)
+#define TCE2_LCNT  _SFR_MEM8(0x0A20)
+#define TCE2_HCNT  _SFR_MEM8(0x0A21)
+#define TCE2_LPER  _SFR_MEM8(0x0A26)
+#define TCE2_HPER  _SFR_MEM8(0x0A27)
+#define TCE2_LCMPA  _SFR_MEM8(0x0A28)
+#define TCE2_HCMPA  _SFR_MEM8(0x0A29)
+#define TCE2_LCMPB  _SFR_MEM8(0x0A2A)
+#define TCE2_HCMPB  _SFR_MEM8(0x0A2B)
+#define TCE2_LCMPC  _SFR_MEM8(0x0A2C)
+#define TCE2_HCMPC  _SFR_MEM8(0x0A2D)
+#define TCE2_LCMPD  _SFR_MEM8(0x0A2E)
+#define TCE2_HCMPD  _SFR_MEM8(0x0A2F)
+
+/* USART - Universal Synchronous/Asynchronous Receiver/Transmitter */
+#define USARTE0_DATA  _SFR_MEM8(0x0AA0)
+#define USARTE0_STATUS  _SFR_MEM8(0x0AA1)
+#define USARTE0_CTRLA  _SFR_MEM8(0x0AA3)
+#define USARTE0_CTRLB  _SFR_MEM8(0x0AA4)
+#define USARTE0_CTRLC  _SFR_MEM8(0x0AA5)
+#define USARTE0_BAUDCTRLA  _SFR_MEM8(0x0AA6)
+#define USARTE0_BAUDCTRLB  _SFR_MEM8(0x0AA7)
+
+/* TC0 - 16-bit Timer/Counter 0 */
+#define TCF0_CTRLA  _SFR_MEM8(0x0B00)
+#define TCF0_CTRLB  _SFR_MEM8(0x0B01)
+#define TCF0_CTRLC  _SFR_MEM8(0x0B02)
+#define TCF0_CTRLD  _SFR_MEM8(0x0B03)
+#define TCF0_CTRLE  _SFR_MEM8(0x0B04)
+#define TCF0_INTCTRLA  _SFR_MEM8(0x0B06)
+#define TCF0_INTCTRLB  _SFR_MEM8(0x0B07)
+#define TCF0_CTRLFCLR  _SFR_MEM8(0x0B08)
+#define TCF0_CTRLFSET  _SFR_MEM8(0x0B09)
+#define TCF0_CTRLGCLR  _SFR_MEM8(0x0B0A)
+#define TCF0_CTRLGSET  _SFR_MEM8(0x0B0B)
+#define TCF0_INTFLAGS  _SFR_MEM8(0x0B0C)
+#define TCF0_TEMP  _SFR_MEM8(0x0B0F)
+#define TCF0_CNT  _SFR_MEM16(0x0B20)
+#define TCF0_PER  _SFR_MEM16(0x0B26)
+#define TCF0_CCA  _SFR_MEM16(0x0B28)
+#define TCF0_CCB  _SFR_MEM16(0x0B2A)
+#define TCF0_CCC  _SFR_MEM16(0x0B2C)
+#define TCF0_CCD  _SFR_MEM16(0x0B2E)
+#define TCF0_PERBUF  _SFR_MEM16(0x0B36)
+#define TCF0_CCABUF  _SFR_MEM16(0x0B38)
+#define TCF0_CCBBUF  _SFR_MEM16(0x0B3A)
+#define TCF0_CCCBUF  _SFR_MEM16(0x0B3C)
+#define TCF0_CCDBUF  _SFR_MEM16(0x0B3E)
+
+/* TC2 - 16-bit Timer/Counter type 2 */
+#define TCF2_CTRLA  _SFR_MEM8(0x0B00)
+#define TCF2_CTRLB  _SFR_MEM8(0x0B01)
+#define TCF2_CTRLC  _SFR_MEM8(0x0B02)
+#define TCF2_CTRLE  _SFR_MEM8(0x0B04)
+#define TCF2_INTCTRLA  _SFR_MEM8(0x0B06)
+#define TCF2_INTCTRLB  _SFR_MEM8(0x0B07)
+#define TCF2_CTRLF  _SFR_MEM8(0x0B09)
+#define TCF2_INTFLAGS  _SFR_MEM8(0x0B0C)
+#define TCF2_LCNT  _SFR_MEM8(0x0B20)
+#define TCF2_HCNT  _SFR_MEM8(0x0B21)
+#define TCF2_LPER  _SFR_MEM8(0x0B26)
+#define TCF2_HPER  _SFR_MEM8(0x0B27)
+#define TCF2_LCMPA  _SFR_MEM8(0x0B28)
+#define TCF2_HCMPA  _SFR_MEM8(0x0B29)
+#define TCF2_LCMPB  _SFR_MEM8(0x0B2A)
+#define TCF2_HCMPB  _SFR_MEM8(0x0B2B)
+#define TCF2_LCMPC  _SFR_MEM8(0x0B2C)
+#define TCF2_HCMPC  _SFR_MEM8(0x0B2D)
+#define TCF2_LCMPD  _SFR_MEM8(0x0B2E)
+#define TCF2_HCMPD  _SFR_MEM8(0x0B2F)
+
+
+
+/*================== Bitfield Definitions ================== */
+
+/* VPORT - Virtual Ports */
+/* VPORT.INTFLAGS  bit masks and bit positions */
+#define VPORT_INT1IF_bm  0x02  /* Port Interrupt 1 Flag bit mask. */
+#define VPORT_INT1IF_bp  1  /* Port Interrupt 1 Flag bit position. */
+
+#define VPORT_INT0IF_bm  0x01  /* Port Interrupt 0 Flag bit mask. */
+#define VPORT_INT0IF_bp  0  /* Port Interrupt 0 Flag bit position. */
+
+/* XOCD - On-Chip Debug System */
+/* OCD.OCDR0  bit masks and bit positions */
+#define OCD_OCDRD_gm  0xFF  /* OCDR Dirty group mask. */
+#define OCD_OCDRD_gp  0  /* OCDR Dirty group position. */
+#define OCD_OCDRD0_bm  (1<<0)  /* OCDR Dirty bit 0 mask. */
+#define OCD_OCDRD0_bp  0  /* OCDR Dirty bit 0 position. */
+#define OCD_OCDRD1_bm  (1<<1)  /* OCDR Dirty bit 1 mask. */
+#define OCD_OCDRD1_bp  1  /* OCDR Dirty bit 1 position. */
+#define OCD_OCDRD2_bm  (1<<2)  /* OCDR Dirty bit 2 mask. */
+#define OCD_OCDRD2_bp  2  /* OCDR Dirty bit 2 position. */
+#define OCD_OCDRD3_bm  (1<<3)  /* OCDR Dirty bit 3 mask. */
+#define OCD_OCDRD3_bp  3  /* OCDR Dirty bit 3 position. */
+#define OCD_OCDRD4_bm  (1<<4)  /* OCDR Dirty bit 4 mask. */
+#define OCD_OCDRD4_bp  4  /* OCDR Dirty bit 4 position. */
+#define OCD_OCDRD5_bm  (1<<5)  /* OCDR Dirty bit 5 mask. */
+#define OCD_OCDRD5_bp  5  /* OCDR Dirty bit 5 position. */
+#define OCD_OCDRD6_bm  (1<<6)  /* OCDR Dirty bit 6 mask. */
+#define OCD_OCDRD6_bp  6  /* OCDR Dirty bit 6 position. */
+#define OCD_OCDRD7_bm  (1<<7)  /* OCDR Dirty bit 7 mask. */
+#define OCD_OCDRD7_bp  7  /* OCDR Dirty bit 7 position. */
+
+/* OCD.OCDR1  bit masks and bit positions */
+/* OCD_OCDRD  Predefined. */
+/* OCD_OCDRD  Predefined. */
+
+/* CPU - CPU */
+/* CPU.CCP  bit masks and bit positions */
+#define CPU_CCP_gm  0xFF  /* CCP signature group mask. */
+#define CPU_CCP_gp  0  /* CCP signature group position. */
+#define CPU_CCP0_bm  (1<<0)  /* CCP signature bit 0 mask. */
+#define CPU_CCP0_bp  0  /* CCP signature bit 0 position. */
+#define CPU_CCP1_bm  (1<<1)  /* CCP signature bit 1 mask. */
+#define CPU_CCP1_bp  1  /* CCP signature bit 1 position. */
+#define CPU_CCP2_bm  (1<<2)  /* CCP signature bit 2 mask. */
+#define CPU_CCP2_bp  2  /* CCP signature bit 2 position. */
+#define CPU_CCP3_bm  (1<<3)  /* CCP signature bit 3 mask. */
+#define CPU_CCP3_bp  3  /* CCP signature bit 3 position. */
+#define CPU_CCP4_bm  (1<<4)  /* CCP signature bit 4 mask. */
+#define CPU_CCP4_bp  4  /* CCP signature bit 4 position. */
+#define CPU_CCP5_bm  (1<<5)  /* CCP signature bit 5 mask. */
+#define CPU_CCP5_bp  5  /* CCP signature bit 5 position. */
+#define CPU_CCP6_bm  (1<<6)  /* CCP signature bit 6 mask. */
+#define CPU_CCP6_bp  6  /* CCP signature bit 6 position. */
+#define CPU_CCP7_bm  (1<<7)  /* CCP signature bit 7 mask. */
+#define CPU_CCP7_bp  7  /* CCP signature bit 7 position. */
+
+/* CPU.SREG  bit masks and bit positions */
+#define CPU_I_bm  0x80  /* Global Interrupt Enable Flag bit mask. */
+#define CPU_I_bp  7  /* Global Interrupt Enable Flag bit position. */
+
+#define CPU_T_bm  0x40  /* Transfer Bit bit mask. */
+#define CPU_T_bp  6  /* Transfer Bit bit position. */
+
+#define CPU_H_bm  0x20  /* Half Carry

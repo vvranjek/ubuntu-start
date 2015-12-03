@@ -1,520 +1,299 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+_CH_BURSTLEN_2BYTE_gc = (0x01<<0),  /* 2-byte burst mode */
+    DMA_CH_BURSTLEN_4BYTE_gc = (0x02<<0),  /* 4-byte burst mode */
+    DMA_CH_BURSTLEN_8BYTE_gc = (0x03<<0),  /* 8-byte burst mode */
+} DMA_CH_BURSTLEN_t;
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="96"
-   height="96"
-   id="svg8280"
-   sodipodi:version="0.32"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="document-open-folder.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   version="1.1">
-  <defs
-     id="defs8282">
-    <linearGradient
-       id="linearGradient5048-15">
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="0"
-         id="stop5050-1" />
-      <stop
-         id="stop5056-5"
-         offset="0.5"
-         style="stop-color:black;stop-opacity:1;" />
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="1"
-         id="stop5052-0" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient5060-22">
-      <stop
-         style="stop-color:black;stop-opacity:1;"
-         offset="0"
-         id="stop5062-8" />
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="1"
-         id="stop5064-1" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient4064-7-5">
-      <stop
-         style="stop-color:#709937;stop-opacity:1;"
-         offset="0"
-         id="stop4066-4-6" />
-      <stop
-         style="stop-color:#709937;stop-opacity:0.50196081;"
-         offset="1"
-         id="stop4068-8-3" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient4054-7-0">
-      <stop
-         style="stop-color:#51751e;stop-opacity:1;"
-         offset="0"
-         id="stop4056-0-4" />
-      <stop
-         style="stop-color:#51751e;stop-opacity:0.50196081;"
-         offset="1"
-         id="stop4058-9-1" />
-    </linearGradient>
-    <linearGradient
-       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)"
-       y2="19.9583"
-       x2="71.999496"
-       y1="14.2578"
-       x1="71.999496"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient9101-3">
-      <stop
-         id="stop9103-0"
-         style="stop-color:#51751e;stop-opacity:0;"
-         offset="0.25" />
-      <stop
-         id="stop9105-2"
-         style="stop-color:#51751e;stop-opacity:1;"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient10176-71"
-       gradientUnits="userSpaceOnUse"
-       x1="71.999496"
-       y1="14.2578"
-       x2="71.999496"
-       y2="19.9583"
-       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)">
-      <stop
-         offset="0.00445589"
-         style="stop-color:#eaeaea;stop-opacity:0;"
-         id="stop10178-84" />
-      <stop
-         id="stop10180-1"
-         style="stop-color:#ffffff;stop-opacity:0.52941179;"
-         offset="0.46138024" />
-      <stop
-         offset="1"
-         style="stop-color:#f5f5f5;stop-opacity:0"
-         id="stop10182-0" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient9073-9-7-5">
-      <stop
-         id="stop9075-9-7-1"
-         offset="0"
-         style="stop-color:#aacb7d;stop-opacity:1" />
-      <stop
-         id="stop9077-5-4-1"
-         offset="1"
-         style="stop-color:#709937;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient9087-5-2-5">
-      <stop
-         style="stop-color:#709937;stop-opacity:1"
-         offset="0"
-         id="stop9089-5-0-4" />
-      <stop
-         style="stop-color:#51751e;stop-opacity:1"
-         offset="1"
-         id="stop9091-1-6-6" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5048-15"
-       id="linearGradient3040"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.0628545,0,0,0.0432353,1.2825904,18.647865)"
-       x1="302.85715"
-       y1="366.64789"
-       x2="302.85715"
-       y2="609.50507" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5060-22"
-       id="radialGradient3042"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.0628545,0,0,0.0432353,1.2949602,18.647865)"
-       cx="605.71429"
-       cy="486.64789"
-       fx="605.71429"
-       fy="486.64789"
-       r="117.14286" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5060-22"
-       id="radialGradient3044"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-0.0628545,0,0,0.0432353,46.705049,18.647865)"
-       cx="605.71429"
-       cy="486.64789"
-       fx="605.71429"
-       fy="486.64789"
-       r="117.14286" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9073-9-7-5"
-       id="linearGradient3052"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.3515659,0,0,0.3552688,-85.937236,-103.34001)"
-       x1="167.64111"
-       y1="328.87747"
-       x2="167.64111"
-       y2="407.69193" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9087-5-2-5"
-       id="linearGradient3054"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-233.99771,-3.0000001)"
-       x1="206.99738"
-       y1="16.499895"
-       x2="206.99738"
-       y2="44.50021" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient10176-71"
-       id="linearGradient3056"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.4550303,0,0,0.47140449,-5.4003734,7.3603923)"
-       x1="7.2379346"
-       y1="36.005047"
-       x2="122.17093"
-       y2="36.005047" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9101-3"
-       id="linearGradient3062"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.7415924,0,0,0.3333332,-5.3931648,-8.666666)"
-       x1="71.999496"
-       y1="14.2578"
-       x2="71.999496"
-       y2="19.9583" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4064-7-5"
-       id="linearGradient3065"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,2,-94,-48)"
-       x1="71"
-       y1="8"
-       x2="71"
-       y2="41.5" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4054-7-0"
-       id="linearGradient3067"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,2,-94,-48)"
-       x1="71"
-       y1="8"
-       x2="71"
-       y2="41.5" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5048-15-1"
-       id="linearGradient3224"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.0628545,0,0,0.0432353,1.2825904,18.647865)"
-       x1="302.85715"
-       y1="366.64789"
-       x2="302.85715"
-       y2="609.50507" />
-    <linearGradient
-       id="linearGradient5048-15-1">
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="0"
-         id="stop5050-1-1" />
-      <stop
-         id="stop5056-5-0"
-         offset="0.5"
-         style="stop-color:black;stop-opacity:1;" />
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="1"
-         id="stop5052-0-8" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5060-22-8"
-       id="radialGradient3226"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.0628545,0,0,0.0432353,1.2949602,18.647865)"
-       cx="605.71429"
-       cy="486.64789"
-       fx="605.71429"
-       fy="486.64789"
-       r="117.14286" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient5060-22-8">
-      <stop
-         style="stop-color:black;stop-opacity:1;"
-         offset="0"
-         id="stop5062-8-3" />
-      <stop
-         style="stop-color:black;stop-opacity:0;"
-         offset="1"
-         id="stop5064-1-4" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4064-7-5-9"
-       id="linearGradient3269"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,2,-94,-48)"
-       x1="71"
-       y1="8"
-       x2="71"
-       y2="41.5" />
-    <linearGradient
-       id="linearGradient4064-7-5-9">
-      <stop
-         style="stop-color:#709937;stop-opacity:1;"
-         offset="0"
-         id="stop4066-4-6-7" />
-      <stop
-         style="stop-color:#709937;stop-opacity:0.50196081;"
-         offset="1"
-         id="stop4068-8-3-8" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4054-7-0-8"
-       id="linearGradient3271"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,2,-94,-48)"
-       x1="71"
-       y1="8"
-       x2="71"
-       y2="41.5" />
-    <linearGradient
-       id="linearGradient4054-7-0-8">
-      <stop
-         style="stop-color:#51751e;stop-opacity:1;"
-         offset="0"
-         id="stop4056-0-4-6" />
-      <stop
-         style="stop-color:#51751e;stop-opacity:0.50196081;"
-         offset="1"
-         id="stop4058-9-1-7" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9101-3-4"
-       id="linearGradient3266"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.7415924,0,0,0.3333332,-5.3931648,-8.166666)"
-       x1="71.999496"
-       y1="14.2578"
-       x2="71.999496"
-       y2="19.9583" />
-    <linearGradient
-       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)"
-       y2="19.9583"
-       x2="71.999496"
-       y1="14.2578"
-       x1="71.999496"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient9101-3-4">
-      <stop
-         id="stop9103-0-7"
-         style="stop-color:#51751e;stop-opacity:0;"
-         offset="0.25" />
-      <stop
-         id="stop9105-2-7"
-         style="stop-color:#51751e;stop-opacity:1;"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9073-9-7-5-7"
-       id="linearGradient3255"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.7031318,0,0,0.7105376,-171.87447,-254.68002)"
-       x1="167.64111"
-       y1="328.87747"
-       x2="167.64111"
-       y2="407.69193" />
-    <linearGradient
-       id="linearGradient9073-9-7-5-7">
-      <stop
-         id="stop9075-9-7-1-7"
-         offset="0"
-         style="stop-color:#aacb7d;stop-opacity:1" />
-      <stop
-         id="stop9077-5-4-1-7"
-         offset="1"
-         style="stop-color:#709937;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9087-5-2-5-9"
-       id="linearGradient3257"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2,0,0,2,-467.99542,-54)"
-       x1="206.99738"
-       y1="16.499895"
-       x2="206.99738"
-       y2="44.50021" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient9087-5-2-5-9">
-      <stop
-         style="stop-color:#709937;stop-opacity:1"
-         offset="0"
-         id="stop9089-5-0-4-6" />
-      <stop
-         style="stop-color:#51751e;stop-opacity:1"
-         offset="1"
-         id="stop9091-1-6-6-9" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient10176-71-9"
-       id="linearGradient3251"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.9100606,0,0,0.94280898,-10.800747,-33.779215)"
-       x1="7.2379346"
-       y1="36.005047"
-       x2="122.17093"
-       y2="36.005047" />
-    <linearGradient
-       id="linearGradient10176-71-9"
-       gradientUnits="userSpaceOnUse"
-       x1="71.999496"
-       y1="14.2578"
-       x2="71.999496"
-       y2="19.9583"
-       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)">
-      <stop
-         offset="0.00445589"
-         style="stop-color:#eaeaea;stop-opacity:0;"
-         id="stop10178-84-6" />
-      <stop
-         id="stop10180-1-8"
-         style="stop-color:#ffffff;stop-opacity:0.52941179;"
-         offset="0.46138024" />
-      <stop
-         offset="1"
-         style="stop-color:#f5f5f5;stop-opacity:0"
-         id="stop10182-0-1" />
-    </linearGradient>
-    <radialGradient
-       r="117.14286"
-       fy="486.64789"
-       fx="605.71429"
-       cy="486.64789"
-       cx="605.71429"
-       gradientTransform="matrix(-0.0628545,0,0,0.0432353,46.705049,18.647865)"
-       gradientUnits="userSpaceOnUse"
-       id="radialGradient3105"
-       xlink:href="#linearGradient5060-22-8"
-       inkscape:collect="always" />
-  </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="6.0416667"
-     inkscape:cx="48"
-     inkscape:cy="49.903448"
-     inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:grid-bbox="true"
-     inkscape:document-units="px"
-     inkscape:window-width="1064"
-     inkscape:window-height="792"
-     inkscape:window-x="14"
-     inkscape:window-y="57"
-     inkscape:window-maximized="0"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
-  <metadata
-     id="metadata8285">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     id="layer1"
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     transform="translate(0,48)">
-    <g
-       id="g3583"
-       transform="matrix(2,0,0,2,0,-48)">
-      <rect
-         y="34.5"
-         x="8.8251295"
-         height="10.500002"
-         width="30.349741"
-         id="rect13073"
-         style="opacity:0.40206185;fill:url(#linearGradient3224);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible" />
-      <path
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccc"
-         id="path13075"
-         d="m 39.174871,34.500359 c 0,0 0,10.499423 0,10.499423 3.236851,0.01976 7.825131,-2.352388 7.825129,-5.250387 0,-2.898 -3.612082,-5.249035 -7.825129,-5.249036 z"
-         style="opacity:0.40206185;fill:url(#radialGradient3226);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible" />
-      <path
-         inkscape:connector-curvature="0"
-         style="opacity:0.40206185;fill:url(#radialGradient3105);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
-         d="m 8.8251301,34.500359 c 0,0 0,10.499423 0,10.499423 -3.2368516,0.01976 -7.82513,-2.352388 -7.82513,-5.250387 0,-2.898 3.6120815,-5.249035 7.82513,-5.249036 z"
-         id="path13077"
-         sodipodi:nodetypes="cccc" />
-    </g>
-    <path
-       style="color:#000000;fill:url(#linearGradient3269);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3271);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 63,-32 c -1.108,0 -2.0895,0.4645 -2.8125,1.1875 L 56.375,-27 11,-27 c -2.216,0 -4,1.784 -4,4 l 0,56 c 0,1.108 0.892,2 2,2 l 78,0 c 1.108,0 2,-0.892 2,-2 l 0,-61 c 0,-2.216 -1.784,-4 -4,-4 z"
-       id="rect3142"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sscsccccccss" />
-    <path
-       style="opacity:0.5;fill:url(#linearGradient3266);fill-opacity:1;display:inline;enable-background:new"
-       id="path39053"
-       d="m 8.0014792,-3.5 c 0.00618,0.583332 0.01236,1.251666 0.01852,2 l 79.9614648,0 c 0.0062,-0.748334 0.0124,-1.416668 0.0186,-2 l -80.0000028,0 0.00148,0 z"
-       inkscape:connector-curvature="0" />
-    <g
-       id="g3035">
-      <path
-         d="m 90.493984,33.714448 c -0.06074,0.752758 -1.335732,1.28597 -2.499686,1.28597 l -79.9899374,0 c -1.163934,0 -2.438312,-0.533212 -2.499686,-1.28597 L 3.0049906,0.286384 c -0.08468,-0.751384 0.835794,-1.285966 1.999748,-1.285966 l 85.9891834,0 c 1.163954,0 2.088616,0.534582 1.999748,1.285966 l -2.499686,33.428064 z"
-         id="path3300"
-         style="opacity:0.9;color:#000000;fill:url(#linearGradient3255);fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient3257);stroke-width:0.99958181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
-         sodipodi:nodetypes="cccccccccc"
-         inkscape:connector-curvature="0" />
-      <rect
-         ry="0"
-         rx="0"
-         y="-0.5"
-         x="3.9999948"
-         height="1"
-         width="88"
-         id="rect3521-5"
-         style="fill:url(#linearGradient3251);fill-opacity:1;stroke:none;display:inline;enable-background:new" />
-    </g>
-  </g>
-</svg>
+/* Source address reload mode */
+typedef enum DMA_CH_SRCRELOAD_enum
+{
+    DMA_CH_SRCRELOAD_NONE_gc = (0x00<<6),  /* No reload */
+    DMA_CH_SRCRELOAD_BLOCK_gc = (0x01<<6),  /* Reload at end of block */
+    DMA_CH_SRCRELOAD_BURST_gc = (0x02<<6),  /* Reload at end of burst */
+    DMA_CH_SRCRELOAD_TRANSACTION_gc = (0x03<<6),  /* Reload at end of transaction */
+} DMA_CH_SRCRELOAD_t;
+
+/* Source addressing mode */
+typedef enum DMA_CH_SRCDIR_enum
+{
+    DMA_CH_SRCDIR_FIXED_gc = (0x00<<4),  /* Fixed */
+    DMA_CH_SRCDIR_INC_gc = (0x01<<4),  /* Increment */
+    DMA_CH_SRCDIR_DEC_gc = (0x02<<4),  /* Decrement */
+} DMA_CH_SRCDIR_t;
+
+/* Destination adress reload mode */
+typedef enum DMA_CH_DESTRELOAD_enum
+{
+    DMA_CH_DESTRELOAD_NONE_gc = (0x00<<2),  /* No reload */
+    DMA_CH_DESTRELOAD_BLOCK_gc = (0x01<<2),  /* Reload at end of block */
+    DMA_CH_DESTRELOAD_BURST_gc = (0x02<<2),  /* Reload at end of burst */
+    DMA_CH_DESTRELOAD_TRANSACTION_gc = (0x03<<2),  /* Reload at end of transaction */
+} DMA_CH_DESTRELOAD_t;
+
+/* Destination adressing mode */
+typedef enum DMA_CH_DESTDIR_enum
+{
+    DMA_CH_DESTDIR_FIXED_gc = (0x00<<0),  /* Fixed */
+    DMA_CH_DESTDIR_INC_gc = (0x01<<0),  /* Increment */
+    DMA_CH_DESTDIR_DEC_gc = (0x02<<0),  /* Decrement */
+} DMA_CH_DESTDIR_t;
+
+/* Transfer trigger source */
+typedef enum DMA_CH_TRIGSRC_enum
+{
+    DMA_CH_TRIGSRC_OFF_gc = (0x00<<0),  /* Off software triggers only */
+    DMA_CH_TRIGSRC_EVSYS_CH0_gc = (0x01<<0),  /* Event System Channel 0 */
+    DMA_CH_TRIGSRC_EVSYS_CH1_gc = (0x02<<0),  /* Event System Channel 1 */
+    DMA_CH_TRIGSRC_EVSYS_CH2_gc = (0x03<<0),  /* Event System Channel 2 */
+    DMA_CH_TRIGSRC_ADCA_CH0_gc = (0x10<<0),  /* ADCA Channel 0 */
+    DMA_CH_TRIGSRC_ADCA_CH1_gc = (0x11<<0),  /* ADCA Channel 1 */
+    DMA_CH_TRIGSRC_ADCA_CH2_gc = (0x12<<0),  /* ADCA Channel 2 */
+    DMA_CH_TRIGSRC_ADCA_CH3_gc = (0x13<<0),  /* ADCA Channel 3 */
+    DMA_CH_TRIGSRC_ADCA_CH4_gc = (0x14<<0),  /* ADCA Channel 0,1,2,3 combined */
+    DMA_CH_TRIGSRC_DACA_CH0_gc = (0x15<<0),  /* DACA Channel 0 */
+    DMA_CH_TRIGSRC_DACA_CH1_gc = (0x16<<0),  /* DACA Channel 1 */
+    DMA_CH_TRIGSRC_ADCB_CH0_gc = (0x20<<0),  /* ADCB Channel 0 */
+    DMA_CH_TRIGSRC_ADCB_CH1_gc = (0x21<<0),  /* ADCB Channel 1 */
+    DMA_CH_TRIGSRC_ADCB_CH2_gc = (0x22<<0),  /* ADCB Channel 2 */
+    DMA_CH_TRIGSRC_ADCB_CH3_gc = (0x23<<0),  /* ADCB Channel 3 */
+    DMA_CH_TRIGSRC_ADCB_CH4_gc = (0x24<<0),  /* ADCB Channel 0,1,2,3 combined */
+    DMA_CH_TRIGSRC_DACB_CH0_gc = (0x25<<0),  /* DACB Channel 0 */
+    DMA_CH_TRIGSRC_DACB_CH1_gc = (0x26<<0),  /* DACB Channel 1 */
+    DMA_CH_TRIGSRC_TCC0_OVF_gc = (0x40<<0),  /* Timer/Counter C0 Overflow */
+    DMA_CH_TRIGSRC_TCC0_ERR_gc = (0x41<<0),  /* Timer/Counter C0 Error */
+    DMA_CH_TRIGSRC_TCC0_CCA_gc = (0x42<<0),  /* Timer/Counter C0 Compare or Capture A */
+    DMA_CH_TRIGSRC_TCC0_CCB_gc = (0x43<<0),  /* Timer/Counter C0 Compare or Capture B */
+    DMA_CH_TRIGSRC_TCC0_CCC_gc = (0x44<<0),  /* Timer/Counter C0 Compare or Capture C */
+    DMA_CH_TRIGSRC_TCC0_CCD_gc = (0x45<<0),  /* Timer/Counter C0 Compare or Capture D */
+    DMA_CH_TRIGSRC_TCC1_OVF_gc = (0x46<<0),  /* Timer/Counter C1 Overflow */
+    DMA_CH_TRIGSRC_TCC1_ERR_gc = (0x47<<0),  /* Timer/Counter C1 Error */
+    DMA_CH_TRIGSRC_TCC1_CCA_gc = (0x48<<0),  /* Timer/Counter C1 Compare or Capture A */
+    DMA_CH_TRIGSRC_TCC1_CCB_gc = (0x49<<0),  /* Timer/Counter C1 Compare or Capture B */
+    DMA_CH_TRIGSRC_SPIC_gc = (0x4A<<0),  /* SPI C Transfer Complete */
+    DMA_CH_TRIGSRC_USARTC0_RXC_gc = (0x4B<<0),  /* USART C0 Receive Complete */
+    DMA_CH_TRIGSRC_USARTC0_DRE_gc = (0x4C<<0),  /* USART C0 Data Register Empty */
+    DMA_CH_TRIGSRC_USARTC1_RXC_gc = (0x4E<<0),  /* USART C1 Receive Complete */
+    DMA_CH_TRIGSRC_USARTC1_DRE_gc = (0x4F<<0),  /* USART C1 Data Register Empty */
+    DMA_CH_TRIGSRC_TCD0_OVF_gc = (0x60<<0),  /* Timer/Counter D0 Overflow */
+    DMA_CH_TRIGSRC_TCD0_ERR_gc = (0x61<<0),  /* Timer/Counter D0 Error */
+    DMA_CH_TRIGSRC_TCD0_CCA_gc = (0x62<<0),  /* Timer/Counter D0 Compare or Capture A */
+    DMA_CH_TRIGSRC_TCD0_CCB_gc = (0x63<<0),  /* Timer/Counter D0 Compare or Capture B */
+    DMA_CH_TRIGSRC_TCD0_CCC_gc = (0x64<<0),  /* Timer/Counter D0 Compare or Capture C */
+    DMA_CH_TRIGSRC_TCD0_CCD_gc = (0x65<<0),  /* Timer/Counter D0 Compare or Capture D */
+    DMA_CH_TRIGSRC_TCD1_OVF_gc = (0x66<<0),  /* Timer/Counter D1 Overflow */
+    DMA_CH_TRIGSRC_TCD1_ERR_gc = (0x67<<0),  /* Timer/Counter D1 Error */
+    DMA_CH_TRIGSRC_TCD1_CCA_gc = (0x68<<0),  /* Timer/Counter D1 Compare or Capture A */
+    DMA_CH_TRIGSRC_TCD1_CCB_gc = (0x69<<0),  /* Timer/Counter D1 Compare or Capture B */
+    DMA_CH_TRIGSRC_SPID_gc = (0x6A<<0),  /* SPI D Transfer Complete */
+    DMA_CH_TRIGSRC_USARTD0_RXC_gc = (0x6B<<0),  /* USART D0 Receive Complete */
+    DMA_CH_TRIGSRC_USARTD0_DRE_gc = (0x6C<<0),  /* USART D0 Data Register Empty */
+    DMA_CH_TRIGSRC_USARTD1_RXC_gc = (0x6E<<0),  /* USART D1 Receive Complete */
+    DMA_CH_TRIGSRC_USARTD1_DRE_gc = (0x6F<<0),  /* USART D1 Data Register Empty */
+    DMA_CH_TRIGSRC_TCE0_OVF_gc = (0x80<<0),  /* Timer/Counter E0 Overflow */
+    DMA_CH_TRIGSRC_TCE0_ERR_gc = (0x81<<0),  /* Timer/Counter E0 Error */
+    DMA_CH_TRIGSRC_TCE0_CCA_gc = (0x82<<0),  /* Timer/Counter E0 Compare or Capture A */
+    DMA_CH_TRIGSRC_TCE0_CCB_gc = (0x83<<0),  /* Timer/Counter E0 Compare or Capture B */
+    DMA_CH_TRIGSRC_TCE0_CCC_gc = (0x84<<0),  /* Timer/Counter E0 Compare or Capture C */
+    DMA_CH_TRIGSRC_TCE0_CCD_gc = (0x85<<0),  /* Timer/Counter E0 Compare or Capture D */
+    DMA_CH_TRIGSRC_TCE1_OVF_gc = (0x86<<0),  /* Timer/Counter E1 Overflow */
+    DMA_CH_TRIGSRC_TCE1_ERR_gc = (0x87<<0),  /* Timer/Counter E1 Error */
+    DMA_CH_TRIGSRC_TCE1_CCA_gc = (0x88<<0),  /* Timer/Counter E1 Compare or Capture A */
+    DMA_CH_TRIGSRC_TCE1_CCB_gc = (0x89<<0),  /* Timer/Counter E1 Compare or Capture B */
+    DMA_CH_TRIGSRC_SPIE_gc = (0x8A<<0),  /* SPI E Transfer Complete */
+    DMA_CH_TRIGSRC_USARTE0_RXC_gc = (0x8B<<0),  /* USART E0 Receive Complete */
+    DMA_CH_TRIGSRC_USARTE0_DRE_gc = (0x8C<<0),  /* USART E0 Data Register Empty */
+    DMA_CH_TRIGSRC_USARTE1_RXC_gc = (0x8E<<0),  /* USART E1 Receive Complete */
+    DMA_CH_TRIGSRC_USARTE1_DRE_gc = (0x8F<<0),  /* USART E1 Data Register Empty */
+    DMA_CH_TRIGSRC_TCF0_OVF_gc = (0xA0<<0),  /* Timer/Counter F0 Overflow */
+    DMA_CH_TRIGSRC_TCF0_ERR_gc = (0xA1<<0),  /* Timer/Counter F0 Error */
+    DMA_CH_TRIGSRC_TCF0_CCA_gc = (0xA2<<0),  /* Timer/Counter F0 Compare or Capture A */
+    DMA_CH_TRIGSRC_TCF0_CCB_gc = (0xA3<<0),  /* Timer/Counter F0 Compare or Capture B */
+    DMA_CH_TRIGSRC_TCF0_CCC_gc = (0xA4<<0),  /* Timer/Counter F0 Compare or Capture C */
+    DMA_CH_TRIGSRC_TCF0_CCD_gc = (0xA5<<0),  /* Timer/Counter F0 Compare or Capture D */
+    DMA_CH_TRIGSRC_TCF1_OVF_gc = (0xA6<<0),  /* Timer/Counter F1 Overflow */
+    DMA_CH_TRIGSRC_TCF1_ERR_gc = (0xA7<<0),  /* Timer/Counter F1 Error */
+    DMA_CH_TRIGSRC_TCF1_CCA_gc = (0xA8<<0),  /* Timer/Counter F1 Compare or Capture A */
+    DMA_CH_TRIGSRC_TCF1_CCB_gc = (0xA9<<0),  /* Timer/Counter F1 Compare or Capture B */
+    DMA_CH_TRIGSRC_SPIF_gc = (0xAA<<0),  /* SPI F Transfer Complete */
+    DMA_CH_TRIGSRC_USARTF0_RXC_gc = (0xAB<<0),  /* USART F0 Receive Complete */
+    DMA_CH_TRIGSRC_USARTF0_DRE_gc = (0xAC<<0),  /* USART F0 Data Register Empty */
+    DMA_CH_TRIGSRC_USARTF1_RXC_gc = (0xAE<<0),  /* USART F1 Receive Complete */
+    DMA_CH_TRIGSRC_USARTF1_DRE_gc = (0xAF<<0),  /* USART F1 Data Register Empty */
+} DMA_CH_TRIGSRC_t;
+
+/* Double buffering mode */
+typedef enum DMA_DBUFMODE_enum
+{
+    DMA_DBUFMODE_DISABLED_gc = (0x00<<2),  /* Double buffering disabled */
+    DMA_DBUFMODE_CH01_gc = (0x01<<2),  /* Double buffering enabled on channel 0/1 */
+    DMA_DBUFMODE_CH23_gc = (0x02<<2),  /* Double buffering enabled on channel 2/3 */
+    DMA_DBUFMODE_CH01CH23_gc = (0x03<<2),  /* Double buffering enabled on ch. 0/1 and ch. 2/3 */
+} DMA_DBUFMODE_t;
+
+/* Priority mode */
+typedef enum DMA_PRIMODE_enum
+{
+    DMA_PRIMODE_RR0123_gc = (0x00<<0),  /* Round Robin */
+    DMA_PRIMODE_CH0RR123_gc = (0x01<<0),  /* Channel 0 > Round Robin on channel 1/2/3 */
+    DMA_PRIMODE_CH01RR23_gc = (0x02<<0),  /* Channel 0 > channel 1 > Round Robin on channel 2/3 */
+    DMA_PRIMODE_CH0123_gc = (0x03<<0),  /* Channel 0 > channel 1 > channel 2 > channel 3 */
+} DMA_PRIMODE_t;
+
+/* Interrupt level */
+typedef enum DMA_CH_ERRINTLVL_enum
+{
+    DMA_CH_ERRINTLVL_OFF_gc = (0x00<<2),  /* Interrupt disabled */
+    DMA_CH_ERRINTLVL_LO_gc = (0x01<<2),  /* Low level */
+    DMA_CH_ERRINTLVL_MED_gc = (0x02<<2),  /* Medium level */
+    DMA_CH_ERRINTLVL_HI_gc = (0x03<<2),  /* High level */
+} DMA_CH_ERRINTLVL_t;
+
+/* Interrupt level */
+typedef enum DMA_CH_TRNINTLVL_enum
+{
+    DMA_CH_TRNINTLVL_OFF_gc = (0x00<<0),  /* Interrupt disabled */
+    DMA_CH_TRNINTLVL_LO_gc = (0x01<<0),  /* Low level */
+    DMA_CH_TRNINTLVL_MED_gc = (0x02<<0),  /* Medium level */
+    DMA_CH_TRNINTLVL_HI_gc = (0x03<<0),  /* High level */
+} DMA_CH_TRNINTLVL_t;
+
+
+/*
+--------------------------------------------------------------------------
+EVSYS - Event System
+--------------------------------------------------------------------------
+*/
+
+/* Event System */
+typedef struct EVSYS_struct
+{
+    register8_t CH0MUX;  /* Event Channel 0 Multiplexer */
+    register8_t CH1MUX;  /* Event Channel 1 Multiplexer */
+    register8_t CH2MUX;  /* Event Channel 2 Multiplexer */
+    register8_t CH3MUX;  /* Event Channel 3 Multiplexer */
+    register8_t CH4MUX;  /* Event Channel 4 Multiplexer */
+    register8_t CH5MUX;  /* Event Channel 5 Multiplexer */
+    register8_t CH6MUX;  /* Event Channel 6 Multiplexer */
+    register8_t CH7MUX;  /* Event Channel 7 Multiplexer */
+    register8_t CH0CTRL;  /* Channel 0 Control Register */
+    register8_t CH1CTRL;  /* Channel 1 Control Register */
+    register8_t CH2CTRL;  /* Channel 2 Control Register */
+    register8_t CH3CTRL;  /* Channel 3 Control Register */
+    register8_t CH4CTRL;  /* Channel 4 Control Register */
+    register8_t CH5CTRL;  /* Channel 5 Control Register */
+    register8_t CH6CTRL;  /* Channel 6 Control Register */
+    register8_t CH7CTRL;  /* Channel 7 Control Register */
+    register8_t STROBE;  /* Event Strobe */
+    register8_t DATA;  /* Event Data */
+} EVSYS_t;
+
+/* Quadrature Decoder Index Recognition Mode */
+typedef enum EVSYS_QDIRM_enum
+{
+    EVSYS_QDIRM_00_gc = (0x00<<5),  /* QDPH0 = 0, QDPH90 = 0 */
+    EVSYS_QDIRM_01_gc = (0x01<<5),  /* QDPH0 = 0, QDPH90 = 1 */
+    EVSYS_QDIRM_10_gc = (0x02<<5),  /* QDPH0 = 1, QDPH90 = 0 */
+    EVSYS_QDIRM_11_gc = (0x03<<5),  /* QDPH0 = 1, QDPH90 = 1 */
+} EVSYS_QDIRM_t;
+
+/* Digital filter coefficient */
+typedef enum EVSYS_DIGFILT_enum
+{
+    EVSYS_DIGFILT_1SAMPLE_gc = (0x00<<0),  /* 1 SAMPLE */
+    EVSYS_DIGFILT_2SAMPLES_gc = (0x01<<0),  /* 2 SAMPLES */
+    EVSYS_DIGFILT_3SAMPLES_gc = (0x02<<0),  /* 3 SAMPLES */
+    EVSYS_DIGFILT_4SAMPLES_gc = (0x03<<0),  /* 4 SAMPLES */
+    EVSYS_DIGFILT_5SAMPLES_gc = (0x04<<0),  /* 5 SAMPLES */
+    EVSYS_DIGFILT_6SAMPLES_gc = (0x05<<0),  /* 6 SAMPLES */
+    EVSYS_DIGFILT_7SAMPLES_gc = (0x06<<0),  /* 7 SAMPLES */
+    EVSYS_DIGFILT_8SAMPLES_gc = (0x07<<0),  /* 8 SAMPLES */
+} EVSYS_DIGFILT_t;
+
+/* Event Channel multiplexer input selection */
+typedef enum EVSYS_CHMUX_enum
+{
+    EVSYS_CHMUX_OFF_gc = (0x00<<0),  /* Off */
+    EVSYS_CHMUX_RTC_OVF_gc = (0x08<<0),  /* RTC Overflow */
+    EVSYS_CHMUX_RTC_CMP_gc = (0x09<<0),  /* RTC Compare Match */
+    EVSYS_CHMUX_USB_gc = (0x0A<<0),  /* USB Setup, SOF, CRC error and UNF/OVF */
+    EVSYS_CHMUX_ACA_CH0_gc = (0x10<<0),  /* Analog Comparator A Channel 0 */
+    EVSYS_CHMUX_ACA_CH1_gc = (0x11<<0),  /* Analog Comparator A Channel 1 */
+    EVSYS_CHMUX_ACA_WIN_gc = (0x12<<0),  /* Analog Comparator A Window */
+    EVSYS_CHMUX_ACB_CH0_gc = (0x13<<0),  /* Analog Comparator B Channel 0 */
+    EVSYS_CHMUX_ACB_CH1_gc = (0x14<<0),  /* Analog Comparator B Channel 1 */
+    EVSYS_CHMUX_ACB_WIN_gc = (0x15<<0),  /* Analog Comparator B Window */
+    EVSYS_CHMUX_ADCA_CH0_gc = (0x20<<0),  /* ADC A Channel 0 */
+    EVSYS_CHMUX_ADCA_CH1_gc = (0x21<<0),  /* ADC A Channel 1 */
+    EVSYS_CHMUX_ADCA_CH2_gc = (0x22<<0),  /* ADC A Channel 2 */
+    EVSYS_CHMUX_ADCA_CH3_gc = (0x23<<0),  /* ADC A Channel 3 */
+    EVSYS_CHMUX_ADCB_CH0_gc = (0x24<<0),  /* ADC B Channel 0 */
+    EVSYS_CHMUX_ADCB_CH1_gc = (0x25<<0),  /* ADC B Channel 1 */
+    EVSYS_CHMUX_ADCB_CH2_gc = (0x26<<0),  /* ADC B Channel 2 */
+    EVSYS_CHMUX_ADCB_CH3_gc = (0x27<<0),  /* ADC B Channel 3 */
+    EVSYS_CHMUX_PORTA_PIN0_gc = (0x50<<0),  /* Port A, Pin0 */
+    EVSYS_CHMUX_PORTA_PIN1_gc = (0x51<<0),  /* Port A, Pin1 */
+    EVSYS_CHMUX_PORTA_PIN2_gc = (0x52<<0),  /* Port A, Pin2 */
+    EVSYS_CHMUX_PORTA_PIN3_gc = (0x53<<0),  /* Port A, Pin3 */
+    EVSYS_CHMUX_PORTA_PIN4_gc = (0x54<<0),  /* Port A, Pin4 */
+    EVSYS_CHMUX_PORTA_PIN5_gc = (0x55<<0),  /* Port A, Pin5 */
+    EVSYS_CHMUX_PORTA_PIN6_gc = (0x56<<0),  /* Port A, Pin6 */
+    EVSYS_CHMUX_PORTA_PIN7_gc = (0x57<<0),  /* Port A, Pin7 */
+    EVSYS_CHMUX_PORTB_PIN0_gc = (0x58<<0),  /* Port B, Pin0 */
+    EVSYS_CHMUX_PORTB_PIN1_gc = (0x59<<0),  /* Port B, Pin1 */
+    EVSYS_CHMUX_PORTB_PIN2_gc = (0x5A<<0),  /* Port B, Pin2 */
+    EVSYS_CHMUX_PORTB_PIN3_gc = (0x5B<<0),  /* Port B, Pin3 */
+    EVSYS_CHMUX_PORTB_PIN4_gc = (0x5C<<0),  /* Port B, Pin4 */
+    EVSYS_CHMUX_PORTB_PIN5_gc = (0x5D<<0),  /* Port B, Pin5 */
+    EVSYS_CHMUX_PORTB_PIN6_gc = (0x5E<<0),  /* Port B, Pin6 */
+    EVSYS_CHMUX_PORTB_PIN7_gc = (0x5F<<0),  /* Port B, Pin7 */
+    EVSYS_CHMUX_PORTC_PIN0_gc = (0x60<<0),  /* Port C, Pin0 */
+    EVSYS_CHMUX_PORTC_PIN1_gc = (0x61<<0),  /* Port C, Pin1 */
+    EVSYS_CHMUX_PORTC_PIN2_gc = (0x62<<0),  /* Port C, Pin2 */
+    EVSYS_CHMUX_PORTC_PIN3_gc = (0x63<<0),  /* Port C, Pin3 */
+    EVSYS_CHMUX_PORTC_PIN4_gc = (0x64<<0),  /* Port C, Pin4 */
+    EVSYS_CHMUX_PORTC_PIN5_gc = (0x65<<0),  /* Port C, Pin5 */
+    EVSYS_CHMUX_PORTC_PIN6_gc = (0x66<<0),  /* Port C, Pin6 */
+    EVSYS_CHMUX_PORTC_PIN7_gc = (0x67<<0),  /* Port C, Pin7 */
+    EVSYS_CHMUX_PORTD_PIN0_gc = (0x68<<0),  /* Port D, Pin0 */
+    EVSYS_CHMUX_PORTD_PIN1_gc = (0x69<<0),  /* Port D, Pin1 */
+    EVSYS_CHMUX_PORTD_PIN2_gc = (0x6A<<0),  /* Port D, Pin2 */
+    EVSYS_CHMUX_PORTD_PIN3_gc = (0x6B<<0),  /* Port D, Pin3 */
+    EVSYS_CHMUX_PORTD_PIN4_gc = (0x6C<<0),  /* Port D, Pin4 */
+    EVSYS_CHMUX_PORTD_PIN5_gc = (0x6D<<0),  /* Port D, Pin5 */
+    EVSYS_CHMUX_PORTD_PIN6_gc = (0x6E<<0),  /* Port D, Pin6 */
+    EVSYS_CHMUX_PORTD_PIN7_gc = (0x6F<<0),  /* Port D, Pin7 */
+    EVSYS_CHMUX_PORTE_PIN0_gc = (0x70<<0),  /* Port E, Pin0 */
+    EVSYS_CHMUX_PORTE_PIN1_gc = (0x71<<0),  /* Port E, Pin1 */
+    EVSYS_CHMUX_PORTE_PIN2_gc = (0x72<<0),  /* Port E, Pin2 */
+    EVSYS_CHMUX_PORTE_PIN3_gc = (0x73<<0),  /* Port E, Pin3 */
+    EVSYS_CHMUX_PORTE_PIN4_gc = (0x74<<0),  /* Port E, Pin4 */
+    EVSYS_CHMUX_PORTE_PIN5_gc = (0x75<<0),  /* Port E, Pin5 */
+    EVSYS_CHMUX_PORTE_PIN6_gc = (0x76<<0),  /* Port E, Pin6 */
+    EVSYS_CHMUX_PORTE_PIN7_gc = (0x77<<0),  /* Port E, Pin7 */
+    EVSYS_CHMUX_PORTF_PIN0_gc = (0x78<<0),  /* Port F, Pin0 */
+    EVSYS_CHMUX_PORTF_PIN1_gc = (0x79<<0),  /* Port F, Pin1 */
+    EVSYS_CHMUX_PORTF_PIN2_gc = (0x7A<<0),  /* Port F, Pin2 */
+    EVSYS_CHMUX_PORTF_PIN3_gc = (0x7B<<0),  /* Port F, Pin3 */
+    EVSYS_CHMUX_PORTF_PIN4_gc = (0x7C<<0),  /* Port F, Pin4 */
+    EVSYS_CHMUX_PORTF_PIN5_gc = (0x7D<<0),  /* Port F, Pin5 */
+    EVSYS_CHMUX_PORTF_PIN6_gc = (0x7E<<0),  /* Port F, Pin6 */
+    EVSYS_CHMUX_PORTF_PIN7_gc = (0x7F<<0),  /* Port F, Pin7 */
+    EVSYS_CHMUX_PRESCALER_1_gc = (0x80<<0),  /* Prescaler, divide by 1 */
+    EVSYS_CHMUX_PRESCALER_2_gc = (0x81<<0),  /* Prescaler, divide by 2 */
+    EVSYS_CHMUX_PRESCALER_4_gc = (0x82<<0),  /* Prescaler, divide by 4 */
+    EVSYS_CHMUX_PRESCALER_8_gc = (0x83<<0),  /* Prescaler, divide by 8 */
+    EVSYS_CHMUX_PRESCALER_16_gc = (0x84<<0),  /* Prescaler, divide by 16 */
+    EVSYS_CHMUX_PRESCALER_32_gc = (0x85<<0),  /* Prescaler, divide by 32 */
+    EVSYS_CHMUX_PRESCALER_64_gc = (0x86<<0),  /* Prescaler, divide by 64 */
+    EVSYS_CHMUX_PRESCALER_128_gc = (0x87<<0),  /* Prescaler, divide by 128 */
+    EVSYS_CHMUX_PRESCALER_256_gc = (0x88<<0),  /* Prescaler, divide by 256 */
+    EVSYS_CHMUX_PRESCALER_512_gc = (0x89<<0),  /* Prescaler, divide by 512 */
+    EVSYS_CHMUX_PRESCALER_1024_gc = (0x8A<<0),  /* Prescaler, divide by 1024 */
+    EVSYS_CHMUX_PRESCALER_2048_gc = (0x8B<<0),  /* Prescaler, divide by 2048 */
+    EVSYS_CHMUX_PRESCALER_4096_gc = (0x8C<<0),  /* Prescaler, divide by 4096 */
+    EVSYS_CHMUX_PRESCALER_8192_gc = (0x8D<<0),  /* Prescaler, divide by 8192 */
+    EVSYS_CHMUX_PRESCALER_16384_gc = (0x8E<<0),  /* Prescaler, divide by 16384 */
+    EVSYS_CHMUX_PRESCALER_32768_gc = (0x8F<<0),  /* Prescaler, divide by 32768 */
+    EVSYS_CHMUX_TCC0_OVF_gc = (0xC0<<0),  /* Timer/Counter C0 Overflow */
+    EVSYS_CHMUX_TCC0_ERR_gc = (0xC1<<0),  /* Timer/Counter C0 Error */
+    EVSYS_CHMUX_TCC0_CCA_gc = (0xC4<<0),  /* Timer/Counter C0 Compare or Capture A */
+    EVSYS_CHMUX_TCC0_CCB_gc = (

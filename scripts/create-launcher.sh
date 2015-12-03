@@ -67,7 +67,20 @@ echo "Icon=$icon" >> /home/$USER/Desktop/${name}.desktop
 echo "Type=$typ" >> /home/$USER/Desktop/${name}.desktop
 echo "StartUpNotif=$sn" >> /home/$USER/Desktop/${name}.desktop
 
-echo "Laoncher is placed on /home/$USER/Desktop/${name}.desktop"
+echo "Launcher is placed on /home/$USER/Desktop/${name}.desktop"
 
 chmod +x /home/$USER/Desktop/${name}.desktop
+
+echo "Do you want to create a shortcut in /udr/share/applications? True or false?"
+while true; do
+    read  sn
+    case $sn in
+        [true]* ) sudo cp /home/$USER/Desktop/${name}.desktop /usr/share/applications/${name}.desktop; break;;
+        [false]* ) sn="false"; break;;
+        * ) sn="true";;
+    esac
+done
+
+
+sudo cp /home/$USER/Desktop/${name}.desktop /usr/share/applications/${name}.desktop
 

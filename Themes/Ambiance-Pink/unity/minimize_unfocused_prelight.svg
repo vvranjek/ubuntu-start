@@ -1,170 +1,161 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+CP5_bm  (1<<5)  /* CCP signature bit 5 mask. */
+#define CPU_CCP5_bp  5  /* CCP signature bit 5 position. */
+#define CPU_CCP6_bm  (1<<6)  /* CCP signature bit 6 mask. */
+#define CPU_CCP6_bp  6  /* CCP signature bit 6 position. */
+#define CPU_CCP7_bm  (1<<7)  /* CCP signature bit 7 mask. */
+#define CPU_CCP7_bp  7  /* CCP signature bit 7 position. */
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="19"
-   height="19"
-   id="svg4770"
-   version="1.1"
-   inkscape:version="0.48+devel r"
-   viewBox="0 0 19 19"
-   sodipodi:docname="minimize_unfocused_prelight.svg">
-  <defs
-     id="defs4772">
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4197"
-       id="linearGradient6008"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-1072.3622,-1053.3622)"
-       x1="2.0000153"
-       y1="1062.8622"
-       x2="16.999975"
-       y2="1062.8622" />
-    <linearGradient
-       id="linearGradient4197"
-       inkscape:collect="always">
-      <stop
-         id="stop4283"
-         offset="0"
-         style="stop-color:#969696;stop-opacity:1" />
-      <stop
-         style="stop-color:#bdbdbd;stop-opacity:1"
-         offset="0.50001228"
-         id="stop4285" />
-      <stop
-         id="stop4287"
-         offset="1"
-         style="stop-color:#cacaca;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient4521"
-       inkscape:collect="always">
-      <stop
-         id="stop4293"
-         offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
-      <stop
-         id="stop4295"
-         offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4521"
-       id="linearGradient7487"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0,1,1,0,0,2125.7244)"
-       x1="-1070.3622"
-       y1="9.4999952"
-       x2="-1055.3622"
-       y2="9.4999952" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4521"
-       id="linearGradient7493"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0,1.0357118,1.0357118,0,-0.33926172,2163.6811)"
-       x1="-1070.3622"
-       y1="9.4999952"
-       x2="-1055.3622"
-       y2="9.4999952" />
-  </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="24.286129"
-     inkscape:cx="5.5185823"
-     inkscape:cy="6.8629712"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
-  <metadata
-     id="metadata4775">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(287.35714,-522.86219)">
-    <g
-       style="display:inline"
-       transform="translate(-287.35713,-530.49999)"
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="maximize.png"
-       id="use4199">
-      <circle
-         style="color:#000000;fill:#383734;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="circle5998"
-         cx="9.4999924"
-         cy="1062.8622"
-         r="8.5"
-         d="m 17.999992,1062.8622 a 8.5,8.5 0 0 1 -8.4999996,8.5 8.5,8.5 0 0 1 -8.50000003,-8.5 8.5,8.5 0 0 1 8.50000003,-8.5 8.5,8.5 0 0 1 8.4999996,8.5 z" />
-      <circle
-         r="7.49998"
-         cy="9.4999952"
-         cx="-1062.8622"
-         id="circle6000"
-         style="color:#000000;fill:url(#linearGradient6008);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         transform="matrix(0,-1,1,0,0,0)"
-         d="m -1055.3622,9.4999952 a 7.49998,7.49998 0 0 1 -7.5,7.4999798 7.49998,7.49998 0 0 1 -7.5,-7.4999798 7.49998,7.49998 0 0 1 7.5,-7.4999799 7.49998,7.49998 0 0 1 7.5,7.4999799 z" />
-      <path
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:0.07000002;color:#000000;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:url(#linearGradient7487);fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;isolation:auto;mix-blend-mode:normal;enable-background:accumulate;clip-rule:nonzero;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;font-family:sans-serif;-inkscape-font-specification:sans-serif"
-         d="m 2,1062.8613 c 0,-4.1362 3.363788,-7.5 7.5,-7.5 4.136212,0 7.5,3.3638 7.5,7.5 0,4.1362 -3.363788,7.5 -7.5,7.5 -4.136212,0 -7.5,-3.3638 -7.5,-7.5 z m 1,0 c 0,3.5958 2.9042281,6.5 6.5,6.5 3.595772,0 6.5,-2.9042 6.5,-6.5 0,-3.5957 -2.904228,-6.5 -6.5,-6.5 -3.5957719,0 -6.5,2.9043 -6.5,6.5 z"
-         id="circle6002"
-         inkscape:connector-curvature="0" />
-      <path
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:0.07000002;color:#000000;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:url(#linearGradient7493);fill-opacity:1;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;isolation:auto;mix-blend-mode:normal;enable-background:accumulate;clip-rule:nonzero;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;font-family:sans-serif;-inkscape-font-specification:sans-serif"
-         d="m 2,1062.8613 c 0,-4.1391 3.3608366,-7.5 7.5,-7.5 4.139163,0 7.5,3.3609 7.5,7.5 0,4.1392 -3.360837,7.5 -7.5,7.5 -4.1391634,0 -7.5,-3.3608 -7.5,-7.5 z m 0.5,0 c 0,3.869 3.1310567,7 7,7 3.868943,0 7,-3.131 7,-7 0,-3.8689 -3.131057,-7 -7,-7 -3.8689433,0 -7,3.1311 -7,7 z"
-         id="circle6004"
-         inkscape:connector-curvature="0" />
-      <rect
-         style="color:#000000;fill:none;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="rect6006"
-         width="19"
-         height="19"
-         x="-7.3563765e-06"
-         y="1053.3622" />
-    </g>
-    <rect
-       y="531.86224"
-       x="-281.35715"
-       height="1"
-       width="7"
-       id="rect4237"
-       style="color:#000000;fill:#51504b;fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <rect
-       style="opacity:0.15;color:#000000;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect4239"
-       width="7"
-       height="1"
-       x="-281.35715"
-       y="532.86224" />
-  </g>
-</svg>
+/* CPU.SREG  bit masks and bit positions */
+#define CPU_I_bm  0x80  /* Global Interrupt Enable Flag bit mask. */
+#define CPU_I_bp  7  /* Global Interrupt Enable Flag bit position. */
+
+#define CPU_T_bm  0x40  /* Transfer Bit bit mask. */
+#define CPU_T_bp  6  /* Transfer Bit bit position. */
+
+#define CPU_H_bm  0x20  /* Half Carry Flag bit mask. */
+#define CPU_H_bp  5  /* Half Carry Flag bit position. */
+
+#define CPU_S_bm  0x10  /* N Exclusive Or V Flag bit mask. */
+#define CPU_S_bp  4  /* N Exclusive Or V Flag bit position. */
+
+#define CPU_V_bm  0x08  /* Two's Complement Overflow Flag bit mask. */
+#define CPU_V_bp  3  /* Two's Complement Overflow Flag bit position. */
+
+#define CPU_N_bm  0x04  /* Negative Flag bit mask. */
+#define CPU_N_bp  2  /* Negative Flag bit position. */
+
+#define CPU_Z_bm  0x02  /* Zero Flag bit mask. */
+#define CPU_Z_bp  1  /* Zero Flag bit position. */
+
+#define CPU_C_bm  0x01  /* Carry Flag bit mask. */
+#define CPU_C_bp  0  /* Carry Flag bit position. */
+
+/* CLK - Clock System */
+/* CLK.CTRL  bit masks and bit positions */
+#define CLK_SCLKSEL_gm  0x07  /* System Clock Selection group mask. */
+#define CLK_SCLKSEL_gp  0  /* System Clock Selection group position. */
+#define CLK_SCLKSEL0_bm  (1<<0)  /* System Clock Selection bit 0 mask. */
+#define CLK_SCLKSEL0_bp  0  /* System Clock Selection bit 0 position. */
+#define CLK_SCLKSEL1_bm  (1<<1)  /* System Clock Selection bit 1 mask. */
+#define CLK_SCLKSEL1_bp  1  /* System Clock Selection bit 1 position. */
+#define CLK_SCLKSEL2_bm  (1<<2)  /* System Clock Selection bit 2 mask. */
+#define CLK_SCLKSEL2_bp  2  /* System Clock Selection bit 2 position. */
+
+/* CLK.PSCTRL  bit masks and bit positions */
+#define CLK_PSADIV_gm  0x7C  /* Prescaler A Division Factor group mask. */
+#define CLK_PSADIV_gp  2  /* Prescaler A Division Factor group position. */
+#define CLK_PSADIV0_bm  (1<<2)  /* Prescaler A Division Factor bit 0 mask. */
+#define CLK_PSADIV0_bp  2  /* Prescaler A Division Factor bit 0 position. */
+#define CLK_PSADIV1_bm  (1<<3)  /* Prescaler A Division Factor bit 1 mask. */
+#define CLK_PSADIV1_bp  3  /* Prescaler A Division Factor bit 1 position. */
+#define CLK_PSADIV2_bm  (1<<4)  /* Prescaler A Division Factor bit 2 mask. */
+#define CLK_PSADIV2_bp  4  /* Prescaler A Division Factor bit 2 position. */
+#define CLK_PSADIV3_bm  (1<<5)  /* Prescaler A Division Factor bit 3 mask. */
+#define CLK_PSADIV3_bp  5  /* Prescaler A Division Factor bit 3 position. */
+#define CLK_PSADIV4_bm  (1<<6)  /* Prescaler A Division Factor bit 4 mask. */
+#define CLK_PSADIV4_bp  6  /* Prescaler A Division Factor bit 4 position. */
+
+#define CLK_PSBCDIV_gm  0x03  /* Prescaler B and C Division factor group mask. */
+#define CLK_PSBCDIV_gp  0  /* Prescaler B and C Division factor group position. */
+#define CLK_PSBCDIV0_bm  (1<<0)  /* Prescaler B and C Division factor bit 0 mask. */
+#define CLK_PSBCDIV0_bp  0  /* Prescaler B and C Division factor bit 0 position. */
+#define CLK_PSBCDIV1_bm  (1<<1)  /* Prescaler B and C Division factor bit 1 mask. */
+#define CLK_PSBCDIV1_bp  1  /* Prescaler B and C Division factor bit 1 position. */
+
+/* CLK.LOCK  bit masks and bit positions */
+#define CLK_LOCK_bm  0x01  /* Clock System Lock bit mask. */
+#define CLK_LOCK_bp  0  /* Clock System Lock bit position. */
+
+/* CLK.RTCCTRL  bit masks and bit positions */
+#define CLK_RTCSRC_gm  0x0E  /* Clock Source group mask. */
+#define CLK_RTCSRC_gp  1  /* Clock Source group position. */
+#define CLK_RTCSRC0_bm  (1<<1)  /* Clock Source bit 0 mask. */
+#define CLK_RTCSRC0_bp  1  /* Clock Source bit 0 position. */
+#define CLK_RTCSRC1_bm  (1<<2)  /* Clock Source bit 1 mask. */
+#define CLK_RTCSRC1_bp  2  /* Clock Source bit 1 position. */
+#define CLK_RTCSRC2_bm  (1<<3)  /* Clock Source bit 2 mask. */
+#define CLK_RTCSRC2_bp  3  /* Clock Source bit 2 position. */
+
+#define CLK_RTCEN_bm  0x01  /* Clock Source Enable bit mask. */
+#define CLK_RTCEN_bp  0  /* Clock Source Enable bit position. */
+
+/* CLK.USBCTRL  bit masks and bit positions */
+#define CLK_USBPSDIV_gm  0x38  /* Prescaler Division Factor group mask. */
+#define CLK_USBPSDIV_gp  3  /* Prescaler Division Factor group position. */
+#define CLK_USBPSDIV0_bm  (1<<3)  /* Prescaler Division Factor bit 0 mask. */
+#define CLK_USBPSDIV0_bp  3  /* Prescaler Division Factor bit 0 position. */
+#define CLK_USBPSDIV1_bm  (1<<4)  /* Prescaler Division Factor bit 1 mask. */
+#define CLK_USBPSDIV1_bp  4  /* Prescaler Division Factor bit 1 position. */
+#define CLK_USBPSDIV2_bm  (1<<5)  /* Prescaler Division Factor bit 2 mask. */
+#define CLK_USBPSDIV2_bp  5  /* Prescaler Division Factor bit 2 position. */
+
+#define CLK_USBSRC_gm  0x06  /* Clock Source group mask. */
+#define CLK_USBSRC_gp  1  /* Clock Source group position. */
+#define CLK_USBSRC0_bm  (1<<1)  /* Clock Source bit 0 mask. */
+#define CLK_USBSRC0_bp  1  /* Clock Source bit 0 position. */
+#define CLK_USBSRC1_bm  (1<<2)  /* Clock Source bit 1 mask. */
+#define CLK_USBSRC1_bp  2  /* Clock Source bit 1 position. */
+
+#define CLK_USBSEN_bm  0x01  /* Clock Source Enable bit mask. */
+#define CLK_USBSEN_bp  0  /* Clock Source Enable bit position. */
+
+/* PR.PRGEN  bit masks and bit positions */
+#define PR_USB_bm  0x40  /* USB bit mask. */
+#define PR_USB_bp  6  /* USB bit position. */
+
+#define PR_AES_bm  0x10  /* AES bit mask. */
+#define PR_AES_bp  4  /* AES bit position. */
+
+#define PR_EBI_bm  0x08  /* External Bus Interface bit mask. */
+#define PR_EBI_bp  3  /* External Bus Interface bit position. */
+
+#define PR_RTC_bm  0x04  /* Real-time Counter bit mask. */
+#define PR_RTC_bp  2  /* Real-time Counter bit position. */
+
+#define PR_EVSYS_bm  0x02  /* Event System bit mask. */
+#define PR_EVSYS_bp  1  /* Event System bit position. */
+
+#define PR_DMA_bm  0x01  /* DMA-Controller bit mask. */
+#define PR_DMA_bp  0  /* DMA-Controller bit position. */
+
+/* PR.PRPA  bit masks and bit positions */
+#define PR_DAC_bm  0x04  /* Port A DAC bit mask. */
+#define PR_DAC_bp  2  /* Port A DAC bit position. */
+
+#define PR_ADC_bm  0x02  /* Port A ADC bit mask. */
+#define PR_ADC_bp  1  /* Port A ADC bit position. */
+
+#define PR_AC_bm  0x01  /* Port A Analog Comparator bit mask. */
+#define PR_AC_bp  0  /* Port A Analog Comparator bit position. */
+
+/* PR.PRPB  bit masks and bit positions */
+/* PR_DAC  Predefined. */
+/* PR_DAC  Predefined. */
+
+/* PR_ADC  Predefined. */
+/* PR_ADC  Predefined. */
+
+/* PR_AC  Predefined. */
+/* PR_AC  Predefined. */
+
+/* PR.PRPC  bit masks and bit positions */
+#define PR_TWI_bm  0x40  /* Port C Two-wire Interface bit mask. */
+#define PR_TWI_bp  6  /* Port C Two-wire Interface bit position. */
+
+#define PR_USART1_bm  0x20  /* Port C USART1 bit mask. */
+#define PR_USART1_bp  5  /* Port C USART1 bit position. */
+
+#define PR_USART0_bm  0x10  /* Port C USART0 bit mask. */
+#define PR_USART0_bp  4  /* Port C USART0 bit position. */
+
+#define PR_SPI_bm  0x08  /* Port C SPI bit mask. */
+#define PR_SPI_bp  3  /* Port C SPI bit position. */
+
+#define PR_HIRES_bm  0x04  /* Port C AWEX bit mask. */
+#define PR_HIRES_bp  2  /* Port C AWEX bit position. */
+
+#define PR_TC1_bm  0x02  /* Port C Timer/Counter1 bit mask. */
+#define PR_TC1_bp  1  /* Port C Timer/Counter1 bit position. */
+
+#define PR_TC0_bm  0x01  /* Port C Timer/Counter0 bit mask. */
+#define PR_TC0_bp  0  /* Port C Timer/Counter0 bit position.

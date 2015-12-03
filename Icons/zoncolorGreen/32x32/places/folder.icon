@@ -1,2 +1,1 @@
-[Icon Data]
-AttachPoints=24,24|24,8|8,8|8,24
+MCREF_USBSOF_gc = (0x02<<1),  /* USB Start of

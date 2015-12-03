@@ -1,283 +1,255 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+b_iterations.  Only
+     valid if any_upper_bound is true.  */
+  double_int nb_iterations_upper_bound;
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   id="svg3272"
-   height="24"
-   width="24"
-   version="1.0"
-   inkscape:version="0.48.2 r9819"
-   sodipodi:docname="user-home.svg">
-  <metadata
-     id="metadata52">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="721"
-     inkscape:window-height="480"
-     id="namedview50"
-     showgrid="false"
-     inkscape:zoom="9.8333333"
-     inkscape:cx="12"
-     inkscape:cy="12"
-     inkscape:window-x="482"
-     inkscape:window-y="345"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg3272" />
-  <defs
-     id="defs3274">
-    <linearGradient
-       id="linearGradient3404"
-       y2="24.628"
-       gradientUnits="userSpaceOnUse"
-       x2="20.055"
-       y1="16.408"
-       x1="18.031">
-      <stop
-         id="stop2687"
-         style="stop-color:#fff;stop-opacity:.27451"
-         offset="0" />
-      <stop
-         id="stop2689"
-         style="stop-color:#fff;stop-opacity:.078431"
-         offset="1" />
-    </linearGradient>
-    <radialGradient
-       id="radialGradient3402"
-       gradientUnits="userSpaceOnUse"
-       cy="5.5927"
-       cx="4.02"
-       gradientTransform="matrix(-.016802 1.3943 -1.7966 -.021651 -5.3658 -19.339)"
-       r="10.273">
-      <stop
-         id="stop3754"
-         style="stop-color:#fff"
-         offset="0" />
-      <stop
-         id="stop3760"
-         style="stop-color:#fff"
-         offset=".84754" />
-      <stop
-         id="stop3756"
-         style="stop-color:#fff;stop-opacity:0"
-         offset="1" />
-    </radialGradient>
-    <linearGradient
-       id="linearGradient3400"
-       y2="4.303"
-       gradientUnits="userSpaceOnUse"
-       x2="9.7046"
-       gradientTransform="matrix(.99458 0 0 .99458 -19.857 -19.778)"
-       y1="20.882"
-       x1="9.7046">
-      <stop
-         id="stop3624"
-         style="stop-color:#5D636F"
-         offset="0" />
-      <stop
-         id="stop3626"
-         style="stop-color:#757C88"
-         offset="1" />
-    </linearGradient>
-    <radialGradient
-       id="radialGradient3398"
-       gradientUnits="userSpaceOnUse"
-       cy="8.5609"
-       cx="7.8186"
-       gradientTransform="matrix(1.69 0 0 1.0436 -24.967 -20.534)"
-       r="11.268">
-      <stop
-         id="stop3618"
-         style="stop-color:#757C88"
-         offset="0" />
-      <stop
-         id="stop3270"
-         style="stop-color:#757C88"
-         offset=".5" />
-      <stop
-         id="stop3620"
-         style="stop-color:#5D636F"
-         offset="1" />
-    </radialGradient>
-    <linearGradient
-       id="linearGradient3396"
-       y2="23.062"
-       gradientUnits="userSpaceOnUse"
-       x2="9.8764"
-       gradientTransform="translate(-19.518 -21.496)"
-       y1="2.6015"
-       x1="9.8764">
-      <stop
-         id="stop5159"
-         style="stop-color:#c1c1c1"
-         offset="0" />
-      <stop
-         id="stop5161"
-         style="stop-color:#909090"
-         offset="1" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient3394"
-       y2="37.503"
-       gradientUnits="userSpaceOnUse"
-       x2="-28.531"
-       gradientTransform="translate(14.86 -35.997)"
-       y1="17.956"
-       x1="-28.531">
-      <stop
-         id="stop11113"
-         style="stop-color:#fff"
-         offset="0" />
-      <stop
-         id="stop11115"
-         style="stop-color:#cdcdcd"
-         offset=".91014" />
-      <stop
-         id="stop11117"
-         style="stop-color:#a1a1a1"
-         offset="1" />
-    </linearGradient>
-    <radialGradient
-       id="radialGradient3392"
-       xlink:href="#linearGradient5060"
-       gradientUnits="userSpaceOnUse"
-       cy="486.65"
-       cx="605.71"
-       gradientTransform="matrix(-2.7744 0 0 1.9697 112.76 -872.89)"
-       r="117.14" />
-    <linearGradient
-       id="linearGradient5060">
-      <stop
-         id="stop5062"
-         offset="0" />
-      <stop
-         id="stop5064"
-         style="stop-opacity:0"
-         offset="1" />
-    </linearGradient>
-    <radialGradient
-       id="radialGradient3390"
-       xlink:href="#linearGradient5060"
-       gradientUnits="userSpaceOnUse"
-       cy="486.65"
-       cx="605.71"
-       gradientTransform="matrix(2.7744 0 0 1.9697 -1891.6 -872.89)"
-       r="117.14" />
-    <linearGradient
-       id="linearGradient3388"
-       y2="609.51"
-       gradientUnits="userSpaceOnUse"
-       x2="302.86"
-       gradientTransform="matrix(2.7744 0 0 1.9697 -1892.2 -872.89)"
-       y1="366.65"
-       x1="302.86">
-      <stop
-         id="stop5050"
-         style="stop-opacity:0"
-         offset="0" />
-      <stop
-         id="stop5056"
-         offset=".5" />
-      <stop
-         id="stop5052"
-         style="stop-opacity:0"
-         offset="1" />
-    </linearGradient>
-  </defs>
-  <g
-     id="g2701">
-    <g
-       id="g2902">
-      <g
-         id="g2589"
-         transform="translate(.036304 -1.2166e-7)">
-        <g
-           id="g3377"
-           transform="translate(19.518 21.496)">
-          <g
-             id="g3490"
-             style="stroke-width:1.8826"
-             transform="matrix(.54593 0 0 .51685 -20.52 -22.074)">
-            <g
-               id="g5022"
-               style="stroke-width:104.96"
-               transform="matrix(.021652 0 0 .014857 43.008 42.685)">
-              <rect
-                 id="rect2527"
-                 style="opacity:.40206;fill:url(#linearGradient3388)"
-                 height="478.36"
-                 width="1339.6"
-                 y="-150.7"
-                 x="-1559.3" />
-              <path
-                 id="path2529"
-                 style="opacity:.40206;fill:url(#radialGradient3390)"
-                 d="m-219.62-150.68v478.33c142.88 0.9 345.4-107.17 345.4-239.2 0-132.02-159.44-239.13-345.4-239.13z" />
-              <path
-                 id="path2531"
-                 style="opacity:.40206;fill:url(#radialGradient3392)"
-                 d="m-1559.3-150.68v478.33c-142.8 0.9-345.4-107.17-345.4-239.2 0-132.02 159.5-239.13 345.4-239.13z" />
-            </g>
-          </g>
-          <path
-             id="path3496"
-             style="stroke-linejoin:round;stroke:url(#linearGradient3396);stroke-linecap:round;stroke-width:1.0111;fill:url(#linearGradient3394)"
-             d="m-18.841-18.927c-0.085 0-0.159 0.093-0.159 0.189 0 5.869-0.043 12.244-0.049 18.225 0.029 0.89475 0.537 1.5049 0.89 1.5081 1.013 0.0092 0.539-0.00407 1.048-0.00004 6.471-0.0161 13.579-0.07817 20.05-0.09427 0.0539 0.00692-1.4771-0.10773-1.4619-1.4455 0-4.673-0.50209-11.187-0.50209-15.86 0-0.187-0.01544-0.291-0.03178-0.377-0.01261-0.066-0.02869-0.099-0.06354-0.125-0.02787-0.025-0.05455-0.057-0.09533-0.063h-8.8202c-0.8153 0-1.002-1.992-2.2132-1.992l-8.592 0.035z" />
-          <path
-             id="path3498"
-             style="stroke-linejoin:round;stroke:url(#linearGradient3400);stroke-linecap:round;fill:url(#radialGradient3398)"
-             d="m-16.019-14.949c10.57 0 13.031 0.001 19.994-0.027-0.0002 1.57 0.2579 16.04-0.4843 16.04-0.7141-0.0002-14.046-0.09453-21.009-0.06653 1.472 0 1.499-0.62275 1.499-15.946z" />
-          <path
-             id="path3211"
-             style="opacity:.4;stroke:url(#radialGradient3402);stroke-width:.98120;fill:none"
-             d="m3.4207-13.887s-16.832 0.093-18.397-0.093c-0.083 13.83-0.501 14.439-0.501 14.439" />
-          <path
-             id="path2608"
-             style="fill:url(#linearGradient3404);fill-rule:evenodd"
-             d="m3.2188 5.3438c-1.539 0-2.8126 1.2735-2.8126 2.8124l0.00005 16c0.00589 0.286 0.14842 0.613 0.375 0.813 0.22655 0.2 0.51615 0.284 0.84375 0.25h0.0312l45-7.125c0.522-0.083 0.93-0.535 0.938-1.063v-8.8748c0-1.5389-1.274-2.8124-2.813-2.8124h-41.562-0.0002z"
-             transform="matrix(.44503 0 0 .40237 -16.699 -17.646)" />
-        </g>
-      </g>
-      <rect
-         id="rect2545"
-         style="display:block;fill:#757C88"
-         rx=".53846"
-         ry=".5"
-         height="1"
-         width="7"
-         y="4"
-         x="2" />
-    </g>
-  </g>
-  <path
-     id="path892"
-     style="opacity:.4;fill:#fff;fill-rule:evenodd"
-     d="m8.0513 15.051l-0.0451 5.929 4.9948 0.001-0.001-3.951 3-0.03-0.021 4 4.038-0.015 0.012-5.938 1.971 0.001-8.015-6.048-7.985 6.06 2.0513-0.009z" />
-  <path
-     id="path892-2"
-     style="opacity:0.90000000000000002;fill:#2a2b2e;fill-rule:evenodd;fill-opacity:1"
-     d="m8.0513 14.051l-0.0451 5.929 4.9948 0.001-0.001-3.951 3-0.03-0.021 4 4.038-0.015 0.012-5.938 1.971 0.001-8.015-6.048-7.985 6.06 2.0513-0.009z" />
-</svg>
+  /* An integer giving an estimate on nb_iterations.  Unlike
+     nb_iterations_upper_bound, there is no guarantee that it is at least
+     nb_iterations.  */
+  double_int nb_iterations_estimate;
+
+  bool any_upper_bound;
+  bool any_estimate;
+
+  /* True if the loop can be parallel.  */
+  bool can_be_parallel;
+
+  /* True if -Waggressive-loop-optimizations warned about this loop
+     already.  */
+  bool warned_aggressive_loop_optimizations;
+
+  /* An integer estimation of the number of iterations.  Estimate_state
+     describes what is the state of the estimation.  */
+  enum loop_estimation estimate_state;
+
+  /* Upper bound on number of iterations of a loop.  */
+  struct nb_iter_bound *bounds;
+
+  /* Head of the cyclic list of the exits of the loop.  */
+  struct loop_exit *exits;
+};
+
+/* Flags for state of loop structure.  */
+enum
+{
+  LOOPS_HAVE_PREHEADERS = 1,
+  LOOPS_HAVE_SIMPLE_LATCHES = 2,
+  LOOPS_HAVE_MARKED_IRREDUCIBLE_REGIONS = 4,
+  LOOPS_HAVE_RECORDED_EXITS = 8,
+  LOOPS_MAY_HAVE_MULTIPLE_LATCHES = 16,
+  LOOP_CLOSED_SSA = 32,
+  LOOPS_NEED_FIXUP = 64,
+  LOOPS_HAVE_FALLTHRU_PREHEADERS = 128
+};
+
+#define LOOPS_NORMAL (LOOPS_HAVE_PREHEADERS | LOOPS_HAVE_SIMPLE_LATCHES \
+		      | LOOPS_HAVE_MARKED_IRREDUCIBLE_REGIONS)
+#define AVOID_CFG_MODIFICATIONS (LOOPS_MAY_HAVE_MULTIPLE_LATCHES)
+
+/* Structure to hold CFG information about natural loops within a function.  */
+struct GTY (()) loops {
+  /* State of loops.  */
+  int state;
+
+  /* Array of the loops.  */
+  vec<loop_p, va_gc> *larray;
+
+  /* Maps edges to the list of their descriptions as loop exits.  Edges
+     whose sources or destinations have loop_father == NULL (which may
+     happen during the cfg manipulations) should not appear in EXITS.  */
+  htab_t GTY((param_is (struct loop_exit))) exits;
+
+  /* Pointer to root of loop hierarchy tree.  */
+  struct loop *tree_root;
+};
+
+/* Loop recognition.  */
+bool bb_loop_header_p (basic_block);
+extern struct loops *flow_loops_find (struct loops *);
+extern void disambiguate_loops_with_multiple_latches (void);
+extern void flow_loops_free (struct loops *);
+extern void flow_loops_dump (FILE *,
+			     void (*)(const struct loop *, FILE *, int), int);
+extern void flow_loop_dump (const struct loop *, FILE *,
+			    void (*)(const struct loop *, FILE *, int), int);
+struct loop *alloc_loop (void);
+extern void flow_loop_free (struct loop *);
+int flow_loop_nodes_find (basic_block, struct loop *);
+unsigned fix_loop_structure (bitmap changed_bbs);
+bool mark_irreducible_loops (void);
+void release_recorded_exits (void);
+void record_loop_exits (void);
+void rescan_loop_exit (edge, bool, bool);
+
+/* Loop data structure manipulation/querying.  */
+extern void flow_loop_tree_node_add (struct loop *, struct loop *);
+extern void flow_loop_tree_node_remove (struct loop *);
+extern void add_loop (struct loop *, struct loop *);
+extern bool flow_loop_nested_p	(const struct loop *, const struct loop *);
+extern bool flow_bb_inside_loop_p (const struct loop *, const_basic_block);
+extern struct loop * find_common_loop (struct loop *, struct loop *);
+struct loop *superloop_at_depth (struct loop *, unsigned);
+struct eni_weights_d;
+extern unsigned tree_num_loop_insns (struct loop *, struct eni_weights_d *);
+extern int num_loop_insns (const struct loop *);
+extern int average_num_loop_insns (const struct loop *);
+extern unsigned get_loop_level (const struct loop *);
+extern bool loop_exit_edge_p (const struct loop *, const_edge);
+extern bool loop_exits_to_bb_p (struct loop *, basic_block);
+extern bool loop_exits_from_bb_p (struct loop *, basic_block);
+extern void mark_loop_exit_edges (void);
+extern location_t get_loop_location (struct loop *loop);
+
+/* Loops & cfg manipulation.  */
+extern basic_block *get_loop_body (const struct loop *);
+extern unsigned get_loop_body_with_size (const struct loop *, basic_block *,
+					 unsigned);
+extern basic_block *get_loop_body_in_dom_order (const struct loop *);
+extern basic_block *get_loop_body_in_bfs_order (const struct loop *);
+extern basic_block *get_loop_body_in_custom_order (const struct loop *,
+			       int (*) (const void *, const void *));
+
+extern vec<edge> get_loop_exit_edges (const struct loop *);
+extern edge single_exit (const struct loop *);
+extern edge single_likely_exit (struct loop *loop);
+extern unsigned num_loop_branches (const struct loop *);
+
+extern edge loop_preheader_edge (const struct loop *);
+extern edge loop_latch_edge (const struct loop *);
+
+extern void add_bb_to_loop (basic_block, struct loop *);
+extern void remove_bb_from_loops (basic_block);
+
+extern void cancel_loop_tree (struct loop *);
+extern void delete_loop (struct loop *);
+
+enum
+{
+  CP_SIMPLE_PREHEADERS = 1,
+  CP_FALLTHRU_PREHEADERS = 2
+};
+
+basic_block create_preheader (struct loop *, int);
+extern void create_preheaders (int);
+extern void force_single_succ_latches (void);
+
+extern void verify_loop_structure (void);
+
+/* Loop analysis.  */
+extern bool just_once_each_iteration_p (const struct loop *, const_basic_block);
+gcov_type expected_loop_iterations_unbounded (const struct loop *);
+extern unsigned expected_loop_iterations (const struct loop *);
+extern rtx doloop_condition_get (rtx);
+
+void estimate_numbers_of_iterations_loop (struct loop *);
+void record_niter_bound (struct loop *, double_int, bool, bool);
+bool estimated_loop_iterations (struct loop *, double_int *);
+bool max_loop_iterations (struct loop *, double_int *);
+HOST_WIDE_INT estimated_loop_iterations_int (struct loop *);
+HOST_WIDE_INT max_loop_iterations_int (struct loop *);
+bool max_stmt_executions (struct loop *, double_int *);
+bool estimated_stmt_executions (struct loop *, double_int *);
+HOST_WIDE_INT max_stmt_executions_int (struct loop *);
+HOST_WIDE_INT estimated_stmt_executions_int (struct loop *);
+
+/* Loop manipulation.  */
+extern bool can_duplicate_loop_p (const struct loop *loop);
+
+#define DLTHE_FLAG_UPDATE_FREQ	1	/* Update frequencies in
+					   duplicate_loop_to_header_edge.  */
+#define DLTHE_RECORD_COPY_NUMBER 2	/* Record copy number in the aux
+					   field of newly create BB.  */
+#define DLTHE_FLAG_COMPLETTE_PEEL 4	/* Update frequencies expecting
+					   a complete peeling.  */
+
+extern edge create_empty_if_region_on_edge (edge, tree);
+extern struct loop *create_empty_loop_on_edge (edge, tree, tree, tree, tree,
+					       tree *, tree *, struct loop *);
+extern struct loop * duplicate_loop (struct loop *, struct loop *);
+extern void copy_loop_info (struct loop *loop, struct loop *target);
+extern void duplicate_subloops (struct loop *, struct loop *);
+extern bool duplicate_loop_to_header_edge (struct loop *, edge,
+					   unsigned, sbitmap, edge,
+ 					   vec<edge> *, int);
+extern struct loop *loopify (edge, edge,
+			     basic_block, edge, edge, bool,
+			     unsigned, unsigned);
+struct loop * loop_version (struct loop *, void *,
+			    basic_block *, unsigned, unsigned, unsigned, bool);
+extern bool remove_path (edge);
+extern void unloop (struct loop *, bool *, bitmap);
+extern void scale_loop_frequencies (struct loop *, int, int);
+
+/* Induction variable analysis.  */
+
+/* The description of induction variable.  The things are a bit complicated
+   due to need to handle subregs and extends.  The value of the object described
+   by it can be obtained as follows (all computations are done in extend_mode):
+
+   Value in i-th iteration is
+     delta + mult * extend_{extend_mode} (subreg_{mode} (base + i * step)).
+
+   If first_special is true, the value in the first iteration is
+     delta + mult * base
+
+   If extend = UNKNOWN, first_special must be false, delta 0, mult 1 and value is
+     subreg_{mode} (base + i * step)
+
+   The get_iv_value function can be used to obtain these expressions.
+
+   ??? Add a third mode field that would specify the mode in that inner
+   computation is done, which would enable it to be different from the
+   outer one?  */
+
+struct rtx_iv
+{
+  /* Its base and step (mode of base and step is supposed to be extend_mode,
+     see the description above).  */
+  rtx base, step;
+
+  /* The type of extend applied to it (IV_SIGN_EXTEND, IV_ZERO_EXTEND,
+     or IV_UNKNOWN_EXTEND).  */
+  enum iv_extend_code extend;
+
+  /* Operations applied in the extended mode.  */
+  rtx delta, mult;
+
+  /* The mode it is extended to.  */
+  enum machine_mode extend_mode;
+
+  /* The mode the variable iterates in.  */
+  enum machine_mode mode;
+
+  /* Whether the first iteration needs to be handled specially.  */
+  unsigned first_special : 1;
+};
+
+/* The description of an exit from the loop and of the number of iterations
+   till we take the exit.  */
+
+struct niter_desc
+{
+  /* The edge out of the loop.  */
+  edge out_edge;
+
+  /* The other edge leading from the condition.  */
+  edge in_edge;
+
+  /* True if we are able to say anything about number of iterations of the
+     loop.  */
+  bool simple_p;
+
+  /* True if the loop iterates the constant number of times.  */
+  bool const_iter;
+
+  /* Number of iterations if constant.  */
+  unsigned HOST_WIDEST_INT niter;
+
+  /* Assumptions under that the rest of the information is valid.  */
+  rtx assumptions;
+
+  /* Assumptions under that the loop ends before reaching the latch,
+     even if value of niter_expr says otherwise.  */
+  rtx noloop_assumptions;
+
+  /* Condition under that the loop is infinite.  */
+  r

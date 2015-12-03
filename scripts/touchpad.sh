@@ -24,8 +24,12 @@ xinput set-prop "$touchpad" "Synaptics Two-Finger Scrolling" 1, 0
 xinput set-prop "$touchpad" "Synaptics Palm Detection" 1
 xinput set-prop "$touchpad" "Synaptics Palm Dimensions" 5, 10
 
+xinput set-prop "$touchpad" "Synaptics Locked Drags" 1
+xinput set-prop "$touchpad" "Synaptics Locked Drags Timeout" 500
 
 #Synapstics Move Speed: min speed, max speed, acc factor, second, trackstick
 #xinput set-prop "$touchpad" "Move Speed" 1.5, 1.5, 0.053305, 0
+
+
 
 echo "Done!"
