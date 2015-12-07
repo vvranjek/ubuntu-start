@@ -1,0 +1,4 @@
+#! /bin/bash
+
+cat $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS | xclip -sel clip  
+
