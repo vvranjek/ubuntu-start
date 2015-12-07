@@ -6,12 +6,15 @@
 clear
 
 SCRIPTS_DIR=$(find `pwd` -name "scripts")
-NAUTILUS_SCRIPTS_DIR=$(find `pwd` -name "nautilus-scripts")
+NAUTILUS_SCRIPTS_DIR=$(pwd)/../nautilus-scripts
 FILENAME=package-list
 
-sudo chmod +x $SCRIPTS_DIR/*
+echo "SCRIPTS_DIR = $SCRIPTS_DIR"
+echo "NAUTILUS_SCRIPTS_DIR = $NAUTILUS_SCRIPTS_DIR"
+echo "FILENAME = $FILENAME"
+sleep 3
 
-touch touch
+sudo chmod +x $SCRIPTS_DIR/*
 
 echo "Hello and welcome to this must have Ubuntu installation script."
 sleep 0.5
@@ -22,11 +25,11 @@ mkdir -p /home/$USER/bin
 sleep 0.3
 
 echo "Creating links of Nautilus scripts"
-ln -s $NAUTILUS_SCRIPTS_DIR/* /home/$USER/.local/share/nautilus/scripts/.
+ln -s $NAUTILUS_SCRIPTS_DIR/* /home/$USER/.local/share/nautilus/scripts/
 
 echo "Creating links of scripts in bin."
-ln -s $SCRIPTS_DIR/* /home/$USER/bin/.
-#cp -r $SCRIPTS_DIR/. /home/$USER/bin
+ln -s $SCRIPTS_DIR/* /home/$USER/bin/
+#cp -r $SCRIPTS_DIR/ /home/$USER/bin
 #sudo chmod +x /home/$USER/bin/*
 sleep 0.3
 
