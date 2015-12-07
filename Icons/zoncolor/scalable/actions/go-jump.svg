@@ -39,7 +39,7 @@
          offset="0"
          id="stop3165" />
       <stop
-         style="stop-color:#6690aa;stop-opacity:1;"
+         style="stop-color:#4483aa;stop-opacity:1;"
          offset="1"
          id="stop3167" />
     </linearGradient>
@@ -161,7 +161,7 @@
        id="g3797"
        transform="matrix(2,0,0,2,0,-47.5)">
       <path
-         style="fill:url(#linearGradient3028);fill-opacity:1;fill-rule:nonzero;stroke:#3c6688;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
+         style="fill:url(#linearGradient3028);fill-opacity:1;fill-rule:nonzero;stroke:#265c88;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
          d="M 42.462731,24.52548 30.427481,38.5 18.452551,24.52548 l 6.09179,0 c 2.0473,-5.48597 -2.1567,-8.9778 -7.03107,-8.9778 -3.46376,0 -8.1632297,1.90496 -9.7506797,6.6414 -0.82566,2.46352 -2.27994,1.38432 -2.22374,-0.75674 0.21753,-8.26181 6.3428797,-14.8690098 15.4870197,-14.8690098 9.14414,0 15.93686,7.0985898 15.42377,17.9621498 l 6.01309,0 z"
          id="path4972"
          sodipodi:nodetypes="ccccssszcc"

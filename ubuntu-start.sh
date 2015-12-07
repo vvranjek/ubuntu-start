@@ -1,4 +1,4 @@
 #! /bin/bash
 
-dir=$(pwd)
-sh $dir/scripts/start.sh
+CURRENT_DIR=$(pwd)
+sh $CURRENT_DIR/scripts/start.sh

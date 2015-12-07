@@ -50,22 +50,22 @@
     <linearGradient
        id="linearGradient4064-7-5">
       <stop
-         style="stop-color:#6690aa;stop-opacity:1;"
+         style="stop-color:#4483aa;stop-opacity:1;"
          offset="0"
          id="stop4066-4-6" />
       <stop
-         style="stop-color:#6690aa;stop-opacity:0.50196081;"
+         style="stop-color:#4483aa;stop-opacity:0.50196081;"
          offset="1"
          id="stop4068-8-3" />
     </linearGradient>
     <linearGradient
        id="linearGradient4054-7-0">
       <stop
-         style="stop-color:#3c6688;stop-opacity:1;"
+         style="stop-color:#265c88;stop-opacity:1;"
          offset="0"
          id="stop4056-0-4" />
       <stop
-         style="stop-color:#3c6688;stop-opacity:0.50196081;"
+         style="stop-color:#265c88;stop-opacity:0.50196081;"
          offset="1"
          id="stop4058-9-1" />
     </linearGradient>
@@ -79,11 +79,11 @@
        id="linearGradient9101-3">
       <stop
          id="stop9103-0"
-         style="stop-color:#3c6688;stop-opacity:0;"
+         style="stop-color:#265c88;stop-opacity:0;"
          offset="0.25" />
       <stop
          id="stop9105-2"
-         style="stop-color:#3c6688;stop-opacity:1;"
+         style="stop-color:#265c88;stop-opacity:1;"
          offset="1" />
     </linearGradient>
     <linearGradient
@@ -116,17 +116,17 @@
       <stop
          id="stop9077-5-4-1"
          offset="1"
-         style="stop-color:#6690aa;stop-opacity:1" />
+         style="stop-color:#4483aa;stop-opacity:1" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient9087-5-2-5">
       <stop
-         style="stop-color:#6690aa;stop-opacity:1"
+         style="stop-color:#4483aa;stop-opacity:1"
          offset="0"
          id="stop9089-5-0-4" />
       <stop
-         style="stop-color:#3c6688;stop-opacity:1"
+         style="stop-color:#265c88;stop-opacity:1"
          offset="1"
          id="stop9091-1-6-6" />
     </linearGradient>
@@ -283,11 +283,11 @@
     <linearGradient
        id="linearGradient4064-7-5-9">
       <stop
-         style="stop-color:#6690aa;stop-opacity:1;"
+         style="stop-color:#4483aa;stop-opacity:1;"
          offset="0"
          id="stop4066-4-6-7" />
       <stop
-         style="stop-color:#6690aa;stop-opacity:0.50196081;"
+         style="stop-color:#4483aa;stop-opacity:0.50196081;"
          offset="1"
          id="stop4068-8-3-8" />
     </linearGradient>
@@ -304,11 +304,11 @@
     <linearGradient
        id="linearGradient4054-7-0-8">
       <stop
-         style="stop-color:#3c6688;stop-opacity:1;"
+         style="stop-color:#265c88;stop-opacity:1;"
          offset="0"
          id="stop4056-0-4-6" />
       <stop
-         style="stop-color:#3c6688;stop-opacity:0.50196081;"
+         style="stop-color:#265c88;stop-opacity:0.50196081;"
          offset="1"
          id="stop4058-9-1-7" />
     </linearGradient>
@@ -332,11 +332,11 @@
        id="linearGradient9101-3-4">
       <stop
          id="stop9103-0-7"
-         style="stop-color:#3c6688;stop-opacity:0;"
+         style="stop-color:#265c88;stop-opacity:0;"
          offset="0.25" />
       <stop
          id="stop9105-2-7"
-         style="stop-color:#3c6688;stop-opacity:1;"
+         style="stop-color:#265c88;stop-opacity:1;"
          offset="1" />
     </linearGradient>
     <linearGradient
@@ -358,7 +358,7 @@
       <stop
          id="stop9077-5-4-1-7"
          offset="1"
-         style="stop-color:#6690aa;stop-opacity:1" />
+         style="stop-color:#4483aa;stop-opacity:1" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
@@ -374,11 +374,11 @@
        inkscape:collect="always"
        id="linearGradient9087-5-2-5-9">
       <stop
-         style="stop-color:#6690aa;stop-opacity:1"
+         style="stop-color:#4483aa;stop-opacity:1"
          offset="0"
          id="stop9089-5-0-4-6" />
       <stop
-         style="stop-color:#3c6688;stop-opacity:1"
+         style="stop-color:#265c88;stop-opacity:1"
          offset="1"
          id="stop9091-1-6-6-9" />
     </linearGradient>

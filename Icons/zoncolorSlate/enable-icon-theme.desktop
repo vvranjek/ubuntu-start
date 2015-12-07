@@ -1,7 +1,15 @@
- CPU_CCP_gm  0xFF  /* CCP signature group mask. */
-#define CPU_CCP_gp  0  /* CCP signature group position. */
-#define CPU_CCP0_bm  (1<<0)  /* CCP signature bit 0 mask. */
-#define CPU_CCP0_bp  0  /* CCP signature bit 0 position. */
-#define CPU_CCP1_bm  (1<<1)  /* CCP signature bit 1 mask. */
-#define CPU_CCP1_bp  1  /* CCP signature bit 1 position. */
-#define CPU_CCP2_bm  (1<<2) 
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Name=Enable Icon Theme
+GenericName=Themes Utility
+Comment=Enable/activate icon theme found in this folder.
+Categories=Utility;Settings;DesktopSettings;GTK;GNOME;
+Icon=preferences-desktop-theme
+Exec=sh -c "$(dirname '%k')/zcsetup/enable-icon-theme.sh"
+Terminal=false
+StartupNotify=false
+NotShowIn=KDE;
+

@@ -1,129 +1,156 @@
-/* params.def - Run-time parameters.
-   Copyright (C) 2001-2013 Free Software Foundation, Inc.
-   Written by Mark Mitchell <mark@codesourcery.com>.
+#!/bin/bash
+# ===================================================================
+# zonColor Themes Pack Project - http://www.fandigital.com
+# Beautiful themes, your own colors, unlimited!
+# -------------------------------------------------------------------
+# zonColor Icon-Theme - Copyright (C) 2012 Zon Saja
+# ===================================================================
 
-This file is part of GCC.
 
-GCC is free software; you can redistribute it and/or modify it under
-the terms of the GNU General Public License as published by the Free
-Software Foundation; either version 3, or (at your option) any later
-version.
 
-GCC is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or
-FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
-for more details.
+# VARIABLES
 
-You should have received a copy of the GNU General Public License
-along with GCC; see the file COPYING3.  If not see
-<http://www.gnu.org/licenses/>.  */
+# About script
+zcBN=$(basename "$0"); zcDR=$(dirname "$0"); zcFP=$(cd "$zcDR" && pwd);
+if (test -z "$zcCaller"); then zcCaller=$(ps ax | grep "^ *$PPID" | awk '{print $NF}'); fi;
 
-/* This file contains definitions for language-independent
-   parameters.  The DEFPARAM macro takes 6 arguments:
+# App and Environmment Variables
+CurrentSessionName="this desktop";
+CanEnableSettings=false;
+LxdeSession=false;
+LxAppearanceReady=false;
+ZenityReady=false; MateDialogReady=false; XmessageReady=false; NotifySendReady=false;
+XdgOpenReady=false;
 
-     - The enumeral corresponding to this parameter.
+# Input-based variables
 
-     - The name that can be used to set this parameter using the
-       command-line option `--param <name>=<value>'.
+# Internal variables
+ThemeFolderFP=$(cd "$zcFP/.." && pwd);
+ThemeName=$(basename "$ThemeFolderFP");
+SourceDir=$(cd "$zcFP/../.." && pwd);
+IconTheme="$ThemeName";
+CommonTheme="zoncolor";
+UTDName=".icons"; UTDPath="$HOME/$UTDName";
+OUTDName=".local/share/icons"; OUTDPath="$HOME/$OUTDName";
+STDPath="/usr/share/icons";
+TargetDir="$UTDPath";
+ResetString="@RESET";
 
-     - A help string explaining how the parameter is used.
 
-     - A default value for the parameter.
 
-     - The minimum acceptable value for the parameter.
+# FUNCTIONS
 
-     - The maximum acceptable value for the parameter (if greater than
-     the minimum).
+# Session
+CheckSession () {
+	if ((pidof "gnome-session" >/dev/null 2>&1) || \
+		(pidof "gdm-simple-slave" >/dev/null 2>&1) || \
+		(pidof "x-session-manager" >/dev/null 2>&1) || \
+		(pidof "gnome-settings-daemon" >/dev/null 2>&1) || \
+		(pidof "xfce4-session" >/dev/null 2>&1) || \
+		(pidof "mate-session" >/dev/null 2>&1) || \
+		(pidof "mate-settings-daemon" >/dev/null 2>&1)
+		); then
+		CanEnableSettings=true;
+	elif (pidof "lxsession" >/dev/null 2>&1); then
+		LxdeSession=true;
+	fi;
+}
+EnableInSessionErrorMsg () {
+	SessionErrorMsgText=$(printf "Sorry, cannot set/enable settings under $CurrentSessionName session.");
+	echo -e "$SessionErrorMsgText";
+	#if ($XmessageReady); then xmessage "$SessionErrorMsgText" & sleep 1; fi;
+}
 
-   Be sure to add an entry to invoke.texi summarizing the parameter.  */
+# Apps
+CheckApps () {
+	if (command -v zenity >/dev/null 2>&1); then ZenityReady=true; fi;
+	if (command -v matedialog >/dev/null 2>&1); then MateDialogReady=true; fi;
+	if ($ZenityReady); then ZorMDapp="zenity"; elif ($MateDialogReady); then ZorMDapp="matedialog"; fi;
+	if (command -v xmessage >/dev/null 2>&1); then XmessageReady=true; fi;
+	if (command -v notify-send >/dev/null 2>&1); then NotifySendReady=true; fi;
+	if (command -v xdg-open >/dev/null 2>&1); then XdgOpenReady=true; fi;
+	if (command -v lxappearance >/dev/null 2>&1); then LxAppearanceReady=true; fi;
+}
 
-/* When branch is predicted to be taken with probability lower than this
-   threshold (in percent), then it is considered well predictable. */
-DEFPARAM (PARAM_PREDICTABLE_BRANCH_OUTCOME,
-	  "predictable-branch-outcome",
-	  "Maximal estimated outcome of branch considered predictable",
-	  2, 0, 50)
+# Folder clean up
+CleanUpFolderContent () {
+	# Usage: CleanUpFolderContent "<FOLDER>";
+	local CurDir=$(pwd);
+	cd "$1";
+	find . -type d -name "*source*" -exec rm -r {} \+;
+	find . -type f -name "*source*" -exec rm {} \+;
+	find . -type f -name "*symlink*" -exec rm {} \+;
+	find . -type f -name "*.sh" -exec chmod +x {} \+;
+	find . -type f -name "*.desktop" -exec chmod +x {} \+;
+	cd "$CurDir";
+}
 
-DEFPARAM (PARAM_INLINE_MIN_SPEEDUP,
-	  "inline-min-speedup",
-	  "The minimal estimated speedup allowing inliner to ignore inline-insns-single and inline-isnsns-auto",
-	  10, 0, 0)
+# IconTheme
+EnableIconTheme () {
+	gsettings set org.gnome.desktop.interface icon-theme "$IconTheme" >/dev/null 2>&1;
+	gsettings set org.mate.interface icon-theme "$IconTheme" >/dev/null 2>&1;
+	mateconftool-2 --type=string --set /desktop/mate/interface/icon_theme "$IconTheme" >/dev/null 2>&1;
+	gconftool --type=string --set /desktop/gnome/interface/icon_theme "$IconTheme" >/dev/null 2>&1;
+	gconftool-2 --type=string --set /desktop/gnome/interface/icon_theme "$IconTheme" >/dev/null 2>&1;
+	xfconf-query -c xsettings -p /Net/IconThemeName -n -t string -s "$IconTheme" >/dev/null 2>&1;
+}
+ResetIconTheme () {
+	gsettings reset org.gnome.desktop.interface icon-theme >/dev/null 2>&1;
+	gsettings reset org.mate.interface icon-theme >/dev/null 2>&1;
+	mateconftool-2 --unset /desktop/mate/interface/icon_theme >/dev/null 2>&1;
+	gconftool --unset /desktop/gnome/interface/icon_theme >/dev/null 2>&1;
+	gconftool-2 --unset /desktop/gnome/interface/icon_theme >/dev/null 2>&1;
+	xfconf-query -c xsettings -p /Net/IconThemeName -r >/dev/null 2>&1;
+}
 
-/* The single function inlining limit. This is the maximum size
-   of a function counted in internal gcc instructions (not in
-   real machine instructions) that is eligible for inlining
-   by the tree inliner.
-   The default value is 450.
-   Only functions marked inline (or methods defined in the class
-   definition for C++) are affected by this.
-   There are more restrictions to inlining: If inlined functions
-   call other functions, the already inlined instructions are
-   counted and once the recursive inline limit (see
-   "max-inline-insns" parameter) is exceeded, the acceptable size
-   gets decreased.  */
-DEFPARAM (PARAM_MAX_INLINE_INSNS_SINGLE,
-	  "max-inline-insns-single",
-	  "The maximum number of instructions in a single function eligible for inlining",
-	  400, 0, 0)
+# Install theme if not already
+InstallTheme () {
+	if ((! test -d "$UTDPath/$1") && \
+		(! test -d "$OUTDPath/$1") && \
+		(! test -d "$STDPath/$1")
+		); then
+		mkdir -p "$TargetDir";
+		cp -r "$SourceDir"/"$1" "$TargetDir";
+		CleanUpFolderContent "$TargetDir/$1";
+		echo "'$1' theme installed.";
+	fi;
+}
 
-/* The single function inlining limit for functions that are
-   inlined by virtue of -finline-functions (-O3).
-   This limit should be chosen to be below or equal to the limit
-   that is applied to functions marked inlined (or defined in the
-   class declaration in C++) given by the "max-inline-insns-single"
-   parameter.
-   The default value is 40.  */
-DEFPARAM (PARAM_MAX_INLINE_INSNS_AUTO,
-	  "max-inline-insns-auto",
-	  "The maximum number of instructions when automatically inlining",
-	  40, 0, 0)
+# Create symlink if not already (for backward compatibility)
+CreateSymlink () {
+	if (! test -L "$TargetDir"); then
+		if (! readlink "$OUTDPath" | grep -q "$UTDName"); then
+			TimeStamp=$(date -u +%Y%m%d%H%M%S); OUTDBackupName="$OUTDName-backup_$TimeStamp";
+			mkdir -p "$TargetDir";
+			cp -r "$OUTDPath"/* "$TargetDir" >/dev/null 2>&1;
+			mv "$HOME/$OUTDName" "$HOME/$OUTDBackupName" >/dev/null 2>&1;
+			ln -s "$TargetDir" "$HOME/$OUTDName";
+		fi;
+	fi;
+}
 
-DEFPARAM (PARAM_MAX_INLINE_INSNS_RECURSIVE,
-	  "max-inline-insns-recursive",
-	  "The maximum number of instructions inline function can grow to via recursive inlining",
-	  450, 0, 0)
 
-DEFPARAM (PARAM_MAX_INLINE_INSNS_RECURSIVE_AUTO,
-	  "max-inline-insns-recursive-auto",
-	  "The maximum number of instructions non-inline function can grow to via recursive inlining",
-	  450, 0, 0)
 
-DEFPARAM (PARAM_MAX_INLINE_RECURSIVE_DEPTH,
-	  "max-inline-recursive-depth",
-	  "The maximum depth of recursive inlining for inline functions",
-	  8, 0, 0)
+# EXECUTION
 
-DEFPARAM (PARAM_MAX_INLINE_RECURSIVE_DEPTH_AUTO,
-	  "max-inline-recursive-depth-auto",
-	  "The maximum depth of recursive inlining for non-inline functions",
-	  8, 0, 0)
+if (test "$1" = "$ResetString"); then
+	ResetIconTheme;
+else
+	if (! test "$ThemeName" = "$CommonTheme"); then InstallTheme "$CommonTheme"; fi;
+	InstallTheme "$ThemeName";
+	#CreateSymlink;
+	CheckApps;
+	CheckSession;
+	if (! $CanEnableSettings); then
+		if ($LxdeSession); then
+			if ($LxAppearanceReady) && (! pidof lxappearance); then
+				nohup lxappearance >/dev/null 2>&1 & sleep 1;
+			fi;
+		else
+			EnableInSessionErrorMsg;
+		fi;
+	fi;
+	EnableIconTheme;
+fi;
 
-DEFPARAM (PARAM_MIN_INLINE_RECURSIVE_PROBABILITY,
-	  "min-inline-recursive-probability",
-	  "Inline recursively only when the probability of call being executed exceeds the parameter",
-	  10, 0, 0)
-
-/* Limit of iterations of early inliner.  This basically bounds number of
-   nested indirect calls early inliner can resolve.  Deeper chains are still
-   handled by late inlining.  */
-DEFPARAM (PARAM_EARLY_INLINER_MAX_ITERATIONS,
-	  "max-early-inliner-iterations",
-	  "The maximum number of nested indirect inlining performed by early inliner",
-	  1, 0, 0)
-
-/* Limit on probability of entry BB.  */
-DEFPARAM (PARAM_COMDAT_SHARING_PROBABILITY,
-	  "comdat-sharing-probability",
-	  "Probability that COMDAT function will be shared with different compilation unit",
-	  20, 0, 0)
-
-/* Limit on probability of entry BB.  */
-DEFPARAM (PARAM_PARTIAL_INLINING_ENTRY_PROBABILITY,
-	  "partial-inlining-entry-probability",
-	  "Maximum probability of the entry BB of split region (in percent relative to entry BB of the function) to make partial inlining happen",
-	  70, 0, 0)
-
-/* Limit the number of expansions created by the variable expansion
-   optimization to avoid register pressure.  */
-DEFPARAM (PARAM_MAX_VARIABLE_EXPANSIONS,
-	  "max
+exit

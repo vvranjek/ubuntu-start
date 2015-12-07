@@ -82,7 +82,7 @@ Context=Applications
 Size=22
 Type=Scalable
 MinSize=16
-MaxSize=2
+MaxSize=22
 
 [22x22/categories]
 Context=Categories
@@ -195,56 +195,56 @@ Context=Actions
 Size=32
 Type=Scalable
 MinSize=22
-MaxSize=36
+MaxSize=32
 
 [32x32/apps]
 Context=Applications
 Size=32
 Type=Scalable
 MinSize=22
-MaxSize=36
+MaxSize=32
 
 [32x32/categories]
 Context=Categories
 Size=32
 Type=Scalable
 MinSize=22
-MaxSize=36
+MaxSize=32
 
 [32x32/devices]
 Context=Devices
 Size=32
 Type=Scalable
 MinSize=22
-MaxSize=36
+MaxSize=32
 
 [32x32/emblems]
 Context=Emblems
 Size=32
 Type=Scalable
 MinSize=22
-MaxSize=36
+MaxSize=32
 
 [32x32/mimetypes]
 Context=MimeTypes
 Size=32
 Type=Scalable
 MinSize=22
-MaxSize=36
+MaxSize=32
 
 [32x32/places]
 Context=Places
 Size=32
 Type=Scalable
 MinSize=22
-MaxSize=36
+MaxSize=32
 
 [32x32/status]
 Context=Status
 Size=32
 Type=Scalable
 MinSize=22
-MaxSize=36
+MaxSize=32
 
 
 

@@ -27,7 +27,7 @@
          offset="0"
          id="stop3164" />
       <stop
-         style="stop-color:#6690aa;stop-opacity:1;"
+         style="stop-color:#4483aa;stop-opacity:1;"
          offset="1"
          id="stop3166" />
     </linearGradient>
@@ -116,7 +116,7 @@
      transform="translate(-0.25,48.25)">
     <path
        inkscape:connector-curvature="0"
-       style="fill:url(#linearGradient3018);fill-opacity:1;fill-rule:nonzero;stroke:#3c6688;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
+       style="fill:url(#linearGradient3018);fill-opacity:1;fill-rule:nonzero;stroke:#265c88;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
        d="m 60.25,-30.25 -48,30 48,30 0,-16 24,0 0,-28 -24,0 z"
        id="path4348"
        sodipodi:nodetypes="cccccccc" />

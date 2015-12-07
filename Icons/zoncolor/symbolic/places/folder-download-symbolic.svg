@@ -13,7 +13,7 @@
    height="16"
    width="16"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="folder-download-symbolic.svg">
   <defs
      id="defs11" />
@@ -27,15 +27,15 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1016"
-     inkscape:window-height="751"
+     inkscape:window-height="726"
      id="namedview9"
      showgrid="true"
      inkscape:snap-nodes="true"
-     inkscape:zoom="33.875"
+     inkscape:zoom="24"
      inkscape:cx="8"
      inkscape:cy="8"
-     inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-x="179"
+     inkscape:window-y="31"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg7384">
     <inkscape:grid
@@ -57,15 +57,9 @@
   <title
      id="title9167">Gnome Symbolic Icon Theme</title>
   <path
-     inkscape:connector-curvature="0"
-     id="path2990"
-     style="text-indent:0;text-transform:none;block-progression:tb;color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:evenodd;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
-     d="M 3.25,6.25 2,7.5 l 6,6 6,-6 L 12.75,6.25 9.5,9.5 9.5,1 l -3,0 0,8.5 z"
-     sodipodi:nodetypes="cccccccccc" />
-  <path
      style="color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
-     d="m 1,12 0,2 c 0,0.554 0.446,1 1,1 l 12,0 c 0.554,0 1,-0.446 1,-1 l 0,-2 -1.25,0 0,1.75 -11.5,0 0,-1.75 z"
-     id="rect3001"
+     d="M 8,0.5 C 3.857864,0.5 0.5,3.8578644 0.5,8 c 0,4.142136 3.357864,7.5 7.5,7.5 4.142136,0 7.5,-3.357864 7.5,-7.5 C 15.5,3.8578644 12.142136,0.5 8,0.5 z M 5.75,2 l 4.5,0 0,4.5000003 3.25,0 L 8,14 2.5,6.5000003 l 3.25,0 z"
+     id="path2994"
      inkscape:connector-curvature="0"
-     sodipodi:nodetypes="csssscccccc" />
+     sodipodi:nodetypes="ssssscccccccc" />
 </svg>

@@ -1,78 +1,89 @@
-   AC_WINTMODE_BELOW_gc = (0x02<<2),  /* Interrupt on below window */
-    AC_WINTMODE_OUTSIDE_gc = (0x03<<2),  /* Interrupt on outside window */
-} AC_WINTMODE_t;
 
-/* Window interrupt level */
-typedef enum AC_WINTLVL_enum
-{
-    AC_WINTLVL_OFF_gc = (0x00<<0),  /* Interrupt disabled */
-    AC_WINTLVL_LO_gc = (0x01<<0),  /* Low priority */
-    AC_WINTLVL_MED_gc = (0x02<<0),  /* Medium priority */
-    AC_WINTLVL_HI_gc = (0x03<<0),  /* High priority */
-} AC_WINTLVL_t;
+[Icon Data]
 
-/* Window mode state */
-typedef enum AC_WSTATE_enum
-{
-    AC_WSTATE_ABOVE_gc = (0x00<<6),  /* Signal above window */
-    AC_WSTATE_INSIDE_gc = (0x01<<6),  /* Signal inside window */
-    AC_WSTATE_BELOW_gc = (0x02<<6),  /* Signal below window */
-} AC_WSTATE_t;
-
-
-/*
---------------------------------------------------------------------------
-RTC - Real-Time Counter
---------------------------------------------------------------------------
-*/
-
-/* Real-Time Counter */
-typedef struct RTC_struct
-{
-    register8_t CTRL;  /* Control Register */
-    register8_t STATUS;  /* Status Register */
-    register8_t INTCTRL;  /* Interrupt Control Register */
-    register8_t INTFLAGS;  /* Interrupt Flags */
-    register8_t TEMP;  /* Temporary register */
-    register8_t reserved_0x05;
-    register8_t reserved_0x06;
-    register8_t reserved_0x07;
-    _WORDREGISTER(CNT);  /* Count Register */
-    _WORDREGISTER(PER);  /* Period Register */
-    _WORDREGISTER(COMP);  /* Compare Register */
-} RTC_t;
-
-/* Prescaler Factor */
-typedef enum RTC_PRESCALER_enum
-{
-    RTC_PRESCALER_OFF_gc = (0x00<<0),  /* RTC Off */
-    RTC_PRESCALER_DIV1_gc = (0x01<<0),  /* RTC Clock */
-    RTC_PRESCALER_DIV2_gc = (0x02<<0),  /* RTC Clock / 2 */
-    RTC_PRESCALER_DIV8_gc = (0x03<<0),  /* RTC Clock / 8 */
-    RTC_PRESCALER_DIV16_gc = (0x04<<0),  /* RTC Clock / 16 */
-    RTC_PRESCALER_DIV64_gc = (0x05<<0),  /* RTC Clock / 64 */
-    RTC_PRESCALER_DIV256_gc = (0x06<<0),  /* RTC Clock / 256 */
-    RTC_PRESCALER_DIV1024_gc = (0x07<<0),  /* RTC Clock / 1024 */
-} RTC_PRESCALER_t;
-
-/* Compare Interrupt level */
-typedef enum RTC_COMPINTLVL_enum
-{
-    RTC_COMPINTLVL_OFF_gc = (0x00<<2),  /* Interrupt Disabled */
-    RTC_COMPINTLVL_LO_gc = (0x01<<2),  /* Low Level */
-    RTC_COMPINTLVL_MED_gc = (0x02<<2),  /* Medium Level */
-    RTC_COMPINTLVL_HI_gc = (0x03<<2),  /* High Level */
-} RTC_COMPINTLVL_t;
-
-/* Overflow Interrupt level */
-typedef enum RTC_OVFINTLVL_enum
-{
-    RTC_OVFINTLVL_OFF_gc = (0x00<<0),  /* Interrupt Disabled */
-    RTC_OVFINTLVL_LO_gc = (0x01<<0),  /* Low Level */
-    RTC_OVFINTLVL_MED_gc = (0x02<<0),  /* Medium Level */
-    RTC_OVFINTLVL_HI_gc = (0x03<<0),  /* High Level */
-} RTC_OVFINTLVL_t;
-
-
-/*
----------------------------------
+DisplayName=Desktop
+DisplayName[af]=Werkskerm
+DisplayName[ar]=سطح المكتب
+DisplayName[as]=ডেষ্কট'প
+DisplayName[ast]=Escritoriu
+DisplayName[az]=Masa Üstü
+DisplayName[be]=Сталец
+DisplayName[be@latin]=Stoł
+DisplayName[bg]=Работно място
+DisplayName[bn]=ডেস্কটপ
+DisplayName[bn_IN]=ডেস্কটপ
+DisplayName[bs]=Desktop
+DisplayName[ca]=Escriptori
+DisplayName[ca@valencia]=Escriptori
+DisplayName[crh]=Masaüstü
+DisplayName[cs]=Pracovní plocha
+DisplayName[cy]=Penbwrdd
+DisplayName[da]=Skrivebord
+DisplayName[de]=Desktop
+DisplayName[dz]=ཌེཀསི་ཊོཔ།
+DisplayName[el]=Επιφάνεια εργασίας
+DisplayName[en_CA]=Desktop
+DisplayName[en_GB]=Desktop
+DisplayName[es]=Escritorio
+DisplayName[et]=Töölaud
+DisplayName[eu]=Mahaigaina
+DisplayName[fa]=رومیزی
+DisplayName[fi]=Työpöytä
+DisplayName[fr]=Bureau
+DisplayName[fur]=Scrivanie
+DisplayName[ga]=Deasc
+DisplayName[gl]=Escritorio
+DisplayName[gu]=ડેસ્કટોપ
+DisplayName[he]=שולחן עבודה
+DisplayName[hi]=डेस्कटॉप
+DisplayName[hr]=Radna površina
+DisplayName[hu]=Asztal
+DisplayName[id]=Desktop
+DisplayName[it]=Scrivania
+DisplayName[ja]=デスクトップ
+DisplayName[ka]=სამუშაო მაგიდა
+DisplayName[kk]=Жұмыс үстелі
+DisplayName[kn]=ಗಣಕತೆರೆ
+DisplayName[ko]=데스크탑
+DisplayName[lt]=Darbalaukis
+DisplayName[lv]=Darbavirsma
+DisplayName[mai]=डेस्कटाप
+DisplayName[mg]=Sehatrasa
+DisplayName[mk]=Работна околина
+DisplayName[ml]=പണിയിടം
+DisplayName[mr]=कार्यस्थळ
+DisplayName[ms]=Desktop
+DisplayName[nb]=Skrivebord
+DisplayName[nds]=Schrievdisk
+DisplayName[ne]=डेस्कटप
+DisplayName[nl]=Bureaublad
+DisplayName[nn]=Skrivebord
+DisplayName[oc]=Burèu
+DisplayName[or]=ଡେସ୍କଟପ୍
+DisplayName[pa]=ਡੈਸਕਟਾਪ
+DisplayName[pl]=Pulpit
+DisplayName[ps]=سرپاڼه
+DisplayName[pt]=Área de Trabalho
+DisplayName[pt_BR]=Área de trabalho
+DisplayName[ro]=Desktop
+DisplayName[ru]=Рабочий стол
+DisplayName[rw]=Ibiro
+DisplayName[si]=මුලීක තිරය
+DisplayName[sk]=Pracovná plocha
+DisplayName[sl]=Namizje
+DisplayName[sq]=Hapësira e Punës
+DisplayName[sr]=Радна површина
+DisplayName[sr@latin]=Radna površina
+DisplayName[sv]=Skrivbord
+DisplayName[ta]=மேசை
+DisplayName[te]=రంగస్ఠలం
+DisplayName[th]=พื้นโต๊ะ
+DisplayName[tr]=Masaüstü
+DisplayName[uk]=Робочий стіл
+DisplayName[uz]=Ish stoli
+DisplayName[uz@cyrillic]=Иш столи
+DisplayName[vi]=Màn hình nền
+DisplayName[xh]=i-Desktop
+DisplayName[zh_CN]=桌面
+DisplayName[zh_HK]=桌面
+DisplayName[zh_TW]=桌面

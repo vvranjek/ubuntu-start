@@ -5,10 +5,11 @@
 
 clear
 
-CURRENT_DIR=$(find `pwd` -name "scripts")
+SCRIPTS_DIR=$(find `pwd` -name "scripts")
+NAUTILUS_SCRIPTS_DIR=$(find `pwd` -name "nautilus-scripts")
 FILENAME=package-list
 
-sudo chmod +x $CURRENT_DIR/*
+sudo chmod +x $SCRIPTS_DIR/*
 
 touch touch
 
@@ -20,20 +21,23 @@ mkdir -p /home/$USER/Programs
 mkdir -p /home/$USER/bin
 sleep 0.3
 
-echo "Copying scripts to bin."
-cp -r $CURRENT_DIR/. /home/$USER/bin
-sudo chmod +x /home/$USER/bin/*
+echo "Creating links of Nautilus scripts"
+ln -s $NAUTILUS_SCRIPTS_DIR/* /home/$USER/.local/share/nautilus/scripts/.
+
+echo "Creating links of scripts in bin."
+ln -s $SCRIPTS_DIR/* /home/$USER/bin/.
+#cp -r $SCRIPTS_DIR/. /home/$USER/bin
+#sudo chmod +x /home/$USER/bin/*
 sleep 0.3
 
 echo "Adding $USER to group dialout and sudo"
 sudo adduser $USER dialout
-sudo adduser ulu dialout
-sudo adduser ulu sudo
-sudo adduser ulu vid
+sudo adduser $USER sudo
+sudo adduser $USER vid
 sleep 0.3
 
 echo "Adding open as root menu to nautilus"
-sudo bash -c "$CURRENT_DIR/nautilusRoot.sh"
+sudo bash -c "$SCRIPTS_DIR/nautilusRoot.sh"
 sleep 0.3
 
 echo "Adding modifications to bashrc"
@@ -71,7 +75,7 @@ else
 fi
 
 #Disable/enable scrollbar overlay
-sh $CURRENT_DIR/scrollbarOverlay.sh
+sh $SCRIPTS_DIR/scrollbarOverlay.sh
 
 
 while true; do

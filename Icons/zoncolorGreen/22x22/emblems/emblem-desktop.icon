@@ -1,73 +1,89 @@
-)
-#define PORTR_DIRCLR  _SFR_MEM8(0x07E2)
-#define PORTR_DIRTGL  _SFR_MEM8(0x07E3)
-#define PORTR_OUT  _SFR_MEM8(0x07E4)
-#define PORTR_OUTSET  _SFR_MEM8(0x07E5)
-#define PORTR_OUTCLR  _SFR_MEM8(0x07E6)
-#define PORTR_OUTTGL  _SFR_MEM8(0x07E7)
-#define PORTR_IN  _SFR_MEM8(0x07E8)
-#define PORTR_INTCTRL  _SFR_MEM8(0x07E9)
-#define PORTR_INT0MASK  _SFR_MEM8(0x07EA)
-#define PORTR_INT1MASK  _SFR_MEM8(0x07EB)
-#define PORTR_INTFLAGS  _SFR_MEM8(0x07EC)
-#define PORTR_REMAP  _SFR_MEM8(0x07EE)
-#define PORTR_PIN0CTRL  _SFR_MEM8(0x07F0)
-#define PORTR_PIN1CTRL  _SFR_MEM8(0x07F1)
-#define PORTR_PIN2CTRL  _SFR_MEM8(0x07F2)
-#define PORTR_PIN3CTRL  _SFR_MEM8(0x07F3)
-#define PORTR_PIN4CTRL  _SFR_MEM8(0x07F4)
-#define PORTR_PIN5CTRL  _SFR_MEM8(0x07F5)
-#define PORTR_PIN6CTRL  _SFR_MEM8(0x07F6)
-#define PORTR_PIN7CTRL  _SFR_MEM8(0x07F7)
 
-/* TC0 - 16-bit Timer/Counter 0 */
-#define TCC0_CTRLA  _SFR_MEM8(0x0800)
-#define TCC0_CTRLB  _SFR_MEM8(0x0801)
-#define TCC0_CTRLC  _SFR_MEM8(0x0802)
-#define TCC0_CTRLD  _SFR_MEM8(0x0803)
-#define TCC0_CTRLE  _SFR_MEM8(0x0804)
-#define TCC0_INTCTRLA  _SFR_MEM8(0x0806)
-#define TCC0_INTCTRLB  _SFR_MEM8(0x0807)
-#define TCC0_CTRLFCLR  _SFR_MEM8(0x0808)
-#define TCC0_CTRLFSET  _SFR_MEM8(0x0809)
-#define TCC0_CTRLGCLR  _SFR_MEM8(0x080A)
-#define TCC0_CTRLGSET  _SFR_MEM8(0x080B)
-#define TCC0_INTFLAGS  _SFR_MEM8(0x080C)
-#define TCC0_TEMP  _SFR_MEM8(0x080F)
-#define TCC0_CNT  _SFR_MEM16(0x0820)
-#define TCC0_PER  _SFR_MEM16(0x0826)
-#define TCC0_CCA  _SFR_MEM16(0x0828)
-#define TCC0_CCB  _SFR_MEM16(0x082A)
-#define TCC0_CCC  _SFR_MEM16(0x082C)
-#define TCC0_CCD  _SFR_MEM16(0x082E)
-#define TCC0_PERBUF  _SFR_MEM16(0x0836)
-#define TCC0_CCABUF  _SFR_MEM16(0x0838)
-#define TCC0_CCBBUF  _SFR_MEM16(0x083A)
-#define TCC0_CCCBUF  _SFR_MEM16(0x083C)
-#define TCC0_CCDBUF  _SFR_MEM16(0x083E)
+[Icon Data]
 
-/* TC2 - 16-bit Timer/Counter type 2 */
-#define TCC2_CTRLA  _SFR_MEM8(0x0800)
-#define TCC2_CTRLB  _SFR_MEM8(0x0801)
-#define TCC2_CTRLC  _SFR_MEM8(0x0802)
-#define TCC2_CTRLE  _SFR_MEM8(0x0804)
-#define TCC2_INTCTRLA  _SFR_MEM8(0x0806)
-#define TCC2_INTCTRLB  _SFR_MEM8(0x0807)
-#define TCC2_CTRLF  _SFR_MEM8(0x0809)
-#define TCC2_INTFLAGS  _SFR_MEM8(0x080C)
-#define TCC2_LCNT  _SFR_MEM8(0x0820)
-#define TCC2_HCNT  _SFR_MEM8(0x0821)
-#define TCC2_LPER  _SFR_MEM8(0x0826)
-#define TCC2_HPER  _SFR_MEM8(0x0827)
-#define TCC2_LCMPA  _SFR_MEM8(0x0828)
-#define TCC2_HCMPA  _SFR_MEM8(0x0829)
-#define TCC2_LCMPB  _SFR_MEM8(0x082A)
-#define TCC2_HCMPB  _SFR_MEM8(0x082B)
-#define TCC2_LCMPC  _SFR_MEM8(0x082C)
-#define TCC2_HCMPC  _SFR_MEM8(0x082D)
-#define TCC2_LCMPD  _SFR_MEM8(0x082E)
-#define TCC2_HCMPD  _SFR_MEM8(0x082F)
-
-/* TC1 - 16-bit Timer/Counter 1 */
-#define TCC1_CTRLA  _SFR_MEM8(0x0840)
-#define TCC1_CTRLB  _SFR_ME
+DisplayName=Desktop
+DisplayName[af]=Werkskerm
+DisplayName[ar]=سطح المكتب
+DisplayName[as]=ডেষ্কট'প
+DisplayName[ast]=Escritoriu
+DisplayName[az]=Masa Üstü
+DisplayName[be]=Сталец
+DisplayName[be@latin]=Stoł
+DisplayName[bg]=Работно място
+DisplayName[bn]=ডেস্কটপ
+DisplayName[bn_IN]=ডেস্কটপ
+DisplayName[bs]=Desktop
+DisplayName[ca]=Escriptori
+DisplayName[ca@valencia]=Escriptori
+DisplayName[crh]=Masaüstü
+DisplayName[cs]=Pracovní plocha
+DisplayName[cy]=Penbwrdd
+DisplayName[da]=Skrivebord
+DisplayName[de]=Desktop
+DisplayName[dz]=ཌེཀསི་ཊོཔ།
+DisplayName[el]=Επιφάνεια εργασίας
+DisplayName[en_CA]=Desktop
+DisplayName[en_GB]=Desktop
+DisplayName[es]=Escritorio
+DisplayName[et]=Töölaud
+DisplayName[eu]=Mahaigaina
+DisplayName[fa]=رومیزی
+DisplayName[fi]=Työpöytä
+DisplayName[fr]=Bureau
+DisplayName[fur]=Scrivanie
+DisplayName[ga]=Deasc
+DisplayName[gl]=Escritorio
+DisplayName[gu]=ડેસ્કટોપ
+DisplayName[he]=שולחן עבודה
+DisplayName[hi]=डेस्कटॉप
+DisplayName[hr]=Radna površina
+DisplayName[hu]=Asztal
+DisplayName[id]=Desktop
+DisplayName[it]=Scrivania
+DisplayName[ja]=デスクトップ
+DisplayName[ka]=სამუშაო მაგიდა
+DisplayName[kk]=Жұмыс үстелі
+DisplayName[kn]=ಗಣಕತೆರೆ
+DisplayName[ko]=데스크탑
+DisplayName[lt]=Darbalaukis
+DisplayName[lv]=Darbavirsma
+DisplayName[mai]=डेस्कटाप
+DisplayName[mg]=Sehatrasa
+DisplayName[mk]=Работна околина
+DisplayName[ml]=പണിയിടം
+DisplayName[mr]=कार्यस्थळ
+DisplayName[ms]=Desktop
+DisplayName[nb]=Skrivebord
+DisplayName[nds]=Schrievdisk
+DisplayName[ne]=डेस्कटप
+DisplayName[nl]=Bureaublad
+DisplayName[nn]=Skrivebord
+DisplayName[oc]=Burèu
+DisplayName[or]=ଡେସ୍କଟପ୍
+DisplayName[pa]=ਡੈਸਕਟਾਪ
+DisplayName[pl]=Pulpit
+DisplayName[ps]=سرپاڼه
+DisplayName[pt]=Área de Trabalho
+DisplayName[pt_BR]=Área de trabalho
+DisplayName[ro]=Desktop
+DisplayName[ru]=Рабочий стол
+DisplayName[rw]=Ibiro
+DisplayName[si]=මුලීක තිරය
+DisplayName[sk]=Pracovná plocha
+DisplayName[sl]=Namizje
+DisplayName[sq]=Hapësira e Punës
+DisplayName[sr]=Радна површина
+DisplayName[sr@latin]=Radna površina
+DisplayName[sv]=Skrivbord
+DisplayName[ta]=மேசை
+DisplayName[te]=రంగస్ఠలం
+DisplayName[th]=พื้นโต๊ะ
+DisplayName[tr]=Masaüstü
+DisplayName[uk]=Робочий стіл
+DisplayName[uz]=Ish stoli
+DisplayName[uz@cyrillic]=Иш столи
+DisplayName[vi]=Màn hình nền
+DisplayName[xh]=i-Desktop
+DisplayName[zh_CN]=桌面
+DisplayName[zh_HK]=桌面
+DisplayName[zh_TW]=桌面

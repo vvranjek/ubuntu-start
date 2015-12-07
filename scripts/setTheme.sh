@@ -1,6 +1,7 @@
 #!/bin/bash
 
-
+THEMES_DIR=$(find `pwd` -name "Themes")
+ICONS_DIR=$(find `pwd` -name "Icons")
 
 if [ $USER = "root" ]
 then
@@ -8,20 +9,18 @@ then
 	read -p "Press ENTER to exit..." answer
 else
 
-	cur_dir=$(pwd)
-
 	cd /home/$USER/
 	mkdir .themes
 	mkdir .icons
 
 	echo "Copying themes"
 
-	cp -ar "$cur_dir/../Themes/." "/home/$USER/.themes"
-	sudo bash -c "cp -ar $cur_dir/../Themes/. /root/.themes"
+	cp -ar "$THEMES_DIR/." "/home/$USER/.themes"
+	sudo bash -c "cp -ar $THEMES_DIR/. /root/.themes"
 
 	echo "Copying icons"
-	cp -ar "$cur_dir/../Icons/." "/home/$USER/.icons" 
-	sudo bash -c "cp -ar $cur_dir/../Icons/. /root/.icons"
+	cp -ar "$ICONS_DIR/." "/home/$USER/.icons" 
+	sudo bash -c "cp -ar $ICONS_DIR/. /root/.icons"
 
 	echo "Modifying root icons"
 	sudo bash -c "mv /root/.icons/Graphite-icons/ /root/.icons/Graphite-icons-original/"
@@ -36,6 +35,9 @@ else
 
 fi
 
+echo Done
+
+exit 0
 
 
 #read -p "Press ENTER to exit..." answer

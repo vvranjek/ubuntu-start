@@ -1,2 +1,2 @@
- Factor bit 0 mask. */
-#define ADC_CH_GAIN0_
+[Icon Data]
+AttachPoints=24,24|24,8|8,8|8,24

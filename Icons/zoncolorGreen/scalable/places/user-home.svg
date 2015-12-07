@@ -1,201 +1,578 @@
-ence_set "slot2" "slot0, slot1")
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-   Or slot2 can not be reserved if slot0 and unit b0 are reserved or
-   slot1 and unit b1 are reserved .  In this case we could write
-
-      (absence_set "slot2" "slot0 b0, slot1 b1")
-
-   All CPU functional units in a set should to belong the same
-   automaton.  */
-DEF_RTL_EXPR(ABSENCE_SET, "absence_set", "ss", RTX_EXTRA)
-
-/* (final_absence_set string string) is analogous to `absence_set' but
-   checking is done on the result (state) reservation.  See comments
-   for `final_presence_set'.  */
-DEF_RTL_EXPR(FINAL_ABSENCE_SET, "final_absence_set", "ss", RTX_EXTRA)
-
-/* (define_bypass number out_insn_names in_insn_names) names bypass
-   with given latency (the first number) from insns given by the first
-   string (see define_insn_reservation) into insns given by the second
-   string.  Insn names in the strings are separated by commas.  The
-   third operand is optional name of function which is additional
-   guard for the bypass.  The function will get the two insns as
-   parameters.  If the function returns zero the bypass will be
-   ignored for this case.  Additional guard is necessary to recognize
-   complicated bypasses, e.g. when consumer is load address.  If there
-   are more one bypass with the same output and input insns, the
-   chosen bypass is the first bypass with a guard in description whose
-   guard function returns nonzero.  If there is no such bypass, then
-   bypass without the guard function is chosen.  */
-DEF_RTL_EXPR(DEFINE_BYPASS, "define_bypass", "issS", RTX_EXTRA)
-
-/* (define_automaton string) describes names of automata generated and
-   used for pipeline hazards recognition.  The names are separated by
-   comma.  Actually it is possibly to generate the single automaton
-   but unfortunately it can be very large.  If we use more one
-   automata, the summary size of the automata usually is less than the
-   single one.  The automaton name is used in define_cpu_unit and
-   define_query_cpu_unit.  All automata should have unique names.  */
-DEF_RTL_EXPR(DEFINE_AUTOMATON, "define_automaton", "s", RTX_EXTRA)
-
-/* (automata_option string) describes option for generation of
-   automata.  Currently there are the following options:
-
-   o "no-minimization" which makes no minimization of automata.  This
-     is only worth to do when we are debugging the description and
-     need to look more accurately at reservations of states.
-
-   o "time" which means printing additional time statistics about
-      generation of automata.
-
-   o "v" which means generation of file describing the result
-     automata.  The file has suffix `.dfa' and can be used for the
-     description verification and debugging.
-
-   o "w" which means generation of warning instead of error for
-     non-critical errors.
-
-   o "ndfa" which makes nondeterministic finite state automata.
-
-   o "progress" which means output of a progress bar showing how many
-     states were generated so far for automaton being processed.  */
-DEF_RTL_EXPR(AUTOMATA_OPTION, "automata_option", "s", RTX_EXTRA)
-
-/* (define_reservation string string) names reservation (the first
-   string) of cpu functional units (the 2nd string).  Sometimes unit
-   reservations for different insns contain common parts.  In such
-   case, you can describe common part and use its name (the 1st
-   parameter) in regular expression in define_insn_reservation.  All
-   define_reservations, define_cpu_units, and define_query_cpu_units
-   should have unique names which may not be "nothing".  */
-DEF_RTL_EXPR(DEFINE_RESERVATION, "define_reservation", "ss", RTX_EXTRA)
-
-/* (define_insn_reservation name default_latency condition regexpr)
-   describes reservation of cpu functional units (the 3nd operand) for
-   instruction which is selected by the condition (the 2nd parameter).
-   The first parameter is used for output of debugging information.
-   The reservations are described by a regular expression according
-   the following syntax:
-
-       regexp = regexp "," oneof
-              | oneof
-
-       oneof = oneof "|" allof
-             | allof
-
-       allof = allof "+" repeat
-             | repeat
-
-       repeat = element "*" number
-              | element
-
-       element = cpu_function_unit_name
-               | reservation_name
-               | result_name
-               | "nothing"
-               | "(" regexp ")"
-
-       1. "," is used for describing start of the next cycle in
-       reservation.
-
-       2. "|" is used for describing the reservation described by the
-       first regular expression *or* the reservation described by the
-       second regular expression *or* etc.
-
-       3. "+" is used for describing the reservation described by the
-       first regular expression *and* the reservation described by the
-       second regular expression *and* etc.
-
-       4. "*" is used for convenience and simply means sequence in
-       which the regular expression are repeated NUMBER times with
-       cycle advancing (see ",").
-
-       5. cpu functional unit name which means its reservation.
-
-       6. reservation name -- see define_reservation.
-
-       7. string "nothing" means no units reservation.  */
-
-DEF_RTL_EXPR(DEFINE_INSN_RESERVATION, "define_insn_reservation", "sies", RTX_EXTRA)
-
-/* Expressions used for insn attributes.  */
-
-/* Definition of an insn attribute.
-   1st operand: name of the attribute
-   2nd operand: comma-separated list of possible attribute values
-   3rd operand: expression for the default value of the attribute.  */
-DEF_RTL_EXPR(DEFINE_ATTR, "define_attr", "sse", RTX_EXTRA)
-
-/* Definition of an insn attribute that uses an existing enumerated type.
-   1st operand: name of the attribute
-   2nd operand: the name of the enumerated type
-   3rd operand: expression for the default value of the attribute.  */
-DEF_RTL_EXPR(DEFINE_ENUM_ATTR, "define_enum_attr", "sse", RTX_EXTRA)
-
-/* Marker for the name of an attribute.  */
-DEF_RTL_EXPR(ATTR, "attr", "s", RTX_EXTRA)
-
-/* For use in the last (optional) operand of DEFINE_INSN or DEFINE_PEEPHOLE and
-   in DEFINE_ASM_INSN to specify an attribute to assign to insns matching that
-   pattern.
-
-   (set_attr "name" "value") is equivalent to
-   (set (attr "name") (const_string "value"))  */
-DEF_RTL_EXPR(SET_ATTR, "set_attr", "ss", RTX_EXTRA)
-
-/* In the last operand of DEFINE_INSN and DEFINE_PEEPHOLE, this can be used to
-   specify that attribute values are to be assigned according to the
-   alternative matched.
-
-   The following three expressions are equivalent:
-
-   (set (attr "att") (cond [(eq_attrq "alternative" "1") (const_string "a1")
-			    (eq_attrq "alternative" "2") (const_string "a2")]
-			   (const_string "a3")))
-   (set_attr_alternative "att" [(const_string "a1") (const_string "a2")
-				 (const_string "a3")])
-   (set_attr "att" "a1,a2,a3")
- */
-DEF_RTL_EXPR(SET_ATTR_ALTERNATIVE, "set_attr_alternative", "sE", RTX_EXTRA)
-
-/* A conditional expression true if the value of the specified attribute of
-   the current insn equals the specified value.  The first operand is the
-   attribute name and the second is the comparison value.  */
-DEF_RTL_EXPR(EQ_ATTR, "eq_attr", "ss", RTX_EXTRA)
-
-/* A special case of the above representing a set of alternatives.  The first
-   operand is bitmap of the set, the second one is the default value.  */
-DEF_RTL_EXPR(EQ_ATTR_ALT, "eq_attr_alt", "ii", RTX_EXTRA)
-
-/* A conditional expression which is true if the specified flag is
-   true for the insn being scheduled in reorg.
-
-   genattr.c defines the following flags which can be tested by
-   (attr_flag "foo") expressions in eligible_for_delay: forward, backward.  */
-
-DEF_RTL_EXPR (ATTR_FLAG, "attr_flag", "s", RTX_EXTRA)
-
-/* General conditional. The first operand is a vector composed of pairs of
-   expressions.  The first element of each pair is evaluated, in turn.
-   The value of the conditional is the second expression of the first pair
-   whose first expression evaluates nonzero.  If none of the expressions is
-   true, the second operand will be used as the value of the conditional.  */
-DEF_RTL_EXPR(COND, "cond", "Ee", RTX_EXTRA)
-
-DEF_RTL_EXPR(DEFINE_SUBST, "define_subst", "sEsE", RTX_EXTRA)
-DEF_RTL_EXPR(DEFINE_SUBST_ATTR, "define_subst_attr", "ssss", RTX_EXTRA)
-#endif /* GENERATOR_FILE */
-
-/*
-Local variables:
-mode:c
-End:
-*/
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                #define BUILDING_GCC_MAJOR 4
-#define BUILDING_GCC_MINOR 8
-#define BUILDING_GCC_PATCHLEVEL 1
-#define BUILDING_GCC_VERSION (BUILDING_GCC_MAJOR * 1000 + BUILDING_GCC_MINOR)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              offset="0.0059" />
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:docname="user-home.svg"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:version="0.32"
+   id="svg7217"
+   height="96"
+   width="96"
+   inkscape:export-filename="folder.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs7219">
+    <linearGradient
+       id="linearGradient10176"
+       gradientUnits="userSpaceOnUse"
+       x1="71.999496"
+       y1="14.2578"
+       x2="71.999496"
+       y2="19.9583"
+       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)">
+      <stop
+         offset="0.00445589"
+         style="stop-color:#eaeaea;stop-opacity:0;"
+         id="stop10178" />
+      <stop
+         id="stop10180"
+         style="stop-color:#ffffff;stop-opacity:0.52941179;"
+         offset="0.46138024" />
+      <stop
+         offset="1"
+         style="stop-color:#f5f5f5;stop-opacity:0"
+         id="stop10182" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)"
+       y2="19.9583"
+       x2="71.999496"
+       y1="14.2578"
+       x1="71.999496"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient9101">
+      <stop
+         id="stop9103"
+         style="stop-color:#51751e;stop-opacity:0;"
+         offset="0.25" />
+      <stop
+         id="stop9105"
+         style="stop-color:#51751e;stop-opacity:1;"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5060">
+      <stop
+         style="stop-color:black;stop-opacity:1;"
+         offset="0"
+         id="stop5062" />
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="1"
+         id="stop5064" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5048">
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="0"
+         id="stop5050" />
+      <stop
+         id="stop5056"
+         offset="0.5"
+         style="stop-color:black;stop-opacity:1;" />
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="1"
+         id="stop5052" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient9073-9">
+      <stop
+         id="stop9075-9"
+         offset="0"
+         style="stop-color:#aacb7d;stop-opacity:1" />
+      <stop
+         id="stop9077-5"
+         offset="1"
+         style="stop-color:#709937;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient9087-5">
+      <stop
+         style="stop-color:#709937;stop-opacity:1"
+         offset="0"
+         id="stop9089-5" />
+      <stop
+         style="stop-color:#51751e;stop-opacity:1"
+         offset="1"
+         id="stop9091-1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4064-7">
+      <stop
+         style="stop-color:#709937;stop-opacity:1;"
+         offset="0"
+         id="stop4066-4" />
+      <stop
+         style="stop-color:#709937;stop-opacity:0.50196081;"
+         offset="1"
+         id="stop4068-8" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4054-7">
+      <stop
+         style="stop-color:#51751e;stop-opacity:1;"
+         offset="0"
+         id="stop4056-0" />
+      <stop
+         style="stop-color:#51751e;stop-opacity:0.50196081;"
+         offset="1"
+         id="stop4058-9" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9101"
+       id="linearGradient3227"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.75086228,0,0,0.3333332,-6.0605797,-28.166666)"
+       x1="71.999496"
+       y1="14.2578"
+       x2="71.999496"
+       y2="19.9583" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4064-7"
+       id="linearGradient3230"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,2,-94,-48)"
+       x1="71"
+       y1="8"
+       x2="71"
+       y2="41.5" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4054-7"
+       id="linearGradient3232"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,2,-94,-48)"
+       x1="71"
+       y1="8"
+       x2="71"
+       y2="41.5" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5060"
+       id="radialGradient3241"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.125709,0,0,0.0864706,93.410098,-10.70427)"
+       cx="605.71429"
+       cy="486.64789"
+       fx="605.71429"
+       fy="486.64789"
+       r="117.14286" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5060"
+       id="radialGradient3244"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.125709,0,0,0.0864706,2.5899204,-10.70427)"
+       cx="605.71429"
+       cy="486.64789"
+       fx="605.71429"
+       fy="486.64789"
+       r="117.14286" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5048"
+       id="linearGradient3247"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.125709,0,0,0.0864706,2.5651808,-10.70427)"
+       x1="302.85715"
+       y1="366.64789"
+       x2="302.85715"
+       y2="609.50507" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10176"
+       id="linearGradient3256"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.9204022,0,0,1.885618,-11.468937,-87.058428)"
+       x1="7.2379346"
+       y1="36.005047"
+       x2="122.17093"
+       y2="36.005047" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9073-9"
+       id="linearGradient3259"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7031318,0,0,0.7105376,-69.874472,-254.68002)"
+       x1="167.64111"
+       y1="328.87747"
+       x2="167.64111"
+       y2="407.69193" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9087-5"
+       id="linearGradient3261"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,2,-365.99542,-54)"
+       x1="206.99738"
+       y1="16.499895"
+       x2="206.99738"
+       y2="44.50021" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3291"
+       id="radialGradient3606"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.197802,0,92.82166)"
+       cx="63.912209"
+       cy="115.70919"
+       fx="63.912209"
+       fy="115.7093"
+       r="63.912209" />
+    <linearGradient
+       id="linearGradient3291">
+      <stop
+         style="stop-color:black;stop-opacity:1"
+         offset="0"
+         id="stop3293" />
+      <stop
+         style="stop-color:black;stop-opacity:0"
+         offset="1"
+         id="stop3295" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#XMLID_2_"
+       id="linearGradient3608"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       x1="15.5"
+       y1="-28.5"
+       x2="111.5"
+       y2="-28.5" />
+    <linearGradient
+       id="XMLID_2_"
+       gradientUnits="userSpaceOnUse"
+       x1="15.5"
+       y1="-28.5"
+       x2="111.5"
+       y2="-28.5">
+      <stop
+         id="stop3703"
+         style="stop-color:#4e4e4a;stop-opacity:1;"
+         offset="0.04702916" />
+      <stop
+         offset="0.19629943"
+         style="stop-color:#8c8f89;stop-opacity:1;"
+         id="stop10" />
+      <stop
+         offset="0.64499998"
+         style="stop-color:#a5a7a3;stop-opacity:1;"
+         id="stop12" />
+      <stop
+         offset="1"
+         style="stop-color:#53504b;stop-opacity:1;"
+         id="stop14" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#rect20638_1_"
+       id="linearGradient3610"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       x1="98.5"
+       y1="-65.5"
+       x2="90.5"
+       y2="-57.5" />
+    <linearGradient
+       id="rect20638_1_"
+       gradientUnits="userSpaceOnUse"
+       x1="98.5"
+       y1="-65.5"
+       x2="90.5"
+       y2="-57.5">
+      <stop
+         offset="0"
+         style="stop-color:#FFFFFF"
+         id="stop19" />
+      <stop
+         offset="0.1304"
+         style="stop-color:#F6F6F5"
+         id="stop21" />
+      <stop
+         offset="0.8343"
+         style="stop-color:#888A85"
+         id="stop23" />
+      <stop
+         offset="0.9172"
+         style="stop-color:#555753"
+         id="stop25" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#rect20638_5_"
+       id="linearGradient3612"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.62499976,0,0,0.15624994,-34.437477,32.078126)"
+       x1="103"
+       y1="-63.772499"
+       x2="103"
+       y2="-58.681499" />
+    <linearGradient
+       id="rect20638_5_"
+       gradientUnits="userSpaceOnUse"
+       x1="103"
+       y1="-63.772499"
+       x2="103"
+       y2="-58.681499">
+      <stop
+         offset="0"
+         style="stop-color:#BABDB6"
+         id="stop29" />
+      <stop
+         offset="1"
+         style="stop-color:#888A85"
+         id="stop31" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#rect20638_6_"
+       id="linearGradient3614"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.62499976,0,0,0.15624994,-26.93748,32.078126)"
+       x1="88"
+       y1="-61.227501"
+       x2="88"
+       y2="-66.318497" />
+    <linearGradient
+       id="rect20638_6_"
+       gradientUnits="userSpaceOnUse"
+       x1="88"
+       y1="-61.227501"
+       x2="88"
+       y2="-66.318497">
+      <stop
+         offset="0.1304"
+         style="stop-color:#888A85"
+         id="stop35" />
+      <stop
+         offset="1"
+         style="stop-color:#888A85"
+         id="stop37" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#rect20638_7_"
+       id="linearGradient3616"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       x1="103.5"
+       y1="-74.5"
+       x2="87.5"
+       y2="-74.5" />
+    <linearGradient
+       id="rect20638_7_"
+       gradientUnits="userSpaceOnUse"
+       x1="103.5"
+       y1="-74.5"
+       x2="87.5"
+       y2="-74.5">
+      <stop
+         offset="0"
+         style="stop-color:#555753"
+         id="stop41" />
+      <stop
+         offset="1"
+         style="stop-color:#2E3436"
+         id="stop43" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10239"
+       id="linearGradient3618"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.14627654,0,0,2.499999,14.71144,-4.2499848)"
+       x1="63.5005"
+       y1="15.8428"
+       x2="63.5005"
+       y2="6.9485002" />
+    <linearGradient
+       y2="6.9485002"
+       x2="63.5005"
+       y1="15.8428"
+       x1="63.5005"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient10239">
+      <stop
+         id="stop10241"
+         style="stop-color:#FFFFFF"
+         offset="0.2" />
+      <stop
+         id="stop10243"
+         style="stop-color:#daddde;stop-opacity:1;"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#rect20683_1_"
+       id="linearGradient3620"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.19762492,0,0,-0.14435932,-49.031347,-36.82866)"
+       x1="369.54489"
+       y1="-491.397"
+       x2="369.54489"
+       y2="-426.69751" />
+    <linearGradient
+       id="rect20683_1_"
+       gradientUnits="userSpaceOnUse"
+       x1="369.54489"
+       y1="-491.397"
+       x2="369.54489"
+       y2="-426.69751"
+       gradientTransform="matrix(1.2648,0,0,-0.9239,-403.9008,-441.0036)">
+      <stop
+         offset="0"
+         style="stop-color:#BF5E00"
+         id="stop163" />
+      <stop
+         offset="0.2959"
+         style="stop-color:#DB6A00"
+         id="stop165" />
+      <stop
+         offset="0.5562"
+         style="stop-color:#803F00"
+         id="stop167" />
+    </linearGradient>
+    <filter
+       color-interpolation-filters="sRGB"
+       id="AI_Sfocatura_1">
+      <feGaussianBlur
+         stdDeviation="1"
+         id="feGaussianBlur5" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#XMLID_19_"
+       id="linearGradient3622"
+       gradientUnits="userSpaceOnUse"
+       x1="51.168499"
+       y1="-30.392599"
+       x2="84.261703"
+       y2="33.725601" />
+    <linearGradient
+       id="XMLID_19_"
+       gradientUnits="userSpaceOnUse"
+       x1="51.168499"
+       y1="-30.392599"
+       x2="84.261703"
+       y2="33.725601">
+      <stop
+         offset="0.1538"
+         style="stop-color:#B3925D"
+         id="stop175" />
+      <stop
+         offset="1"
+         style="stop-color:#8F6B32"
+         id="stop177" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3291"
+       id="linearGradient3624"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.14705877,0,0,0.15624994,14.661768,32.078126)"
+       x1="67.742142"
+       y1="15.5"
+       x2="67.742142"
+       y2="11.484406" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#XMLID_23_"
+       id="linearGradient3626"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.156254,17.000007)"
+       x1="61.727921"
+       y1="108"
+       x2="61.97398"
+       y2="114.65165" />
+    <radialGradient
+       id="XMLID_23_"
+       cx="62.5"
+       cy="17"
+       r="10.0561"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         style="stop-color:#004D00"
+         id="stop207" />
+      <stop
+         offset="0.40853259"
+         style="stop-color:#008C00"
+         id="stop209" />
+    </radialGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4534"
+       id="linearGradient3628"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       x1="63.5005"
+       y1="19.5"
+       x2="63.5005"
+       y2="15.5" />
+    <linearGradient
+       id="linearGradient4534">
+      <stop
+         id="stop4536"
+         offset="0"
+         style="stop-color:black;stop-opacity:1" />
+      <stop
+         style="stop-color:#909090;stop-opacity:1;"
+         offset="0.72097087"
+         id="stop4540" />
+      <stop
+         id="stop4538"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4534"
+       id="linearGradient3630"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       x1="63.5005"
+       y1="23.5"
+       x2="63.5005"
+       y2="19.5" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13674"
+       id="linearGradient3632"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.13020828,0,0,0.15624994,15.210941,32.078126)"
+       x1="31.5"
+       y1="-22.167"
+       x2="31.5"
+       y2="19.833" />
+    <linearGradient
+       y2="19.833"
+       x2="95.5"
+       y1="-22.167"
+       x1="95.5"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient13674">
+      <stop
+         id="stop13676"
+         style="stop-color:#9c773f;stop-opacity:1;"
+         offset="0.0059" />
       <stop
          id="stop13680"
          style="stop-color:#8c6b3b;stop-opacity:1;"

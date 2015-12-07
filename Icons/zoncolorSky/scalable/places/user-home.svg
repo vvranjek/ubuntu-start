@@ -1,885 +1,1071 @@
- Interrupt */
-#define TCE0_CCD_vect_num  52
-#define TCE0_CCD_vect      _VECTOR(52)  /* Compare or Capture D Interrupt */
-
-/* TCE1 interrupt vectors */
-#define TCE1_OVF_vect_num  53
-#define TCE1_OVF_vect      _VECTOR(53)  /* Overflow Interrupt */
-#define TCE1_ERR_vect_num  54
-#define TCE1_ERR_vect      _VECTOR(54)  /* Error Interrupt */
-#define TCE1_CCA_vect_num  55
-#define TCE1_CCA_vect      _VECTOR(55)  /* Compare or Capture A Interrupt */
-#define TCE1_CCB_vect_num  56
-#define TCE1_CCB_vect      _VECTOR(56)  /* Compare or Capture B Interrupt */
-
-/* USARTE0 interrupt vectors */
-#define USARTE0_RXC_vect_num  58
-#define USARTE0_RXC_vect      _VECTOR(58)  /* Reception Complete Interrupt */
-#define USARTE0_DRE_vect_num  59
-#define USARTE0_DRE_vect      _VECTOR(59)  /* Data Register Empty Interrupt */
-#define USARTE0_TXC_vect_num  60
-#define USARTE0_TXC_vect      _VECTOR(60)  /* Transmission Complete Interrupt */
-
-/* PORTD interrupt vectors */
-#define PORTD_INT0_vect_num  64
-#define PORTD_INT0_vect      _VECTOR(64)  /* External Interrupt 0 */
-#define PORTD_INT1_vect_num  65
-#define PORTD_INT1_vect      _VECTOR(65)  /* External Interrupt 1 */
-
-/* PORTA interrupt vectors */
-#define PORTA_INT0_vect_num  66
-#define PORTA_INT0_vect      _VECTOR(66)  /* External Interrupt 0 */
-#define PORTA_INT1_vect_num  67
-#define PORTA_INT1_vect      _VECTOR(67)  /* External Interrupt 1 */
-
-/* ACA interrupt vectors */
-#define ACA_AC0_vect_num  68
-#define ACA_AC0_vect      _VECTOR(68)  /* AC0 Interrupt */
-#define ACA_AC1_vect_num  69
-#define ACA_AC1_vect      _VECTOR(69)  /* AC1 Interrupt */
-#define ACA_ACW_vect_num  70
-#define ACA_ACW_vect      _VECTOR(70)  /* ACW Window Mode Interrupt */
-
-/* ADCA interrupt vectors */
-#define ADCA_CH0_vect_num  71
-#define ADCA_CH0_vect      _VECTOR(71)  /* Interrupt 0 */
-#define ADCA_CH1_vect_num  72
-#define ADCA_CH1_vect      _VECTOR(72)  /* Interrupt 1 */
-#define ADCA_CH2_vect_num  73
-#define ADCA_CH2_vect      _VECTOR(73)  /* Interrupt 2 */
-#define ADCA_CH3_vect_num  74
-#define ADCA_CH3_vect      _VECTOR(74)  /* Interrupt 3 */
-
-/* TCD0 interrupt vectors */
-#define TCD0_OVF_vect_num  77
-#define TCD0_OVF_vect      _VECTOR(77)  /* Overflow Interrupt */
-#define TCD0_ERR_vect_num  78
-#define TCD0_ERR_vect      _VECTOR(78)  /* Error Interrupt */
-#define TCD0_CCA_vect_num  79
-#define TCD0_CCA_vect      _VECTOR(79)  /* Compare or Capture A Interrupt */
-#define TCD0_CCB_vect_num  80
-#define TCD0_CCB_vect      _VECTOR(80)  /* Compare or Capture B Interrupt */
-#define TCD0_CCC_vect_num  81
-#define TCD0_CCC_vect      _VECTOR(81)  /* Compare or Capture C Interrupt */
-#define TCD0_CCD_vect_num  82
-#define TCD0_CCD_vect      _VECTOR(82)  /* Compare or Capture D Interrupt */
-
-/* TCD1 interrupt vectors */
-#define TCD1_OVF_vect_num  83
-#define TCD1_OVF_vect      _VECTOR(83)  /* Overflow Interrupt */
-#define TCD1_ERR_vect_num  84
-#define TCD1_ERR_vect      _VECTOR(84)  /* Error Interrupt */
-#define TCD1_CCA_vect_num  85
-#define TCD1_CCA_vect      _VECTOR(85)  /* Compare or Capture A Interrupt */
-#define TCD1_CCB_vect_num  86
-#define TCD1_CCB_vect      _VECTOR(86)  /* Compare or Capture B Interrupt */
-
-/* SPID interrupt vectors */
-#define SPID_INT_vect_num  87
-#define SPID_INT_vect      _VECTOR(87)  /* SPI Interrupt */
-
-/* USARTD0 interrupt vectors */
-#define USARTD0_RXC_vect_num  88
-#define USARTD0_RXC_vect      _VECTOR(88)  /* Reception Complete Interrupt */
-#define USARTD0_DRE_vect_num  89
-#define USARTD0_DRE_vect      _VECTOR(89)  /* Data Register Empty Interrupt */
-#define USARTD0_TXC_vect_num  90
-#define USARTD0_TXC_vect      _VECTOR(90)  /* Transmission Complete Interrupt */
-
-/* USARTD1 interrupt vectors */
-#define USARTD1_RXC_vect_num  91
-#define USARTD1_RXC_vect      _VECTOR(91)  /* Reception Complete Interrupt */
-#define USARTD1_DRE_vect_num  92
-#define USARTD1_DRE_vect      _VECTOR(92)  /* Data Register Empty Interrupt */
-#define USARTD1_TXC_vect_num  93
-#define USARTD1_TXC_vect      _VECTOR(93)  /* Transmission Complete Interrupt */
-
-/* PORTF interrupt vectors */
-#define PORTF_INT0_vect_num  104
-#define PORTF_INT0_vect      _VECTOR(104)  /* External Interrupt 0 */
-#define PORTF_INT1_vect_num  105
-#define PORTF_INT1_vect      _VECTOR(105)  /* External Interrupt 1 */
-
-/* TCF0 interrupt vectors */
-#define TCF0_OVF_vect_num  108
-#define TCF0_OVF_vect      _VECTOR(108)  /* Overflow Interrupt */
-#define TCF0_ERR_vect_num  109
-#define TCF0_ERR_vect      _VECTOR(109)  /* Error Interrupt */
-#define TCF0_CCA_vect_num  110
-#define TCF0_CCA_vect      _VECTOR(110)  /* Compare or Capture A Interrupt */
-#define TCF0_CCB_vect_num  111
-#define TCF0_CCB_vect      _VECTOR(111)  /* Compare or Capture B Interrupt */
-#define TCF0_CCC_vect_num  112
-#define TCF0_CCC_vect      _VECTOR(112)  /* Compare or Capture C Interrupt */
-#define TCF0_CCD_vect_num  113
-#define TCF0_CCD_vect      _VECTOR(113)  /* Compare or Capture D Interrupt */
-
-/* USARTF0 interrupt vectors */
-#define USARTF0_RXC_vect_num  119
-#define USARTF0_RXC_vect      _VECTOR(119)  /* Reception Complete Interrupt */
-#define USARTF0_DRE_vect_num  120
-#define USARTF0_DRE_vect      _VECTOR(120)  /* Data Register Empty Interrupt */
-#define USARTF0_TXC_vect_num  121
-#define USARTF0_TXC_vect      _VECTOR(121)  /* Transmission Complete Interrupt */
-
-
-#define _VECTOR_SIZE 4 /* Size of individual vector. */
-#define _VECTORS_SIZE (122 * _VECTOR_SIZE)
-
-
-/* ========== Constants ========== */
-
-#define PROGMEM_START     (0x0000)
-#define PROGMEM_SIZE      (270336)
-#define PROGMEM_PAGE_SIZE (512)
-#define PROGMEM_END       (PROGMEM_START + PROGMEM_SIZE - 1)
-
-#define APP_SECTION_START     (0x0000)
-#define APP_SECTION_SIZE      (262144)
-#define APP_SECTION_PAGE_SIZE (512)
-#define APP_SECTION_END       (APP_SECTION_START + APP_SECTION_SIZE - 1)
-
-#define APPTABLE_SECTION_START     (0x3E000)
-#define APPTABLE_SECTION_SIZE      (8192)
-#define APPTABLE_SECTION_PAGE_SIZE (512)
-#define APPTABLE_SECTION_END       (APPTABLE_SECTION_START + APPTABLE_SECTION_SIZE - 1)
-
-#define BOOT_SECTION_START     (0x40000)
-#define BOOT_SECTION_SIZE      (8192)
-#define BOOT_SECTION_PAGE_SIZE (512)
-#define BOOT_SECTION_END       (BOOT_SECTION_START + BOOT_SECTION_SIZE - 1)
-
-#define DATAMEM_START     (0x0000)
-#define DATAMEM_SIZE      (24576)
-#define DATAMEM_PAGE_SIZE (0)
-#define DATAMEM_END       (DATAMEM_START + DATAMEM_SIZE - 1)
-
-#define IO_START     (0x0000)
-#define IO_SIZE      (4096)
-#define IO_PAGE_SIZE (0)
-#define IO_END       (IO_START + IO_SIZE - 1)
-
-#define MAPPED_EEPROM_START     (0x1000)
-#define MAPPED_EEPROM_SIZE      (4096)
-#define MAPPED_EEPROM_PAGE_SIZE (0)
-#define MAPPED_EEPROM_END       (MAPPED_EEPROM_START + MAPPED_EEPROM_SIZE - 1)
-
-#define INTERNAL_SRAM_START     (0x2000)
-#define INTERNAL_SRAM_SIZE      (16384)
-#define INTERNAL_SRAM_PAGE_SIZE (0)
-#define INTERNAL_SRAM_END       (INTERNAL_SRAM_START + INTERNAL_SRAM_SIZE - 1)
-
-#define EEPROM_START     (0x0000)
-#define EEPROM_SIZE      (4096)
-#define EEPROM_PAGE_SIZE (32)
-#define EEPROM_END       (EEPROM_START + EEPROM_SIZE - 1)
-
-#define FUSE_START     (0x0000)
-#define FUSE_SIZE      (6)
-#define FUSE_PAGE_SIZE (0)
-#define FUSE_END       (FUSE_START + FUSE_SIZE - 1)
-
-#define LOCKBIT_START     (0x0000)
-#define LOCKBIT_SIZE      (1)
-#define LOCKBIT_PAGE_SIZE (0)
-#define LOCKBIT_END       (LOCKBIT_START + LOCKBIT_SIZE - 1)
-
-#define SIGNATURES_START     (0x0000)
-#define SIGNATURES_SIZE      (3)
-#define SIGNATURES_PAGE_SIZE (0)
-#define SIGNATURES_END       (SIGNATURES_START + SIGNATURES_SIZE - 1)
-
-#define USER_SIGNATURES_START     (0x0000)
-#define USER_SIGNATURES_SIZE      (512)
-#define USER_SIGNATURES_PAGE_SIZE (0)
-#define USER_SIGNATURES_END       (USER_SIGNATURES_START + USER_SIGNATURES_SIZE - 1)
-
-#define PROD_SIGNATURES_START     (0x0000)
-#define PROD_SIGNATURES_SIZE      (52)
-#define PROD_SIGNATURES_PAGE_SIZE (0)
-#define PROD_SIGNATURES_END       (PROD_SIGNATURES_START + PROD_SIGNATURES_SIZE - 1)
-
-#define FLASHEND     PROGMEM_END
-#define SPM_PAGESIZE PROGMEM_PAGE_SIZE
-#define RAMSTART     INTERNAL_SRAM_START
-#define RAMSIZE      INTERNAL_SRAM_SIZE
-#define RAMEND       INTERNAL_SRAM_END
-#define XRAMSTART    EXTERNAL_SRAM_START
-#define XRAMSIZE     EXTERNAL_SRAM_SIZE
-#define XRAMEND      INTERNAL_SRAM_END
-#define E2END        EEPROM_END
-#define E2PAGESIZE   EEPROM_PAGE_SIZE
-
-
-/* ========== Fuses ========== */
-#define FUSE_MEMORY_SIZE 6
-
-/* Fuse Byte 0 */
-#define FUSE_JTAGUSERID0  (unsigned char)~_BV(0)  /* JTAG User ID Bit 0 */
-#define FUSE_JTAGUSERID1  (unsigned char)~_BV(1)  /* JTAG User ID Bit 1 */
-#define FUSE_JTAGUSERID2  (unsigned char)~_BV(2)  /* JTAG User ID Bit 2 */
-#define FUSE_JTAGUSERID3  (unsigned char)~_BV(3)  /* JTAG User ID Bit 3 */
-#define FUSE_JTAGUSERID4  (unsigned char)~_BV(4)  /* JTAG User ID Bit 4 */
-#define FUSE_JTAGUSERID5  (unsigned char)~_BV(5)  /* JTAG User ID Bit 5 */
-#define FUSE_JTAGUSERID6  (unsigned char)~_BV(6)  /* JTAG User ID Bit 6 */
-#define FUSE_JTAGUSERID7  (unsigned char)~_BV(7)  /* JTAG User ID Bit 7 */
-#define FUSE0_DEFAULT  (0xFF)
-
-/* Fuse Byte 1 */
-#define FUSE_WDP0  (unsigned char)~_BV(0)  /* Watchdog Timeout Period Bit 0 */
-#define FUSE_WDP1  (unsigned char)~_BV(1)  /* Watchdog Timeout Period Bit 1 */
-#define FUSE_WDP2  (unsigned char)~_BV(2)  /* Watchdog Timeout Period Bit 2 */
-#define FUSE_WDP3  (unsigned char)~_BV(3)  /* Watchdog Timeout Period Bit 3 */
-#define FUSE_WDWP0  (unsigned char)~_BV(4)  /* Watchdog Window Timeout Period Bit 0 */
-#define FUSE_WDWP1  (unsigned char)~_BV(5)  /* Watchdog Window Timeout Period Bit 1 */
-#define FUSE_WDWP2  (unsigned char)~_BV(6)  /* Watchdog Window Timeout Period Bit 2 */
-#define FUSE_WDWP3  (unsigned char)~_BV(7)  /* Watchdog Window Timeout Period Bit 3 */
-#define FUSE1_DEFAULT  (0xFF)
-
-/* Fuse Byte 2 */
-#define FUSE_BODPD0  (unsigned char)~_BV(0)  /* BOD Operation in Power-Down Mode Bit 0 */
-#define FUSE_BODPD1  (unsigned char)~_BV(1)  /* BOD Operation in Power-Down Mode Bit 1 */
-#define FUSE_BOOTRST  (unsigned char)~_BV(6)  /* Boot Loader Section Reset Vector */
-#define FUSE_DVSDON  (unsigned char)~_BV(7)  /* Spike Detector Enable */
-#define FUSE2_DEFAULT  (0xFF)
-
-/* Fuse Byte 3 Reserved */
-
-/* Fuse Byte 4 */
-#define FUSE_JTAGEN  (unsigned char)~_BV(0)  /* JTAG Interface Enable */
-#define FUSE_WDLOCK  (unsigned char)~_BV(1)  /* Watchdog Timer Lock */
-#define FUSE_SUT0  (unsigned char)~_BV(2)  /* Start-up Time Bit 0 */
-#define FUSE_SUT1  (unsigned char)~_BV(3)  /* Start-up Time Bit 1 */
-#define FUSE4_DEFAULT  (0xFF)
-
-/* Fuse Byte 5 */
-#define FUSE_BODLVL0  (unsigned char)~_BV(0)  /* Brown Out Detection Voltage Level Bit 0 */
-#define FUSE_BODLVL1  (unsigned char)~_BV(1)  /* Brown Out Detection Voltage Level Bit 1 */
-#define FUSE_BODLVL2  (unsigned char)~_BV(2)  /* Brown Out Detection Voltage Level Bit 2 */
-#define FUSE_EESAVE  (unsigned char)~_BV(3)  /* Preserve EEPROM Through Chip Erase */
-#define FUSE_BODACT0  (unsigned char)~_BV(4)  /* BOD Operation in Active Mode Bit 0 */
-#define FUSE_BODACT1  (unsigned char)~_BV(5)  /* BOD Operation in Active Mode Bit 1 */
-#define FUSE5_DEFAULT  (0xFF)
-
-
-/* ========== Lock Bits ========== */
-#define __LOCK_BITS_EXIST
-#define __BOOT_LOCK_APPLICATION_TABLE_BITS_EXIST
-#define __BOOT_LOCK_APPLICATION_BITS_EXIST
-#define __BOOT_LOCK_BOOT_BITS_EXIST
-
-
-/* ========== Signature ========== */
-#define SIGNATURE_0 0x1E
-#define SIGNATURE_1 0x98
-#define SIGNATURE_2 0x43
-
-
-#endif /* _AVR_ATxmega256A3B_H_ */
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        /* Map logical line numbers to (source file, line number) pairs.
-   Copyright (C) 2001-2013 Free Software Foundation, Inc.
-
-This program is free software; you can redistribute it and/or modify it
-under the terms of the GNU General Public License as published by the
-Free Software Foundation; either version 3, or (at your option) any
-later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; see the file COPYING3.  If not see
-<http://www.gnu.org/licenses/>.
-
- In other words, you are welcome to use, share and improve this program.
- You are forbidden to forbid anyone else to use, share and improve
- what you give them.   Help stamp out software-hoarding!  */
-
-#ifndef LIBCPP_LINE_MAP_H
-#define LIBCPP_LINE_MAP_H
-
-#ifndef GTY
-#define GTY(x) /* nothing */
-#endif
-
-/* Reason for creating a new line map with linemap_add.  LC_ENTER is
-   when including a new file, e.g. a #include directive in C.
-   LC_LEAVE is when reaching a file's end.  LC_RENAME is when a file
-   name or line number changes for neither of the above reasons
-   (e.g. a #line directive in C); LC_RENAME_VERBATIM is like LC_RENAME
-   but a filename of "" is not specially interpreted as standard
-   input. LC_ENTER_MACRO is when a macro expansion is about to start.  */
-enum lc_reason
-{
-  LC_ENTER = 0,
-  LC_LEAVE,
-  LC_RENAME,
-  LC_RENAME_VERBATIM,
-  LC_ENTER_MACRO
-  /* FIXME: add support for stringize and paste.  */
-};
-
-/* The type of line numbers.  */
-typedef unsigned int linenum_type;
-
-/* A logical line/column number, i.e. an "index" into a line_map.  */
-typedef unsigned int source_location;
-
-/* Memory allocation function typedef.  Works like xrealloc.  */
-typedef void *(*line_map_realloc) (void *, size_t);
-
-/* Memory allocator function that returns the actual allocated size,
-   for a given requested allocation.  */
-typedef size_t (*line_map_round_alloc_size_func) (size_t);
-
-/* An ordinary line map encodes physical source locations. Those
-   physical source locations are called "spelling locations".
-   
-   Physical source file TO_FILE at line TO_LINE at column 0 is represented
-   by the logical START_LOCATION.  TO_LINE+L at column C is represented by
-   START_LOCATION+(L*(1<<column_bits))+C, as long as C<(1<<column_bits),
-   and the result_location is less than the next line_map's start_location.
-   (The top line is line 1 and the leftmost column is column 1; line/column 0
-   means "entire file/line" or "unknown line/column" or "not applicable".)
-
-   The highest possible source location is MAX_SOURCE_LOCATION.  */
-struct GTY(()) line_map_ordinary {
-  const char *to_file;
-  linenum_type to_line;
-
-  /* An index into the set that gives the line mapping at whose end
-     the current one was included.  File(s) at the bottom of the
-     include stack have this set to -1.  */
-  int included_from;
-
-  /* SYSP is one for a system header, two for a C system header file
-     that therefore needs to be extern "C" protected in C++, and zero
-     otherwise.  This field isn't really needed now that it's in
-     cpp_buffer.  */
-  unsigned char sysp;
-
-  /* Number of the low-order source_location bits used for a column number.  */
-  unsigned int column_bits : 8;
-};
-
-/* This is the highest possible source location encoded within an
-   ordinary or macro map.  */
-#define MAX_SOURCE_LOCATION 0x7FFFFFFF
-
-struct cpp_hashnode;
-
-/* A macro line map encodes location of tokens coming from a macro
-   expansion.
-   
-   Please note that this struct line_map_macro is a field of struct
-   line_map below, go read the comments of struct line_map below and
-   then come back here.
-   
-   The offset from START_LOCATION is used to index into
-   MACRO_LOCATIONS; this holds the original location of the token.  */
-struct GTY(()) line_map_macro {
-  /* The cpp macro which expansion gave birth to this macro map.  */
-  struct cpp_hashnode * GTY ((nested_ptr (union tree_node,
-				   "%h ? CPP_HASHNODE (GCC_IDENT_TO_HT_IDENT (%h)) : NULL",
-				   "%h ? HT_IDENT_TO_GCC_IDENT (HT_NODE (%h)) : NULL")))
-    macro;
-
-  /* The number of tokens inside the replacement-list of MACRO.  */
-  unsigned int n_tokens;
-
-  /* This array of location is actually an array of pairs of
-     locations. The elements inside it thus look like:
-
-           x0,y0, x1,y1, x2,y2, ...., xn,yn.
-
-     where n == n_tokens;
-
-     Remember that these xI,yI are collected when libcpp is about to
-     expand a given macro.
-
-     yI is the location in the macro definition, either of the token
-     itself or of a macro parameter that it replaces.
-
-     Imagine this:
-
-	#define PLUS(A, B) A + B  <--- #1
-
-	int a = PLUS (1,2); <--- #2
-
-     There is a macro map for the expansion of PLUS in #2.  PLUS is
-     expanded into its expansion-list.  The expansion-list is the
-     replacement-list of PLUS where the macro parameters are replaced
-     with their arguments.  So the replacement-list of PLUS is made of
-     the tokens:
-
-        A, +, B
-
-     and the expansion-list is made of the tokens:
-
-        1, +, 2
-
-     Let's consider the case of token "+".  Its y1 [yI for I == 1] is
-     its spelling location in #1.
-
-     y0 (thus for token "1") is the spelling location of A in #1.
-
-     And y2 (of token "2") is the spelling location of B in #1.
-
-     When the token is /not/ an argument for a macro, xI is the same
-     location as yI.  Otherwise, xI is the location of the token
-     outside this macro expansion.  If this macro was expanded from
-     another macro expansion, xI is a virtual location representing
-     the token in that macro expansion; otherwise, it is the spelling
-     location of the token.
-
-     Note that a virtual location is a location returned by
-     linemap_add_macro_token.  It encodes the relevant locations (x,y
-     pairs) of that token across the macro expansions from which it
-     (the token) might come from.
-
-     In the example above x1 (for token "+") is going to be the same
-     as y1.  x0 is the spelling location for the argument token "1",
-     and x2 is the spelling location for the argument token "2".  */
-  source_location * GTY((atomic)) macro_locations;
-
-  /* This is the location of the expansion point of the current macro
-     map.  It's the location of the macro name.  That location is held
-     by the map that was current right before the current one. It
-     could have been either a macro or an ordinary map, depending on
-     if we are in a nested expansion context not.  */
-  source_location expansion;
-};
-
-/* A line_map encodes a sequence of locations.
-   There are two kinds of maps. Ordinary maps and macro expansion
-   maps, a.k.a macro maps.
-
-   A macro map encodes source locations of tokens that are part of a
-   macro replacement-list, at a macro expansion point. E.g, in:
-
-            #define PLUS(A,B) A + B
-
-   No macro map is going to be created there, because we are not at a
-   macro expansion point. We are at a macro /definition/ point. So the
-   locations of the tokens of the macro replacement-list (i.e, A + B)
-   will be locations in an ordinary map, not a macro map.
-
-   On the other hand, if we later do:
-
-        int a = PLUS (1,2);
-
-   The invocation of PLUS here is a macro expansion. So we are at a
-   macro expansion point. The preprocessor expands PLUS (1,2) and
-   replaces it with the tokens of its replacement-list: 1 + 2. A macro
-   map is going to be created to hold (or rather to map, haha ...) the
-   locations of the tokens 1, + and 2. The macro map also records the
-   location of the expansion point of PLUS. That location is mapped in
-   the map that is active right before the location of the invocation
-   of PLUS.  */
-struct GTY(()) line_map {
-  source_location start_location;
-
-  /* The reason for creation of this line map.  */
-  ENUM_BITFIELD (lc_reason) reason : CHAR_BIT;
-
-  union map_u {
-    struct line_map_ordinary GTY((tag ("0"))) ordinary;
-    struct line_map_macro GTY((tag ("1"))) macro;
-  } GTY((desc ("%1.reason == LC_ENTER_MACRO"))) d;
-};
-
-#define MAP_START_LOCATION(MAP) (MAP)->start_location
-
-#define ORDINARY_MAP_FILE_NAME(MAP) \
-  linemap_check_ordinary (MAP)->d.ordinary.to_file
-
-#define ORDINARY_MAP_STARTING_LINE_NUMBER(MAP) \
-  linemap_check_ordinary (MAP)->d.ordinary.to_line
-
-#define ORDINARY_MAP_INCLUDER_FILE_INDEX(MAP) \
-  linemap_check_ordinary (MAP)->d.ordinary.included_from
-
-#define ORDINARY_MAP_IN_SYSTEM_HEADER_P(MAP) \
-  linemap_check_ordinary (MAP)->d.ordinary.sysp
-
-#define ORDINARY_MAP_NUMBER_OF_COLUMN_BITS(MAP) \
-  linemap_check_ordinary (MAP)->d.ordinary.column_bits
-
-#define MACRO_MAP_MACRO(MAP) (MAP)->d.macro.macro
-
-#define MACRO_MAP_NUM_MACRO_TOKENS(MAP) (MAP)->d.macro.n_tokens
-
-#define MACRO_MAP_LOCATIONS(MAP) (MAP)->d.macro.macro_locations
-
-#define MACRO_MAP_EXPANSION_POINT_LOCATION(MAP) (MAP)->d.macro.expansion
-
-/* The abstraction of a set of location maps. There can be several
-   types of location maps. This abstraction contains the attributes
-   that are independent from the type of the map.  */
-struct GTY(()) maps_info {
-  /* This array contains the different line maps.
-     A line map is created for the following events:
-       - when a new preprocessing unit start. 
-       - when a preprocessing unit ends.
-       - when a macro expansion occurs.  */
-  struct line_map * GTY ((length ("%h.used"))) maps;
-
-  /* The total number of allocated maps.  */
-  unsigned int allocated;
-
-  /* The number of elements used in maps. This number is smaller
-     or equal to ALLOCATED.  */
-  unsigned int used;
-
-  unsigned int cache;
-};
-
-/* Data structure to associate an arbitrary data to a source location.  */
-struct GTY(()) location_adhoc_data {
-  source_location locus;
-  void * GTY((skip)) data;
-};
-
-struct htab;
-
-/* The following data structure encodes a location with some adhoc data
-   and maps it to a new unsigned integer (called an adhoc location)
-   that replaces the original location to represent the mapping.
-
-   The new adhoc_loc uses the highest bit as the enabling bit, i.e. if the
-   highest bit is 1, then the number is adhoc_loc. Otherwise, it serves as
-   the original location. Once identified as the adhoc_loc, the lower 31
-   bits of the integer is used to index the location_adhoc_data array,
-   in which the locus and associated data is stored.  */
-
-struct GTY(()) location_adhoc_data_map {
-  struct htab * GTY((skip)) htab;
-  source_location curr_loc;
-  unsigned int allocated;
-  struct location_adhoc_data GTY((length ("%h.allocated"))) *data;
-};
-
-/* A set of chronological line_map structures.  */
-struct GTY(()) line_maps {
-  
-  struct maps_info info_ordinary;
-
-  struct maps_info info_macro;
-
-  /* Depth of the include stack, including the current file.  */
-  unsigned int depth;
-
-  /* If true, prints an include trace a la -H.  */
-  bool trace_includes;
-
-  /* Highest source_location "given out".  */
-  source_location highest_location;
-
-  /* Start of line of highest source_location "given out".  */
-  source_location highest_line;
-
-  /* The maximum column number we can quickly allocate.  Higher numbers
-     may require allocating a new line_map.  */
-  unsigned int max_column_hint;
-
-  /* If non-null, the allocator to use when resizing 'maps'.  If null,
-     xrealloc is used.  */
-  line_map_realloc reallocator;
-
-  /* The allocators' function used to know the actual size it
-     allocated, for a certain allocation size requested.  */
-  line_map_round_alloc_size_func round_alloc_size;
-
-  struct location_adhoc_data_map location_adhoc_data_map;
-};
-
-/* Returns the pointer to the memory region where information about
-   maps are stored in the line table SET. MACRO_MAP_P is a flag
-   telling if we want macro or ordinary maps.  */
-#define LINEMAPS_MAP_INFO(SET, MACRO_MAP_P)				\
-  ((MACRO_MAP_P)							\
-   ? &((SET)->info_macro)						\
-   : &((SET)->info_ordinary))
-
-/* Returns the pointer to the memory region where maps are stored in
-   the line table SET. MAP_KIND shall be TRUE if we are interested in
-   macro maps false otherwise.  */
-#define LINEMAPS_MAPS(SET, MAP_KIND) \
-  (LINEMAPS_MAP_INFO (SET, MAP_KIND))->maps
-
-/* Returns the number of allocated maps so far. MAP_KIND shall be TRUE
-   if we are interested in macro maps, FALSE otherwise.  */
-#define LINEMAPS_ALLOCATED(SET, MAP_KIND) \
-  (LINEMAPS_MAP_INFO (SET, MAP_KIND))->allocated
-
-/* Returns the number of used maps so far. MAP_KIND shall be TRUE if
-   we are interested in macro maps, FALSE otherwise.*/
-#define LINEMAPS_USED(SET, MAP_KIND) \
-  (LINEMAPS_MAP_INFO (SET, MAP_KIND))->used
-
-/* Returns the index of the last map that was looked up with
-   linemap_lookup. MAP_KIND shall be TRUE if we are interested in
-   macro maps, FALSE otherwise.  */
-#define LINEMAPS_CACHE(SET, MAP_KIND) \
-  (LINEMAPS_MAP_INFO (SET, MAP_KIND))->cache
-
-/* Return the map at a given index.  */
-#define LINEMAPS_MAP_AT(SET, MAP_KIND, INDEX)	\
-  (&((LINEMAPS_MAPS (SET, MAP_KIND))[(INDEX)]))
-
-/* Returns the last map used in the line table SET. MAP_KIND
-   shall be TRUE if we are interested in macro maps, FALSE
-   otherwise.*/
-#define LINEMAPS_LAST_MAP(SET, MAP_KIND) \
-  LINEMAPS_MAP_AT (SET, MAP_KIND, (LINEMAPS_USED (SET, MAP_KIND) - 1))
-
-/* Returns the last map that was allocated in the line table SET.
-   MAP_KIND shall be TRUE if we are interested in macro maps, FALSE
-   otherwise.*/
-#define LINEMAPS_LAST_ALLOCATED_MAP(SET, MAP_KIND) \
-  LINEMAPS_MAP_AT (SET, MAP_KIND, LINEMAPS_ALLOCATED (SET, MAP_KIND) - 1)
-
-/* Returns a pointer to the memory region where ordinary maps are
-   allocated in the line table SET.  */
-#define LINEMAPS_ORDINARY_MAPS(SET) \
-  LINEMAPS_MAPS (SET, false)
-
-/* Returns the INDEXth ordinary map.  */
-#define LINEMAPS_ORDINARY_MAP_AT(SET, INDEX)	\
-  LINEMAPS_MAP_AT (SET, false, INDEX)
-
-/* Return the number of ordinary maps allocated in the line table
-   SET.  */
-#define LINEMAPS_ORDINARY_ALLOCATED(SET) \
-  LINEMAPS_ALLOCATED(SET, false)
-
-/* Return the number of ordinary maps used in the line table SET.  */
-#define LINEMAPS_ORDINARY_USED(SET) \
-  LINEMAPS_USED(SET, false)
-
-/* Return the index of the last ordinary map that was looked up with
-   linemap_lookup.  */
-#define LINEMAPS_ORDINARY_CACHE(SET) \
-  LINEMAPS_CACHE(SET, false)
-
-/* Returns a pointer to the last ordinary map used in the line table
-   SET.  */
-#define LINEMAPS_LAST_ORDINARY_MAP(SET) \
-  LINEMAPS_LAST_MAP(SET, false)
-
-/* Returns a pointer to the last ordinary map allocated the line table
-   SET.  */
-#define LINEMAPS_LAST_ALLOCATED_ORDINARY_MAP(SET) \
-  LINEMAPS_LAST_ALLOCATED_MAP(SET, false)
-
-/* Returns a pointer to the beginning of the region where macro maps
-   are allcoated.  */
-#define LINEMAPS_MACRO_MAPS(SET) \
-  LINEMAPS_MAPS(SET, true)
-
-/* Returns the INDEXth macro map.  */
-#define LINEMAPS_MACRO_MAP_AT(SET, INDEX)	\
-  LINEMAPS_MAP_AT (SET, true, INDEX)
-
-/* Returns the number of macro maps that were allocated in the line
-   table SET.  */
-#define LINEMAPS_MACRO_ALLOCATED(SET) \
-  LINEMAPS_ALLOCATED(SET, true)
-
-/* Returns the number of macro maps used in the line table SET.  */
-#define LINEMAPS_MACRO_USED(SET) \
-  LINEMAPS_USED(SET, true)
-
-/* Returns the index of the last macro map looked up with
-   linemap_lookup.  */
-#define LINEMAPS_MACRO_CACHE(SET) \
-  LINEMAPS_CACHE(SET, true)
-
-/* Returns the lowest location [of a token resulting from macro
-   expansion] encoded in this line table.  */
-#define LINEMAPS_MACRO_LOWEST_LOCATION(SET)			\
-  (LINEMAPS_MACRO_USED (set)					\
-   ? MAP_START_LOCATION (LINEMAPS_LAST_MACRO_MAP (set))		\
-   : MAX_SOURCE_LOCATION)
-
-/* Returns the last macro map used in the line table SET.  */
-#define LINEMAPS_LAST_MACRO_MAP(SET) \
-  LINEMAPS_LAST_MAP (SET, true)
-
-/* Returns the last macro map allocated in the line table SET.  */
-#define LINEMAPS_LAST_ALLOCATED_MACRO_MAP(SET) \
-  LINEMAPS_LAST_ALLOCATED_MAP (SET, true)
-
-extern void location_adhoc_data_fini (struct line_maps *);
-extern source_location get_combined_adhoc_loc (struct line_maps *,
-					       source_location, void *);
-extern void *get_data_from_adhoc_loc (struct line_maps *, source_location);
-extern source_location get_location_from_adhoc_loc (struct line_maps *,
-						    source_location);
-
-#define IS_ADHOC_LOC(LOC) (((LOC) & MAX_SOURCE_LOCATION) != (LOC))
-#define COMBINE_LOCATION_DATA(SET, LOC, BLOCK) \
-  get_combined_adhoc_loc ((SET), (LOC), (BLOCK))
-
-extern void rebuild_location_adhoc_htab (struct line_maps *);
-
-/* Initialize a line map set.  */
-extern void linemap_init (struct line_maps *);
-
-/* Check for and warn about line_maps entered but not exited.  */
-
-extern void linemap_check_files_exited (struct line_maps *);
-
-/* Return a source_location for the start (i.e. column==0) of
-   (physical) line TO_LINE in the current source file (as in the
-   most recent linemap_add).   MAX_COLUMN_HINT is the highest column
-   number we expect to use in this line (but it does not change
-   the highest_location).  */
-
-extern source_location linemap_line_start
-(struct line_maps *set, linenum_type to_line,  unsigned int max_column_hint);
-
-/* Add a mapping of logical source line to physical source file and
-   line number. This function creates an "ordinary map", which is a
-   map that records locations of tokens that are not part of macro
-   replacement-lists present at a macro expansion point.
-
-   The text pointed to by TO_FILE must have a lifetime
-   at least as long as the lifetime of SET.  An empty
-   TO_FILE means standard input.  If reason is LC_LEAVE, and
-   TO_FILE is NULL, then TO_FILE, TO_LINE and SYSP are given their
-   natural values considering the file we are returning to.
-
-   A call to this function can relocate the previous set of
-   maps, so any stored line_map pointers should not be used.  */
-extern const struct line_map *linemap_add
-  (struct line_maps *, enum lc_reason, unsigned int sysp,
-   const char *to_file, linenum_type to_line);
-
-/* Given a logical source location, returns the map which the
-   corresponding (source file, line, column) triplet can be deduced
-   from. Since the set is built chronologically, the logical lines are
-   monotonic increasing, and so the list is sorted and we can use a
-   binary search. If no line map have been allocated yet, this
-   function returns NULL.  */
-extern const struct line_map *linemap_lookup
-  (struct line_maps *, source_location);
-
-/* Returns TRUE if the line table set tracks token locations across
-   macro expansion, FALSE otherwise.  */
-bool linemap_tracks_macro_expansion_locs_p (struct line_maps *);
-
-/* Return TRUE if MAP encodes locations coming from a macro
-   replacement-list at macro expansion point.  */
-bool linemap_macro_expansion_map_p (const struct line_map *);
-
-/* Return the name of the macro associated to MACRO_MAP.  */
-const char* linemap_map_get_macro_name (const struct line_map*);
-
-/* Return a positive value if LOCATION is the locus of a token that is
-   located in a system header, O otherwise. It returns 1 if LOCATION
-   is the locus of a token that is located in a system header, and 2
-   if LOCATION is the locus of a token located in a C system header
-   that therefore needs to be extern "C" protected in C++.
-
-   Note that this function returns 1 if LOCATION belongs to a token
-   that is part of a macro replacement-list defined in a system
-   header, but expanded in a non-system file.  */
-int linemap_location_in_system_header_p (struct line_maps *,
-					 source_location);
-
-/* Return TRUE if LOCATION is a source code location of a token coming
-   from a macro replacement-list at a macro expansion point, FALSE
-   otherwise.  */
-bool linemap_location_from_macro_expansion_p (struct line_maps *,
-					      source_location);
-
-/* source_location values from 0 to RESERVED_LOCATION_COUNT-1 will
-   be reserved for libcpp user as special values, no token from libcpp
-   will contain any of those locations.  */
-#define RESERVED_LOCATION_COUNT	2
-
-/* Converts a map and a source_location to source line.  */
-#define SOURCE_LINE(MAP, LOC)						\
-  (((((LOC) - linemap_check_ordinary (MAP)->start_location)		\
-     >> (MAP)->d.ordinary.column_bits) + (MAP)->d.ordinary.to_line))
-
-/* Convert a map and source_location to source column number.  */
-#define SOURCE_COLUMN(MAP, LOC)						\
-  ((((LOC) - linemap_check_ordinary (MAP)->start_location)		\
-    & ((1 << (MAP)->d.ordinary.column_bits) - 1)))
-
-/* Returns the last source line number within an ordinary map.  This
-   is the (last) line of the #include, or other directive, that caused
-   a map change.  */
-#define LAST_SOURCE_LINE(MAP) \
-  SOURCE_LINE (MAP, LAST_SOURCE_LINE_LOCATION (MAP))
-
-/* Return the last column number within an ordinary map.  */
-#define LAST_SOURCE_COLUMN(MAP) \
-  SOURCE_COLUMN (MAP, LAST_SOURCE_LINE_LOCATION (MAP))
-
-/* Return the location of the last source line within an ordinary
-   map.  */
-#define LAST_SOURCE_LINE_LOCATION(MAP)					\
-  ((((linemap_check_ordinary (MAP)[1].start_location - 1		\
-      - (MAP)->start_location)						\
-     & ~((1 << (MAP)->d.ordinary.column_bits) - 1))			\
-    + (MAP)->start_location))
-
-/* Returns the map a given map was included from, or NULL if the map
-   belongs to the main file, i.e, a file that wasn't included by
-   another one.  */
-#define INCLUDED_FROM(SET, MAP)						\
-  ((linemap_check_ordinary (MAP)->d.ordinary.included_from == -1)	\
-   ? NULL								\
-   : (&LINEMAPS_ORDINARY_MAPS (SET)[(MAP)->d.ordinary.included_from]))
-
-/* Nonzero if the map is at the bottom of the include stack.  */
-#define MAIN_FILE_P(MAP)						\
-  ((linemap_check_ordinary (MAP)->d.ordinary.included_from < 0))
-
-#if defined ENABLE_CHECKING && (GCC_VERSION >= 2007)
-
-/* Assertion macro to be used in line-map code.  */
-#define linemap_assert(EXPR)			\
-  do {						\
-    if (! (EXPR))				\
-      abort ();					\
-  } while (0)
-
-/* Assert that MAP encodes locations of tokens that are not part of
-   the replacement-list of a macro expansion.  */
-#define linemap_check_ordinary(LINE_MAP) __extension__		\
-  ({linemap_assert (!linemap_macro_expansion_map_p (LINE_MAP)); \
-    (LINE_MAP);})
-#else
-#define linemap_assert(EXPR)
-#define linemap_check_ordinary(LINE_MAP) (LINE_MAP)
-#endif
-
-/* Encode and return a source_location from a column number. The
-   source line considered is the last source line used to call
-   linemap_line_start, i.e, the last source line which a location was
-   encoded from.  */
-extern source_location
-linemap_position_for_column (struct line_maps *, unsigned int);
-
-/* Encode and return a source location from a given line and
-   column.  */
-source_location linemap_position_for_line_and_column (struct line_map *,
-						      linenum_type,
-						      unsigned int);
-/* Return the file this map is for.  */
-#define LINEMAP_FILE(MAP)					\
-  (linemap_check_ordinary (MAP)->d.ordinary.to_file)
-
-/* Return the line number this map started encoding location from.  */
-#define LINEMAP_LINE(MAP)					\
-  (linemap_check_ordinary (MAP)->d.ordinary.to_line)
-
-/* Return a positive value if map encodes locations from a system
-   header, 0 otherwise. Returns 1
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:docname="user-home.svg"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:version="0.32"
+   id="svg7217"
+   height="96"
+   width="96"
+   inkscape:export-filename="folder.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs7219">
+    <linearGradient
+       id="linearGradient10176"
+       gradientUnits="userSpaceOnUse"
+       x1="71.999496"
+       y1="14.2578"
+       x2="71.999496"
+       y2="19.9583"
+       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)">
+      <stop
+         offset="0.00445589"
+         style="stop-color:#eaeaea;stop-opacity:0;"
+         id="stop10178" />
+      <stop
+         id="stop10180"
+         style="stop-color:#ffffff;stop-opacity:0.52941179;"
+         offset="0.46138024" />
+      <stop
+         offset="1"
+         style="stop-color:#f5f5f5;stop-opacity:0"
+         id="stop10182" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)"
+       y2="19.9583"
+       x2="71.999496"
+       y1="14.2578"
+       x1="71.999496"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient9101">
+      <stop
+         id="stop9103"
+         style="stop-color:#707c8c;stop-opacity:0;"
+         offset="0.25" />
+      <stop
+         id="stop9105"
+         style="stop-color:#707c8c;stop-opacity:1;"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5060">
+      <stop
+         style="stop-color:black;stop-opacity:1;"
+         offset="0"
+         id="stop5062" />
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="1"
+         id="stop5064" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5048">
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="0"
+         id="stop5050" />
+      <stop
+         id="stop5056"
+         offset="0.5"
+         style="stop-color:black;stop-opacity:1;" />
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="1"
+         id="stop5052" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient9073-9">
+      <stop
+         id="stop9075-9"
+         offset="0"
+         style="stop-color:#d0e0f8;stop-opacity:1" />
+      <stop
+         id="stop9077-5"
+         offset="1"
+         style="stop-color:#889cb8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient9087-5">
+      <stop
+         style="stop-color:#889cb8;stop-opacity:1"
+         offset="0"
+         id="stop9089-5" />
+      <stop
+         style="stop-color:#707c8c;stop-opacity:1"
+         offset="1"
+         id="stop9091-1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4064-7">
+      <stop
+         style="stop-color:#889cb8;stop-opacity:1;"
+         offset="0"
+         id="stop4066-4" />
+      <stop
+         style="stop-color:#889cb8;stop-opacity:0.50196081;"
+         offset="1"
+         id="stop4068-8" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4054-7">
+      <stop
+         style="stop-color:#707c8c;stop-opacity:1;"
+         offset="0"
+         id="stop4056-0" />
+      <stop
+         style="stop-color:#707c8c;stop-opacity:0.50196081;"
+         offset="1"
+         id="stop4058-9" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9101"
+       id="linearGradient3227"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.75086228,0,0,0.3333332,-6.0605797,-28.166666)"
+       x1="71.999496"
+       y1="14.2578"
+       x2="71.999496"
+       y2="19.9583" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4064-7"
+       id="linearGradient3230"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,2,-94,-48)"
+       x1="71"
+       y1="8"
+       x2="71"
+       y2="41.5" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4054-7"
+       id="linearGradient3232"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,2,-94,-48)"
+       x1="71"
+       y1="8"
+       x2="71"
+       y2="41.5" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5060"
+       id="radialGradient3241"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.125709,0,0,0.0864706,93.410098,-10.70427)"
+       cx="605.71429"
+       cy="486.64789"
+       fx="605.71429"
+       fy="486.64789"
+       r="117.14286" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5060"
+       id="radialGradient3244"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.125709,0,0,0.0864706,2.5899204,-10.70427)"
+       cx="605.71429"
+       cy="486.64789"
+       fx="605.71429"
+       fy="486.64789"
+       r="117.14286" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5048"
+       id="linearGradient3247"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.125709,0,0,0.0864706,2.5651808,-10.70427)"
+       x1="302.85715"
+       y1="366.64789"
+       x2="302.85715"
+       y2="609.50507" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10176"
+       id="linearGradient3256"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.9204022,0,0,1.885618,-11.468937,-87.058428)"
+       x1="7.2379346"
+       y1="36.005047"
+       x2="122.17093"
+       y2="36.005047" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9073-9"
+       id="linearGradient3259"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7031318,0,0,0.7105376,-69.874472,-254.68002)"
+       x1="167.64111"
+       y1="328.87747"
+       x2="167.64111"
+       y2="407.69193" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9087-5"
+       id="linearGradient3261"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,2,-365.99542,-54)"
+       x1="206.99738"
+       y1="16.499895"
+       x2="206.99738"
+       y2="44.50021" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3291"
+       id="radialGradient3606"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.197802,0,92.82166)"
+       cx="63.912209"
+       cy="115.70919"
+       fx="63.912209"
+       fy="115.7093"
+       r="63.912209" />
+    <linearGradient
+       id="linearGradient3291">
+      <stop
+         style="stop-color:black;stop-opacity:1"
+         offset="0"
+         id="stop3293" />
+      <stop
+         style="stop-color:black;stop-opacity:0"
+         offset="1"
+         id="stop3295" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#XMLID_2_"
+       id="linearGradient3608"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       x1="15.5"
+       y1="-28.5"
+       x2="111.5"
+       y2="-28.5" />
+    <linearGradient
+       id="XMLID_2_"
+       gradientUnits="userSpaceOnUse"
+       x1="15.5"
+       y1="-28.5"
+       x2="111.5"
+       y2="-28.5">
+      <stop
+         id="stop3703"
+         style="stop-color:#4e4e4a;stop-opacity:1;"
+         offset="0.04702916" />
+      <stop
+         offset="0.19629943"
+         style="stop-color:#8c8f89;stop-opacity:1;"
+         id="stop10" />
+      <stop
+         offset="0.64499998"
+         style="stop-color:#a5a7a3;stop-opacity:1;"
+         id="stop12" />
+      <stop
+         offset="1"
+         style="stop-color:#53504b;stop-opacity:1;"
+         id="stop14" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#rect20638_1_"
+       id="linearGradient3610"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       x1="98.5"
+       y1="-65.5"
+       x2="90.5"
+       y2="-57.5" />
+    <linearGradient
+       id="rect20638_1_"
+       gradientUnits="userSpaceOnUse"
+       x1="98.5"
+       y1="-65.5"
+       x2="90.5"
+       y2="-57.5">
+      <stop
+         offset="0"
+         style="stop-color:#FFFFFF"
+         id="stop19" />
+      <stop
+         offset="0.1304"
+         style="stop-color:#F6F6F5"
+         id="stop21" />
+      <stop
+         offset="0.8343"
+         style="stop-color:#888A85"
+         id="stop23" />
+      <stop
+         offset="0.9172"
+         style="stop-color:#555753"
+         id="stop25" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#rect20638_5_"
+       id="linearGradient3612"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.62499976,0,0,0.15624994,-34.437477,32.078126)"
+       x1="103"
+       y1="-63.772499"
+       x2="103"
+       y2="-58.681499" />
+    <linearGradient
+       id="rect20638_5_"
+       gradientUnits="userSpaceOnUse"
+       x1="103"
+       y1="-63.772499"
+       x2="103"
+       y2="-58.681499">
+      <stop
+         offset="0"
+         style="stop-color:#BABDB6"
+         id="stop29" />
+      <stop
+         offset="1"
+         style="stop-color:#888A85"
+         id="stop31" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#rect20638_6_"
+       id="linearGradient3614"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.62499976,0,0,0.15624994,-26.93748,32.078126)"
+       x1="88"
+       y1="-61.227501"
+       x2="88"
+       y2="-66.318497" />
+    <linearGradient
+       id="rect20638_6_"
+       gradientUnits="userSpaceOnUse"
+       x1="88"
+       y1="-61.227501"
+       x2="88"
+       y2="-66.318497">
+      <stop
+         offset="0.1304"
+         style="stop-color:#888A85"
+         id="stop35" />
+      <stop
+         offset="1"
+         style="stop-color:#888A85"
+         id="stop37" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#rect20638_7_"
+       id="linearGradient3616"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       x1="103.5"
+       y1="-74.5"
+       x2="87.5"
+       y2="-74.5" />
+    <linearGradient
+       id="rect20638_7_"
+       gradientUnits="userSpaceOnUse"
+       x1="103.5"
+       y1="-74.5"
+       x2="87.5"
+       y2="-74.5">
+      <stop
+         offset="0"
+         style="stop-color:#555753"
+         id="stop41" />
+      <stop
+         offset="1"
+         style="stop-color:#2E3436"
+         id="stop43" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10239"
+       id="linearGradient3618"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.14627654,0,0,2.499999,14.71144,-4.2499848)"
+       x1="63.5005"
+       y1="15.8428"
+       x2="63.5005"
+       y2="6.9485002" />
+    <linearGradient
+       y2="6.9485002"
+       x2="63.5005"
+       y1="15.8428"
+       x1="63.5005"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient10239">
+      <stop
+         id="stop10241"
+         style="stop-color:#FFFFFF"
+         offset="0.2" />
+      <stop
+         id="stop10243"
+         style="stop-color:#daddde;stop-opacity:1;"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#rect20683_1_"
+       id="linearGradient3620"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.19762492,0,0,-0.14435932,-49.031347,-36.82866)"
+       x1="369.54489"
+       y1="-491.397"
+       x2="369.54489"
+       y2="-426.69751" />
+    <linearGradient
+       id="rect20683_1_"
+       gradientUnits="userSpaceOnUse"
+       x1="369.54489"
+       y1="-491.397"
+       x2="369.54489"
+       y2="-426.69751"
+       gradientTransform="matrix(1.2648,0,0,-0.9239,-403.9008,-441.0036)">
+      <stop
+         offset="0"
+         style="stop-color:#BF5E00"
+         id="stop163" />
+      <stop
+         offset="0.2959"
+         style="stop-color:#DB6A00"
+         id="stop165" />
+      <stop
+         offset="0.5562"
+         style="stop-color:#803F00"
+         id="stop167" />
+    </linearGradient>
+    <filter
+       color-interpolation-filters="sRGB"
+       id="AI_Sfocatura_1">
+      <feGaussianBlur
+         stdDeviation="1"
+         id="feGaussianBlur5" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#XMLID_19_"
+       id="linearGradient3622"
+       gradientUnits="userSpaceOnUse"
+       x1="51.168499"
+       y1="-30.392599"
+       x2="84.261703"
+       y2="33.725601" />
+    <linearGradient
+       id="XMLID_19_"
+       gradientUnits="userSpaceOnUse"
+       x1="51.168499"
+       y1="-30.392599"
+       x2="84.261703"
+       y2="33.725601">
+      <stop
+         offset="0.1538"
+         style="stop-color:#B3925D"
+         id="stop175" />
+      <stop
+         offset="1"
+         style="stop-color:#8F6B32"
+         id="stop177" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3291"
+       id="linearGradient3624"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.14705877,0,0,0.15624994,14.661768,32.078126)"
+       x1="67.742142"
+       y1="15.5"
+       x2="67.742142"
+       y2="11.484406" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#XMLID_23_"
+       id="linearGradient3626"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.156254,17.000007)"
+       x1="61.727921"
+       y1="108"
+       x2="61.97398"
+       y2="114.65165" />
+    <radialGradient
+       id="XMLID_23_"
+       cx="62.5"
+       cy="17"
+       r="10.0561"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         style="stop-color:#004D00"
+         id="stop207" />
+      <stop
+         offset="0.40853259"
+         style="stop-color:#008C00"
+         id="stop209" />
+    </radialGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4534"
+       id="linearGradient3628"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       x1="63.5005"
+       y1="19.5"
+       x2="63.5005"
+       y2="15.5" />
+    <linearGradient
+       id="linearGradient4534">
+      <stop
+         id="stop4536"
+         offset="0"
+         style="stop-color:black;stop-opacity:1" />
+      <stop
+         style="stop-color:#909090;stop-opacity:1;"
+         offset="0.72097087"
+         id="stop4540" />
+      <stop
+         id="stop4538"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4534"
+       id="linearGradient3630"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       x1="63.5005"
+       y1="23.5"
+       x2="63.5005"
+       y2="19.5" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13674"
+       id="linearGradient3632"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.13020828,0,0,0.15624994,15.210941,32.078126)"
+       x1="31.5"
+       y1="-22.167"
+       x2="31.5"
+       y2="19.833" />
+    <linearGradient
+       y2="19.833"
+       x2="95.5"
+       y1="-22.167"
+       x1="95.5"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient13674">
+      <stop
+         id="stop13676"
+         style="stop-color:#9c773f;stop-opacity:1;"
+         offset="0.0059" />
+      <stop
+         id="stop13680"
+         style="stop-color:#8c6b3b;stop-opacity:1;"
+         offset="1" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#radialGradient14444"
+       id="radialGradient3634"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.10525777,0,0,0.14204682,15.690039,32.111017)"
+       cx="34.463402"
+       cy="-3.3936"
+       r="20.350599" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.8982,0,0,0.9091,0.5883,0.2105)"
+       r="20.350599"
+       cy="-3.3936"
+       cx="34.463402"
+       id="radialGradient14444">
+      <stop
+         id="stop14446"
+         style="stop-color:#BFD9FF"
+         offset="0" />
+      <stop
+         id="stop14448"
+         style="stop-color:#FFFFFF"
+         offset="1" />
+    </radialGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13674"
+       id="linearGradient3636"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.13020828,0,0,0.15624994,16.252607,32.078126)"
+       x1="95.5"
+       y1="-22.167"
+       x2="95.5"
+       y2="19.833" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#radialGradient14444"
+       id="radialGradient3638"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.10525777,0,0,0.14204682,17.502893,32.111017)"
+       cx="106.3066"
+       cy="-3.3936"
+       r="20.3496" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3291"
+       id="linearGradient3640"
+       gradientUnits="userSpaceOnUse"
+       x1="57.5"
+       y1="-4.5"
+       x2="57.5"
+       y2="0.87599993" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#XMLID_37_"
+       id="linearGradient3642"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7071,-0.7071,0.7071,0.7071,18.4979,39.9256)"
+       x1="55.578098"
+       y1="-2.4209001"
+       x2="59.578098"
+       y2="-2.4209001" />
+    <linearGradient
+       id="XMLID_37_"
+       gradientUnits="userSpaceOnUse"
+       x1="55.578098"
+       y1="-2.4209001"
+       x2="59.578098"
+       y2="-2.4209001"
+       gradientTransform="matrix(0.7071,-0.7071,0.7071,0.7071,18.4979,39.9256)">
+      <stop
+         offset="0"
+         style="stop-color:#E3AD00"
+         id="stop349" />
+      <stop
+         offset="0.7278"
+         style="stop-color:#FFEA00"
+         id="stop351" />
+      <stop
+         offset="1"
+         style="stop-color:#BA7C00"
+         id="stop353" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#XMLID_38_"
+       id="radialGradient3644"
+       gradientUnits="userSpaceOnUse"
+       cx="57.5"
+       cy="-2.5"
+       fx="57.5"
+       fy="-1"
+       r="2" />
+    <radialGradient
+       id="XMLID_38_"
+       cx="57.5"
+       cy="-2.5"
+       r="2"
+       fx="57.5"
+       fy="-1"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         style="stop-color:#E3AD00"
+         id="stop358" />
+      <stop
+         offset="0.7278"
+         style="stop-color:#FFEA00"
+         id="stop360" />
+      <stop
+         offset="1"
+         style="stop-color:#BA7C00"
+         id="stop362" />
+    </radialGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#XMLID_39_"
+       id="linearGradient3646"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       x1="57.5"
+       y1="-4.0068002"
+       x2="57.5"
+       y2="-2.6947" />
+    <linearGradient
+       id="XMLID_39_"
+       gradientUnits="userSpaceOnUse"
+       x1="57.5"
+       y1="-4.0068002"
+       x2="57.5"
+       y2="-2.6947">
+      <stop
+         offset="0"
+         style="stop-color:#FFFFFF"
+         id="stop367" />
+      <stop
+         offset="1"
+         style="stop-color:#FFEB55"
+         id="stop369" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3291"
+       id="linearGradient3648"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       x1="63.4995"
+       y1="-96.5"
+       x2="63.4995"
+       y2="-39.5" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#polygon20640_1_"
+       id="radialGradient3650"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+       cx="63.5"
+       cy="-86.201904"
+       fx="63.5"
+       fy="-86.201904"
+       r="106" />
+    <radialGradient
+       id="polygon20640_1_"
+       cx="63.5"
+       cy="-88.5"
+       r="106"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         style="stop-color:#555753"
+         id="stop374" />
+      <stop
+         offset="0.645"
+         style="stop-color:#2E3436"
+         id="stop376" />
+      <stop
+         offset="1"
+         style="stop-color:#BABDB6"
+         id="stop378" />
+    </radialGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6.2395833"
+     inkscape:cx="48"
+     inkscape:cy="48"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1058"
+     inkscape:window-height="811"
+     inkscape:window-x="20"
+     inkscape:window-y="57"
+     inkscape:window-maximized="0"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7222">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(0,48)">
+    <g
+       id="g3274">
+      <g
+         id="g3269">
+        <rect
+           style="opacity:0.40206185;fill:url(#linearGradient3247);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+           id="rect13073"
+           width="60.699482"
+           height="21.000004"
+           x="17.650259"
+           y="21" />
+        <path
+           style="opacity:0.40206185;fill:url(#radialGradient3244);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+           d="m 78.349742,21.000718 c 0,0 0,20.998846 0,20.998846 C 84.823444,42.039084 94.000004,37.294788 94,31.49879 94,25.70279 86.775836,21.00072 78.349742,21.000718 z"
+           id="path13075"
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0" />
+        <path
+           sodipodi:nodetypes="cccc"
+           id="path13077"
+           d="m 17.65026,21.000718 c 0,0 0,20.998846 0,20.998846 -6.473703,0.03952 -15.6502598,-4.704776 -15.6502598,-10.500774 0,-5.796 7.224163,-10.49807 15.6502598,-10.498072 z"
+           style="opacity:0.40206185;fill:url(#radialGradient3241);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g3263">
+        <path
+           style="color:#000000;fill:url(#linearGradient3230);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3232);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="m 63,-32 c -1.108,0 -2.0895,0.4645 -2.8125,1.1875 L 56.375,-27 11,-27 c -2.216,0 -4,1.784 -4,4 l 0,56 c 0,1.108 0.892,2 2,2 l 78,0 c 1.108,0 2,-0.892 2,-2 l 0,-61 c 0,-2.216 -1.784,-4 -4,-4 z"
+           id="rect3142"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sscsccccccss" />
+        <path
+           style="opacity:0.5;fill:url(#linearGradient3227);fill-opacity:1;display:inline;enable-background:new"
+           id="path39053"
+           d="m 7.5014969,-23.5 c 0.00626,0.583332 0.012514,1.251666 0.018752,2 l 80.9609801,0 c 0.0063,-0.748334 0.01256,-1.416668 0.01883,-2 l -80.9999993,0 0.0015,0 z"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccccc"
+           style="opacity:0.9;color:#000000;fill:url(#linearGradient3259);fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient3261);stroke-width:0.99958181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
+           id="path3300"
+           d="m 90.493984,33 c -0.06074,1.170968 -1.335732,2.000418 -2.499686,2.000418 l -79.9899374,0 c -1.163934,0 -2.438312,-0.82945 -2.499686,-2.000418 l -2.499684,-51.999792 c -0.08468,-1.168834 0.835794,-2.000416 1.999748,-2.000416 l 85.9891834,0 c 1.163954,0 2.088616,0.831582 1.999748,2.000416 L 90.493984,33 z" />
+        <rect
+           style="fill:url(#linearGradient3256);fill-opacity:1;stroke:none;display:inline;enable-background:new"
+           id="rect3521-5"
+           width="89"
+           height="2"
+           x="3.4999948"
+           y="-20.5"
+           rx="0"
+           ry="0" />
+      </g>
+    </g>
+    <g
+       id="g3459"
+       transform="matrix(1.8749993,0,0,1.8749993,3.0000174,-42.99997)">
+      <path
+         id="path3456"
+         d="m 24,15.15625 a 0.83341665,0.83341665 0 0 0 -0.59375,0.25 l -11.1875,11.1875 a 0.83341665,0.83341665 0 0 0 0,1.15625 L 13,28.5625 a 0.83341665,0.83341665 0 0 0 0.5625,0.28125 l 0,9.5625 A 0.83341665,0.83341665 0 0 0 14.40625,39.25 l 19.1875,0 a 0.83341665,0.83341665 0 0 0 0.84375,-0.84375 l 0,-9.5625 A 0.83341665,0.83341665 0 0 0 35,28.5625 L 35.78125,27.75 a 0.83341665,0.83341665 0 0 0 0,-1.15625 l -2.9375,-2.9375 0,-5.25 A 0.83341665,0.83341665 0 0 0 32,17.5625 l -3.1875,0 a 0.83341665,0.83341665 0 0 0 -0.84375,0.84375 l 0,0.375 -3.375,-3.375 A 0.83341665,0.83341665 0 0 0 24,15.15625 z"
+         style="opacity:0.25;fill:#000000;stroke:none"
+         inkscape:connector-curvature="0" />
+      <g
+         transform="matrix(1.2800005,0,0,1.2800005,-6.7200121,-7.3600165)"
+         id="g3964">
+        <path
+           sodipodi:type="arc"
+           style="opacity:0.1;fill:url(#radialGradient3606);fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path1563"
+           sodipodi:cx="63.912209"
+           sodipodi:cy="115.70919"
+           sodipodi:rx="63.912209"
+           sodipodi:ry="12.641975"
+           d="m 127.82442,115.70919 c 0,6.98197 -28.614473,12.64198 -63.912211,12.64198 C 28.61447,128.35117 0,122.69116 0,115.70919 c 0,-6.98197 28.61447,-12.64198 63.912209,-12.64198 35.297738,0 63.912211,5.66001 63.912211,12.64198 z"
+           transform="matrix(0.15646463,0,0,0.07415769,14,27.481774)" />
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:url(#linearGradient3608)"
+           d="m 16.500003,33.875001 14.999994,0 0,1.874999 -14.999994,0 0,-1.874999 z"
+           id="polygon16"
+           sodipodi:nodetypes="ccccc" />
+        <rect
+           style="fill:url(#linearGradient3610)"
+           id="rect20638"
+           x="27.749998"
+           y="20.125006"
+           width="2.499999"
+           height="4.3749981" />
+        <rect
+           style="fill:url(#linearGradient3612)"
+           id="rect20638_4_"
+           x="29.624998"
+           y="20.125006"
+           width="0.62499976"
+           height="4.3749981" />
+        <rect
+           style="fill:url(#linearGradient3614)"
+           id="rect20638_3_"
+           x="27.749998"
+           y="20.125006"
+           width="0.62499976"
+           height="4.3749981" />
+        <rect
+           style="fill:url(#linearGradient3616)"
+           id="rect20638_2_"
+           x="27.749998"
+           y="20.125006"
+           width="2.499999"
+           height="0.62499976" />
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:#808080"
+           id="path20667"
+           d="m 16.500003,27.000003 0,7.499997 14.999994,0 0,-7.499997 -7.568434,-7.499997 -7.43156,7.499997 z" />
+        <path
+           style="fill:url(#linearGradient3618);fill-opacity:1"
+           d="m 23.931641,19.500006 -6.806638,6.870115 0,8.129879 13.749995,0 0,-8.120114 -6.943357,-6.87988 z"
+           id="rect76"
+           inkscape:connector-curvature="0" />
+        <rect
+           style="fill:url(#linearGradient3620)"
+           id="rect20683"
+           x="22.125"
+           y="28.250002"
+           width="3.7499986"
+           height="6.2499976" />
+        <g
+           style="filter:url(#AI_Sfocatura_1)"
+           id="g170"
+           transform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)">
+          <path
+             inkscape:connector-curvature="0"
+             d="m 51.5,-24.5 0,40 1.655,0 c 0,-9.879 0,-37.246 0,-39 1.482,0 20.862,0 22.345,0 0,1.754 0,29.121 0,39 l 1,0 0,-40 -25,0 z"
+             id="path172" />
+        </g>
+        <polygon
+           style="fill:url(#linearGradient3622)"
+           points="79.5,-28.5 47.5,-28.5 47.5,-28.5 47.5,15.5 51.5,15.5 51.5,-24.5 75.5,-24.5 75.5,15.5 79.5,15.5 "
+           id="polygon179"
+           transform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)" />
+        <rect
+           id="rect7949"
+           height="0.62499976"
+           width="4.9999981"
+           y="33.875"
+           x="21.500002"
+           style="opacity:0.5;fill:url(#linearGradient3624);fill-opacity:1" />
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:url(#linearGradient3626);fill-opacity:1"
+           d="m 21.812501,34.5 c 0,-0.34525 0.279844,-0.624999 0.625,-0.624999 l 3.124999,0 c 0.345156,0 0.624999,0.279749 0.624999,0.624999 l 0,0 c 0,0.34525 -0.279843,0.625 -0.624999,0.625 l -3.124999,0 c -0.345156,0 -0.625,-0.27975 -0.625,-0.625 l 0,0 z"
+           id="path211" />
+        <rect
+           style="fill:url(#linearGradient3628);fill-opacity:1"
+           x="21.187502"
+           y="34.5"
+           width="5.6249976"
+           height="0.62499976"
+           id="rect232" />
+        <rect
+           style="fill:url(#linearGradient3630);fill-opacity:1"
+           x="20.875002"
+           y="35.125"
+           width="6.2499976"
+           height="0.62499976"
+           id="rect253" />
+        <rect
+           style="fill:url(#linearGradient3632);fill-opacity:1"
+           x="17.750002"
+           y="28.250002"
+           width="3.1249988"
+           height="4.3749981"
+           id="rect262" />
+        <rect
+           style="fill:url(#radialGradient3634);fill-opacity:1"
+           x="18.375002"
+           y="28.875002"
+           width="1.8749993"
+           height="3.1249988"
+           id="rect269" />
+        <rect
+           style="fill:url(#linearGradient3636);fill-opacity:1"
+           x="27.124998"
+           y="28.250002"
+           width="3.1249988"
+           height="4.3749981"
+           id="rect296" />
+        <rect
+           style="fill:url(#radialGradient3638);fill-opacity:1"
+           x="27.749998"
+           y="28.875002"
+           width="1.8749993"
+           height="3.1249988"
+           id="rect303" />
+        <ellipse
+           d="m 59.5,-1.812 c 0,1.48454135 -0.895431,2.68799993 -2,2.68799993 -1.104569,0 -2,-1.20345858 -2,-2.68799993 0,-1.4845414 0.895431,-2.688 2,-2.688 1.104569,0 2,1.2034586 2,2.688 z"
+           transform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)"
+           id="ellipse4083"
+           ry="2.688"
+           rx="2"
+           cy="-1.812"
+           cx="57.5"
+           style="opacity:0.5;fill:url(#linearGradient3640);fill-opacity:1"
+           sodipodi:cx="57.5"
+           sodipodi:cy="-1.812"
+           sodipodi:rx="2"
+           sodipodi:ry="2.688" />
+        <circle
+           d="m 59.5,-2.5 c 0,1.1045695 -0.895431,2 -2,2 -1.104569,0 -2,-0.8954305 -2,-2 0,-1.1045695 0.895431,-2 2,-2 1.104569,0 2,0.8954305 2,2 z"
+           sodipodi:ry="2"
+           sodipodi:rx="2"
+           sodipodi:cy="-2.5"
+           sodipodi:cx="57.5"
+           style="fill:url(#linearGradient3642)"
+           cx="57.5"
+           cy="-2.5"
+           r="2"
+           id="circle355"
+           transform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)" />
+        <circle
+           d="m 58.5,-2.5 c 0,0.5522847 -0.447715,1 -1,1 -0.552285,0 -1,-0.4477153 -1,-1 0,-0.5522847 0.447715,-1 1,-1 0.552285,0 1,0.4477153 1,1 z"
+           sodipodi:ry="1"
+           sodipodi:rx="1"
+           sodipodi:cy="-2.5"
+           sodipodi:cx="57.5"
+           style="fill:url(#radialGradient3644)"
+           cx="57.5"
+           cy="-2.5"
+           r="1"
+           id="circle364"
+           transform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)" />
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:url(#linearGradient3646)"
+           d="m 22.857501,31.657189 c 0,0.113125 0.09203,0 0.205,0 0.112968,0 0.204999,0.113125 0.204999,0 0,-0.113281 -0.09203,-0.205 -0.204999,-0.205 -0.112969,0 -0.205,0.09172 -0.205,0.205 z"
+           id="path371" />
+        <path
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccc"
+           id="path5654"
+           d="M 16.500003,27.000003 24,19.500006 l 7.499997,7.499997 0,0.625 -14.999994,0 0,-0.625 z"
+           style="opacity:0.3;fill:url(#linearGradient3648);fill-opacity:1" />
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:url(#radialGradient3650)"
+           d="M 32.124997,27.625003 24,19.500006 15.875003,27.625003 15.250004,27.000003 24,18.250007 l 8.749997,8.749996 -0.625,0.625 z"
+           id="polygon20640"
+           sodipodi:nodetypes="ccccccc" />
+        <g
+           style="opacity:0.6;filter:url(#AI_Sfocatura_1)"
+           id="g381"
+           transform="matrix(0.15624994,0,0,0.15624994,14.078129,32.078126)">
+          <path
+             inkscape:connector-curvature="0"
+             style="fill:#000000;fill-opacity:1;stroke:none"
+             d="m 59.5,-80.5 -45,47 3.0625,2.0625 L 63.5,-76.5 l 46.9375,45.0625 2.83211,-2.125 -46.70711,-47 L 59.5,-80.5 z"
+             id="polyline383"
+             sodipodi:nodetypes="cccccccc" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

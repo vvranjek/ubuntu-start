@@ -72,6 +72,19 @@ CheckApps () {
 	if (command -v lxappearance >/dev/null 2>&1); then LxAppearanceReady=true; fi;
 }
 
+# Folder clean up
+CleanUpFolderContent () {
+	# Usage: CleanUpFolderContent "<FOLDER>";
+	local CurDir=$(pwd);
+	cd "$1";
+	find . -type d -name "*source*" -exec rm -r {} \+;
+	find . -type f -name "*source*" -exec rm {} \+;
+	find . -type f -name "*symlink*" -exec rm {} \+;
+	find . -type f -name "*.sh" -exec chmod +x {} \+;
+	find . -type f -name "*.desktop" -exec chmod +x {} \+;
+	cd "$CurDir";
+}
+
 # IconTheme
 EnableIconTheme () {
 	gsettings set org.gnome.desktop.interface icon-theme "$IconTheme" >/dev/null 2>&1;
@@ -98,11 +111,7 @@ InstallTheme () {
 		); then
 		mkdir -p "$TargetDir";
 		cp -r "$SourceDir"/"$1" "$TargetDir";
-		find "$TargetDir/$1" -type d -name "*source*" -exec rm -r {} \+;
-		find "$TargetDir/$1" -type f -name "*symlink*" -exec rm {} \+;
-		find "$TargetDir/$1" -type f -name "*.sh" -exec chmod +x {} \+;
-		find "$TargetDir/$1" -type f -name "*.desktop" -exec chmod +x {} \+;
-		find "$TargetDir/$1" -type f -name "*RESET*" -exec chmod +x {} \+;
+		CleanUpFolderContent "$TargetDir/$1";
 		echo "'$1' theme installed.";
 	fi;
 }
