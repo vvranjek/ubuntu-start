@@ -1,243 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-    EVSYS_CHMUX_ACB_CH1_gc = (0x14<<0),  /* Analog Comparator B Channel 1 */
-    EVSYS_CHMUX_ACB_WIN_gc = (0x15<<0),  /* Analog Comparator B Window */
-    EVSYS_CHMUX_ADCA_CH0_gc = (0x20<<0),  /* ADC A Channel 0 */
-    EVSYS_CHMUX_ADCA_CH1_gc = (0x21<<0),  /* ADC A Channel 1 */
-    EVSYS_CHMUX_ADCA_CH2_gc = (0x22<<0),  /* ADC A Channel 2 */
-    EVSYS_CHMUX_ADCA_CH3_gc = (0x23<<0),  /* ADC A Channel 3 */
-    EVSYS_CHMUX_ADCB_CH0_gc = (0x24<<0),  /* ADC B Channel 0 */
-    EVSYS_CHMUX_ADCB_CH1_gc = (0x25<<0),  /* ADC B Channel 1 */
-    EVSYS_CHMUX_ADCB_CH2_gc = (0x26<<0),  /* ADC B Channel 2 */
-    EVSYS_CHMUX_ADCB_CH3_gc = (0x27<<0),  /* ADC B Channel 3 */
-    EVSYS_CHMUX_PORTA_PIN0_gc = (0x50<<0),  /* Port A, Pin0 */
-    EVSYS_CHMUX_PORTA_PIN1_gc = (0x51<<0),  /* Port A, Pin1 */
-    EVSYS_CHMUX_PORTA_PIN2_gc = (0x52<<0),  /* Port A, Pin2 */
-    EVSYS_CHMUX_PORTA_PIN3_gc = (0x53<<0),  /* Port A, Pin3 */
-    EVSYS_CHMUX_PORTA_PIN4_gc = (0x54<<0),  /* Port A, Pin4 */
-    EVSYS_CHMUX_PORTA_PIN5_gc = (0x55<<0),  /* Port A, Pin5 */
-    EVSYS_CHMUX_PORTA_PIN6_gc = (0x56<<0),  /* Port A, Pin6 */
-    EVSYS_CHMUX_PORTA_PIN7_gc = (0x57<<0),  /* Port A, Pin7 */
-    EVSYS_CHMUX_PORTB_PIN0_gc = (0x58<<0),  /* Port B, Pin0 */
-    EVSYS_CHMUX_PORTB_PIN1_gc = (0x59<<0),  /* Port B, Pin1 */
-    EVSYS_CHMUX_PORTB_PIN2_gc = (0x5A<<0),  /* Port B, Pin2 */
-    EVSYS_CHMUX_PORTB_PIN3_gc = (0x5B<<0),  /* Port B, Pin3 */
-    EVSYS_CHMUX_PORTB_PIN4_gc = (0x5C<<0),  /* Port B, Pin4 */
-    EVSYS_CHMUX_PORTB_PIN5_gc = (0x5D<<0),  /* Port B, Pin5 */
-    EVSYS_CHMUX_PORTB_PIN6_gc = (0x5E<<0),  /* Port B, Pin6 */
-    EVSYS_CHMUX_PORTB_PIN7_gc = (0x5F<<0),  /* Port B, Pin7 */
-    EVSYS_CHMUX_PORTC_PIN0_gc = (0x60<<0),  /* Port C, Pin0 */
-    EVSYS_CHMUX_PORTC_PIN1_gc = (0x61<<0),  /* Port C, Pin1 */
-    EVSYS_CHMUX_PORTC_PIN2_gc = (0x62<<0),  /* Port C, Pin2 */
-    EVSYS_CHMUX_PORTC_PIN3_gc = (0x63<<0),  /* Port C, Pin3 */
-    EVSYS_CHMUX_PORTC_PIN4_gc = (0x64<<0),  /* Port C, Pin4 */
-    EVSYS_CHMUX_PORTC_PIN5_gc = (0x65<<0),  /* Port C, Pin5 */
-    EVSYS_CHMUX_PORTC_PIN6_gc = (0x66<<0),  /* Port C, Pin6 */
-    EVSYS_CHMUX_PORTC_PIN7_gc = (0x67<<0),  /* Port C, Pin7 */
-    EVSYS_CHMUX_PORTD_PIN0_gc = (0x68<<0),  /* Port D, Pin0 */
-    EVSYS_CHMUX_PORTD_PIN1_gc = (0x69<<0),  /* Port D, Pin1 */
-    EVSYS_CHMUX_PORTD_PIN2_gc = (0x6A<<0),  /* Port D, Pin2 */
-    EVSYS_CHMUX_PORTD_PIN3_gc = (0x6B<<0),  /* Port D, Pin3 */
-    EVSYS_CHMUX_PORTD_PIN4_gc = (0x6C<<0),  /* Port D, Pin4 */
-    EVSYS_CHMUX_PORTD_PIN5_gc = (0x6D<<0),  /* Port D, Pin5 */
-    EVSYS_CHMUX_PORTD_PIN6_gc = (0x6E<<0),  /* Port D, Pin6 */
-    EVSYS_CHMUX_PORTD_PIN7_gc = (0x6F<<0),  /* Port D, Pin7 */
-    EVSYS_CHMUX_PORTE_PIN0_gc = (0x70<<0),  /* Port E, Pin0 */
-    EVSYS_CHMUX_PORTE_PIN1_gc = (0x71<<0),  /* Port E, Pin1 */
-    EVSYS_CHMUX_PORTE_PIN2_gc = (0x72<<0),  /* Port E, Pin2 */
-    EVSYS_CHMUX_PORTE_PIN3_gc = (0x73<<0),  /* Port E, Pin3 */
-    EVSYS_CHMUX_PORTE_PIN4_gc = (0x74<<0),  /* Port E, Pin4 */
-    EVSYS_CHMUX_PORTE_PIN5_gc = (0x75<<0),  /* Port E, Pin5 */
-    EVSYS_CHMUX_PORTE_PIN6_gc = (0x76<<0),  /* Port E, Pin6 */
-    EVSYS_CHMUX_PORTE_PIN7_gc = (0x77<<0),  /* Port E, Pin7 */
-    EVSYS_CHMUX_PORTF_PIN0_gc = (0x78<<0),  /* Port F, Pin0 */
-    EVSYS_CHMUX_PORTF_PIN1_gc = (0x79<<0),  /* Port F, Pin1 */
-    EVSYS_CHMUX_PORTF_PIN2_gc = (0x7A<<0),  /* Port F, Pin2 */
-    EVSYS_CHMUX_PORTF_PIN3_gc = (0x7B<<0),  /* Port F, Pin3 */
-    EVSYS_CHMUX_PORTF_PIN4_gc = (0x7C<<0),  /* Port F, Pin4 */
-    EVSYS_CHMUX_PORTF_PIN5_gc = (0x7D<<0),  /* Port F, Pin5 */
-    EVSYS_CHMUX_PORTF_PIN6_gc = (0x7E<<0),  /* Port F, Pin6 */
-    EVSYS_CHMUX_PORTF_PIN7_gc = (0x7F<<0),  /* Port F, Pin7 */
-    EVSYS_CHMUX_PRESCALER_1_gc = (0x80<<0),  /* Prescaler, divide by 1 */
-    EVSYS_CHMUX_PRESCALER_2_gc = (0x81<<0),  /* Prescaler, divide by 2 */
-    EVSYS_CHMUX_PRESCALER_4_gc = (0x82<<0),  /* Prescaler, divide by 4 */
-    EVSYS_CHMUX_PRESCALER_8_gc = (0x83<<0),  /* Prescaler, divide by 8 */
-    EVSYS_CHMUX_PRESCALER_16_gc = (0x84<<0),  /* Prescaler, divide by 16 */
-    EVSYS_CHMUX_PRESCALER_32_gc = (0x85<<0),  /* Prescaler, divide by 32 */
-    EVSYS_CHMUX_PRESCALER_64_gc = (0x86<<0),  /* Prescaler, divide by 64 */
-    EVSYS_CHMUX_PRESCALER_128_gc = (0x87<<0),  /* Prescaler, divide by 128 */
-    EVSYS_CHMUX_PRESCALER_256_gc = (0x88<<0),  /* Prescaler, divide by 256 */
-    EVSYS_CHMUX_PRESCALER_512_gc = (0x89<<0),  /* Prescaler, divide by 512 */
-    EVSYS_CHMUX_PRESCALER_1024_gc = (0x8A<<0),  /* Prescaler, divide by 1024 */
-    EVSYS_CHMUX_PRESCALER_2048_gc = (0x8B<<0),  /* Prescaler, divide by 2048 */
-    EVSYS_CHMUX_PRESCALER_4096_gc = (0x8C<<0),  /* Prescaler, divide by 4096 */
-    EVSYS_CHMUX_PRESCALER_8192_gc = (0x8D<<0),  /* Prescaler, divide by 8192 */
-    EVSYS_CHMUX_PRESCALER_16384_gc = (0x8E<<0),  /* Prescaler, divide by 16384 */
-    EVSYS_CHMUX_PRESCALER_32768_gc = (0x8F<<0),  /* Prescaler, divide by 32768 */
-    EVSYS_CHMUX_TCC0_OVF_gc = (0xC0<<0),  /* Timer/Counter C0 Overflow */
-    EVSYS_CHMUX_TCC0_ERR_gc = (0xC1<<0),  /* Timer/Counter C0 Error */
-    EVSYS_CHMUX_TCC0_CCA_gc = (0xC4<<0),  /* Timer/Counter C0 Compare or Capture A */
-    EVSYS_CHMUX_TCC0_CCB_gc = (0xC5<<0),  /* Timer/Counter C0 Compare or Capture B */
-    EVSYS_CHMUX_TCC0_CCC_gc = (0xC6<<0),  /* Timer/Counter C0 Compare or Capture C */
-    EVSYS_CHMUX_TCC0_CCD_gc = (0xC7<<0),  /* Timer/Counter C0 Compare or Capture D */
-    EVSYS_CHMUX_TCC1_OVF_gc = (0xC8<<0),  /* Timer/Counter C1 Overflow */
-    EVSYS_CHMUX_TCC1_ERR_gc = (0xC9<<0),  /* Timer/Counter C1 Error */
-    EVSYS_CHMUX_TCC1_CCA_gc = (0xCC<<0),  /* Timer/Counter C1 Compare or Capture A */
-    EVSYS_CHMUX_TCC1_CCB_gc = (0xCD<<0),  /* Timer/Counter C1 Compare or Capture B */
-    EVSYS_CHMUX_TCD0_OVF_gc = (0xD0<<0),  /* Timer/Counter D0 Overflow */
-    EVSYS_CHMUX_TCD0_ERR_gc = (0xD1<<0),  /* Timer/Counter D0 Error */
-    EVSYS_CHMUX_TCD0_CCA_gc = (0xD4<<0),  /* Timer/Counter D0 Compare or Capture A */
-    EVSYS_CHMUX_TCD0_CCB_gc = (0xD5<<0),  /* Timer/Counter D0 Compare or Capture B */
-    EVSYS_CHMUX_TCD0_CCC_gc = (0xD6<<0),  /* Timer/Counter D0 Compare or Capture C */
-    EVSYS_CHMUX_TCD0_CCD_gc = (0xD7<<0),  /* Timer/Counter D0 Compare or Capture D */
-    EVSYS_CHMUX_TCD1_OVF_gc = (0xD8<<0),  /* Timer/Counter D1 Overflow */
-    EVSYS_CHMUX_TCD1_ERR_gc = (0xD9<<0),  /* Timer/Counter D1 Error */
-    EVSYS_CHMUX_TCD1_CCA_gc = (0xDC<<0),  /* Timer/Counter D1 Compare or Capture A */
-    EVSYS_CHMUX_TCD1_CCB_gc = (0xDD<<0),  /* Timer/Counter D1 Compare or Capture B */
-    EVSYS_CHMUX_TCE0_OVF_gc = (0xE0<<0),  /* Timer/Counter E0 Overflow */
-    EVSYS_CHMUX_TCE0_ERR_gc = (0xE1<<0),  /* Timer/Counter E0 Error */
-    EVSYS_CHMUX_TCE0_CCA_gc = (0xE4<<0),  /* Timer/Counter E0 Compare or Capture A */
-    EVSYS_CHMUX_TCE0_CCB_gc = (0xE5<<0),  /* Timer/Counter E0 Compare or Capture B */
-    EVSYS_CHMUX_TCE0_CCC_gc = (0xE6<<0),  /* Timer/Counter E0 Compare or Capture C */
-    EVSYS_CHMUX_TCE0_CCD_gc = (0xE7<<0),  /* Timer/Counter E0 Compare or Capture D */
-    EVSYS_CHMUX_TCE1_OVF_gc = (0xE8<<0),  /* Timer/Counter E1 Overflow */
-    EVSYS_CHMUX_TCE1_ERR_gc = (0xE9<<0),  /* Timer/Counter E1 Error */
-    EVSYS_CHMUX_TCE1_CCA_gc = (0xEC<<0),  /* Timer/Counter E1 Compare or Capture A */
-    EVSYS_CHMUX_TCE1_CCB_gc = (0xED<<0),  /* Timer/Counter E1 Compare or Capture B */
-    EVSYS_CHMUX_TCF0_OVF_gc = (0xF0<<0),  /* Timer/Counter F0 Overflow */
-    EVSYS_CHMUX_TCF0_ERR_gc = (0xF1<<0),  /* Timer/Counter F0 Error */
-    EVSYS_CHMUX_TCF0_CCA_gc = (0xF4<<0),  /* Timer/Counter F0 Compare or Capture A */
-    EVSYS_CHMUX_TCF0_CCB_gc = (0xF5<<0),  /* Timer/Counter F0 Compare or Capture B */
-    EVSYS_CHMUX_TCF0_CCC_gc = (0xF6<<0),  /* Timer/Counter F0 Compare or Capture C */
-    EVSYS_CHMUX_TCF0_CCD_gc = (0xF7<<0),  /* Timer/Counter F0 Compare or Capture D */
-    EVSYS_CHMUX_TCF1_OVF_gc = (0xF8<<0),  /* Timer/Counter F1 Overflow */
-    EVSYS_CHMUX_TCF1_ERR_gc = (0xF9<<0),  /* Timer/Counter F1 Error */
-    EVSYS_CHMUX_TCF1_CCA_gc = (0xFC<<0),  /* Timer/Counter F1 Compare or Capture A */
-    EVSYS_CHMUX_TCF1_CCB_gc = (0xFD<<0),  /* Timer/Counter F1 Compare or Capture B */
-} EVSYS_CHMUX_t;
-
-
-/*
---------------------------------------------------------------------------
-NVM - Non Volatile Memory Controller
---------------------------------------------------------------------------
-*/
-
-/* Non-volatile Memory Controller */
-typedef struct NVM_struct
-{
-    register8_t ADDR0;  /* Address Register 0 */
-    register8_t ADDR1;  /* Address Register 1 */
-    register8_t ADDR2;  /* Address Register 2 */
-    register8_t reserved_0x03;
-    register8_t DATA0;  /* Data Register 0 */
-    register8_t DATA1;  /* Data Register 1 */
-    register8_t DATA2;  /* Data Register 2 */
-    register8_t reserved_0x07;
-    register8_t reserved_0x08;
-    register8_t reserved_0x09;
-    register8_t CMD;  /* Command */
-    register8_t CTRLA;  /* Control Register A */
-    register8_t CTRLB;  /* Control Register B */
-    register8_t INTCTRL;  /* Interrupt Control */
-    register8_t reserved_0x0E;
-    register8_t STATUS;  /* Status */
-    register8_t LOCKBITS;  /* Lock Bits */
-} NVM_t;
-
-/* NVM Command */
-typedef enum NVM_CMD_enum
-{
-    NVM_CMD_NO_OPERATION_gc = (0x00<<0),  /* Noop/Ordinary LPM */
-    NVM_CMD_READ_USER_SIG_ROW_gc = (0x01<<0),  /* Read user signature row */
-    NVM_CMD_READ_CALIB_ROW_gc = (0x02<<0),  /* Read calibration row */
-    NVM_CMD_READ_EEPROM_gc = (0x06<<0),  /* Read EEPROM */
-    NVM_CMD_READ_FUSES_gc = (0x07<<0),  /* Read fuse byte */
-    NVM_CMD_WRITE_LOCK_BITS_gc = (0x08<<0),  /* Write lock bits */
-    NVM_CMD_ERASE_USER_SIG_ROW_gc = (0x18<<0),  /* Erase user signature row */
-    NVM_CMD_WRITE_USER_SIG_ROW_gc = (0x1A<<0),  /* Write user signature row */
-    NVM_CMD_ERASE_APP_gc = (0x20<<0),  /* Erase Application Section */
-    NVM_CMD_ERASE_APP_PAGE_gc = (0x22<<0),  /* Erase Application Section page */
-    NVM_CMD_LOAD_FLASH_BUFFER_gc = (0x23<<0),  /* Load Flash page buffer */
-    NVM_CMD_WRITE_APP_PAGE_gc = (0x24<<0),  /* Write Application Section page */
-    NVM_CMD_ERASE_WRITE_APP_PAGE_gc = (0x25<<0),  /* Erase-and-write Application Section page */
-    NVM_CMD_ERASE_FLASH_BUFFER_gc = (0x26<<0),  /* Erase/flush Flash page buffer */
-    NVM_CMD_ERASE_BOOT_PAGE_gc = (0x2A<<0),  /* Erase Boot Section page */
-    NVM_CMD_ERASE_FLASH_PAGE_gc = (0x2B<<0),  /* Erase Flash Page */
-    NVM_CMD_WRITE_BOOT_PAGE_gc = (0x2C<<0),  /* Write Boot Section page */
-    NVM_CMD_ERASE_WRITE_BOOT_PAGE_gc = (0x2D<<0),  /* Erase-and-write Boot Section page */
-    NVM_CMD_WRITE_FLASH_PAGE_gc = (0x2E<<0),  /* Write Flash Page */
-    NVM_CMD_ERASE_WRITE_FLASH_PAGE_gc = (0x2F<<0),  /* Erase-and-write Flash Page */
-    NVM_CMD_ERASE_EEPROM_gc = (0x30<<0),  /* Erase EEPROM */
-    NVM_CMD_ERASE_EEPROM_PAGE_gc = (0x32<<0),  /* Erase EEPROM page */
-    NVM_CMD_LOAD_EEPROM_BUFFER_gc = (0x33<<0),  /* Load EEPROM page buffer */
-    NVM_CMD_WRITE_EEPROM_PAGE_gc = (0x34<<0),  /* Write EEPROM page */
-    NVM_CMD_ERASE_WRITE_EEPROM_PAGE_gc = (0x35<<0),  /* Erase-and-write EEPROM page */
-    NVM_CMD_ERASE_EEPROM_BUFFER_gc = (0x36<<0),  /* Erase/flush EEPROM page buffer */
-    NVM_CMD_APP_CRC_gc = (0x38<<0),  /* Application section CRC */
-    NVM_CMD_BOOT_CRC_gc = (0x39<<0),  /*  Boot Section CRC */
-    NVM_CMD_FLASH_RANGE_CRC_gc = (0x3A<<0),  /* Flash Range CRC */
-    NVM_CMD_CHIP_ERASE_gc = (0x40<<0),  /* Erase Chip */
-    NVM_CMD_READ_NVM_gc = (0x43<<0),  /* Read NVM */
-    NVM_CMD_WRITE_FUSE_gc = (0x4C<<0),  /* Write Fuse byte */
-    NVM_CMD_ERASE_BOOT_gc = (0x68<<0),  /* Erase Boot Section */
-    NVM_CMD_FLASH_CRC_gc = (0x78<<0),  /* Flash CRC */
-} NVM_CMD_t;
-
-/* SPM ready interrupt level */
-typedef enum NVM_SPMLVL_enum
-{
-    NVM_SPMLVL_OFF_gc = (0x00<<2),  /* Interrupt disabled */
-    NVM_SPMLVL_LO_gc = (0x01<<2),  /* Low level */
-    NVM_SPMLVL_MED_gc = (0x02<<2),  /* Medium level */
-    NVM_SPMLVL_HI_gc = (0x03<<2),  /* High level */
-} NVM_SPMLVL_t;
-
-/* EEPROM ready interrupt level */
-typedef enum NVM_EELVL_enum
-{
-    NVM_EELVL_OFF_gc = (0x00<<0),  /* Interrupt disabled */
-    NVM_EELVL_LO_gc = (0x01<<0),  /* Low level */
-    NVM_EELVL_MED_gc = (0x02<<0),  /* Medium level */
-    NVM_EELVL_HI_gc = (0x03<<0),  /* High level */
-} NVM_EELVL_t;
-
-/* Boot lock bits - boot setcion */
-typedef enum NVM_BLBB_enum
-{
-    NVM_BLBB_RWLOCK_gc = (0x00<<6),  /* Read and write not allowed */
-    NVM_BLBB_RLOCK_gc = (0x01<<6),  /* Read not allowed */
-    NVM_BLBB_WLOCK_gc = (0x02<<6),  /* Write not allowed */
-    NVM_BLBB_NOLOCK_gc = (0x03<<6),  /* No locks */
-} NVM_BLBB_t;
-
-/* Boot lock bits - application section */
-typedef enum NVM_BLBA_enum
-{
-    NVM_BLBA_RWLOCK_gc = (0x00<<4),  /* Read and write not allowed */
-    NVM_BLBA_RLOCK_gc = (0x01<<4),  /* Read not allowed */
-    NVM_BLBA_WLOCK_gc = (0x02<<4),  /* Write not allowed */
-    NVM_BLBA_NOLOCK_gc = (0x03<<4),  /* No locks */
-} NVM_BLBA_t;
-
-/* Boot lock bits - application table section */
-typedef enum NVM_BLBAT_enum
-{
-    NVM_BLBAT_RWLOCK_gc = (0x00<<2),  /* Read and write not allowed */
-    NVM_BLBAT_RLOCK_gc = (0x01<<2),  /* Read not allowed */
-    NVM_BLBAT_WLOCK_gc = (0x02<<2),  /* Write not allowed */
-    NVM_BLBAT_NOLOCK_gc = (0x03<<2),  /* No locks */
-} NVM_BLBAT_t;
-
-/* Lock bits */
-typedef enum NVM_LB_enum
-{
-    NVM_LB_RWLOCK_gc = (0x00<<0),  /* Read and write not allowed */
-    NVM_LB_WLOCK_gc = (0x02<<0),  /* Write not allowed */
-    NVM_LB_NOLOCK_gc = (0x03<<0),  /* No locks */
-} NVM_LB_t;
-
-
-/*
---------------------------------------------------------------------------
-ADC - Analog/Digital Converter
------
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="96"
+   height="96"
+   id="svg8331"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="folder-documents.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.1"
+   inkscape:export-filename="folder-documents.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs8333">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5048-73"
+       id="linearGradient3247"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.125709,0,0,0.0864706,2.5651808,-10.70427)"
+       x1="302.85715"
+       y1="366.64789"
+       x2="302.85715"
+       y2="609.50507" />
+    <linearGradient
+       id="linearGradient5048-73">
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="0"
+         id="stop5050-95" />
+      <stop
+         id="stop5056-7"
+         offset="0.5"
+         style="stop-color:black;stop-opacity:1;" />
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="1"
+         id="stop5052-93" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5060-75"
+       id="radialGradient3244"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.125709,0,0,0.0864706,2.5899204,-10.70427)"
+       cx="605.71429"
+       cy="486.64789"
+       fx="605.71429"
+       fy="486.64789"
+       r="117.14286" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5060-75">
+      <stop
+         style="stop-color:black;stop-opacity:1;"
+         offset="0"
+         id="stop5062-4" />
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="1"
+         id="stop5064-5" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5060-75"
+       id="radialGradient3241"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.125709,0,0,0.0864706,93.410098,-10.70427)"
+       cx="605.71429"
+       cy="486.64789"
+       fx="605.71429"
+       fy="486.64789"
+       r="117.14286" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4064-7-7"
+       id="linearGradient3230"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,2,-94,-48)"
+       x1="71"
+       y1="8"
+       x2="71"
+       y2="41.5" />
+    <linearGradient
+       id="linearGradient4064-7-7">
+      <stop
+         style="stop-color:#6888a8;stop-opacity:1;"
+         offset="0"
+         id="stop4066-4-3" />
+      <stop
+         style="stop-color:#6888a8;stop-opacity:0.50196081;"
+         offset="1"
+         id="stop4068-8-7" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4054-7-4"
+       id="linearGradient3232"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,2,-94,-48)"
+       x1="71"
+       y1="8"
+       x2="71"
+       y2="41.5" />
+    <linearGradient
+       id="linearGradient4054-7-4">
+      <stop
+         style="stop-color:#406080;stop-opacity:1;"
+         offset="0"
+         id="stop4056-0-9" />
+      <stop
+         style="stop-color:#406080;stop-opacity:0.50196081;"
+         offset="1"
+         id="stop4058-9-5" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9101-2"
+       id="linearGradient3227-8"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.75086228,0,0,0.3333332,-6.0605797,-28.166666)"
+       x1="71.999496"
+       y1="14.2578"
+       x2="71.999496"
+       y2="19.9583" />
+    <linearGradient
+       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)"
+       y2="19.9583"
+       x2="71.999496"
+       y1="14.2578"
+       x1="71.999496"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient9101-2">
+      <stop
+         id="stop9103-0"
+         style="stop-color:#406080;stop-opacity:0;"
+         offset="0.25" />
+      <stop
+         id="stop9105-6"
+         style="stop-color:#406080;stop-opacity:1;"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9073-9-3"
+       id="linearGradient3259"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7031318,0,0,0.7105376,-69.874472,-254.68002)"
+       x1="167.64111"
+       y1="328.87747"
+       x2="167.64111"
+       y2="407.69193" />
+    <linearGradient
+       id="linearGradient9073-9-3">
+      <stop
+         id="stop9075-9-7"
+         offset="0"
+         style="stop-color:#a8c8e8;stop-opacity:1" />
+      <stop
+         id="stop9077-5-8"
+         offset="1"
+         style="stop-color:#6888a8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9087-5-2"
+       id="linearGradient3261"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,2,-365.99542,-54)"
+       x1="206.99738"
+       y1="16.499895"
+       x2="206.99738"
+       y2="44.50021" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient9087-5-2">
+      <stop
+         style="stop-color:#6888a8;stop-opacity:1"
+         offset="0"
+         id="stop9089-5-8" />
+      <stop
+         style="stop-color:#406080;stop-opacity:1"
+         offset="1"
+         id="stop9091-1-1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10176-17"
+       id="linearGradient3256"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.9204022,0,0,1.885618,-11.468937,-87.058428)"
+       x1="7.2379346"
+       y1="36.005047"
+       x2="122.17093"
+       y2="36.005047" />
+    <linearGradient
+       id="linearGradient10176-17"
+       gradientUnits="userSpaceOnUse"
+       x1="71.999496"
+       y1="14.2578"
+       x2="71.999496"
+       y2="19.9583"
+       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)">
+      <stop
+         offset="0.00445589"
+         style="stop-color:#eaeaea;stop-opacity:0;"
+         id="stop10178-6" />
+      <stop
+         id="stop10180-0"
+         style="stop-color:#ffffff;stop-opacity:0.52941179;"
+         offset="0.46138024" />
+      <stop
+         offset="1"
+         style="stop-color:#f5f5f5;stop-opacity:0"
+         id="stop10182-6" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6"
+     inkscape:cx="48"
+     inkscape:cy="48"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1115"
+     inkscape:window-height="788"
+     inkscape:window-x="163"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-nodes="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata8336">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(0,48)">
+    <g
+       id="g3274">
+      <g
+         id="g3269">
+        <rect
+           style="opacity:0.40206185;fill:url(#linearGradient3247);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+           id="rect13073"
+           width="60.699482"
+           height="21.000004"
+           x="17.650259"
+           y="21" />
+        <path
+           style="opacity:0.40206185;fill:url(#radialGradient3244);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+           d="m 78.349742,21.000718 c 0,0 0,20.998846 0,20.998846 C 84.823444,42.039084 94.000004,37.294788 94,31.49879 94,25.70279 86.775836,21.00072 78.349742,21.000718 z"
+           id="path13075"
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0" />
+        <path
+           sodipodi:nodetypes="cccc"
+           id="path13077"
+           d="m 17.65026,21.000718 c 0,0 0,20.998846 0,20.998846 -6.473703,0.03952 -15.6502598,-4.704776 -15.6502598,-10.500774 0,-5.796 7.224163,-10.49807 15.6502598,-10.498072 z"
+           style="opacity:0.40206185;fill:url(#radialGradient3241);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g3263">
+        <path
+           style="color:#000000;fill:url(#linearGradient3230);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3232);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="m 63,-32 c -1.108,0 -2.0895,0.4645 -2.8125,1.1875 L 56.375,-27 11,-27 c -2.216,0 -4,1.784 -4,4 l 0,56 c 0,1.108 0.892,2 2,2 l 78,0 c 1.108,0 2,-0.892 2,-2 l 0,-61 c 0,-2.216 -1.784,-4 -4,-4 z"
+           id="rect3142"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sscsccccccss" />
+        <path
+           style="opacity:0.5;fill:url(#linearGradient3227-8);fill-opacity:1;display:inline;enable-background:new"
+           id="path39053"
+           d="m 7.5014969,-23.5 c 0.00626,0.583332 0.012514,1.251666 0.018752,2 l 80.9609801,0 c 0.0063,-0.748334 0.01256,-1.416668 0.01883,-2 l -80.9999993,0 0.0015,0 z"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccccc"
+           style="opacity:0.9;color:#000000;fill:url(#linearGradient3259);fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient3261);stroke-width:0.99958181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
+           id="path3300"
+           d="m 90.493984,33 c -0.06074,1.170968 -1.335732,2.000418 -2.499686,2.000418 l -79.9899374,0 c -1.163934,0 -2.438312,-0.82945 -2.499686,-2.000418 l -2.499684,-51.999792 c -0.08468,-1.168834 0.835794,-2.000416 1.999748,-2.000416 l 85.9891834,0 c 1.163954,0 2.088616,0.831582 1.999748,2.000416 L 90.493984,33 z" />
+        <rect
+           style="fill:url(#linearGradient3256);fill-opacity:1;stroke:none;display:inline;enable-background:new"
+           id="rect3521-5"
+           width="89"
+           height="2"
+           x="3.4999948"
+           y="-20.5"
+           rx="0"
+           ry="0" />
+      </g>
+    </g>
+    <path
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:0.6;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="m 36,-8 0,27 c 0,1.644702 1.355298,3 3,3 l 11,0 0,-5 -10,0 0,-1 10,0 c 0,-1.193494 0.53446,-2.264406 1.375,-3 L 40,13 l 0,-1 14,0 2,0 4,0 0,-17 c 0,-1.644702 -1.355298,-3 -3,-3 l -21,0 z m 4,4 16,0 0,1 -16,0 0,-1 z m 0,4 16,0 0,1 -16,0 0,-1 z m 0,4 16,0 0,1 -16,0 0,-1 z m 0,4 16,0 0,1 -16,0 0,-1 z m 14,6 c -1.095342,0 -2,0.904658 -2,2 l 0,6 8,-8 -6,0 z"
+       id="path3180"
+       inkscape:connector-curvature="0" />
+    <path
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:0.25;color:#000000;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="m 36,-9 0,2 21,0 c 1.644702,0 3,1.355298 3,3 l 0,-2 c 0,-1.644702 -1.355298,-3 -3,-3 l -21,0 z m 4,6 0,1 16,0 0,-1 -16,0 z m 0,4 0,1 16,0 0,-1 -16,0 z m 0,4 0,1 16,0 0,-1 -16,0 z m 0,4 0,1 16,0 0,-1 -16,0 z m 0,4 0,1 10.1875,0 c 0.09356,-0.35473 0.1924,-0.690374 0.375,-1 L 40,13 z m 14,0 c -1.095342,0 -2,0.904658 -2,2 l 0,2 c 0,-1.095342 0.904658,-2 2,-2 l 4,0 2,-2 -4,0 -2,0 z m -14,4 0,1 10,0 0,-1 -10,0 z"
+       id="path3117"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

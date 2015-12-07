@@ -14,7 +14,7 @@
    height="96"
    width="96"
    version="1.0"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="indicator-messages.svg"
    inkscape:export-filename="indicator-messages.png"
    inkscape:export-xdpi="90"
@@ -34,13 +34,24 @@
   <defs
      id="defs10">
     <linearGradient
+       id="linearGradient3761">
+      <stop
+         style="stop-color:#202020;stop-opacity:1;"
+         offset="0"
+         id="stop3764" />
+      <stop
+         style="stop-color:#606060;stop-opacity:1;"
+         offset="1"
+         id="stop3766" />
+    </linearGradient>
+    <linearGradient
        id="linearGradient3759">
       <stop
          style="stop-color:#ffffff;stop-opacity:1;"
          offset="0"
          id="stop3761" />
       <stop
-         style="stop-color:#e0e0e0;stop-opacity:1;"
+         style="stop-color:#c4c4c4;stop-opacity:1;"
          offset="1"
          id="stop3763" />
     </linearGradient>
@@ -54,6 +65,15 @@
        y1="5.4994998"
        x2="11"
        y2="16.4995" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761"
+       id="linearGradient3768"
+       x1="48"
+       y1="74"
+       x2="48"
+       y2="22"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -82,23 +102,26 @@
      fit-margin-right="0"
      fit-margin-bottom="0" />
   <rect
-     id="rect3819"
-     style="opacity:0.25;fill:#000000;fill-opacity:1;stroke:none"
-     height="60"
-     width="84"
-     y="18"
-     x="6"
-     rx="4"
-     ry="4" />
+     x="10"
+     y="22"
+     width="76"
+     height="52"
+     style="fill:none;fill-opacity:1;stroke:url(#linearGradient3768);stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round;stroke-linecap:round;opacity:0.25000000000000000"
+     id="rect3772" />
   <rect
-     x="8"
-     y="20"
-     width="80"
-     height="56"
-     style="opacity:0.75;fill:#000000;fill-opacity:1;stroke:none"
-     id="rect3815"
-     rx="2"
-     ry="2" />
+     id="rect3770"
+     style="fill:none;fill-opacity:1;stroke:url(#linearGradient3768);stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round;stroke-linecap:round;opacity:0.50000000000000000"
+     height="52"
+     width="76"
+     y="22"
+     x="10" />
+  <rect
+     x="10"
+     y="22"
+     width="76"
+     height="52"
+     style="fill:none;fill-opacity:1;stroke:url(#linearGradient3768);stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round;stroke-linecap:round"
+     id="rect3759" />
   <rect
      id="rect2991"
      style="fill:url(#linearGradient3899);fill-opacity:1;stroke:none"

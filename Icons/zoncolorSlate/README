@@ -1,46 +1,44 @@
-ne SPIC_INTCTRL  _SFR_MEM8(0x08C1)
-#define SPIC_STATUS  _SFR_MEM8(0x08C2)
-#define SPIC_DATA  _SFR_MEM8(0x08C3)
+# ===================================================================
+# zonColor Themes Pack Project - http://www.fandigital.com
+# This icon theme is licensed under GNU GPL version 3 or later.
+# ===================================================================
 
-/* IRCOM - IR Communication Module */
-#define IRCOM_CTRL  _SFR_MEM8(0x08F8)
-#define IRCOM_TXPLCTRL  _SFR_MEM8(0x08F9)
-#define IRCOM_RXPLCTRL  _SFR_MEM8(0x08FA)
 
-/* TC0 - 16-bit Timer/Counter 0 */
-#define TCD0_CTRLA  _SFR_MEM8(0x0900)
-#define TCD0_CTRLB  _SFR_MEM8(0x0901)
-#define TCD0_CTRLC  _SFR_MEM8(0x0902)
-#define TCD0_CTRLD  _SFR_MEM8(0x0903)
-#define TCD0_CTRLE  _SFR_MEM8(0x0904)
-#define TCD0_INTCTRLA  _SFR_MEM8(0x0906)
-#define TCD0_INTCTRLB  _SFR_MEM8(0x0907)
-#define TCD0_CTRLFCLR  _SFR_MEM8(0x0908)
-#define TCD0_CTRLFSET  _SFR_MEM8(0x0909)
-#define TCD0_CTRLGCLR  _SFR_MEM8(0x090A)
-#define TCD0_CTRLGSET  _SFR_MEM8(0x090B)
-#define TCD0_INTFLAGS  _SFR_MEM8(0x090C)
-#define TCD0_TEMP  _SFR_MEM8(0x090F)
-#define TCD0_CNT  _SFR_MEM16(0x0920)
-#define TCD0_PER  _SFR_MEM16(0x0926)
-#define TCD0_CCA  _SFR_MEM16(0x0928)
-#define TCD0_CCB  _SFR_MEM16(0x092A)
-#define TCD0_CCC  _SFR_MEM16(0x092C)
-#define TCD0_CCD  _SFR_MEM16(0x092E)
-#define TCD0_PERBUF  _SFR_MEM16(0x0936)
-#define TCD0_CCABUF  _SFR_MEM16(0x0938)
-#define TCD0_CCBBUF  _SFR_MEM16(0x093A)
-#define TCD0_CCCBUF  _SFR_MEM16(0x093C)
-#define TCD0_CCDBUF  _SFR_MEM16(0x093E)
+To enable/activate this theme (if already installed):
+=====================================================
+Run "enable-icon-theme.sh" script file included in this folder,
+either by double-clicking it in Nautilus (file manager) window,
+or by executing it in Terminal window.
+The script supports Unity/GNOME/Cinnamon/MATE/Xfce session.
 
-/* TC2 - 16-bit Timer/Counter type 2 */
-#define TCD2_CTRLA  _SFR_MEM8(0x0900)
-#define TCD2_CTRLB  _SFR_MEM8(0x0901)
-#define TCD2_CTRLC  _SFR_MEM8(0x0902)
-#define TCD2_CTRLE  _SFR_MEM8(0x0904)
-#define TCD2_INTCTRLA  _SFR_MEM8(0x0906)
-#define TCD2_INTCTRLB  _SFR_MEM8(0x0907)
-#define TCD2_CTRLF  _SFR_MEM8(0x0909)
-#define TCD2_INTFLAGS  _SFR_MEM8(0x090C)
-#define TCD2_LCNT  _SFR_MEM8(0x0920)
-#define TCD2_HCNT  _SFR_MEM8(
+Alternatively, use a theme changer utility (e.g. GNOME Tweak Tool)
+or a built-in appearance settings app (if available).
+
+.
+
+To install (if not already):
+============================
+Run "enable-icon-theme.sh" script file included in this folder.
+The script will check whether this icon theme installed or not,
+and will automatically install when needed into "/home/$USER/.icons".
+Alternatively, you can install it manually by copying this folder
+into the icons folder.
+
+.
+
+NOTES
+=====
+You may need to set file permission to the script to allow
+executing it as program.
+* To set file permission in Nautilus file manager:
+    Right-click on the file ==> Properties ==> Permissions ==>
+    Execute ==> Check "Allow executing file as program" option.
+  You may also need to change Nautilus (Files) preference to be able
+  to run executable text files:
+    Open Nautilus (Files) Preferences window ==> Behavior ==>
+    Executable Text Files: Select "Ask each time".
+* To mark the script file as executable via Terminal:
+  Navigate to this folder, and then run this command:
+  "chmod +x *.sh" (without quotes)
+
+.

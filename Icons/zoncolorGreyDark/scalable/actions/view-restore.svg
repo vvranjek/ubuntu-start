@@ -1,133 +1,193 @@
-(1<<5)  /* Baud Rate Selection Bits [7:0] bit 5 mask. */
-#define USART_BSEL5_bp  5  /* Baud Rate Selection Bits [7:0] bit 5 position. */
-#define USART_BSEL6_bm  (1<<6)  /* Baud Rate Selection Bits [7:0] bit 6 mask. */
-#define USART_BSEL6_bp  6  /* Baud Rate Selection Bits [7:0] bit 6 position. */
-#define USART_BSEL7_bm  (1<<7)  /* Baud Rate Selection Bits [7:0] bit 7 mask. */
-#define USART_BSEL7_bp  7  /* Baud Rate Selection Bits [7:0] bit 7 position. */
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-/* USART.BAUDCTRLB  bit masks and bit positions */
-#define USART_BSCALE_gm  0xF0  /* Baud Rate Scale group mask. */
-#define USART_BSCALE_gp  4  /* Baud Rate Scale group position. */
-#define USART_BSCALE0_bm  (1<<4)  /* Baud Rate Scale bit 0 mask. */
-#define USART_BSCALE0_bp  4  /* Baud Rate Scale bit 0 position. */
-#define USART_BSCALE1_bm  (1<<5)  /* Baud Rate Scale bit 1 mask. */
-#define USART_BSCALE1_bp  5  /* Baud Rate Scale bit 1 position. */
-#define USART_BSCALE2_bm  (1<<6)  /* Baud Rate Scale bit 2 mask. */
-#define USART_BSCALE2_bp  6  /* Baud Rate Scale bit 2 position. */
-#define USART_BSCALE3_bm  (1<<7)  /* Baud Rate Scale bit 3 mask. */
-#define USART_BSCALE3_bp  7  /* Baud Rate Scale bit 3 position. */
-
-/* USART_BSEL  Predefined. */
-/* USART_BSEL  Predefined. */
-
-/* SPI - Serial Peripheral Interface */
-/* SPI.CTRL  bit masks and bit positions */
-#define SPI_CLK2X_bm  0x80  /* Enable Double Speed bit mask. */
-#define SPI_CLK2X_bp  7  /* Enable Double Speed bit position. */
-
-#define SPI_ENABLE_bm  0x40  /* Enable Module bit mask. */
-#define SPI_ENABLE_bp  6  /* Enable Module bit position. */
-
-#define SPI_DORD_bm  0x20  /* Data Order Setting bit mask. */
-#define SPI_DORD_bp  5  /* Data Order Setting bit position. */
-
-#define SPI_MASTER_bm  0x10  /* Master Operation Enable bit mask. */
-#define SPI_MASTER_bp  4  /* Master Operation Enable bit position. */
-
-#define SPI_MODE_gm  0x0C  /* SPI Mode group mask. */
-#define SPI_MODE_gp  2  /* SPI Mode group position. */
-#define SPI_MODE0_bm  (1<<2)  /* SPI Mode bit 0 mask. */
-#define SPI_MODE0_bp  2  /* SPI Mode bit 0 position. */
-#define SPI_MODE1_bm  (1<<3)  /* SPI Mode bit 1 mask. */
-#define SPI_MODE1_bp  3  /* SPI Mode bit 1 position. */
-
-#define SPI_PRESCALER_gm  0x03  /* Prescaler group mask. */
-#define SPI_PRESCALER_gp  0  /* Prescaler group position. */
-#define SPI_PRESCALER0_bm  (1<<0)  /* Prescaler bit 0 mask. */
-#define SPI_PRESCALER0_bp  0  /* Prescaler bit 0 position. */
-#define SPI_PRESCALER1_bm  (1<<1)  /* Prescaler bit 1 mask. */
-#define SPI_PRESCALER1_bp  1  /* Prescaler bit 1 position. */
-
-/* SPI.INTCTRL  bit masks and bit positions */
-#define SPI_INTLVL_gm  0x03  /* Interrupt level group mask. */
-#define SPI_INTLVL_gp  0  /* Interrupt level group position. */
-#define SPI_INTLVL0_bm  (1<<0)  /* Interrupt level bit 0 mask. */
-#define SPI_INTLVL0_bp  0  /* Interrupt level bit 0 position. */
-#define SPI_INTLVL1_bm  (1<<1)  /* Interrupt level bit 1 mask. */
-#define SPI_INTLVL1_bp  1  /* Interrupt level bit 1 position. */
-
-/* SPI.STATUS  bit masks and bit positions */
-#define SPI_IF_bm  0x80  /* Interrupt Flag bit mask. */
-#define SPI_IF_bp  7  /* Interrupt Flag bit position. */
-
-#define SPI_WRCOL_bm  0x40  /* Write Collision bit mask. */
-#define SPI_WRCOL_bp  6  /* Write Collision bit position. */
-
-/* IRCOM - IR Communication Module */
-/* IRCOM.CTRL  bit masks and bit positions */
-#define IRCOM_EVSEL_gm  0x0F  /* Event Channel Select group mask. */
-#define IRCOM_EVSEL_gp  0  /* Event Channel Select group position. */
-#define IRCOM_EVSEL0_bm  (1<<0)  /* Event Channel Select bit 0 mask. */
-#define IRCOM_EVSEL0_bp  0  /* Event Channel Select bit 0 position. */
-#define IRCOM_EVSEL1_bm  (1<<1)  /* Event Channel Select bit 1 mask. */
-#define IRCOM_EVSEL1_bp  1  /* Event Channel Select bit 1 position. */
-#define IRCOM_EVSEL2_bm  (1<<2)  /* Event Channel Select bit 2 mask. */
-#define IRCOM_EVSEL2_bp  2  /* Event Channel Select bit 2 position. */
-#define IRCOM_EVSEL3_bm  (1<<3)  /* Event Channel Select bit 3 mask. */
-#define IRCOM_EVSEL3_bp  3  /* Event Channel Select bit 3 position. */
-
-/* LCD - LCD Controller */
-/* LCD.CTRLA  bit masks and bit positions */
-#define LCD_ENABLE_bm  0x80  /* LCD Enable bit mask. */
-#define LCD_ENABLE_bp  7  /* LCD Enable bit position. */
-
-#define LCD_XBIAS_bm  0x40  /* External Register Bias Generation bit mask. */
-#define LCD_XBIAS_bp  6  /* External Register Bias Generation bit position. */
-
-#define LCD_DATCLK_bm  0x20  /* Data Register Lock bit mask. */
-#define LCD_DATCLK_bp  5  /* Data Register Lock bit position. */
-
-#define LCD_COMSWP_bm  0x10  /* Common Bus Swap bit mask. */
-#define LCD_COMSWP_bp  4  /* Common Bus Swap bit position. */
-
-#define LCD_SEGSWP_bm  0x08  /* Segment Bus Swap bit mask. */
-#define LCD_SEGSWP_bp  3  /* Segment Bus Swap bit position. */
-
-#define LCD_CLRDT_bm  0x04  /* Clear Data Register bit mask. */
-#define LCD_CLRDT_bp  2  /* Clear Data Register bit position. */
-
-#define LCD_SEGON_bm  0x02  /* Segments On bit mask. */
-#define LCD_SEGON_bp  1  /* Segments On bit position. */
-
-#define LCD_BLANK_bm  0x01  /* Blanking Display Mode bit mask. */
-#define LCD_BLANK_bp  0  /* Blanking Display Mode bit position. */
-
-/* LCD.CTRLB  bit masks and bit positions */
-#define LCD_PRESC_bm  0x80  /* LCD Prescaler Select bit mask. */
-#define LCD_PRESC_bp  7  /* LCD Prescaler Select bit position. */
-
-#define LCD_CLKDIV_gm  0x70  /* LCD Clock Divide group mask. */
-#define LCD_CLKDIV_gp  4  /* LCD Clock Divide group position. */
-#define LCD_CLKDIV0_bm  (1<<4)  /* LCD Clock Divide bit 0 mask. */
-#define LCD_CLKDIV0_bp  4  /* LCD Clock Divide bit 0 position. */
-#define LCD_CLKDIV1_bm  (1<<5)  /* LCD Clock Divide bit 1 mask. */
-#define LCD_CLKDIV1_bp  5  /* LCD Clock Divide bit 1 position. */
-#define LCD_CLKDIV2_bm  (1<<6)  /* LCD Clock Divide bit 2 mask. */
-#define LCD_CLKDIV2_bp  6  /* LCD Clock Divide bit 2 position. */
-
-#define LCD_LPWAV_bm  0x08  /* Low Power Waveform bit mask. */
-#define LCD_LPWAV_bp  3  /* Low Power Waveform bit position. */
-
-#define LCD_DUTY_gm  0x03  /* Duty Select group mask. */
-#define LCD_DUTY_gp  0  /* Duty Select group position. */
-#define LCD_DUTY0_bm  (1<<0)  /* Duty Select bit 0 mask. */
-#define LCD_DUTY0_bp  0  /* Duty Select bit 0 position. */
-#define LCD_DUTY1_bm  (1<<1)  /* Duty Select bit 1 mask. */
-#define LCD_DUTY1_bp  1  /* Duty Select bit 1 position. */
-
-/* LCD.CTRLC  bit masks and bit positions */
-#define LCD_PMSK_gm  0x3F  /* LCD Port Mask group mask. */
-#define LCD_PMSK_gp  0  /* LCD Port Mask group position. */
-#define LCD_PMSK0_bm  (1<<0)  /* LCD Port Mask bit 0 mask. */
-#define LCD_PMSK0_bp  0  /* LCD Port Mask bit 0 position. */
-#define LCD_PMSK1_bm  (1<<1)  /* LCD Po
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="96"
+   height="96"
+   id="svg8026"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="view-restore.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.1">
+  <defs
+     id="defs8028">
+    <linearGradient
+       id="linearGradient2889">
+      <stop
+         style="stop-color:white;stop-opacity:1;"
+         offset="0"
+         id="stop2891" />
+      <stop
+         style="stop-color:white;stop-opacity:0;"
+         offset="1"
+         id="stop2893" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2897">
+      <stop
+         style="stop-color:#212223;stop-opacity:1;"
+         offset="0"
+         id="stop2899" />
+      <stop
+         style="stop-color:#212223;stop-opacity:0;"
+         offset="1"
+         id="stop2901" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2905">
+      <stop
+         style="stop-color:#babbbc;stop-opacity:1;"
+         offset="0"
+         id="stop2907" />
+      <stop
+         style="stop-color:#babbbc;stop-opacity:0;"
+         offset="1"
+         id="stop2909" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4816">
+      <stop
+         style="stop-color:#212223;stop-opacity:1.0000000"
+         offset="0.0000000"
+         id="stop4818" />
+      <stop
+         style="stop-color:#212223;stop-opacity:0.0000000"
+         offset="1.0000000"
+         id="stop4820" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4816"
+       id="linearGradient3065"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.5700486,0,0,1.699094,-5.1966184,7.0117575)"
+       x1="13.050564"
+       y1="11.353518"
+       x2="13.050564"
+       y2="5.6173568" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2905"
+       id="linearGradient3067"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-3.600981,5.0000005)"
+       x1="35.100983"
+       y1="12.375624"
+       x2="43.349266"
+       y2="4.4381237" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2897"
+       id="linearGradient3069"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-3.600981,5.0000005)"
+       x1="35.100983"
+       y1="12.375624"
+       x2="43.349266"
+       y2="4.4381237" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2889"
+       id="linearGradient3071"
+       gradientUnits="userSpaceOnUse"
+       x1="24.75"
+       y1="13.984375"
+       x2="41.96875"
+       y2="13.984375" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.8020833"
+     inkscape:cx="48"
+     inkscape:cy="48"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1136"
+     inkscape:window-height="769"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata8031">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(0,48)">
+    <rect
+       id="rect3808"
+       style="opacity:0.5;fill:#e6e6e6;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:0.60166395;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
+       y="-39.398338"
+       x="32.601662"
+       ry="1.4781177"
+       rx="1.3468397"
+       height="54.796673"
+       width="54.796669" />
+    <g
+       id="g3037"
+       transform="matrix(2,0,0,2,0,-48)">
+      <rect
+         id="rect3818"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#212223;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
+         y="20.981197"
+         x="4.25"
+         ry="0.61417913"
+         rx="0.55963117"
+         height="22.768803"
+         width="22.768803" />
+      <rect
+         id="rect3820"
+         style="fill:url(#linearGradient3065);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+         y="21.115339"
+         x="4.384398"
+         ry="0.13495015"
+         rx="0.11907369"
+         height="4.25"
+         width="22.5" />
+    </g>
+    <g
+       id="g3096"
+       transform="matrix(2,0,0,2,-2,-46)">
+      <path
+         sodipodi:nodetypes="ccccccc"
+         style="fill:url(#linearGradient3067);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3069);stroke-width:0.49999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
+         d="M 32.382104,25.557267 29.385398,22.741128 43.935786,6.0012485 25.862675,19.208861 22.686809,16.024392 20.5,27.5 32.382104,25.557267 z"
+         id="path2890"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path2887"
+         d="M 37.84375,11.625 26.4375,19.96875 A 0.92685746,0.92685746 0 0 1 25.21875,19.875 l -1.9375,-1.9375 -1.625,8.4375 L 30.375,24.96875 28.75,23.4375 A 0.92685746,0.92685746 0 0 1 28.6875,22.15625 L 37.84375,11.625 z"
+         style="opacity:0.4070352;fill:none;stroke:url(#linearGradient3071);stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible" />
+    </g>
+  </g>
+</svg>

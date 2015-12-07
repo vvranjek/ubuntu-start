@@ -5,10 +5,11 @@
 
 clear
 
-CURRENT_DIR=$(find `pwd` -name "scripts")
+SCRIPTS_DIR=$(find `pwd` -name "scripts")
+NAUTILUS_SCRIPTS_DIR=$(find `pwd` -name "nautilus-scripts")
 FILENAME=package-list
 
-sudo chmod +x $CURRENT_DIR/*
+sudo chmod +x $SCRIPTS_DIR/*
 
 touch touch
 
@@ -20,17 +21,23 @@ mkdir -p /home/$USER/Programs
 mkdir -p /home/$USER/bin
 sleep 0.3
 
-echo "Copying scripts to bin."
-cp -r $CURRENT_DIR/. /home/$USER/bin
-sudo chmod +x /home/$USER/bin/*
+echo "Creating links of Nautilus scripts"
+ln -s $NAUTILUS_SCRIPTS_DIR/* /home/$USER/.local/share/nautilus/scripts/.
+
+echo "Creating links of scripts in bin."
+ln -s $SCRIPTS_DIR/* /home/$USER/bin/.
+#cp -r $SCRIPTS_DIR/. /home/$USER/bin
+#sudo chmod +x /home/$USER/bin/*
 sleep 0.3
 
-echo "Adding $USER to group dialout"
+echo "Adding $USER to group dialout and sudo"
 sudo adduser $USER dialout
+sudo adduser $USER sudo
+sudo adduser $USER vid
 sleep 0.3
 
 echo "Adding open as root menu to nautilus"
-sudo bash -c "$CURRENT_DIR/nautilusRoot.sh"
+sudo bash -c "$SCRIPTS_DIR/nautilusRoot.sh"
 sleep 0.3
 
 echo "Adding modifications to bashrc"
@@ -68,7 +75,7 @@ else
 fi
 
 #Disable/enable scrollbar overlay
-sh $CURRENT_DIR/scrollbarOverlay.sh
+sh $SCRIPTS_DIR/scrollbarOverlay.sh
 
 
 while true; do
@@ -83,7 +90,8 @@ while true; do
     sudo add-apt-repository ppa:rabbitvcs/ppa -y    #SVN nautilus stuff
     sudo add-apt-repository ppa:flozz/flozz    -y     # nautilus-terminal
     sudo add-apt-repository ppa:noobslab/apps   -y    #open-as-administrator 
-    sudo add-apt-repository ppa:daniel.pavel/solaar -y #Sollar, tool for logitech unigying receicers  
+    sudo add-apt-repository ppa:daniel.pavel/solaar -y #Sollar, tool for logitech unigying receicers 
+    sudo add-apt-repository sudo ppa:nilarimogard/webupd8 -y #Prime indicator 
     sudo add-apt-repository ppa:appgrid/stable -y      #Appgrid
     #sudo add-apt-repository ppa:gloobus-dev/gloobus-preview -y
     #sudo apt-add-repository ppa:screenlets/ppa -y 		# Scrennlets
@@ -119,6 +127,8 @@ while true; do
 		if [ "$fs" != "#" ]; then
 			sudo apt-get install $line -y
 		fi
+			
+		indicator-multiload & disown
 	done
 	break;;
  		
@@ -126,6 +136,23 @@ while true; do
 	* ) echo "Please answer yes or no.";;
     esac
 done
+
+while true; do
+    read -p "Whould you like install ZSH and Oh-My-Zsh? (Y/N)" answer
+    case $answer in
+      [Yy]* ) 
+
+	sudo apt-get install zsh
+	wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+	chsh -s /bin/zsh vid
+	chsh -s /bin/zsh ulu
+	break;;
+ 		
+    [Nn]* ) echo "NO"; break;;
+	* ) echo "Please answer yes or no.";;
+    esac
+done
+
 
 
 echo Done!

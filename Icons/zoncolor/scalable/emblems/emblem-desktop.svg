@@ -34,11 +34,11 @@
     <linearGradient
        id="linearGradient2699">
       <stop
-         style="stop-color:#aaeeff;stop-opacity:1"
+         style="stop-color:#aaefff;stop-opacity:1"
          offset="0"
          id="stop2701" />
       <stop
-         style="stop-color:#005599;stop-opacity:1;"
+         style="stop-color:#006fcf;stop-opacity:1;"
          offset="1"
          id="stop2703" />
     </linearGradient>
@@ -210,7 +210,7 @@
         <g
            id="g3025">
           <rect
-             style="fill:#336688;fill-opacity:1;stroke:none"
+             style="fill:#0058a3;fill-opacity:1;stroke:none"
              id="rect3803"
              transform="matrix(-0.9999988,0.00154862,-0.00107499,-0.99999942,0,0)"
              y="-34.015121"

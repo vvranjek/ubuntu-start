@@ -9,7 +9,7 @@ else
 	
 		echo "" >> /usr/share/applications/nautilus.desktop
 		echo [Desktop Action Window] >> /usr/share/applications/nautilus.desktop
-		echo Name=Open as root >> /usr/share/applications/nautilus.desktop
+		echo Name=Open As Root >> /usr/share/applications/nautilus.desktop
 		echo Exec=gksudo nautilus >> /usr/share/applications/nautilus.desktop
 		echo "OnlyShowIn=Unity;" >> /usr/share/applications/nautilus.desktop
 	else

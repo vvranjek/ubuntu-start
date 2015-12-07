@@ -1,228 +1,337 @@
-fine NVM_CMD5_bp  5  /* Command bit 5 position. */
-#define NVM_CMD6_bm  (1<<6)  /* Command bit 6 mask. */
-#define NVM_CMD6_bp  6  /* Command bit 6 position. */
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-/* NVM.CTRLA  bit masks and bit positions */
-#define NVM_CMDEX_bm  0x01  /* Command Execute bit mask. */
-#define NVM_CMDEX_bp  0  /* Command Execute bit position. */
-
-/* NVM.CTRLB  bit masks and bit positions */
-#define NVM_EEMAPEN_bm  0x08  /* EEPROM Mapping Enable bit mask. */
-#define NVM_EEMAPEN_bp  3  /* EEPROM Mapping Enable bit position. */
-
-#define NVM_FPRM_bm  0x04  /* Flash Power Reduction Enable bit mask. */
-#define NVM_FPRM_bp  2  /* Flash Power Reduction Enable bit position. */
-
-#define NVM_EPRM_bm  0x02  /* EEPROM Power Reduction Enable bit mask. */
-#define NVM_EPRM_bp  1  /* EEPROM Power Reduction Enable bit position. */
-
-#define NVM_SPMLOCK_bm  0x01  /* SPM Lock bit mask. */
-#define NVM_SPMLOCK_bp  0  /* SPM Lock bit position. */
-
-/* NVM.INTCTRL  bit masks and bit positions */
-#define NVM_SPMLVL_gm  0x0C  /* SPM Interrupt Level group mask. */
-#define NVM_SPMLVL_gp  2  /* SPM Interrupt Level group position. */
-#define NVM_SPMLVL0_bm  (1<<2)  /* SPM Interrupt Level bit 0 mask. */
-#define NVM_SPMLVL0_bp  2  /* SPM Interrupt Level bit 0 position. */
-#define NVM_SPMLVL1_bm  (1<<3)  /* SPM Interrupt Level bit 1 mask. */
-#define NVM_SPMLVL1_bp  3  /* SPM Interrupt Level bit 1 position. */
-
-#define NVM_EELVL_gm  0x03  /* EEPROM Interrupt Level group mask. */
-#define NVM_EELVL_gp  0  /* EEPROM Interrupt Level group position. */
-#define NVM_EELVL0_bm  (1<<0)  /* EEPROM Interrupt Level bit 0 mask. */
-#define NVM_EELVL0_bp  0  /* EEPROM Interrupt Level bit 0 position. */
-#define NVM_EELVL1_bm  (1<<1)  /* EEPROM Interrupt Level bit 1 mask. */
-#define NVM_EELVL1_bp  1  /* EEPROM Interrupt Level bit 1 position. */
-
-/* NVM.STATUS  bit masks and bit positions */
-#define NVM_NVMBUSY_bm  0x80  /* Non-volatile Memory Busy bit mask. */
-#define NVM_NVMBUSY_bp  7  /* Non-volatile Memory Busy bit position. */
-
-#define NVM_FBUSY_bm  0x40  /* Flash Memory Busy bit mask. */
-#define NVM_FBUSY_bp  6  /* Flash Memory Busy bit position. */
-
-#define NVM_EELOAD_bm  0x02  /* EEPROM Page Buffer Active Loading bit mask. */
-#define NVM_EELOAD_bp  1  /* EEPROM Page Buffer Active Loading bit position. */
-
-#define NVM_FLOAD_bm  0x01  /* Flash Page Buffer Active Loading bit mask. */
-#define NVM_FLOAD_bp  0  /* Flash Page Buffer Active Loading bit position. */
-
-/* NVM.LOCKBITS  bit masks and bit positions */
-#define NVM_BLBB_gm  0xC0  /* Boot Lock Bits - Boot Section group mask. */
-#define NVM_BLBB_gp  6  /* Boot Lock Bits - Boot Section group position. */
-#define NVM_BLBB0_bm  (1<<6)  /* Boot Lock Bits - Boot Section bit 0 mask. */
-#define NVM_BLBB0_bp  6  /* Boot Lock Bits - Boot Section bit 0 position. */
-#define NVM_BLBB1_bm  (1<<7)  /* Boot Lock Bits - Boot Section bit 1 mask. */
-#define NVM_BLBB1_bp  7  /* Boot Lock Bits - Boot Section bit 1 position. */
-
-#define NVM_BLBA_gm  0x30  /* Boot Lock Bits - Application Section group mask. */
-#define NVM_BLBA_gp  4  /* Boot Lock Bits - Application Section group position. */
-#define NVM_BLBA0_bm  (1<<4)  /* Boot Lock Bits - Application Section bit 0 mask. */
-#define NVM_BLBA0_bp  4  /* Boot Lock Bits - Application Section bit 0 position. */
-#define NVM_BLBA1_bm  (1<<5)  /* Boot Lock Bits - Application Section bit 1 mask. */
-#define NVM_BLBA1_bp  5  /* Boot Lock Bits - Application Section bit 1 position. */
-
-#define NVM_BLBAT_gm  0x0C  /* Boot Lock Bits - Application Table group mask. */
-#define NVM_BLBAT_gp  2  /* Boot Lock Bits - Application Table group position. */
-#define NVM_BLBAT0_bm  (1<<2)  /* Boot Lock Bits - Application Table bit 0 mask. */
-#define NVM_BLBAT0_bp  2  /* Boot Lock Bits - Application Table bit 0 position. */
-#define NVM_BLBAT1_bm  (1<<3)  /* Boot Lock Bits - Application Table bit 1 mask. */
-#define NVM_BLBAT1_bp  3  /* Boot Lock Bits - Application Table bit 1 position. */
-
-#define NVM_LB_gm  0x03  /* Lock Bits group mask. */
-#define NVM_LB_gp  0  /* Lock Bits group position. */
-#define NVM_LB0_bm  (1<<0)  /* Lock Bits bit 0 mask. */
-#define NVM_LB0_bp  0  /* Lock Bits bit 0 position. */
-#define NVM_LB1_bm  (1<<1)  /* Lock Bits bit 1 mask. */
-#define NVM_LB1_bp  1  /* Lock Bits bit 1 position. */
-
-/* ADC - Analog/Digital Converter */
-/* ADC_CH.CTRL  bit masks and bit positions */
-#define ADC_CH_START_bm  0x80  /* Channel Start Conversion bit mask. */
-#define ADC_CH_START_bp  7  /* Channel Start Conversion bit position. */
-
-#define ADC_CH_GAIN_gm  0x1C  /* Gain Factor group mask. */
-#define ADC_CH_GAIN_gp  2  /* Gain Factor group position. */
-#define ADC_CH_GAIN0_bm  (1<<2)  /* Gain Factor bit 0 mask. */
-#define ADC_CH_GAIN0_bp  2  /* Gain Factor bit 0 position. */
-#define ADC_CH_GAIN1_bm  (1<<3)  /* Gain Factor bit 1 mask. */
-#define ADC_CH_GAIN1_bp  3  /* Gain Factor bit 1 position. */
-#define ADC_CH_GAIN2_bm  (1<<4)  /* Gain Factor bit 2 mask. */
-#define ADC_CH_GAIN2_bp  4  /* Gain Factor bit 2 position. */
-
-#define ADC_CH_INPUTMODE_gm  0x03  /* Input Mode Select group mask. */
-#define ADC_CH_INPUTMODE_gp  0  /* Input Mode Select group position. */
-#define ADC_CH_INPUTMODE0_bm  (1<<0)  /* Input Mode Select bit 0 mask. */
-#define ADC_CH_INPUTMODE0_bp  0  /* Input Mode Select bit 0 position. */
-#define ADC_CH_INPUTMODE1_bm  (1<<1)  /* Input Mode Select bit 1 mask. */
-#define ADC_CH_INPUTMODE1_bp  1  /* Input Mode Select bit 1 position. */
-
-/* ADC_CH.MUXCTRL  bit masks and bit positions */
-#define ADC_CH_MUXPOS_gm  0x78  /* MUX selection on Positive ADC input group mask. */
-#define ADC_CH_MUXPOS_gp  3  /* MUX selection on Positive ADC input group position. */
-#define ADC_CH_MUXPOS0_bm  (1<<3)  /* MUX selection on Positive ADC input bit 0 mask. */
-#define ADC_CH_MUXPOS0_bp  3  /* MUX selection on Positive ADC input bit 0 position. */
-#define ADC_CH_MUXPOS1_bm  (1<<4)  /* MUX selection on Positive ADC input bit 1 mask. */
-#define ADC_CH_MUXPOS1_bp  4  /* MUX selection on Positive ADC input bit 1 position. */
-#define ADC_CH_MUXPOS2_bm  (1<<5)  /* MUX selection on Positive ADC input bit 2 mask. */
-#define ADC_CH_MUXPOS2_bp  5  /* MUX selection on Positive ADC input bit 2 position. */
-#define ADC_CH_MUXPOS3_bm  (1<<6)  /* MUX selection on Positive ADC input bit 3 mask. */
-#define ADC_CH_MUXPOS3_bp  6  /* MUX selection on Positive ADC input bit 3 position. */
-
-#define ADC_CH_MUXINT_gm  0x78  /* MUX selection on Internal ADC input group mask. */
-#define ADC_CH_MUXINT_gp  3  /* MUX selection on Internal ADC input group position. */
-#define ADC_CH_MUXINT0_bm  (1<<3)  /* MUX selection on Internal ADC input bit 0 mask. */
-#define ADC_CH_MUXINT0_bp  3  /* MUX selection on Internal ADC input bit 0 position. */
-#define ADC_CH_MUXINT1_bm  (1<<4)  /* MUX selection on Internal ADC input bit 1 mask. */
-#define ADC_CH_MUXINT1_bp  4  /* MUX selection on Internal ADC input bit 1 position. */
-#define ADC_CH_MUXINT2_bm  (1<<5)  /* MUX selection on Internal ADC input bit 2 mask. */
-#define ADC_CH_MUXINT2_bp  5  /* MUX selection on Internal ADC input bit 2 position. */
-#define ADC_CH_MUXINT3_bm  (1<<6)  /* MUX selection on Internal ADC input bit 3 mask. */
-#define ADC_CH_MUXINT3_bp  6  /* MUX selection on Internal ADC input bit 3 position. */
-
-#define ADC_CH_MUXNEG_gm  0x03  /* MUX selection on Negative ADC input group mask. */
-#define ADC_CH_MUXNEG_gp  0  /* MUX selection on Negative ADC input group position. */
-#define ADC_CH_MUXNEG0_bm  (1<<0)  /* MUX selection on Negative ADC input bit 0 mask. */
-#define ADC_CH_MUXNEG0_bp  0  /* MUX selection on Negative ADC input bit 0 position. */
-#define ADC_CH_MUXNEG1_bm  (1<<1)  /* MUX selection on Negative ADC input bit 1 mask. */
-#define ADC_CH_MUXNEG1_bp  1  /* MUX selection on Negative ADC input bit 1 position. */
-
-/* ADC_CH.INTCTRL  bit masks and bit positions */
-#define ADC_CH_INTMODE_gm  0x0C  /* Interrupt Mode group mask. */
-#define ADC_CH_INTMODE_gp  2  /* Interrupt Mode group position. */
-#define ADC_CH_INTMODE0_bm  (1<<2)  /* Interrupt Mode bit 0 mask. */
-#define ADC_CH_INTMODE0_bp  2  /* Interrupt Mode bit 0 position. */
-#define ADC_CH_INTMODE1_bm  (1<<3)  /* Interrupt Mode bit 1 mask. */
-#define ADC_CH_INTMODE1_bp  3  /* Interrupt Mode bit 1 position. */
-
-#define ADC_CH_INTLVL_gm  0x03  /* Interrupt Level group mask. */
-#define ADC_CH_INTLVL_gp  0  /* Interrupt Level group position. */
-#define ADC_CH_INTLVL0_bm  (1<<0)  /* Interrupt Level bit 0 mask. */
-#define ADC_CH_INTLVL0_bp  0  /* Interrupt Level bit 0 position. */
-#define ADC_CH_INTLVL1_bm  (1<<1)  /* Interrupt Level bit 1 mask. */
-#define ADC_CH_INTLVL1_bp  1  /* Interrupt Level bit 1 position. */
-
-/* ADC_CH.INTFLAGS  bit masks and bit positions */
-#define ADC_CH_CHIF_bm  0x01  /* Channel Interrupt Flag bit mask. */
-#define ADC_CH_CHIF_bp  0  /* Channel Interrupt Flag bit position. */
-
-/* ADC_CH.SCAN  bit masks and bit positions */
-#define ADC_CH_OFFSET_gm  0xF0  /* Positive MUX setting offset group mask. */
-#define ADC_CH_OFFSET_gp  4  /* Positive MUX setting offset group position. */
-#define ADC_CH_OFFSET0_bm  (1<<4)  /* Positive MUX setting offset bit 0 mask. */
-#define ADC_CH_OFFSET0_bp  4  /* Positive MUX setting offset bit 0 position. */
-#define ADC_CH_OFFSET1_bm  (1<<5)  /* Positive MUX setting offset bit 1 mask. */
-#define ADC_CH_OFFSET1_bp  5  /* Positive MUX setting offset bit 1 position. */
-#define ADC_CH_OFFSET2_bm  (1<<6)  /* Positive MUX setting offset bit 2 mask. */
-#define ADC_CH_OFFSET2_bp  6  /* Positive MUX setting offset bit 2 position. */
-#define ADC_CH_OFFSET3_bm  (1<<7)  /* Positive MUX setting offset bit 3 mask. */
-#define ADC_CH_OFFSET3_bp  7  /* Positive MUX setting offset bit 3 position. */
-
-#define ADC_CH_SCANNUM_gm  0x0F  /* Number of Channels included in scan group mask. */
-#define ADC_CH_SCANNUM_gp  0  /* Number of Channels included in scan group position. */
-#define ADC_CH_SCANNUM0_bm  (1<<0)  /* Number of Channels included in scan bit 0 mask. */
-#define ADC_CH_SCANNUM0_bp  0  /* Number of Channels included in scan bit 0 position. */
-#define ADC_CH_SCANNUM1_bm  (1<<1)  /* Number of Channels included in scan bit 1 mask. */
-#define ADC_CH_SCANNUM1_bp  1  /* Number of Channels included in scan bit 1 position. */
-#define ADC_CH_SCANNUM2_bm  (1<<2)  /* Number of Channels included in scan bit 2 mask. */
-#define ADC_CH_SCANNUM2_bp  2  /* Number of Channels included in scan bit 2 position. */
-#define ADC_CH_SCANNUM3_bm  (1<<3)  /* Number of Channels included in scan bit 3 mask. */
-#define ADC_CH_SCANNUM3_bp  3  /* Number of Channels included in scan bit 3 position. */
-
-/* ADC.CTRLA  bit masks and bit positions */
-#define ADC_CH0START_bm  0x04  /* Channel 0 Start Conversion bit mask. */
-#define ADC_CH0START_bp  2  /* Channel 0 Start Conversion bit position. */
-
-#define ADC_FLUSH_bm  0x02  /* ADC Flush bit mask. */
-#define ADC_FLUSH_bp  1  /* ADC Flush bit position. */
-
-#define ADC_ENABLE_bm  0x01  /* Enable ADC bit mask. */
-#define ADC_ENABLE_bp  0  /* Enable ADC bit position. */
-
-/* ADC.CTRLB  bit masks and bit positions */
-#define ADC_CURRLIMIT_gm  0x60  /* Current Limitation group mask. */
-#define ADC_CURRLIMIT_gp  5  /* Current Limitation group position. */
-#define ADC_CURRLIMIT0_bm  (1<<5)  /* Current Limitation bit 0 mask. */
-#define ADC_CURRLIMIT0_bp  5  /* Current Limitation bit 0 position. */
-#define ADC_CURRLIMIT1_bm  (1<<6)  /* Current Limitation bit 1 mask. */
-#define ADC_CURRLIMIT1_bp  6  /* Current Limitation bit 1 position. */
-
-#define ADC_CONMODE_bm  0x10  /* Conversion Mode bit mask. */
-#define ADC_CONMODE_bp  4  /* Conversion Mode bit position. */
-
-#define ADC_FREERUN_bm  0x08  /* Free Running Mode Enable bit mask. */
-#define ADC_FREERUN_bp  3  /* Free Running Mode Enable bit position. */
-
-#define ADC_RESOLUTION_gm  0x06  /* Result Resolution group mask. */
-#define ADC_RESOLUTION_gp  1  /* Result Resolution group position. */
-#define ADC_RESOLUTION0_bm  (1<<1)  /* Result Resolution bit 0 mask. */
-#define ADC_RESOLUTION0_bp  1  /* Result Resolution bit 0 position. */
-#define ADC_RESOLUTION1_bm  (1<<2)  /* Result Resolution bit 1 mask. */
-#define ADC_RESOLUTION1_bp  2  /* Result Resolution bit 1 position. */
-
-/* ADC.REFCTRL  bit masks and bit positions */
-#define ADC_REFSEL_gm  0x70  /* Reference Selection group mask. */
-#define ADC_REFSEL_gp  4  /* Reference Selection group position. */
-#define ADC_REFSEL0_bm  (1<<4)  /* Reference Selection bit 0 mask. */
-#define ADC_REFSEL0_bp  4  /* Reference Selection bit 0 position. */
-#define ADC_REFSEL1_bm  (1<<5)  /* Reference Selection bit 1 mask. */
-#define ADC_REFSEL1_bp  5  /* Reference Selection bit 1 position. */
-#define ADC_REFSEL2_bm  (1<<6)  /* Reference Selection bit 2 mask. */
-#define ADC_REFSEL2_bp  6  /* Reference Selection bit 2 position. */
-
-#define ADC_BANDGAP_bm  0x02  /* Bandgap enable bit mask. */
-#define ADC_BANDGAP_bp  1  /* Bandgap enable bit position. */
-
-#define ADC_TEMPREF_bm  0x01  /* Temperature Reference Enable bit mask. */
-#define ADC_TEMPREF_bp  0  /* Temperature Reference Enable bit position. */
-
-/* ADC.EVCTRL  bit masks and bit positions */
-#define ADC_EVSEL_gm  0x18  /* Event Input Select group mask. */
-#define ADC_EVSEL_gp  3  /* Event Input Select group position. */
-#define ADC_EVSEL0_bm  (1<<3)  /* Event Input Select bit 0 mask. */
-#define ADC_EVSEL0_bp  3  /* Event Input Select bit 0 position. */
-#define ADC_EVSEL1_bm  (1<<4)  /* Event Input Select bit 1 mask. */
-#define ADC_EVSEL1_bp  4  /* Event Input Select bit 1 position. */
-
-#define ADC_EVACT_gm  0x07  /* Event Action Select group mask. */
-#define ADC_EVACT_gp  0  /* Event Action Select 
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="96"
+   height="96"
+   id="svg8331"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="folder-documents.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.1"
+   inkscape:export-filename="folder-documents.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs8333">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5048-73"
+       id="linearGradient3247"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.125709,0,0,0.0864706,2.5651808,-10.70427)"
+       x1="302.85715"
+       y1="366.64789"
+       x2="302.85715"
+       y2="609.50507" />
+    <linearGradient
+       id="linearGradient5048-73">
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="0"
+         id="stop5050-95" />
+      <stop
+         id="stop5056-7"
+         offset="0.5"
+         style="stop-color:black;stop-opacity:1;" />
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="1"
+         id="stop5052-93" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5060-75"
+       id="radialGradient3244"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.125709,0,0,0.0864706,2.5899204,-10.70427)"
+       cx="605.71429"
+       cy="486.64789"
+       fx="605.71429"
+       fy="486.64789"
+       r="117.14286" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5060-75">
+      <stop
+         style="stop-color:black;stop-opacity:1;"
+         offset="0"
+         id="stop5062-4" />
+      <stop
+         style="stop-color:black;stop-opacity:0;"
+         offset="1"
+         id="stop5064-5" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5060-75"
+       id="radialGradient3241"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.125709,0,0,0.0864706,93.410098,-10.70427)"
+       cx="605.71429"
+       cy="486.64789"
+       fx="605.71429"
+       fy="486.64789"
+       r="117.14286" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4064-7-7"
+       id="linearGradient3230"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,2,-94,-48)"
+       x1="71"
+       y1="8"
+       x2="71"
+       y2="41.5" />
+    <linearGradient
+       id="linearGradient4064-7-7">
+      <stop
+         style="stop-color:#709937;stop-opacity:1;"
+         offset="0"
+         id="stop4066-4-3" />
+      <stop
+         style="stop-color:#709937;stop-opacity:0.50196081;"
+         offset="1"
+         id="stop4068-8-7" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4054-7-4"
+       id="linearGradient3232"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,2,-94,-48)"
+       x1="71"
+       y1="8"
+       x2="71"
+       y2="41.5" />
+    <linearGradient
+       id="linearGradient4054-7-4">
+      <stop
+         style="stop-color:#51751e;stop-opacity:1;"
+         offset="0"
+         id="stop4056-0-9" />
+      <stop
+         style="stop-color:#51751e;stop-opacity:0.50196081;"
+         offset="1"
+         id="stop4058-9-5" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9101-2"
+       id="linearGradient3227-8"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.75086228,0,0,0.3333332,-6.0605797,-28.166666)"
+       x1="71.999496"
+       y1="14.2578"
+       x2="71.999496"
+       y2="19.9583" />
+    <linearGradient
+       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)"
+       y2="19.9583"
+       x2="71.999496"
+       y1="14.2578"
+       x1="71.999496"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient9101-2">
+      <stop
+         id="stop9103-0"
+         style="stop-color:#51751e;stop-opacity:0;"
+         offset="0.25" />
+      <stop
+         id="stop9105-6"
+         style="stop-color:#51751e;stop-opacity:1;"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9073-9-3"
+       id="linearGradient3259"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7031318,0,0,0.7105376,-69.874472,-254.68002)"
+       x1="167.64111"
+       y1="328.87747"
+       x2="167.64111"
+       y2="407.69193" />
+    <linearGradient
+       id="linearGradient9073-9-3">
+      <stop
+         id="stop9075-9-7"
+         offset="0"
+         style="stop-color:#aacb7d;stop-opacity:1" />
+      <stop
+         id="stop9077-5-8"
+         offset="1"
+         style="stop-color:#709937;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9087-5-2"
+       id="linearGradient3261"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2,0,0,2,-365.99542,-54)"
+       x1="206.99738"
+       y1="16.499895"
+       x2="206.99738"
+       y2="44.50021" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient9087-5-2">
+      <stop
+         style="stop-color:#709937;stop-opacity:1"
+         offset="0"
+         id="stop9089-5-8" />
+      <stop
+         style="stop-color:#51751e;stop-opacity:1"
+         offset="1"
+         id="stop9091-1-1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10176-17"
+       id="linearGradient3256"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.9204022,0,0,1.885618,-11.468937,-87.058428)"
+       x1="7.2379346"
+       y1="36.005047"
+       x2="122.17093"
+       y2="36.005047" />
+    <linearGradient
+       id="linearGradient10176-17"
+       gradientUnits="userSpaceOnUse"
+       x1="71.999496"
+       y1="14.2578"
+       x2="71.999496"
+       y2="19.9583"
+       gradientTransform="matrix(1.0033404,0,0,1,-8.2374684,8)">
+      <stop
+         offset="0.00445589"
+         style="stop-color:#eaeaea;stop-opacity:0;"
+         id="stop10178-6" />
+      <stop
+         id="stop10180-0"
+         style="stop-color:#ffffff;stop-opacity:0.52941179;"
+         offset="0.46138024" />
+      <stop
+         offset="1"
+         style="stop-color:#f5f5f5;stop-opacity:0"
+         id="stop10182-6" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6"
+     inkscape:cx="48"
+     inkscape:cy="48"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1115"
+     inkscape:window-height="788"
+     inkscape:window-x="163"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-nodes="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata8336">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(0,48)">
+    <g
+       id="g3274">
+      <g
+         id="g3269">
+        <rect
+           style="opacity:0.40206185;fill:url(#linearGradient3247);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+           id="rect13073"
+           width="60.699482"
+           height="21.000004"
+           x="17.650259"
+           y="21" />
+        <path
+           style="opacity:0.40206185;fill:url(#radialGradient3244);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+           d="m 78.349742,21.000718 c 0,0 0,20.998846 0,20.998846 C 84.823444,42.039084 94.000004,37.294788 94,31.49879 94,25.70279 86.775836,21.00072 78.349742,21.000718 z"
+           id="path13075"
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0" />
+        <path
+           sodipodi:nodetypes="cccc"
+           id="path13077"
+           d="m 17.65026,21.000718 c 0,0 0,20.998846 0,20.998846 -6.473703,0.03952 -15.6502598,-4.704776 -15.6502598,-10.500774 0,-5.796 7.224163,-10.49807 15.6502598,-10.498072 z"
+           style="opacity:0.40206185;fill:url(#radialGradient3241);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g3263">
+        <path
+           style="color:#000000;fill:url(#linearGradient3230);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3232);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="m 63,-32 c -1.108,0 -2.0895,0.4645 -2.8125,1.1875 L 56.375,-27 11,-27 c -2.216,0 -4,1.784 -4,4 l 0,56 c 0,1.108 0.892,2 2,2 l 78,0 c 1.108,0 2,-0.892 2,-2 l 0,-61 c 0,-2.216 -1.784,-4 -4,-4 z"
+           id="rect3142"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sscsccccccss" />
+        <path
+           style="opacity:0.5;fill:url(#linearGradient3227-8);fill-opacity:1;display:inline;enable-background:new"
+           id="path39053"
+           d="m 7.5014969,-23.5 c 0.00626,0.583332 0.012514,1.251666 0.018752,2 l 80.9609801,0 c 0.0063,-0.748334 0.01256,-1.416668 0.01883,-2 l -80.9999993,0 0.0015,0 z"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccccc"
+           style="opacity:0.9;color:#000000;fill:url(#linearGradient3259);fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient3261);stroke-width:0.99958181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
+           id="path3300"
+           d="m 90.493984,33 c -0.06074,1.170968 -1.335732,2.000418 -2.499686,2.000418 l -79.9899374,0 c -1.163934,0 -2.438312,-0.82945 -2.499686,-2.000418 l -2.499684,-51.999792 c -0.08468,-1.168834 0.835794,-2.000416 1.999748,-2.000416 l 85.9891834,0 c 1.163954,0 2.088616,0.831582 1.999748,2.000416 L 90.493984,33 z" />
+        <rect
+           style="fill:url(#linearGradient3256);fill-opacity:1;stroke:none;display:inline;enable-background:new"
+           id="rect3521-5"
+           width="89"
+           height="2"
+           x="3.4999948"
+           y="-20.5"
+           rx="0"
+           ry="0" />
+      </g>
+    </g>
+    <path
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:0.6;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="m 36,-8 0,27 c 0,1.644702 1.355298,3 3,3 l 11,0 0,-5 -10,0 0,-1 10,0 c 0,-1.193494 0.53446,-2.264406 1.375,-3 L 40,13 l 0,-1 14,0 2,0 4,0 0,-17 c 0,-1.644702 -1.355298,-3 -3,-3 l -21,0 z m 4,4 16,0 0,1 -16,0 0,-1 z m 0,4 16,0 0,1 -16,0 0,-1 z m 0,4 16,0 0,1 -16,0 0,-1 z m 0,4 16,0 0,1 -16,0 0,-1 z m 14,6 c -1.095342,0 -2,0.904658 -2,2 l 0,6 8,-8 -6,0 z"
+       id="path3180"
+       inkscape:connector-curvature="0" />
+    <path
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:0.25;color:#000000;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="m 36,-9 0,2 21,0 c 1.644702,0 3,1.355298 3,3 l 0,-2 c 0,-1.644702 -1.355298,-3 -3,-3 l -21,0 z m 4,6 0,1 16,0 0,-1 -16,0 z m 0,4 0,1 16,0 0,-1 -16,0 z m 0,4 0,1 16,0 0,-1 -16,0 z m 0,4 0,1 16,0 0,-1 -16,0 z m 0,4 0,1 10.1875,0 c 0.09356,-0.35473 0.1924,-0.690374 0.375,-1 L 40,13 z m 14,0 c -1.095342,0 -2,0.904658 -2,2 l 0,2 c 0,-1.095342 0.904658,-2 2,-2 l 4,0 2,-2 -4,0 -2,0 z m -14,4 0,1 10,0 0,-1 -10,0 z"
+       id="path3117"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

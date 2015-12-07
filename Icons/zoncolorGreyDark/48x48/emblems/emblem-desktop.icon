@@ -1,56 +1,89 @@
-sk. */
-#define USB_EP_BUSNACK1_bp  2  /* Data Buffer 1 Not Acknowledge bit position. */
 
-#define USB_EP_BUSNACK0_bm  0x02  /* Data Buffer 0 Not Acknowledge bit mask. */
-#define USB_EP_BUSNACK0_bp  1  /* Data Buffer 0 Not Acknowledge bit position. */
+[Icon Data]
 
-#define USB_EP_TOGGLE_bm  0x01  /* Data Toggle bit mask. */
-#define USB_EP_TOGGLE_bp  0  /* Data Toggle bit position. */
-
-/* USB_EP.CTRL  bit masks and bit positions */
-#define USB_EP_TYPE_gm  0xC0  /* Endpoint Type group mask. */
-#define USB_EP_TYPE_gp  6  /* Endpoint Type group position. */
-#define USB_EP_TYPE0_bm  (1<<6)  /* Endpoint Type bit 0 mask. */
-#define USB_EP_TYPE0_bp  6  /* Endpoint Type bit 0 position. */
-#define USB_EP_TYPE1_bm  (1<<7)  /* Endpoint Type bit 1 mask. */
-#define USB_EP_TYPE1_bp  7  /* Endpoint Type bit 1 position. */
-
-#define USB_EP_MULTIPKT_bm  0x20  /* Multi Packet Transfer Enable bit mask. */
-#define USB_EP_MULTIPKT_bp  5  /* Multi Packet Transfer Enable bit position. */
-
-#define USB_EP_PINGPONG_bm  0x10  /* Ping-Pong Enable bit mask. */
-#define USB_EP_PINGPONG_bp  4  /* Ping-Pong Enable bit position. */
-
-#define USB_EP_INTDSBL_bm  0x08  /* Interrupt Disable bit mask. */
-#define USB_EP_INTDSBL_bp  3  /* Interrupt Disable bit position. */
-
-#define USB_EP_STALL_bm  0x04  /* Data Stall bit mask. */
-#define USB_EP_STALL_bp  2  /* Data Stall bit position. */
-
-#define USB_EP_BUFSIZE_gm  0x07  /* Data Buffer Size group mask. */
-#define USB_EP_BUFSIZE_gp  0  /* Data Buffer Size group position. */
-#define USB_EP_BUFSIZE0_bm  (1<<0)  /* Data Buffer Size bit 0 mask. */
-#define USB_EP_BUFSIZE0_bp  0  /* Data Buffer Size bit 0 position. */
-#define USB_EP_BUFSIZE1_bm  (1<<1)  /* Data Buffer Size bit 1 mask. */
-#define USB_EP_BUFSIZE1_bp  1  /* Data Buffer Size bit 1 position. */
-#define USB_EP_BUFSIZE2_bm  (1<<2)  /* Data Buffer Size bit 2 mask. */
-#define USB_EP_BUFSIZE2_bp  2  /* Data Buffer Size bit 2 position. */
-
-/* USB_EP.CNT  bit masks and bit positions */
-#define USB_EP_ZLP_bm  0x8000  /* Zero Length Packet bit mask. */
-#define USB_EP_ZLP_bp  15  /* Zero Length Packet bit position. */
-
-/* USB.CTRLA  bit masks and bit positions */
-#define USB_ENABLE_bm  0x80  /* USB Enable bit mask. */
-#define USB_ENABLE_bp  7  /* USB Enable bit position. */
-
-#define USB_SPEED_bm  0x40  /* Speed Select bit mask. */
-#define USB_SPEED_bp  6  /* Speed Select bit position. */
-
-#define USB_FIFOEN_bm  0x20  /* USB FIFO Enable bit mask. */
-#define USB_FIFOEN_bp  5  /* USB FIFO Enable bit position. */
-
-#define USB_STFRNUM_bm  0x10  /* Store Frame Number Enable bit mask. */
-#define USB_STFRNUM_bp  4  /* Store Frame Number Enable bit position. */
-
-#define USB_MAXEP_gm  0x0F  /* Maximum Endpoint Addresses group mask. */
+DisplayName=Desktop
+DisplayName[af]=Werkskerm
+DisplayName[ar]=سطح المكتب
+DisplayName[as]=ডেষ্কট'প
+DisplayName[ast]=Escritoriu
+DisplayName[az]=Masa Üstü
+DisplayName[be]=Сталец
+DisplayName[be@latin]=Stoł
+DisplayName[bg]=Работно място
+DisplayName[bn]=ডেস্কটপ
+DisplayName[bn_IN]=ডেস্কটপ
+DisplayName[bs]=Desktop
+DisplayName[ca]=Escriptori
+DisplayName[ca@valencia]=Escriptori
+DisplayName[crh]=Masaüstü
+DisplayName[cs]=Pracovní plocha
+DisplayName[cy]=Penbwrdd
+DisplayName[da]=Skrivebord
+DisplayName[de]=Desktop
+DisplayName[dz]=ཌེཀསི་ཊོཔ།
+DisplayName[el]=Επιφάνεια εργασίας
+DisplayName[en_CA]=Desktop
+DisplayName[en_GB]=Desktop
+DisplayName[es]=Escritorio
+DisplayName[et]=Töölaud
+DisplayName[eu]=Mahaigaina
+DisplayName[fa]=رومیزی
+DisplayName[fi]=Työpöytä
+DisplayName[fr]=Bureau
+DisplayName[fur]=Scrivanie
+DisplayName[ga]=Deasc
+DisplayName[gl]=Escritorio
+DisplayName[gu]=ડેસ્કટોપ
+DisplayName[he]=שולחן עבודה
+DisplayName[hi]=डेस्कटॉप
+DisplayName[hr]=Radna površina
+DisplayName[hu]=Asztal
+DisplayName[id]=Desktop
+DisplayName[it]=Scrivania
+DisplayName[ja]=デスクトップ
+DisplayName[ka]=სამუშაო მაგიდა
+DisplayName[kk]=Жұмыс үстелі
+DisplayName[kn]=ಗಣಕತೆರೆ
+DisplayName[ko]=데스크탑
+DisplayName[lt]=Darbalaukis
+DisplayName[lv]=Darbavirsma
+DisplayName[mai]=डेस्कटाप
+DisplayName[mg]=Sehatrasa
+DisplayName[mk]=Работна околина
+DisplayName[ml]=പണിയിടം
+DisplayName[mr]=कार्यस्थळ
+DisplayName[ms]=Desktop
+DisplayName[nb]=Skrivebord
+DisplayName[nds]=Schrievdisk
+DisplayName[ne]=डेस्कटप
+DisplayName[nl]=Bureaublad
+DisplayName[nn]=Skrivebord
+DisplayName[oc]=Burèu
+DisplayName[or]=ଡେସ୍କଟପ୍
+DisplayName[pa]=ਡੈਸਕਟਾਪ
+DisplayName[pl]=Pulpit
+DisplayName[ps]=سرپاڼه
+DisplayName[pt]=Área de Trabalho
+DisplayName[pt_BR]=Área de trabalho
+DisplayName[ro]=Desktop
+DisplayName[ru]=Рабочий стол
+DisplayName[rw]=Ibiro
+DisplayName[si]=මුලීක තිරය
+DisplayName[sk]=Pracovná plocha
+DisplayName[sl]=Namizje
+DisplayName[sq]=Hapësira e Punës
+DisplayName[sr]=Радна површина
+DisplayName[sr@latin]=Radna površina
+DisplayName[sv]=Skrivbord
+DisplayName[ta]=மேசை
+DisplayName[te]=రంగస్ఠలం
+DisplayName[th]=พื้นโต๊ะ
+DisplayName[tr]=Masaüstü
+DisplayName[uk]=Робочий стіл
+DisplayName[uz]=Ish stoli
+DisplayName[uz@cyrillic]=Иш столи
+DisplayName[vi]=Màn hình nền
+DisplayName[xh]=i-Desktop
+DisplayName[zh_CN]=桌面
+DisplayName[zh_HK]=桌面
+DisplayName[zh_TW]=桌面

@@ -15,7 +15,7 @@
    height="96"
    id="svg2408"
    style="display:inline"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="puddletag.svg">
   <metadata
      id="metadata83">
@@ -44,7 +44,7 @@
      showgrid="false"
      inkscape:zoom="4"
      inkscape:cx="48"
-     inkscape:cy="48"
+     inkscape:cy="58"
      inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="0"
@@ -72,11 +72,11 @@
        id="linearGradient3690">
       <stop
          id="stop3692"
-         style="stop-color:#297ab3;stop-opacity:1;"
+         style="stop-color:#81feff;stop-opacity:1;"
          offset="0" />
       <stop
          id="stop3694"
-         style="stop-color:#44e8cb;stop-opacity:1;"
+         style="stop-color:#184968;stop-opacity:1;"
          offset="1" />
     </linearGradient>
     <linearGradient
@@ -114,22 +114,23 @@
        gradientTransform="matrix(1.0058652,0,0,0.994169,0,12)" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient3690"
-       id="linearGradient3003"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.291485,0,0,1.59561,-117.31008,-13.430984)"
-       x1="122.64286"
-       y1="55.956505"
-       x2="122.64286"
-       y2="19.411707" />
-    <linearGradient
-       inkscape:collect="always"
        xlink:href="#linearGradient3788"
        id="linearGradient3794"
        x1="51.915455"
        y1="18.182428"
-       x2="52.35709"
-       y2="70.318703"
+       x2="51.915455"
+       y2="65.833603"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3690"
+       id="radialGradient3770"
+       cx="48.713207"
+       cy="64.353874"
+       fx="48.713207"
+       fy="64.353874"
+       r="41.327518"
+       gradientTransform="matrix(1.6802157,-8.1034907e-8,6.0521678e-8,1.2548848,-33.098706,-10.006688)"
        gradientUnits="userSpaceOnUse" />
   </defs>
   <path
@@ -155,11 +156,11 @@
   </g>
   <path
      inkscape:connector-curvature="0"
-     style="fill:url(#linearGradient3003);fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline"
+     style="fill:url(#radialGradient3770);fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline"
      id="path3242"
      d="m 53.16594,18.481215 c -7.863575,0 -14.601176,5.794811 -17.636842,14.111176 -1.410648,-1.82082 -3.408724,-2.941905 -5.609888,-2.941905 -4.279604,0 -7.74891,4.286273 -7.74891,9.57366 -8.585792,0 -15.49782,8.539706 -15.49782,19.147318 0,10.607615 6.912028,19.147321 15.49782,19.147321 l 51.6594,0 c 8.58579,0 15.49782,-8.539705 15.49782,-19.147321 0,-10.607612 -6.91203,-19.147318 -15.49782,-19.147318 l -1.452922,0 C 71.113042,27.515705 62.988428,18.481215 53.16594,18.481215 z" />
   <path
-     style="opacity:0.25000000000000000;color:#000000;fill:url(#linearGradient3794);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0.69999999999999996;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     style="opacity:0.75000000000000000;color:#000000;fill:url(#linearGradient3794);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0.69999999999999996;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
      d="M 53.15625 18.46875 C 45.292675 18.46875 38.566916 24.277385 35.53125 32.59375 C 34.120602 30.77293 32.107414 29.65625 29.90625 29.65625 C 25.626646 29.65625 22.15625 33.931363 22.15625 39.21875 C 17.729201 39.21875 13.756437 41.502573 10.9375 45.15625 C 19.741211 51.300319 33.076422 55.21875 48 55.21875 C 62.923578 55.21875 76.258789 51.300319 85.0625 45.15625 C 82.243562 41.502573 78.270798 39.21875 73.84375 39.21875 L 72.375 39.21875 C 71.111264 27.510309 62.978738 18.46875 53.15625 18.46875 z "
      id="path3782" />
 </svg>

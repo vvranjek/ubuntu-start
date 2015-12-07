@@ -92,11 +92,11 @@
     <linearGradient
        id="linearGradient2699-1">
       <stop
-         style="stop-color:#aaeeff;stop-opacity:1"
+         style="stop-color:#aaefff;stop-opacity:1"
          offset="0"
          id="stop2701-3" />
       <stop
-         style="stop-color:#005599;stop-opacity:1;"
+         style="stop-color:#006fcf;stop-opacity:1;"
          offset="1"
          id="stop2703-5" />
     </linearGradient>
@@ -206,7 +206,7 @@
         <g
            id="g3025">
           <rect
-             style="fill:#336688;fill-opacity:1;stroke:none"
+             style="fill:#0058a3;fill-opacity:1;stroke:none"
              id="rect3803"
              transform="matrix(-0.9999988,0.00154862,-0.00107499,-0.99999942,0,0)"
              y="-34.015121"
@@ -255,7 +255,7 @@
          inkscape:connector-curvature="0"
          id="path3109"
          d="M 6.0312574,2.062498 89.97182,1.935042"
-         style="fill:none;stroke:#336688;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;stroke:#0058a3;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
          style="opacity:0.5;fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="M 6.0312574,3.0620058 89.97182,2.9345498"
@@ -265,7 +265,7 @@
          inkscape:connector-curvature="0"
          id="path3111"
          d="m 48.000001,-27.999991 0.0625,59.937486"
-         style="fill:none;stroke:#336688;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;stroke:#0058a3;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
   </g>
 </svg>

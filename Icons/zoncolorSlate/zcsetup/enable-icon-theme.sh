@@ -1,133 +1,156 @@
-#define TCE0_CTRLC  _SFR_MEM8(0x0A02)
-#define TCE0_CTRLD  _SFR_MEM8(0x0A03)
-#define TCE0_CTRLE  _SFR_MEM8(0x0A04)
-#define TCE0_INTCTRLA  _SFR_MEM8(0x0A06)
-#define TCE0_INTCTRLB  _SFR_MEM8(0x0A07)
-#define TCE0_CTRLFCLR  _SFR_MEM8(0x0A08)
-#define TCE0_CTRLFSET  _SFR_MEM8(0x0A09)
-#define TCE0_CTRLGCLR  _SFR_MEM8(0x0A0A)
-#define TCE0_CTRLGSET  _SFR_MEM8(0x0A0B)
-#define TCE0_INTFLAGS  _SFR_MEM8(0x0A0C)
-#define TCE0_TEMP  _SFR_MEM8(0x0A0F)
-#define TCE0_CNT  _SFR_MEM16(0x0A20)
-#define TCE0_PER  _SFR_MEM16(0x0A26)
-#define TCE0_CCA  _SFR_MEM16(0x0A28)
-#define TCE0_CCB  _SFR_MEM16(0x0A2A)
-#define TCE0_CCC  _SFR_MEM16(0x0A2C)
-#define TCE0_CCD  _SFR_MEM16(0x0A2E)
-#define TCE0_PERBUF  _SFR_MEM16(0x0A36)
-#define TCE0_CCABUF  _SFR_MEM16(0x0A38)
-#define TCE0_CCBBUF  _SFR_MEM16(0x0A3A)
-#define TCE0_CCCBUF  _SFR_MEM16(0x0A3C)
-#define TCE0_CCDBUF  _SFR_MEM16(0x0A3E)
+#!/bin/bash
+# ===================================================================
+# zonColor Themes Pack Project - http://www.fandigital.com
+# Beautiful themes, your own colors, unlimited!
+# -------------------------------------------------------------------
+# zonColor Icon-Theme - Copyright (C) 2012 Zon Saja
+# ===================================================================
 
-/* TC2 - 16-bit Timer/Counter type 2 */
-#define TCE2_CTRLA  _SFR_MEM8(0x0A00)
-#define TCE2_CTRLB  _SFR_MEM8(0x0A01)
-#define TCE2_CTRLC  _SFR_MEM8(0x0A02)
-#define TCE2_CTRLE  _SFR_MEM8(0x0A04)
-#define TCE2_INTCTRLA  _SFR_MEM8(0x0A06)
-#define TCE2_INTCTRLB  _SFR_MEM8(0x0A07)
-#define TCE2_CTRLF  _SFR_MEM8(0x0A09)
-#define TCE2_INTFLAGS  _SFR_MEM8(0x0A0C)
-#define TCE2_LCNT  _SFR_MEM8(0x0A20)
-#define TCE2_HCNT  _SFR_MEM8(0x0A21)
-#define TCE2_LPER  _SFR_MEM8(0x0A26)
-#define TCE2_HPER  _SFR_MEM8(0x0A27)
-#define TCE2_LCMPA  _SFR_MEM8(0x0A28)
-#define TCE2_HCMPA  _SFR_MEM8(0x0A29)
-#define TCE2_LCMPB  _SFR_MEM8(0x0A2A)
-#define TCE2_HCMPB  _SFR_MEM8(0x0A2B)
-#define TCE2_LCMPC  _SFR_MEM8(0x0A2C)
-#define TCE2_HCMPC  _SFR_MEM8(0x0A2D)
-#define TCE2_LCMPD  _SFR_MEM8(0x0A2E)
-#define TCE2_HCMPD  _SFR_MEM8(0x0A2F)
 
-/* TC1 - 16-bit Timer/Counter 1 */
-#define TCE1_CTRLA  _SFR_MEM8(0x0A40)
-#define TCE1_CTRLB  _SFR_MEM8(0x0A41)
-#define TCE1_CTRLC  _SFR_MEM8(0x0A42)
-#define TCE1_CTRLD  _SFR_MEM8(0x0A43)
-#define TCE1_CTRLE  _SFR_MEM8(0x0A44)
-#define TCE1_INTCTRLA  _SFR_MEM8(0x0A46)
-#define TCE1_INTCTRLB  _SFR_MEM8(0x0A47)
-#define TCE1_CTRLFCLR  _SFR_MEM8(0x0A48)
-#define TCE1_CTRLFSET  _SFR_MEM8(0x0A49)
-#define TCE1_CTRLGCLR  _SFR_MEM8(0x0A4A)
-#define TCE1_CTRLGSET  _SFR_MEM8(0x0A4B)
-#define TCE1_INTFLAGS  _SFR_MEM8(0x0A4C)
-#define TCE1_TEMP  _SFR_MEM8(0x0A4F)
-#define TCE1_CNT  _SFR_MEM16(0x0A60)
-#define TCE1_PER  _SFR_MEM16(0x0A66)
-#define TCE1_CCA  _SFR_MEM16(0x0A68)
-#define TCE1_CCB  _SFR_MEM16(0x0A6A)
-#define TCE1_PERBUF  _SFR_MEM16(0x0A76)
-#define TCE1_CCABUF  _SFR_MEM16(0x0A78)
-#define TCE1_CCBBUF  _SFR_MEM16(0x0A7A)
 
-/* AWEX - Advanced Waveform Extension */
-#define AWEXE_CTRL  _SFR_MEM8(0x0A80)
-#define AWEXE_FDEMASK  _SFR_MEM8(0x0A82)
-#define AWEXE_FDCTRL  _SFR_MEM8(0x0A83)
-#define AWEXE_STATUS  _SFR_MEM8(0x0A84)
-#define AWEXE_STATUSSET  _SFR_MEM8(0x0A85)
-#define AWEXE_DTBOTH  _SFR_MEM8(0x0A86)
-#define AWEXE_DTBOTHBUF  _SFR_MEM8(0x0A87)
-#define AWEXE_DTLS  _SFR_MEM8(0x0A88)
-#define AWEXE_DTHS  _SFR_MEM8(0x0A89)
-#define AWEXE_DTLSBUF  _SFR_MEM8(0x0A8A)
-#define AWEXE_DTHSBUF  _SFR_MEM8(0x0A8B)
-#define AWEXE_OUTOVEN  _SFR_MEM8(0x0A8C)
+# VARIABLES
 
-/* HIRES - High-Resolution Extension */
-#define HIRESE_CTRLA  _SFR_MEM8(0x0A90)
+# About script
+zcBN=$(basename "$0"); zcDR=$(dirname "$0"); zcFP=$(cd "$zcDR" && pwd);
+if (test -z "$zcCaller"); then zcCaller=$(ps ax | grep "^ *$PPID" | awk '{print $NF}'); fi;
 
-/* USART - Universal Synchronous/Asynchronous Receiver/Transmitter */
-#define USARTE0_DATA  _SFR_MEM8(0x0AA0)
-#define USARTE0_STATUS  _SFR_MEM8(0x0AA1)
-#define USARTE0_CTRLA  _SFR_MEM8(0x0AA3)
-#define USARTE0_CTRLB  _SFR_MEM8(0x0AA4)
-#define USARTE0_CTRLC  _SFR_MEM8(0x0AA5)
-#define USARTE0_BAUDCTRLA  _SFR_MEM8(0x0AA6)
-#define USARTE0_BAUDCTRLB  _SFR_MEM8(0x0AA7)
+# App and Environmment Variables
+CurrentSessionName="this desktop";
+CanEnableSettings=false;
+LxdeSession=false;
+LxAppearanceReady=false;
+ZenityReady=false; MateDialogReady=false; XmessageReady=false; NotifySendReady=false;
+XdgOpenReady=false;
 
-/* USART - Universal Synchronous/Asynchronous Receiver/Transmitter */
-#define USARTE1_DATA  _SFR_MEM8(0x0AB0)
-#define USARTE1_STATUS  _SFR_MEM8(0x0AB1)
-#define USARTE1_CTRLA  _SFR_MEM8(0x0AB3)
-#define USARTE1_CTRLB  _SFR_MEM8(0x0AB4)
-#define USARTE1_CTRLC  _SFR_MEM8(0x0AB5)
-#define USARTE1_BAUDCTRLA  _SFR_MEM8(0x0AB6)
-#define USARTE1_BAUDCTRLB  _SFR_MEM8(0x0AB7)
+# Input-based variables
 
-/* SPI - Serial Peripheral Interface */
-#define SPIE_CTRL  _SFR_MEM8(0x0AC0)
-#define SPIE_INTCTRL  _SFR_MEM8(0x0AC1)
-#define SPIE_STATUS  _SFR_MEM8(0x0AC2)
-#define SPIE_DATA  _SFR_MEM8(0x0AC3)
+# Internal variables
+ThemeFolderFP=$(cd "$zcFP/.." && pwd);
+ThemeName=$(basename "$ThemeFolderFP");
+SourceDir=$(cd "$zcFP/../.." && pwd);
+IconTheme="$ThemeName";
+CommonTheme="zoncolor";
+UTDName=".icons"; UTDPath="$HOME/$UTDName";
+OUTDName=".local/share/icons"; OUTDPath="$HOME/$OUTDName";
+STDPath="/usr/share/icons";
+TargetDir="$UTDPath";
+ResetString="@RESET";
 
-/* TC0 - 16-bit Timer/Counter 0 */
-#define TCF0_CTRLA  _SFR_MEM8(0x0B00)
-#define TCF0_CTRLB  _SFR_MEM8(0x0B01)
-#define TCF0_CTRLC  _SFR_MEM8(0x0B02)
-#define TCF0_CTRLD  _SFR_MEM8(0x0B03)
-#define TCF0_CTRLE  _SFR_MEM8(0x0B04)
-#define TCF0_INTCTRLA  _SFR_MEM8(0x0B06)
-#define TCF0_INTCTRLB  _SFR_MEM8(0x0B07)
-#define TCF0_CTRLFCLR  _SFR_MEM8(0x0B08)
-#define TCF0_CTRLFSET  _SFR_MEM8(0x0B09)
-#define TCF0_CTRLGCLR  _SFR_MEM8(0x0B0A)
-#define TCF0_CTRLGSET  _SFR_MEM8(0x0B0B)
-#define TCF0_INTFLAGS  _SFR_MEM8(0x0B0C)
-#define TCF0_TEMP  _SFR_MEM8(0x0B0F)
-#define TCF0_CNT  _SFR_MEM16(0x0B20)
-#define TCF0_PER  _SFR_MEM16(0x0B26)
-#define TCF0_CCA  _SFR_MEM16(0x0B28)
-#define TCF0_CCB  _SFR_MEM16(0x0B2A)
-#define TCF0_CCC  _SFR_MEM16(0x0B2C)
-#define TCF0_CCD  _SFR_MEM16(0x0B2E)
-#define TCF0_PERBUF  _SFR_MEM16(0x0B36)
-#define TCF0_CCABUF  _SFR_MEM16(0x0B38)
-#define TCF0_CCBBUF  _SFR_MEM16(0x0B3A)
-#define TCF0_CCCBUF  _SFR_MEM16(0x0B3C)
-#define TCF0_
+
+
+# FUNCTIONS
+
+# Session
+CheckSession () {
+	if ((pidof "gnome-session" >/dev/null 2>&1) || \
+		(pidof "gdm-simple-slave" >/dev/null 2>&1) || \
+		(pidof "x-session-manager" >/dev/null 2>&1) || \
+		(pidof "gnome-settings-daemon" >/dev/null 2>&1) || \
+		(pidof "xfce4-session" >/dev/null 2>&1) || \
+		(pidof "mate-session" >/dev/null 2>&1) || \
+		(pidof "mate-settings-daemon" >/dev/null 2>&1)
+		); then
+		CanEnableSettings=true;
+	elif (pidof "lxsession" >/dev/null 2>&1); then
+		LxdeSession=true;
+	fi;
+}
+EnableInSessionErrorMsg () {
+	SessionErrorMsgText=$(printf "Sorry, cannot set/enable settings under $CurrentSessionName session.");
+	echo -e "$SessionErrorMsgText";
+	#if ($XmessageReady); then xmessage "$SessionErrorMsgText" & sleep 1; fi;
+}
+
+# Apps
+CheckApps () {
+	if (command -v zenity >/dev/null 2>&1); then ZenityReady=true; fi;
+	if (command -v matedialog >/dev/null 2>&1); then MateDialogReady=true; fi;
+	if ($ZenityReady); then ZorMDapp="zenity"; elif ($MateDialogReady); then ZorMDapp="matedialog"; fi;
+	if (command -v xmessage >/dev/null 2>&1); then XmessageReady=true; fi;
+	if (command -v notify-send >/dev/null 2>&1); then NotifySendReady=true; fi;
+	if (command -v xdg-open >/dev/null 2>&1); then XdgOpenReady=true; fi;
+	if (command -v lxappearance >/dev/null 2>&1); then LxAppearanceReady=true; fi;
+}
+
+# Folder clean up
+CleanUpFolderContent () {
+	# Usage: CleanUpFolderContent "<FOLDER>";
+	local CurDir=$(pwd);
+	cd "$1";
+	find . -type d -name "*source*" -exec rm -r {} \+;
+	find . -type f -name "*source*" -exec rm {} \+;
+	find . -type f -name "*symlink*" -exec rm {} \+;
+	find . -type f -name "*.sh" -exec chmod +x {} \+;
+	find . -type f -name "*.desktop" -exec chmod +x {} \+;
+	cd "$CurDir";
+}
+
+# IconTheme
+EnableIconTheme () {
+	gsettings set org.gnome.desktop.interface icon-theme "$IconTheme" >/dev/null 2>&1;
+	gsettings set org.mate.interface icon-theme "$IconTheme" >/dev/null 2>&1;
+	mateconftool-2 --type=string --set /desktop/mate/interface/icon_theme "$IconTheme" >/dev/null 2>&1;
+	gconftool --type=string --set /desktop/gnome/interface/icon_theme "$IconTheme" >/dev/null 2>&1;
+	gconftool-2 --type=string --set /desktop/gnome/interface/icon_theme "$IconTheme" >/dev/null 2>&1;
+	xfconf-query -c xsettings -p /Net/IconThemeName -n -t string -s "$IconTheme" >/dev/null 2>&1;
+}
+ResetIconTheme () {
+	gsettings reset org.gnome.desktop.interface icon-theme >/dev/null 2>&1;
+	gsettings reset org.mate.interface icon-theme >/dev/null 2>&1;
+	mateconftool-2 --unset /desktop/mate/interface/icon_theme >/dev/null 2>&1;
+	gconftool --unset /desktop/gnome/interface/icon_theme >/dev/null 2>&1;
+	gconftool-2 --unset /desktop/gnome/interface/icon_theme >/dev/null 2>&1;
+	xfconf-query -c xsettings -p /Net/IconThemeName -r >/dev/null 2>&1;
+}
+
+# Install theme if not already
+InstallTheme () {
+	if ((! test -d "$UTDPath/$1") && \
+		(! test -d "$OUTDPath/$1") && \
+		(! test -d "$STDPath/$1")
+		); then
+		mkdir -p "$TargetDir";
+		cp -r "$SourceDir"/"$1" "$TargetDir";
+		CleanUpFolderContent "$TargetDir/$1";
+		echo "'$1' theme installed.";
+	fi;
+}
+
+# Create symlink if not already (for backward compatibility)
+CreateSymlink () {
+	if (! test -L "$TargetDir"); then
+		if (! readlink "$OUTDPath" | grep -q "$UTDName"); then
+			TimeStamp=$(date -u +%Y%m%d%H%M%S); OUTDBackupName="$OUTDName-backup_$TimeStamp";
+			mkdir -p "$TargetDir";
+			cp -r "$OUTDPath"/* "$TargetDir" >/dev/null 2>&1;
+			mv "$HOME/$OUTDName" "$HOME/$OUTDBackupName" >/dev/null 2>&1;
+			ln -s "$TargetDir" "$HOME/$OUTDName";
+		fi;
+	fi;
+}
+
+
+
+# EXECUTION
+
+if (test "$1" = "$ResetString"); then
+	ResetIconTheme;
+else
+	if (! test "$ThemeName" = "$CommonTheme"); then InstallTheme "$CommonTheme"; fi;
+	InstallTheme "$ThemeName";
+	#CreateSymlink;
+	CheckApps;
+	CheckSession;
+	if (! $CanEnableSettings); then
+		if ($LxdeSession); then
+			if ($LxAppearanceReady) && (! pidof lxappearance); then
+				nohup lxappearance >/dev/null 2>&1 & sleep 1;
+			fi;
+		else
+			EnableInSessionErrorMsg;
+		fi;
+	fi;
+	EnableIconTheme;
+fi;
+
+exit

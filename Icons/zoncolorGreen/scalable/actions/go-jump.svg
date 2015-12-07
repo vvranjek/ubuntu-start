@@ -1,122 +1,183 @@
-* Clock Selection group position. */
-#define TC2_CLKSEL0_bm  (1<<0)  /* Clock Selection bit 0 mask. */
-#define TC2_CLKSEL0_bp  0  /* Clock Selection bit 0 position. */
-#define TC2_CLKSEL1_bm  (1<<1)  /* Clock Selection bit 1 mask. */
-#define TC2_CLKSEL1_bp  1  /* Clock Selection bit 1 position. */
-#define TC2_CLKSEL2_bm  (1<<2)  /* Clock Selection bit 2 mask. */
-#define TC2_CLKSEL2_bp  2  /* Clock Selection bit 2 position. */
-#define TC2_CLKSEL3_bm  (1<<3)  /* Clock Selection bit 3 mask. */
-#define TC2_CLKSEL3_bp  3  /* Clock Selection bit 3 position. */
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-/* TC2.CTRLB  bit masks and bit positions */
-#define TC2_HCMPDEN_bm  0x80  /* High Byte Compare D Enable bit mask. */
-#define TC2_HCMPDEN_bp  7  /* High Byte Compare D Enable bit position. */
-
-#define TC2_HCMPCEN_bm  0x40  /* High Byte Compare C Enable bit mask. */
-#define TC2_HCMPCEN_bp  6  /* High Byte Compare C Enable bit position. */
-
-#define TC2_HCMPBEN_bm  0x20  /* High Byte Compare B Enable bit mask. */
-#define TC2_HCMPBEN_bp  5  /* High Byte Compare B Enable bit position. */
-
-#define TC2_HCMPAEN_bm  0x10  /* High Byte Compare A Enable bit mask. */
-#define TC2_HCMPAEN_bp  4  /* High Byte Compare A Enable bit position. */
-
-#define TC2_LCMPDEN_bm  0x08  /* Low Byte Compare D Enable bit mask. */
-#define TC2_LCMPDEN_bp  3  /* Low Byte Compare D Enable bit position. */
-
-#define TC2_LCMPCEN_bm  0x04  /* Low Byte Compare C Enable bit mask. */
-#define TC2_LCMPCEN_bp  2  /* Low Byte Compare C Enable bit position. */
-
-#define TC2_LCMPBEN_bm  0x02  /* Low Byte Compare B Enable bit mask. */
-#define TC2_LCMPBEN_bp  1  /* Low Byte Compare B Enable bit position. */
-
-#define TC2_LCMPAEN_bm  0x01  /* Low Byte Compare A Enable bit mask. */
-#define TC2_LCMPAEN_bp  0  /* Low Byte Compare A Enable bit position. */
-
-/* TC2.CTRLC  bit masks and bit positions */
-#define TC2_HCMPD_bm  0x80  /* High Byte Compare D Output Value bit mask. */
-#define TC2_HCMPD_bp  7  /* High Byte Compare D Output Value bit position. */
-
-#define TC2_HCMPC_bm  0x40  /* High Byte Compare C Output Value bit mask. */
-#define TC2_HCMPC_bp  6  /* High Byte Compare C Output Value bit position. */
-
-#define TC2_HCMPB_bm  0x20  /* High Byte Compare B Output Value bit mask. */
-#define TC2_HCMPB_bp  5  /* High Byte Compare B Output Value bit position. */
-
-#define TC2_HCMPA_bm  0x10  /* High Byte Compare A Output Value bit mask. */
-#define TC2_HCMPA_bp  4  /* High Byte Compare A Output Value bit position. */
-
-#define TC2_LCMPD_bm  0x08  /* Low Byte Compare D Output Value bit mask. */
-#define TC2_LCMPD_bp  3  /* Low Byte Compare D Output Value bit position. */
-
-#define TC2_LCMPC_bm  0x04  /* Low Byte Compare C Output Value bit mask. */
-#define TC2_LCMPC_bp  2  /* Low Byte Compare C Output Value bit position. */
-
-#define TC2_LCMPB_bm  0x02  /* Low Byte Compare B Output Value bit mask. */
-#define TC2_LCMPB_bp  1  /* Low Byte Compare B Output Value bit position. */
-
-#define TC2_LCMPA_bm  0x01  /* Low Byte Compare A Output Value bit mask. */
-#define TC2_LCMPA_bp  0  /* Low Byte Compare A Output Value bit position. */
-
-/* TC2.CTRLE  bit masks and bit positions */
-#define TC2_BYTEM_gm  0x03  /* Byte Mode group mask. */
-#define TC2_BYTEM_gp  0  /* Byte Mode group position. */
-#define TC2_BYTEM0_bm  (1<<0)  /* Byte Mode bit 0 mask. */
-#define TC2_BYTEM0_bp  0  /* Byte Mode bit 0 position. */
-#define TC2_BYTEM1_bm  (1<<1)  /* Byte Mode bit 1 mask. */
-#define TC2_BYTEM1_bp  1  /* Byte Mode bit 1 position. */
-
-/* TC2.INTCTRLA  bit masks and bit positions */
-#define TC2_HUNFINTLVL_gm  0x0C  /* High Byte Underflow Interrupt Level group mask. */
-#define TC2_HUNFINTLVL_gp  2  /* High Byte Underflow Interrupt Level group position. */
-#define TC2_HUNFINTLVL0_bm  (1<<2)  /* High Byte Underflow Interrupt Level bit 0 mask. */
-#define TC2_HUNFINTLVL0_bp  2  /* High Byte Underflow Interrupt Level bit 0 position. */
-#define TC2_HUNFINTLVL1_bm  (1<<3)  /* High Byte Underflow Interrupt Level bit 1 mask. */
-#define TC2_HUNFINTLVL1_bp  3  /* High Byte Underflow Interrupt Level bit 1 position. */
-
-#define TC2_LUNFINTLVL_gm  0x03  /* Low Byte Underflow interrupt level group mask. */
-#define TC2_LUNFINTLVL_gp  0  /* Low Byte Underflow interrupt level group position. */
-#define TC2_LUNFINTLVL0_bm  (1<<0)  /* Low Byte Underflow interrupt level bit 0 mask. */
-#define TC2_LUNFINTLVL0_bp  0  /* Low Byte Underflow interrupt level bit 0 position. */
-#define TC2_LUNFINTLVL1_bm  (1<<1)  /* Low Byte Underflow interrupt level bit 1 mask. */
-#define TC2_LUNFINTLVL1_bp  1  /* Low Byte Underflow interrupt level bit 1 position. */
-
-/* TC2.INTCTRLB  bit masks and bit positions */
-#define TC2_LCMPDINTLVL_gm  0xC0  /* Low Byte Compare D Interrupt Level group mask. */
-#define TC2_LCMPDINTLVL_gp  6  /* Low Byte Compare D Interrupt Level group position. */
-#define TC2_LCMPDINTLVL0_bm  (1<<6)  /* Low Byte Compare D Interrupt Level bit 0 mask. */
-#define TC2_LCMPDINTLVL0_bp  6  /* Low Byte Compare D Interrupt Level bit 0 position. */
-#define TC2_LCMPDINTLVL1_bm  (1<<7)  /* Low Byte Compare D Interrupt Level bit 1 mask. */
-#define TC2_LCMPDINTLVL1_bp  7  /* Low Byte Compare D Interrupt Level bit 1 position. */
-
-#define TC2_LCMPCINTLVL_gm  0x30  /* Low Byte Compare C Interrupt Level group mask. */
-#define TC2_LCMPCINTLVL_gp  4  /* Low Byte Compare C Interrupt Level group position. */
-#define TC2_LCMPCINTLVL0_bm  (1<<4)  /* Low Byte Compare C Interrupt Level bit 0 mask. */
-#define TC2_LCMPCINTLVL0_bp  4  /* Low Byte Compare C Interrupt Level bit 0 position. */
-#define TC2_LCMPCINTLVL1_bm  (1<<5)  /* Low Byte Compare C Interrupt Level bit 1 mask. */
-#define TC2_LCMPCINTLVL1_bp  5  /* Low Byte Compare C Interrupt Level bit 1 position. */
-
-#define TC2_LCMPBINTLVL_gm  0x0C  /* Low Byte Compare B Interrupt Level group mask. */
-#define TC2_LCMPBINTLVL_gp  2  /* Low Byte Compare B Interrupt Level group position. */
-#define TC2_LCMPBINTLVL0_bm  (1<<2)  /* Low Byte Compare B Interrupt Level bit 0 mask. */
-#define TC2_LCMPBINTLVL0_bp  2  /* Low Byte Compare B Interrupt Level bit 0 position. */
-#define TC2_LCMPBINTLVL1_bm  (1<<3)  /* Low Byte Compare B Interrupt Level bit 1 mask. */
-#define TC2_LCMPBINTLVL1_bp  3  /* Low Byte Compare B Interrupt Level bit 1 position. */
-
-#define TC2_LCMPAINTLVL_gm  0x03  /* Low Byte Compare A Interrupt Level group mask. */
-#define TC2_LCMPAINTLVL_gp  0  /* Low Byte Compare A Interrupt Level group position. */
-#define TC2_LCMPAINTLVL0_bm  (1<<0)  /* Low Byte Compare A Interrupt Level bit 0 mask. */
-#define TC2_LCMPAINTLVL0_bp  0  /* Low Byte Compare A Interrupt Level bit 0 position. */
-#define TC2_LCMPAINTLVL1_bm  (1<<1)  /* Low Byte Compare A Interrupt Level bit 1 mask. */
-#define TC2_LCMPAINTLVL1_bp  1  /* Low Byte Compare A Interrupt Level bit 1 position. */
-
-/* TC2.CTRLF  bit masks and bit positions */
-#define TC2_CMD_gm  0x0C  /* Command group mask. */
-#define TC2_CMD_gp  2  /* Command group position. */
-#define TC2_CMD0_bm  (1<<2)  /* Command bit 0 mask. */
-#define TC2_CMD0_bp  2  /* Command bit 0 position. */
-#define TC2_CMD1_bm  (1<<3)  /* Command bit 1 mask. */
-#define TC2_CMD1_bp  3  /* Command bit 1 position. */
-
-#define TC2_CMDEN_gm  0x03  /* Command Enable group mask. */
-#define TC2_CMDEN_gp  0  /* Command Enable group positio
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="96"
+   height="96"
+   id="svg8422"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="go-jump.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.1">
+  <defs
+     id="defs8424">
+    <linearGradient
+       id="linearGradient5113"
+       inkscape:collect="always">
+      <stop
+         id="stop5115"
+         offset="0"
+         style="stop-color:white;stop-opacity:1;" />
+      <stop
+         id="stop5117"
+         offset="1"
+         style="stop-color:white;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3163">
+      <stop
+         style="stop-color:#badb8d;stop-opacity:1;"
+         offset="0"
+         id="stop3165" />
+      <stop
+         style="stop-color:#709937;stop-opacity:1;"
+         offset="1"
+         id="stop3167" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5105"
+       inkscape:collect="always">
+      <stop
+         id="stop5107"
+         offset="0"
+         style="stop-color:black;stop-opacity:1;" />
+      <stop
+         id="stop5109"
+         offset="1"
+         style="stop-color:black;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3770">
+      <stop
+         id="stop3772"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+      <stop
+         id="stop3774"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:1;" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5105"
+       id="radialGradient3026"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.282946,0,13.64644)"
+       cx="11.25"
+       cy="19.03125"
+       fx="11.25"
+       fy="19.03125"
+       r="8.0625" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3163"
+       id="linearGradient3028"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.03726873,-0.9999995)"
+       x1="25"
+       y1="9"
+       x2="25"
+       y2="37" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3770"
+       id="linearGradient3030"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1,0,0,1,45.754479,-1.2210089)"
+       x1="24.004463"
+       y1="7.1938653"
+       x2="24.004463"
+       y2="37.193859" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5113"
+       id="linearGradient3032"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.004639,0,0,1,-55.0586,-4.0477895)"
+       x1="58.748795"
+       y1="2.047786"
+       x2="105.32369"
+       y2="58.047787" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.8541667"
+     inkscape:cx="48"
+     inkscape:cy="48"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1006"
+     inkscape:window-height="774"
+     inkscape:window-x="44"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata8427">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(0,48)">
+    <path
+       sodipodi:type="arc"
+       style="opacity:0.16292138;fill:url(#radialGradient3026);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+       id="path4346"
+       sodipodi:cx="11.25"
+       sodipodi:cy="19.03125"
+       sodipodi:rx="8.0625"
+       sodipodi:ry="2.28125"
+       d="m 19.3125,19.03125 c 0,1.2599 -3.609704,2.28125 -8.0625,2.28125 -4.4527958,0 -8.0625,-1.02135 -8.0625,-2.28125 0,-1.2599 3.6097042,-2.28125 8.0625,-2.28125 4.452796,0 8.0625,1.02135 8.0625,2.28125 z"
+       transform="matrix(5.0242452,0,0,4.821922,-8.5227586,-56.767213)" />
+    <g
+       id="g3797"
+       transform="matrix(2,0,0,2,0,-47.5)">
+      <path
+         style="fill:url(#linearGradient3028);fill-opacity:1;fill-rule:nonzero;stroke:#51751e;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
+         d="M 42.462731,24.52548 30.427481,38.5 18.452551,24.52548 l 6.09179,0 c 2.0473,-5.48597 -2.1567,-8.9778 -7.03107,-8.9778 -3.46376,0 -8.1632297,1.90496 -9.7506797,6.6414 -0.82566,2.46352 -2.27994,1.38432 -2.22374,-0.75674 0.21753,-8.26181 6.3428797,-14.8690098 15.4870197,-14.8690098 9.14414,0 15.93686,7.0985898 15.42377,17.9621498 l 6.01309,0 z"
+         id="path4972"
+         sodipodi:nodetypes="ccccssszcc"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccssszcc"
+         id="path3779"
+         d="M 42.462731,24.52548 30.427481,38.5 18.452551,24.52548 l 6.09179,0 c 2.0473,-5.48597 -2.1567,-8.9778 -7.03107,-8.9778 -3.46376,0 -8.1632297,1.90496 -9.7506797,6.6414 -0.82566,2.46352 -2.27994,1.38432 -2.22374,-0.75674 0.21753,-8.26181 6.3428797,-14.8690098 15.4870197,-14.8690098 9.14414,0 15.93686,7.0985898 15.42377,17.9621498 l 6.01309,0 z"
+         style="opacity:0.1;color:#000000;fill:url(#linearGradient3030);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         sodipodi:nodetypes="ccccsscszcc"
+         id="path4980"
+         d="m 40.344881,25.52548 -9.9174,11.5424 -9.85707,-11.5424 4.69895,0 C 27.747121,20 24.170641,14.62862 17.962731,14.52859 14.063481,14.46576 12.015781,15.76164 9.3003313,18 c -1.48801,1.22658 -2.24772,3.63896 -2.59822,4.51309 -0.48056,0.02462 -0.19802,-2.6805 0.26062,-4.36294 1.67191,-6.13316 6.8466197,-10.6507798 14.1838797,-10.6644798 7.33726,-0.0137 15.30137,5.0244998 14.30303,18.0398098 l 4.89524,0 z"
+         style="opacity:0.35400008;fill:none;stroke:url(#linearGradient3032);stroke-width:0.49999979;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>
