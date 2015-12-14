@@ -96,6 +96,7 @@ while true; do
     sudo add-apt-repository ppa:daniel.pavel/solaar -y #Sollar, tool for logitech unigying receicers 
     sudo add-apt-repository sudo ppa:nilarimogard/webupd8 -y #Prime indicator 
     sudo add-apt-repository ppa:appgrid/stable -y      #Appgrid
+    sudo apt-add-repository ppa:rael-gc/scudcloud -y  # Slack
     #sudo add-apt-repository ppa:gloobus-dev/gloobus-preview -y
     #sudo apt-add-repository ppa:screenlets/ppa -y 		# Scrennlets
     #sudo apt-add-repository ppa:ian-berke/ppa-drawers -y   # Drawers
