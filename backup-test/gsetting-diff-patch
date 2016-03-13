@@ -1,0 +1,704 @@
+--- /home/ulu/temp/gsettings_backup_ulu
++++ /home/ulu/temp/gsettings-backup-fresh
+@@ -17,7 +17,7 @@
+ de.mh21.indicator-multiload.general speed uint16 500
+ de.mh21.indicator-multiload.general graphs ['cpu', 'mem', 'net', 'swap', 'load', 'disk']
+ de.mh21.indicator-multiload.general color-scheme 'ambiance'
+-de.mh21.indicator-multiload.general settings-version uint32 3
++de.mh21.indicator-multiload.general settings-version uint32 1
+ de.mh21.indicator-multiload.general width uint16 40
+ de.mh21.indicator-multiload.general description-expressions ['CPU $(percent(cpu.inuse)) Mem $(size(mem.user)) Net down $(speed(net.down)) up $(speed(net.up)) Swap $(size(swap.used)) Load $(decimals(load.avg,2)) Disk read $(speed(disk.read)) write $(speed(disk.write))']
+ de.mh21.indicator-multiload.general height uint16 22
+@@ -38,15 +38,15 @@
+ org.yorba.shotwell.preferences.window sidebar-position 180
+ org.gnome.settings-daemon.plugins.cursor active true
+ org.gnome.settings-daemon.plugins.cursor priority 0
+-com.ubuntu.update-manager show-details true
+-com.ubuntu.update-manager window-height 414
++com.ubuntu.update-manager show-details false
++com.ubuntu.update-manager window-height 400
+ com.ubuntu.update-manager autoclose-install-window true
+-com.ubuntu.update-manager first-run false
+-com.ubuntu.update-manager window-width 484
++com.ubuntu.update-manager first-run true
++com.ubuntu.update-manager window-width 1
+ com.ubuntu.update-manager show-versions false
+ com.ubuntu.update-manager check-new-release-ignore ''
+ com.ubuntu.update-manager summary-before-name true
+-com.ubuntu.update-manager launch-time 1449647090
++com.ubuntu.update-manager launch-time 0
+ com.ubuntu.update-manager check-dist-upgrades true
+ de.mh21.indicator-multiload.traces.load1 expression '$(load.avg)'
+ de.mh21.indicator-multiload.traces.load1 color 'ambiance:load1'
+@@ -61,7 +61,7 @@
+ org.gnome.eog.view use-background-color true
+ org.gnome.eog.view transparency 'checked'
+ org.gnome.eog.view extrapolate true
+-org.gnome.eog.view background-color 'rgb(0,0,0)'
++org.gnome.eog.view background-color '#000000'
+ org.gnome.eog.view autorotate true
+ org.gnome.evolution-data-server.calendar contacts-reminder-interval 15
+ org.gnome.evolution-data-server.calendar contacts-reminder-units 'minutes'
+@@ -74,7 +74,7 @@
+ org.gnome.settings-daemon.peripherals.keyboard remember-numlock-state true
+ org.gnome.settings-daemon.peripherals.keyboard bell-pitch 400
+ org.gnome.settings-daemon.peripherals.keyboard click-volume 0
+-org.gnome.settings-daemon.peripherals.keyboard numlock-state 'on'
++org.gnome.settings-daemon.peripherals.keyboard numlock-state 'unknown'
+ org.gnome.settings-daemon.peripherals.keyboard bell-duration 100
+ org.gnome.settings-daemon.peripherals.keyboard bell-mode 'on'
+ org.gnome.settings-daemon.peripherals.keyboard bell-custom-file ''
+@@ -115,7 +115,7 @@
+ org.gnome.calculator show-zeroes false
+ org.gnome.calculator source-currency ''
+ org.gnome.calculator show-thousands false
+-org.gnome.calculator button-mode 'programming'
++org.gnome.calculator button-mode 'basic'
+ org.gnome.calculator target-units 'radian'
+ org.gnome.calculator word-size 64
+ org.gnome.calculator number-format 'automatic'
+@@ -127,12 +127,12 @@
+ org.gnome.settings-daemon.plugins.a11y-settings active true
+ org.gnome.settings-daemon.plugins.a11y-settings priority 0
+ org.gnome.DejaDup.Rackspace username ''
+-org.gnome.DejaDup.Rackspace container 'vid-G550JK'
++org.gnome.DejaDup.Rackspace container '$HOSTNAME'
+ org.gnome.desktop.media-handling automount-open true
+ org.gnome.desktop.media-handling automount true
+-org.gnome.desktop.media-handling autorun-x-content-start-app ['x-content/unix-software', 'x-content/bootable-media']
++org.gnome.desktop.media-handling autorun-x-content-start-app ['x-content/unix-software']
+ org.gnome.desktop.media-handling autorun-never false
+-org.gnome.desktop.media-handling autorun-x-content-ignore ['x-content/bootable-media']
++org.gnome.desktop.media-handling autorun-x-content-ignore @as []
+ org.gnome.desktop.media-handling autorun-x-content-open-folder @as []
+ org.gnome.settings-daemon.plugins.smartcard active true
+ org.gnome.settings-daemon.plugins.smartcard priority 0
+@@ -143,7 +143,7 @@
+ org.gnome.desktop.default-applications.office.calendar needs-term false
+ org.gnome.desktop.default-applications.office.tasks exec 'evolution -c tasks'
+ org.gnome.desktop.default-applications.office.tasks needs-term false
+-org.gnome.nm-applet stamp 3
++org.gnome.nm-applet stamp 0
+ org.gnome.nm-applet disable-disconnected-notifications false
+ org.gnome.nm-applet disable-vpn-notifications false
+ org.gnome.nm-applet disable-connected-notifications false
+@@ -195,7 +195,7 @@
+ org.gnome.settings-daemon.plugins.media-keys magnifier '<Alt><Super>8'
+ org.gnome.settings-daemon.plugins.media-keys help ''
+ org.gnome.settings-daemon.plugins.media-keys search 'XF86Search'
+-org.gnome.settings-daemon.plugins.media-keys custom-keybindings ['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
++org.gnome.settings-daemon.plugins.media-keys custom-keybindings @as []
+ org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-in '<Alt><Super>equal'
+ org.gnome.settings-daemon.plugins.media-keys calculator 'XF86Calculator'
+ org.gnome.settings-daemon.plugins.media-keys video-out '<Super>p'
+@@ -266,7 +266,7 @@
+ org.gnome.settings-daemon.plugins.power percentage-low 10
+ org.gnome.settings-daemon.plugins.power priority 0
+ org.gnome.settings-daemon.plugins.power lid-close-suspend-with-external-monitor false
+-org.gnome.settings-daemon.plugins.power idle-dim false
++org.gnome.settings-daemon.plugins.power idle-dim true
+ org.gnome.settings-daemon.plugins.power button-hibernate 'hibernate'
+ org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
+ org.gnome.settings-daemon.plugins.power button-sleep 'suspend'
+@@ -310,10 +310,10 @@
+ org.gnome.Contacts view-subset 'main'
+ org.gnome.Contacts did-initial-setup false
+ org.gnome.gedit.state.file-filter filter-id 0
+-org.gnome.gedit.state.history-entry search-for-entry ['TMP_BIN2', 'TMP_TMP']
+-org.gnome.gedit.state.history-entry replace-with-entry ['BIN_PUSH', 'TMP_BIN']
+-org.gnome.gedit.state.window size (934, 1028)
+-org.gnome.gedit.state.window state 128
++org.gnome.gedit.state.history-entry search-for-entry ['']
++org.gnome.gedit.state.history-entry replace-with-entry ['']
++org.gnome.gedit.state.window size (650, 500)
++org.gnome.gedit.state.window state 132
+ org.gnome.gedit.state.window bottom-panel-active-page 0
+ org.gnome.gedit.state.window bottom-panel-size 140
+ org.gnome.gedit.state.window side-panel-active-page 228660812
+@@ -363,7 +363,7 @@
+ org.gnome.desktop.wm.preferences mouse-button-modifier '<Alt>'
+ org.gnome.desktop.wm.preferences action-middle-click-titlebar 'lower'
+ org.gnome.desktop.wm.preferences titlebar-uses-system-font false
+-org.gnome.desktop.wm.preferences theme 'Ambiance-Graphite-dark'
++org.gnome.desktop.wm.preferences theme 'Ambiance'
+ org.gnome.desktop.wm.preferences num-workspaces 4
+ org.gnome.desktop.wm.preferences raise-on-click true
+ org.gnome.desktop.wm.preferences auto-raise false
+@@ -378,8 +378,8 @@
+ org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu Bold 11'
+ org.gnome.desktop.wm.preferences visual-bell-type 'fullscreen-flash'
+ org.gnome.online-accounts whitelisted-providers ['all']
+-org.gnome.gedit.state.history-entry search-for-entry ['TMP_BIN2', 'TMP_TMP']
+-org.gnome.gedit.state.history-entry replace-with-entry ['BIN_PUSH', 'TMP_BIN']
++org.gnome.gedit.state.history-entry search-for-entry ['']
++org.gnome.gedit.state.history-entry replace-with-entry ['']
+ org.gnome.settings-daemon.plugins.gsdwacom active true
+ org.gnome.settings-daemon.plugins.gsdwacom priority 0
+ org.gnome.settings-daemon.plugins.xsettings disabled-gtk-modules @as []
+@@ -420,7 +420,7 @@
+ de.mh21.indicator-multiload.traces.net3 enabled true
+ org.gnome.nautilus.window-state sidebar-width 188
+ org.gnome.nautilus.window-state start-with-sidebar true
+-org.gnome.nautilus.window-state geometry '928x1028+65+24'
++org.gnome.nautilus.window-state geometry '890x550+65+52'
+ org.gnome.nautilus.window-state maximized false
+ org.gnome.nautilus.window-state start-with-location-bar true
+ org.gnome.FileRoller.Dialogs.LastOutput width -1
+@@ -491,7 +491,7 @@
+ org.gnome.settings-daemon.plugins.media-keys magnifier '<Alt><Super>8'
+ org.gnome.settings-daemon.plugins.media-keys help ''
+ org.gnome.settings-daemon.plugins.media-keys search 'XF86Search'
+-org.gnome.settings-daemon.plugins.media-keys custom-keybindings ['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
++org.gnome.settings-daemon.plugins.media-keys custom-keybindings @as []
+ org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-in '<Alt><Super>equal'
+ org.gnome.settings-daemon.plugins.media-keys calculator 'XF86Calculator'
+ org.gnome.settings-daemon.plugins.media-keys video-out '<Super>p'
+@@ -518,7 +518,7 @@
+ org.gnome.settings-daemon.plugins.media-keys active true
+ org.gnome.settings-daemon.plugins.media-keys area-screenshot '<Shift>Print'
+ org.gnome.DejaDup.GDrive email ''
+-org.gnome.DejaDup.GDrive folder '/deja-dup/vid-G550JK'
++org.gnome.DejaDup.GDrive folder '/deja-dup/$HOSTNAME'
+ org.gnome.Empathy.sounds sounds-contact-login false
+ org.gnome.Empathy.sounds sounds-service-logout false
+ org.gnome.Empathy.sounds sounds-outgoing-message false
+@@ -546,7 +546,7 @@
+ org.gnome.totem contrast 32767
+ org.gnome.totem autoload-chapters true
+ org.gnome.totem disable-deinterlacing false
+-org.gnome.totem active-plugins ['screensaver', 'media_player_keys', 'autoload-subtitles', 'skipto', 'screenshot', 'apple-trailers', 'recent', 'movie-properties', 'vimeo', 'save-file']
++org.gnome.totem active-plugins ['skipto', 'chapters', 'screenshot', 'media_player_keys', 'screensaver', 'movie-properties', 'save-file']
+ org.gnome.totem autoload-subtitles false
+ org.gnome.totem open-uri ''
+ org.gnome.totem hue 32767
+@@ -630,8 +630,8 @@
+ org.onboard.typing-assistance.word-suggestions enabled false
+ org.onboard.typing-assistance.word-suggestions wordlist-buttons ['language', 'hide']
+ org.onboard.typing-assistance.word-suggestions stealth-mode false
+-org.gnome.baobab.ui active-chart 'treemap'
+-org.gnome.baobab.ui window-state 128
++org.gnome.baobab.ui active-chart 'rings'
++org.gnome.baobab.ui window-state 0
+ org.gnome.baobab.ui window-size (960, 600)
+ org.gnome.desktop.a11y.keyboard slowkeys-beep-press false
+ org.gnome.desktop.a11y.keyboard mousekeys-accel-time 300
+@@ -656,7 +656,7 @@
+ de.mh21.indicator-multiload.general speed uint16 500
+ de.mh21.indicator-multiload.general graphs ['cpu', 'mem', 'net', 'swap', 'load', 'disk']
+ de.mh21.indicator-multiload.general color-scheme 'ambiance'
+-de.mh21.indicator-multiload.general settings-version uint32 3
++de.mh21.indicator-multiload.general settings-version uint32 1
+ de.mh21.indicator-multiload.general width uint16 40
+ de.mh21.indicator-multiload.general description-expressions ['CPU $(percent(cpu.inuse)) Mem $(size(mem.user)) Net down $(speed(net.down)) up $(speed(net.up)) Swap $(size(swap.used)) Load $(decimals(load.avg,2)) Disk read $(speed(disk.read)) write $(speed(disk.write))']
+ de.mh21.indicator-multiload.general height uint16 22
+@@ -1050,7 +1050,7 @@
+ org.gnome.desktop.interface toolbar-style 'both-horiz'
+ org.gnome.desktop.interface toolbar-icons-size 'large'
+ org.gnome.desktop.interface gtk-im-module 'gtk-im-context-simple'
+-org.gnome.desktop.interface icon-theme 'Graphite-icons'
++org.gnome.desktop.interface icon-theme 'ubuntu-mono-dark'
+ org.gnome.desktop.interface gtk-timeout-initial 200
+ org.gnome.desktop.interface scaling-factor uint32 1
+ org.gnome.desktop.interface clock-format '24h'
+@@ -1061,7 +1061,7 @@
+ org.gnome.desktop.interface gtk-im-preedit-style 'callback'
+ org.gnome.desktop.interface show-unicode-menu true
+ org.gnome.desktop.interface cursor-blink true
+-org.gnome.desktop.interface gtk-theme 'Ambiance-Graphite-dark'
++org.gnome.desktop.interface gtk-theme 'Ambiance'
+ org.gnome.desktop.interface gtk-key-theme 'Default'
+ org.gnome.desktop.interface gtk-im-status-style 'callback'
+ org.gnome.desktop.interface menubar-accel 'F10'
+@@ -1343,7 +1343,7 @@
+ org.gnome.settings-daemon.plugins.datetime priority 0
+ org.gnome.metacity.keybindings toggle-tiled-right ['<Super>Right']
+ org.gnome.metacity.keybindings toggle-tiled-left ['<Super>Left']
+-org.gnome.Evince.Default window-ratio (2.3409090909090908, 1.2549019607843137)
++org.gnome.Evince.Default window-ratio (0.0, 0.0)
+ org.gnome.Evince.Default continuous true
+ org.gnome.Evince.Default fullscreen false
+ org.gnome.Evince.Default show-toolbar true
+@@ -1493,7 +1493,7 @@
+ org.gnome.brasero.config engine-group ''
+ org.gnome.desktop.screensaver picture-opacity 100
+ org.gnome.desktop.screensaver logout-enabled false
+-org.gnome.desktop.screensaver lock-enabled false
++org.gnome.desktop.screensaver lock-enabled true
+ org.gnome.desktop.screensaver logout-delay uint32 7200
+ org.gnome.desktop.screensaver embedded-keyboard-enabled false
+ org.gnome.desktop.screensaver primary-color '#023c88'
+@@ -1504,11 +1504,11 @@
+ org.gnome.desktop.screensaver embedded-keyboard-command ''
+ org.gnome.desktop.screensaver show-notifications false
+ org.gnome.desktop.screensaver picture-options 'zoom'
+-org.gnome.desktop.screensaver lock-delay uint32 3600
++org.gnome.desktop.screensaver lock-delay uint32 0
+ org.gnome.desktop.screensaver show-full-name-in-top-bar true
+ org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/gnome/adwaita-lock.jpg'
+ org.gnome.desktop.screensaver status-message-enabled true
+-org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
++org.gnome.desktop.screensaver ubuntu-lock-on-suspend true
+ org.gnome.desktop.screensaver user-switch-enabled true
+ org.gnome.eog.plugins active-plugins ['fullscreen']
+ org.gnome.system.proxy.ftp host ''
+@@ -1546,23 +1546,23 @@
+ org.gnome.desktop.wm.keybindings cycle-panels-backward ['<Shift><Control><Alt>Escape']
+ org.gnome.desktop.wm.keybindings panel-run-dialog ['<Alt>F2']
+ org.gnome.desktop.wm.keybindings switch-to-workspace-down ['<Control><Alt>Down']
+-org.gnome.desktop.wm.keybindings move-to-corner-ne ['<Control><Alt>KP_Prior']
+-org.gnome.desktop.wm.keybindings move-to-side-e ['<Control><Alt>KP_Right']
++org.gnome.desktop.wm.keybindings move-to-corner-ne ['<Primary><Alt>KP_Prior']
++org.gnome.desktop.wm.keybindings move-to-side-e ['<Primary><Alt>KP_Right']
+ org.gnome.desktop.wm.keybindings move-to-workspace-right ['<Shift><Control><Alt>Right']
+ org.gnome.desktop.wm.keybindings always-on-top @as []
+ org.gnome.desktop.wm.keybindings move-to-workspace-up ['<Shift><Control><Alt>Up']
+ org.gnome.desktop.wm.keybindings raise ['disabled']
+ org.gnome.desktop.wm.keybindings maximize ['<Control><Super>Up']
+ org.gnome.desktop.wm.keybindings cycle-group-backward ['<Shift><Alt>F6']
+-org.gnome.desktop.wm.keybindings move-to-side-n ['<Control><Alt>KP_Up']
+-org.gnome.desktop.wm.keybindings move-to-side-s ['<Control><Alt>KP_Down']
++org.gnome.desktop.wm.keybindings move-to-side-n ['<Primary><Alt>KP_Up']
++org.gnome.desktop.wm.keybindings move-to-side-s ['<Primary><Alt>KP_Down']
+ org.gnome.desktop.wm.keybindings maximize-horizontally ['disabled']
+ org.gnome.desktop.wm.keybindings move-to-side-w ['<Control><Alt>KP_Left']
+-org.gnome.desktop.wm.keybindings move-to-corner-nw ['<Control><Alt>KP_Home']
++org.gnome.desktop.wm.keybindings move-to-corner-nw ['<Primary><Alt>KP_Home']
+ org.gnome.desktop.wm.keybindings switch-windows ['disabled']
+ org.gnome.desktop.wm.keybindings begin-move ['<Alt>F7']
+ org.gnome.desktop.wm.keybindings move-to-monitor-down ['<Super><Shift>Down']
+-org.gnome.desktop.wm.keybindings switch-windows-backward ['disabled']
++org.gnome.desktop.wm.keybindings switch-windows-backward @as []
+ org.gnome.desktop.wm.keybindings move-to-workspace-left ['<Shift><Control><Alt>Left']
+ org.gnome.desktop.wm.keybindings move-to-corner-se ['<Control><Alt>KP_Next']
+ org.gnome.desktop.wm.keybindings activate-window-menu ['<Alt>space']
+@@ -1573,10 +1573,10 @@
+ org.gnome.desktop.wm.keybindings move-to-workspace-last ['<Super><Shift>End']
+ org.gnome.desktop.wm.keybindings lower ['disabled']
+ org.gnome.desktop.wm.keybindings cycle-panels ['<Control><Alt>Escape']
+-org.gnome.desktop.wm.keybindings toggle-fullscreen ['disabled']
+-org.gnome.desktop.wm.keybindings toggle-on-all-workspaces ['disabled']
++org.gnome.desktop.wm.keybindings toggle-fullscreen @as []
++org.gnome.desktop.wm.keybindings toggle-on-all-workspaces @as []
+ org.gnome.desktop.wm.keybindings move-to-monitor-up ['<Super><Shift>Up']
+-org.gnome.desktop.wm.keybindings move-to-corner-sw ['<Control><Alt>KP_End']
++org.gnome.desktop.wm.keybindings move-to-corner-sw ['<Primary><Alt>KP_End']
+ org.gnome.desktop.wm.keybindings toggle-shaded ['<Control><Alt>s']
+ org.gnome.desktop.wm.keybindings switch-to-workspace-1 ['<Super>Home']
+ org.gnome.desktop.wm.keybindings switch-to-workspace-2 ['disabled']
+@@ -1621,7 +1621,7 @@
+ org.gnome.eog.view use-background-color true
+ org.gnome.eog.view transparency 'checked'
+ org.gnome.eog.view extrapolate true
+-org.gnome.eog.view background-color 'rgb(0,0,0)'
++org.gnome.eog.view background-color '#000000'
+ org.gnome.eog.view autorotate true
+ org.gnome.eog.fullscreen seconds 5
+ org.gnome.eog.fullscreen loop true
+@@ -1682,10 +1682,10 @@
+ org.gnome.gedit.preferences.ui toolbar-visible true
+ org.gnome.gedit.plugins active-plugins ['filebrowser', 'spell', 'modelines', 'zeitgeistplugin', 'docinfo', 'time']
+ org.gnome.gedit.state.file-filter filter-id 0
+-org.gnome.gedit.state.history-entry search-for-entry ['TMP_BIN2', 'TMP_TMP']
+-org.gnome.gedit.state.history-entry replace-with-entry ['BIN_PUSH', 'TMP_BIN']
+-org.gnome.gedit.state.window size (934, 1028)
+-org.gnome.gedit.state.window state 128
++org.gnome.gedit.state.history-entry search-for-entry ['']
++org.gnome.gedit.state.history-entry replace-with-entry ['']
++org.gnome.gedit.state.window size (650, 500)
++org.gnome.gedit.state.window state 132
+ org.gnome.gedit.state.window bottom-panel-active-page 0
+ org.gnome.gedit.state.window bottom-panel-size 140
+ org.gnome.gedit.state.window side-panel-active-page 228660812
+@@ -1703,7 +1703,7 @@
+ org.gnome.FileRoller.Listing list-mode 'as-folder'
+ org.gnome.FileRoller.Listing show-type true
+ org.gnome.FileRoller.Listing name-column-width 250
+-org.gnome.FileRoller.Listing show-path false
++org.gnome.FileRoller.Listing show-path true
+ org.gnome.FileRoller.Listing show-size true
+ org.gnome.gnome-system-monitor net-out-color '#EE1D00'
+ org.gnome.gnome-system-monitor smooth-refresh true
+@@ -1713,7 +1713,7 @@
+ org.gnome.gnome-system-monitor kill-dialog true
+ org.gnome.gnome-system-monitor network-in-bits false
+ org.gnome.gnome-system-monitor show-whose-processes 'user'
+-org.gnome.gnome-system-monitor window-state (700, 500, 65, 50)
++org.gnome.gnome-system-monitor window-state (700, 500, 50, 50)
+ org.gnome.gnome-system-monitor net-in-color '#2D7DB3'
+ org.gnome.gnome-system-monitor graph-update-interval 1000
+ org.gnome.gnome-system-monitor update-interval 3000
+@@ -1722,7 +1722,7 @@
+ org.gnome.gnome-system-monitor disks-interval 5000
+ org.gnome.gnome-system-monitor cpu-stacked-area-chart false
+ org.gnome.gnome-system-monitor show-all-fs false
+-org.gnome.gnome-system-monitor cpu-colors [(uint32 0, '#FF6E00'), (1, '#CB0C29'), (2, '#49A835'), (3, '#2D7DB3'), (4, '#f25915e815e8'), (5, '#f25915e815e8'), (6, '#f25915e815e8'), (7, '#f25915e815e8')]
++org.gnome.gnome-system-monitor cpu-colors [(uint32 0, '#FF6E00'), (1, '#CB0C29'), (2, '#49A835'), (3, '#2D7DB3')]
+ org.gnome.gnome-system-monitor solaris-mode true
+ org.gnome.gnome-system-monitor.proctree col-14-width 48
+ org.gnome.gnome-system-monitor.proctree col-20-width 59
+@@ -1735,11 +1735,11 @@
+ org.gnome.gnome-system-monitor.proctree col-17-width 48
+ org.gnome.gnome-system-monitor.proctree col-18-width 70
+ org.gnome.gnome-system-monitor.proctree col-1-width 98
+-org.gnome.gnome-system-monitor.proctree sort-col 8
++org.gnome.gnome-system-monitor.proctree sort-col 0
+ org.gnome.gnome-system-monitor.proctree col-0-visible true
+ org.gnome.gnome-system-monitor.proctree col-1-visible true
+ org.gnome.gnome-system-monitor.proctree col-2-width 37
+-org.gnome.gnome-system-monitor.proctree columns-order [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
++org.gnome.gnome-system-monitor.proctree columns-order [0]
+ org.gnome.gnome-system-monitor.proctree col-19-width 41
+ org.gnome.gnome-system-monitor.proctree col-2-visible false
+ org.gnome.gnome-system-monitor.proctree col-3-visible false
+@@ -1792,7 +1792,7 @@
+ org.gnome.gnome-system-monitor.disktreenew col-5-width 80
+ org.gnome.gnome-system-monitor.disktreenew col-5-visible true
+ org.gnome.gnome-system-monitor.disktreenew col-6-visible true
+-org.gnome.gnome-system-monitor.disktreenew col-6-width 0
++org.gnome.gnome-system-monitor.disktreenew col-6-width 300
+ org.gnome.gnome-system-monitor.disktreenew sort-order 0
+ org.gnome.system.proxy.http host ''
+ org.gnome.system.proxy.http port 8080
+@@ -1831,8 +1831,8 @@
+ com.canonical.indicator.datetime show-events true
+ com.canonical.indicator.datetime alarm-default-volume uint32 50
+ com.canonical.indicator.datetime show-year false
+-org.gnome.gedit.state.window size (934, 1028)
+-org.gnome.gedit.state.window state 128
++org.gnome.gedit.state.window size (650, 500)
++org.gnome.gedit.state.window state 132
+ org.gnome.gedit.state.window bottom-panel-active-page 0
+ org.gnome.gedit.state.window bottom-panel-size 140
+ org.gnome.gedit.state.window side-panel-active-page 228660812
+@@ -1863,12 +1863,12 @@
+ org.yorba.shotwell.sharing.picasa default-size 2
+ org.yorba.shotwell.sharing.picasa last-album ''
+ org.gnome.desktop.background picture-opacity 100
+-org.gnome.desktop.background secondary-color '#000000'
++org.gnome.desktop.background secondary-color '#5789ca'
+ org.gnome.desktop.background show-desktop-icons true
+-org.gnome.desktop.background primary-color '#000000'
++org.gnome.desktop.background primary-color '#023c88'
+ org.gnome.desktop.background color-shading-type 'solid'
+ org.gnome.desktop.background picture-options 'zoom'
+-org.gnome.desktop.background picture-uri 'file:///home/ulu/Pictures/royal_dongle.jpg'
++org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/warty-final-ubuntu.png'
+ org.gnome.desktop.background draw-background true
+ org.freedesktop.ibus.general dconf-preserve-name-prefixes ['/desktop/ibus/engine/pinyin', '/desktop/ibus/engine/bopomofo', '/desktop/ibus/engine/hangul']
+ org.freedesktop.ibus.general use-system-keyboard-layout false
+@@ -1911,7 +1911,7 @@
+ org.gnome.Evince allow-links-change-zoom true
+ org.gnome.Evince pictures-directory @ms nothing
+ org.gnome.Evince show-caret-navigation-message true
+-org.gnome.Evince.Default window-ratio (2.3409090909090908, 1.2549019607843137)
++org.gnome.Evince.Default window-ratio (0.0, 0.0)
+ org.gnome.Evince.Default continuous true
+ org.gnome.Evince.Default fullscreen false
+ org.gnome.Evince.Default show-toolbar true
+@@ -1934,8 +1934,8 @@
+ org.gnome.Empathy.ui show-balance-in-roster true
+ org.gnome.Empathy.ui show-groups false
+ org.gnome.baobab.preferences excluded-uris @as []
+-org.gnome.baobab.ui active-chart 'treemap'
+-org.gnome.baobab.ui window-state 128
++org.gnome.baobab.ui active-chart 'rings'
++org.gnome.baobab.ui window-state 0
+ org.gnome.baobab.ui window-size (960, 600)
+ org.gnome.brasero nautilus-extension-debug false
+ org.gnome.brasero.filter broken-sym true
+@@ -1962,7 +1962,7 @@
+ org.gnome.settings-daemon.peripherals.keyboard remember-numlock-state true
+ org.gnome.settings-daemon.peripherals.keyboard bell-pitch 400
+ org.gnome.settings-daemon.peripherals.keyboard click-volume 0
+-org.gnome.settings-daemon.peripherals.keyboard numlock-state 'on'
++org.gnome.settings-daemon.peripherals.keyboard numlock-state 'unknown'
+ org.gnome.settings-daemon.peripherals.keyboard bell-duration 100
+ org.gnome.settings-daemon.peripherals.keyboard bell-mode 'on'
+ org.gnome.settings-daemon.peripherals.keyboard bell-custom-file ''
+@@ -2021,7 +2021,7 @@
+ com.canonical.Unity form-factor 'Automatic'
+ com.canonical.Unity always-show-menus false
+ com.canonical.Unity home-expanded 'Expanded'
+-com.canonical.Unity minimize-count 100
++com.canonical.Unity minimize-count 0
+ com.canonical.Unity minimize-speed-threshold 100
+ org.gnome.Empathy.location resource-network true
+ org.gnome.Empathy.location reduce-accuracy true
+@@ -2044,7 +2044,7 @@
+ org.gnome.FileRoller.Listing list-mode 'as-folder'
+ org.gnome.FileRoller.Listing show-type true
+ org.gnome.FileRoller.Listing name-column-width 250
+-org.gnome.FileRoller.Listing show-path false
++org.gnome.FileRoller.Listing show-path true
+ org.gnome.FileRoller.Listing show-size true
+ org.gnome.FileRoller.Dialogs.Add recursive true
+ org.gnome.FileRoller.Dialogs.Add selected-files @as []
+@@ -2123,7 +2123,7 @@
+ org.gnome.gedit.plugins.filebrowser filter-pattern ''
+ org.gnome.gedit.plugins.filebrowser tree-view true
+ org.gnome.gedit.plugins.filebrowser open-at-first-doc true
+-org.gnome.gedit.plugins.filebrowser virtual-root 'file:///home/ulu/ULU/ulu-dongle-firmware/dongle-firmware/src'
++org.gnome.gedit.plugins.filebrowser virtual-root 'file:///home/test/ubuntu-start/scripts'
+ org.gnome.gedit.plugins.filebrowser enable-remote false
+ org.gnome.gedit.plugins.filebrowser root 'file:///'
+ com.canonical.Unity.FilesLens use-locate true
+@@ -2250,7 +2250,7 @@
+ org.gnome.nautilus.list-view default-visible-columns ['name', 'size', 'type', 'date_modified']
+ org.gnome.nautilus.list-view default-zoom-level 'small'
+ org.gnome.nautilus.list-view use-tree-view false
+-org.gnome.nautilus.list-view default-column-order ['name', 'size', 'type', 'date_modified', 'date_accessed', 'owner', 'group', 'permissions', 'mime_type', 'where']
++org.gnome.nautilus.list-view default-column-order ['name', 'size', 'type', 'date_modified']
+ org.gnome.SimpleScan jpeg-quality 75
+ org.gnome.SimpleScan text-dpi 150
+ org.gnome.SimpleScan paper-width 0
+@@ -2280,13 +2280,13 @@
+ org.gnome.desktop.peripherals.touchpad send-events 'enabled'
+ org.gnome.desktop.peripherals.touchpad tap-to-click true
+ org.gnome.desktop.peripherals.touchpad speed 0.0
+-org.gnome.DejaDup.File path 'file:///media/ulu/HDD_1TB/Backup%20ULU'
+-org.gnome.DejaDup.File short-name 'HDD_1TB'
+-org.gnome.DejaDup.File uuid '4c922a31-ed6d-48ec-b2c1-2266b4306471'
+-org.gnome.DejaDup.File icon '. GThemedIcon drive-harddisk drive'
+-org.gnome.DejaDup.File relpath b'Backup ULU'
+-org.gnome.DejaDup.File name 'HGST HTS721010A9E630: HDD_1TB'
+-org.gnome.DejaDup.File type 'volume'
++org.gnome.DejaDup.File path '/home/test/deja-dup'
++org.gnome.DejaDup.File short-name ''
++org.gnome.DejaDup.File uuid ''
++org.gnome.DejaDup.File icon ''
++org.gnome.DejaDup.File relpath @ay []
++org.gnome.DejaDup.File name ''
++org.gnome.DejaDup.File type 'normal'
+ org.gnome.seahorse.manager show-expiry false
+ org.gnome.seahorse.manager show-trust false
+ org.gnome.seahorse.manager keyrings-selected ['secret-service://login']
+@@ -2301,11 +2301,11 @@
+ org.gtk.Settings.FileChooser clock-format '24h'
+ org.gtk.Settings.FileChooser last-folder-uri ''
+ org.gtk.Settings.FileChooser sidebar-width 148
+-org.gtk.Settings.FileChooser window-position (65, 225)
++org.gtk.Settings.FileChooser window-position (-1, -1)
+ org.gtk.Settings.FileChooser show-size-column true
+ org.gtk.Settings.FileChooser startup-mode 'cwd'
+ org.gtk.Settings.FileChooser show-hidden false
+-org.gtk.Settings.FileChooser window-size (910, 682)
++org.gtk.Settings.FileChooser window-size (-1, -1)
+ org.gtk.Settings.FileChooser sort-directories-first true
+ org.gtk.Settings.FileChooser expand-folders false
+ org.gtk.Settings.FileChooser sort-order 'ascending'
+@@ -2335,7 +2335,7 @@
+ com.ubuntu.touch.sound silent-mode false
+ org.gnome.DejaDup.S3 id ''
+ org.gnome.DejaDup.S3 bucket ''
+-org.gnome.DejaDup.S3 folder 'vid-G550JK'
++org.gnome.DejaDup.S3 folder '$HOSTNAME'
+ org.gnome.settings-daemon.plugins.remote-display active true
+ org.gnome.settings-daemon.plugins.remote-display priority 0
+ org.gnome.libgnomekbd.desktop layout-names-as-group-names true
+@@ -2344,7 +2344,7 @@
+ org.gnome.libgnomekbd.desktop default-group -1
+ org.gnome.libgnomekbd.desktop group-per-window false
+ org.gnome.gedit.state.file-filter filter-id 0
+-com.canonical.desktop.interface scrollbar-mode 'normal'
++com.canonical.desktop.interface scrollbar-mode 'overlay-auto'
+ org.gnome.mahjongg show-toolbar true
+ org.gnome.mahjongg window-width 900
+ org.gnome.mahjongg mapset 'Easy'
+@@ -2745,7 +2745,7 @@
+ org.gnome.rhythmbox.plugins.visualizer vis-quality 'medium'
+ org.gnome.settings-daemon.peripherals.input-devices hotplug-command ''
+ com.canonical.Unity.Devices blacklist @as []
+-org.gtk.Settings.ColorChooser selected-color (true, 0.0, 0.0, 0.0, 1.0)
++org.gtk.Settings.ColorChooser selected-color (false, 1.0, 1.0, 1.0, 1.0)
+ org.gtk.Settings.ColorChooser custom-colors @a(dddd) []
+ org.gnome.desktop.privacy remember-app-usage true
+ org.gnome.desktop.privacy remove-old-temp-files false
+@@ -2996,7 +2996,7 @@
+ org.gnome.FileRoller.UI window-width 600
+ org.gnome.FileRoller.Dialogs.Extract skip-newer false
+ org.gnome.FileRoller.Dialogs.Extract recreate-folders true
+-com.canonical.Unity.Launcher favorites ['application://org.gnome.Nautilus.desktop', 'application://firefox.desktop', 'application://qtcreator.desktop', 'application://kde-cutecom.desktop', 'application://unity-control-center.desktop', 'application://ubuntu-software-center.desktop', 'unity://running-apps', 'unity://expo-icon', 'unity://devices']
++com.canonical.Unity.Launcher favorites ['application://ubiquity.desktop', 'application://org.gnome.Nautilus.desktop', 'application://firefox.desktop', 'application://libreoffice-writer.desktop', 'application://libreoffice-calc.desktop', 'application://libreoffice-impress.desktop', 'application://ubuntu-software-center.desktop', 'application://ubuntu-amazon-default.desktop', 'application://unity-control-center.desktop', 'unity://running-apps', 'unity://expo-icon', 'unity://devices']
+ com.canonical.Unity.Launcher items ['application:///dialer-app.desktop', 'application:///messaging-app.desktop', 'application:///address-book-app.desktop', 'application:///ubuntu-system-settings.desktop', 'appid://com.ubuntu.camera/camera/current-user-version', 'appid://com.ubuntu.gallery/gallery/current-user-version', 'application:///webbrowser-app.desktop']
+ com.canonical.Unity.Launcher favorite-migration ''
+ org.gnome.FileRoller.Dialogs.Add recursive true
+@@ -3041,14 +3041,14 @@
+ org.gnome.eog.ui filechooser-xdg-fallback true
+ org.gnome.system.location max-accuracy-level 'exact'
+ org.gnome.system.location enabled false
+-org.gnome.power-manager info-last-device '/org/freedesktop/UPower/devices/battery_BAT0'
++org.gnome.power-manager info-last-device ''
+ org.gnome.power-manager info-stats-graph-smooth true
+-org.gnome.power-manager info-page-number 1
++org.gnome.power-manager info-page-number 0
+ org.gnome.power-manager info-history-graph-points true
+-org.gnome.power-manager info-history-time 7200
+-org.gnome.power-manager info-history-type 'rate'
++org.gnome.power-manager info-history-time 21600
++org.gnome.power-manager info-history-type 'power'
+ org.gnome.power-manager info-history-graph-smooth true
+-org.gnome.power-manager info-stats-type 'discharge-accuracy'
++org.gnome.power-manager info-stats-type 'power'
+ org.gnome.power-manager info-stats-graph-points true
+ org.gnome.rhythmbox.plugins active-plugins ['artsearch', 'audiocd', 'audioscrobbler', 'cd-recorder', 'daap', 'dbus-media-server', 'generic-player', 'ipod', 'iradio', 'mmkeys', 'mpris', 'mtpdevice', 'notification', 'power-manager']
+ org.gnome.rhythmbox.plugins seen-plugins @as []
+@@ -3184,7 +3184,7 @@
+ org.gnome.settings-daemon.plugins.power percentage-low 10
+ org.gnome.settings-daemon.plugins.power priority 0
+ org.gnome.settings-daemon.plugins.power lid-close-suspend-with-external-monitor false
+-org.gnome.settings-daemon.plugins.power idle-dim false
++org.gnome.settings-daemon.plugins.power idle-dim true
+ org.gnome.settings-daemon.plugins.power button-hibernate 'hibernate'
+ org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
+ org.gnome.settings-daemon.plugins.power button-sleep 'suspend'
+@@ -3272,7 +3272,7 @@
+ org.onboard.scanner enabled false
+ org.onboard.scanner cycles 2
+ org.gnome.desktop.session session-name 'ubuntu'
+-org.gnome.desktop.session idle-delay uint32 3600
++org.gnome.desktop.session idle-delay uint32 300
+ org.freedesktop.Geoclue gps-baudrate uint32 0
+ org.freedesktop.Geoclue gps-device ''
+ org.compiz.integrated run-command-3 ['disabled']
+@@ -3330,11 +3330,11 @@
+ org.gnome.gnome-system-monitor.proctree col-17-width 48
+ org.gnome.gnome-system-monitor.proctree col-18-width 70
+ org.gnome.gnome-system-monitor.proctree col-1-width 98
+-org.gnome.gnome-system-monitor.proctree sort-col 8
++org.gnome.gnome-system-monitor.proctree sort-col 0
+ org.gnome.gnome-system-monitor.proctree col-0-visible true
+ org.gnome.gnome-system-monitor.proctree col-1-visible true
+ org.gnome.gnome-system-monitor.proctree col-2-width 37
+-org.gnome.gnome-system-monitor.proctree columns-order [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
++org.gnome.gnome-system-monitor.proctree columns-order [0]
+ org.gnome.gnome-system-monitor.proctree col-19-width 41
+ org.gnome.gnome-system-monitor.proctree col-2-visible false
+ org.gnome.gnome-system-monitor.proctree col-3-visible false
+@@ -3381,14 +3381,14 @@
+ org.gnome.meld vc-break-commit-message false
+ org.gnome.meld insert-spaces-instead-of-tabs false
+ org.gnome.meld style-scheme 'classic'
+-org.gnome.meld text-filters [('CVS keywords', false, '$\\w+(:[^\\n$]+)?$'), ('C++ comment', false, '//.*'), ('C comment', false, '/\\*.*?\\*/'), ('All whitespace', true, '[ \\t\\r\\f\\v]*'), ('Leading whitespace', false, '^[ \\t\\r\\f\\v]*'), ('Trailing whitespace', false, '[ \\t\\r\\f\\v]*$'), ('Script comment', false, '#.*')]
++org.gnome.meld text-filters [('CVS/SVN keywords', false, '$\\w+(:[^\\n$]+)?$'), ('C++ comment', false, '//.*'), ('C comment', false, '/\\*.*?\\*/'), ('All whitespace', false, '[ \\t\\r\\f\\v]*'), ('Leading whitespace', false, '^[ \\t\\r\\f\\v]*'), ('Trailing whitespace', false, '[ \\t\\r\\f\\v]*$'), ('Script comment', false, '#.*')]
+ org.gnome.meld indent-width 8
+ org.gnome.meld vc-status-filters ['flatten', 'modified']
+ org.gnome.meld wrap-mode 'none'
+ org.gnome.meld vc-left-is-local false
+ org.gnome.meld folder-shallow-comparison false
+-org.gnome.meld show-line-numbers true
+-org.gnome.meld window-state 'maximized'
++org.gnome.meld show-line-numbers false
++org.gnome.meld window-state 'normal'
+ org.gnome.meld custom-font 'monospace, 14'
+ org.gnome.meld use-system-editor true
+ org.gnome.meld folder-columns [('size', true), ('modification time', true), ('permissions', false)]
+@@ -3403,12 +3403,12 @@
+ org.gnome.meld folder-time-resolution 100
+ org.gnome.meld highlight-syntax false
+ org.gnome.meld vc-console-pane-position 300
+-org.gnome.meld draw-spaces ['space', 'tab', 'newline', 'nbsp', 'leading', 'text', 'trailing']
++org.gnome.meld draw-spaces @as []
+ org.gnome.meld highlight-current-line false
+ org.gnome.meld folder-status-filters ['normal', 'modified', 'new']
+ org.gnome.meld toolbar-visible true
+ org.gnome.meld vc-commit-margin 72
+-org.gnome.meld window-size (516, 400)
++org.gnome.meld window-size (-1, -1)
+ org.gnome.meld vc-show-commit-margin true
+ org.gnome.evolution.eds-shell start-offline false
+ org.freedesktop.ibus.general.hotkey next-engine ['Alt+Shift_L']
+@@ -3431,7 +3431,7 @@
+ org.gnome.nautilus.preferences click-policy 'double'
+ org.gnome.nautilus.preferences enable-delete false
+ org.gnome.nautilus.preferences default-sort-order 'name'
+-org.gnome.nautilus.preferences default-folder-viewer 'list-view'
++org.gnome.nautilus.preferences default-folder-viewer 'icon-view'
+ org.gnome.nautilus.preferences sort-directories-first true
+ org.gnome.nautilus.preferences show-directory-item-counts 'local-only'
+ org.gnome.nautilus.preferences tabs-open-position 'after-current-tab'
+@@ -3443,7 +3443,7 @@
+ org.gnome.nautilus.preferences mouse-use-extra-buttons true
+ org.gnome.nautilus.window-state sidebar-width 188
+ org.gnome.nautilus.window-state start-with-sidebar true
+-org.gnome.nautilus.window-state geometry '928x1028+65+24'
++org.gnome.nautilus.window-state geometry '890x550+65+52'
+ org.gnome.nautilus.window-state maximized false
+ org.gnome.nautilus.window-state start-with-location-bar true
+ org.gnome.nautilus.icon-view captions ['none', 'size', 'date_modified']
+@@ -3463,7 +3463,7 @@
+ org.gnome.nautilus.list-view default-visible-columns ['name', 'size', 'type', 'date_modified']
+ org.gnome.nautilus.list-view default-zoom-level 'small'
+ org.gnome.nautilus.list-view use-tree-view false
+-org.gnome.nautilus.list-view default-column-order ['name', 'size', 'type', 'date_modified', 'date_accessed', 'owner', 'group', 'permissions', 'mime_type', 'where']
++org.gnome.nautilus.list-view default-column-order ['name', 'size', 'type', 'date_modified']
+ org.yorba.shotwell.sharing.youtube refresh-token ''
+ com.canonical.Unity.Lenses home-lens-priority ['files.scope', 'music.scope']
+ com.canonical.Unity.Lenses disabled-scopes @as []
+@@ -3484,7 +3484,7 @@
+ org.gnome.nautilus.preferences click-policy 'double'
+ org.gnome.nautilus.preferences enable-delete false
+ org.gnome.nautilus.preferences default-sort-order 'name'
+-org.gnome.nautilus.preferences default-folder-viewer 'list-view'
++org.gnome.nautilus.preferences default-folder-viewer 'icon-view'
+ org.gnome.nautilus.preferences sort-directories-first true
+ org.gnome.nautilus.preferences show-directory-item-counts 'local-only'
+ org.gnome.nautilus.preferences tabs-open-position 'after-current-tab'
+@@ -3509,7 +3509,7 @@
+ org.gnome.gnome-system-monitor.disktreenew col-5-width 80
+ org.gnome.gnome-system-monitor.disktreenew col-5-visible true
+ org.gnome.gnome-system-monitor.disktreenew col-6-visible true
+-org.gnome.gnome-system-monitor.disktreenew col-6-width 0
++org.gnome.gnome-system-monitor.disktreenew col-6-width 300
+ org.gnome.gnome-system-monitor.disktreenew sort-order 0
+ org.gnome.brasero.filter broken-sym true
+ org.gnome.brasero.filter hidden true
+@@ -3526,32 +3526,32 @@
+ org.gnome.desktop.file-sharing bluetooth-obexpush-enabled false
+ org.gnome.desktop.file-sharing bluetooth-allow-write false
+ org.gnome.DejaDup last-restore ''
+-org.gnome.DejaDup periodic true
++org.gnome.DejaDup periodic false
+ org.gnome.DejaDup full-backup-period 90
+ org.gnome.DejaDup backend 'file'
+-org.gnome.DejaDup last-run '2015-12-09T09:56:20.911821Z'
+-org.gnome.DejaDup nag-check '2015-10-26T10:14:09.265303Z'
+-org.gnome.DejaDup prompt-check '2015-10-04T19:52:43.761278Z'
++org.gnome.DejaDup last-run ''
++org.gnome.DejaDup nag-check ''
++org.gnome.DejaDup prompt-check '2015-12-08T14:50:53.321504Z'
+ org.gnome.DejaDup root-prompt true
+ org.gnome.DejaDup include-list ['$HOME']
+-org.gnome.DejaDup exclude-list ['/home/ulu/.local/share/Trash', '/home/ulu/Dropbox']
+-org.gnome.DejaDup last-backup '2015-12-09T09:56:20.911821Z'
+-org.gnome.DejaDup periodic-period 1
++org.gnome.DejaDup exclude-list ['$TRASH', '$DOWNLOAD']
++org.gnome.DejaDup last-backup ''
++org.gnome.DejaDup periodic-period 7
+ org.gnome.DejaDup delete-after 0
+ org.gnome.DejaDup.S3 id ''
+ org.gnome.DejaDup.S3 bucket ''
+-org.gnome.DejaDup.S3 folder 'vid-G550JK'
++org.gnome.DejaDup.S3 folder '$HOSTNAME'
+ org.gnome.DejaDup.GDrive email ''
+-org.gnome.DejaDup.GDrive folder '/deja-dup/vid-G550JK'
++org.gnome.DejaDup.GDrive folder '/deja-dup/$HOSTNAME'
+ org.gnome.DejaDup.Rackspace username ''
+-org.gnome.DejaDup.Rackspace container 'vid-G550JK'
+-org.gnome.DejaDup.File path 'file:///media/ulu/HDD_1TB/Backup%20ULU'
+-org.gnome.DejaDup.File short-name 'HDD_1TB'
+-org.gnome.DejaDup.File uuid '4c922a31-ed6d-48ec-b2c1-2266b4306471'
+-org.gnome.DejaDup.File icon '. GThemedIcon drive-harddisk drive'
+-org.gnome.DejaDup.File relpath b'Backup ULU'
+-org.gnome.DejaDup.File name 'HGST HTS721010A9E630: HDD_1TB'
+-org.gnome.DejaDup.File type 'volume'
++org.gnome.DejaDup.Rackspace container '$HOSTNAME'
++org.gnome.DejaDup.File path '/home/test/deja-dup'
++org.gnome.DejaDup.File short-name ''
++org.gnome.DejaDup.File uuid ''
++org.gnome.DejaDup.File icon ''
++org.gnome.DejaDup.File relpath @ay []
++org.gnome.DejaDup.File name ''
++org.gnome.DejaDup.File type 'normal'
+ org.gnome.rhythmbox.plugins.lyrics folder ''
+ org.gnome.rhythmbox.plugins.lyrics sites ['lyrc.com.ar']
+ org.gnome.settings-daemon.peripherals.mouse drag-threshold 8

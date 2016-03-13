@@ -1,0 +1,15 @@
+s0_panel_opacity = 0.000000
+s0_background_color = #00000080
+s0_dash_blur_experimental = 1
+s0_launcher_switcher_forward = Disabled
+s0_launcher_opacity = 0.000000
+s0_icon_size = 36
+s0_backlight_mode = 4
+s0_alt_tab_forward = Disabled
+s0_active_plugins = core;composite;opengl;regex;snap;grid;copytex;compiztoolbox;vpswitch;place;imgpng;wall;resize;animation;ring;expo;move;fade;session;mousepoll;ezoom;commands;unitymtgrabhandles;workarounds;scale;unityshell;
+s0_hsize = 3
+s0_vsize = 3
+s0_prev_key = <Super>q
+s0_next_all_key = <Alt>Tab
+s0_prev_all_key = <Alt>q
+s0_x_offset = 52
