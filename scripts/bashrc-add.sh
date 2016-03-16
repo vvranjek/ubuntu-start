@@ -10,10 +10,10 @@ else
 	echo Folder /home/$USER/bin exists.
 fi
 
-if grep "Added by bashrc-add.sh" /home/$USER/.bashrc ; then
-	echo ".bashrc already contains modifications from this script."
-else if cat bashrc-content >> /home/$USER/.bashrc ; then
-	echo "Copied bashrc-content to /home/$USER/.bashrc!"
+if grep "Added by bashrc-add.sh" /home/$USER/.profile ; then
+	echo ".profile already contains modifications from this script."
+else if cat bashrc-content >> /home/$USER/.profile ; then
+	echo "Copied bashrc-content to /home/$USER/.profile!"
 else
 	echo "Something went wrong."
 fi
