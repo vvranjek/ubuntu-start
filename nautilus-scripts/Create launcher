@@ -1,0 +1,45 @@
+#! /bin/bash
+
+DIR=$(dirname $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
+FILE=$(basename $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
+EXTENSION="${FILE##*.}"
+
+# Remove newline from NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
+NAUTILUS_SCRIPT_SELECTED_FILE_PATHS=$(echo $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS | tr -d '\n')
+
+# Check if the fale has extension
+if [ "$EXTENSION" == "$FILE" ]; then
+    echo "File without extension"
+    FILENAME=$FILE
+    LAUNCHER_NAME="$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS".desktop
+    #gedit $LAUNCHER_NAME
+else
+    echo "File has extension"
+    FILENAME="${FILE%.*}"
+    LAUNCHER_NAME="${NAUTILUS_SCRIPT_SELECTED_FILE_PATHS%.*}.desktop"
+fi
+
+if [[ -x "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" ]]
+then
+    echo "File '$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS' is executable"
+else
+    #gksudo chmod +x $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
+    echo "File '$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS' is not executable or found"
+fi
+
+#touch $LAUNCHER_NAME
+
+echo "[Desktop Entry]" > "$LAUNCHER_NAME"
+echo "Version=" >> "$LAUNCHER_NAME"
+echo "Name=$FILENAME" >> "$LAUNCHER_NAME"
+echo "Comment=" >> "$LAUNCHER_NAME"
+echo "Exec=$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" >> "$LAUNCHER_NAME"
+echo "Icon=$DIR/icon.png" >> "$LAUNCHER_NAME"
+echo "Terminal=false" >> "$LAUNCHER_NAME"
+echo "Type=Application" >> "$LAUNCHER_NAME"
+echo "Categories=Utility;Application;" >> "$LAUNCHER_NAME"
+
+chmod +x $LAUNCHER_NAME
+
+gedit $LAUNCHER_NAME
+
