@@ -1,0 +1,13 @@
+./
+%ARDUINO_DIR%/hardware/arduino/avr/cores/arduino
+%ARDUINO_DIR%/hardware/arduino/avr/cores/arduino
+/home/vid/Arduino/libraries
+%ARDUINO_DIR%/libraries/LiquidCrystal_I2C/
+%ARDUINO_DIR%/libraries/TinyGPSPlus/
+%ARDUINO_DIR%/libraries/Servo/src
+%ARDUINO_DIR%/hardware/arduino/avr/libraries
+%ARDUINO_DIR%/hardware/arduino/avr/libraries/SoftwareSerial/
+%ARDUINO_DIR%/hardware/arduino/avr/libraries/EEPROM/
+
+
+Arduino.mk

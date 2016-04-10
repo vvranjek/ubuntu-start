@@ -1,0 +1,13 @@
+
+ARDUINO_DIR  = %ARDUINO_DIR%
+
+TARGET       = %ProjectName%
+ARDUINO_LIBS = %ARDUINO_LIBS%
+
+BOARD_TAG    = %BOARD_TAG%
+MCU	     = 
+ARDUINO_PORT = %ARDUINO_PORT%
+
+
+include $(ARDUINO_DIR)/Arduino.mk
+

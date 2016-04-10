@@ -1,19 +1,13 @@
 #! /bin/bash
 
+FILE=$1
+SCRIPT=`realpath $0`
+SCRIPTS_DIR=`dirname $SCRIPT`
 
-mkdir /home/$USER/bin
-RESULT=$?
-
-if [ $RESULT == 0 ] ; then 
-	echo Created folder /home/$USER/bin
-else
-	echo Folder /home/$USER/bin exists.
-fi
-
-if grep "Added by bashrc-add.sh" /home/$USER/.profile ; then
-	echo ".profile already contains modifications from this script."
-else if cat bashrc-content >> /home/$USER/.profile ; then
-	echo "Copied bashrc-content to /home/$USER/.profile!"
+if grep "Added by bashrc-add.sh to $FILE" $FILE ; then
+	echo "$FILE already contains modifications from this script."
+else if cat $SCRIPTS_DIR/bashrc-content >> $FILE ; then
+	echo "Copied bashrc-content to $FILE!"
 else
 	echo "Something went wrong."
 fi

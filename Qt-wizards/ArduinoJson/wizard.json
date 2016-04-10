@@ -1,0 +1,270 @@
+{
+	"version": 1,
+	"kind": "project",
+	"id": "R.Plain Cpp App",
+	"category": "I.Projects",
+	"trDescription": "Creates a simple Arduino project.",
+	"trDisplayName": "Arduino",
+	"trDisplayCategory": "Custom Projects",
+	"icon": "arduino.png",
+	"enabled": "%{JS: [ %{Plugins} ].indexOf('QmakeProjectManager') >= 0 || [ %{Plugins} ].indexOf('QbsProjectManager') >= 0 || [ %{Plugins} ].indexOf('CMakeProjectManager') >= 0}",
+
+	"options":
+		[
+		{ "key": "ProjectFile", "value": "%{ProFile}.cpp" },
+		{ "key": "ProFile", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}', 'pro')}" },
+		{ "key": "QbsFile", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}', 'qbs')}" },
+		{ "key": "CMakeFile", "value": "%{ProjectDirectory}/CMakeLists.txt" },
+		{ "key": "CppFileName", "value": "%{JS: 'main.' + Util.preferredSuffix('text/x-c++src')}" },
+		{ "key": "IsTopLevelProject", "value": "%{JS: !'%{Exists:ProjectExplorer.Profile.Ids}'}" },
+
+		{ "key": "BoardSelected", "value": "%{JS: '%{ArduinoBoard}'}" }
+
+	],
+
+	"pages":
+		[
+		{
+			"trDisplayName": "Project Location",
+			"trShortTitle": "Project Location",
+			"typeId": "Project"
+		},
+
+
+		{
+			"trDisplayName": "Arduino Location",
+			"trShortTitle": "Arduino Location",
+			"typeId": "Fields",
+			"data":
+				[
+				{
+					"name": "ArduinoPath",
+					"trDisplayName": "Arduino Path:",
+					"mandatory": true,
+					"type": "PathChooser",
+					"data":
+					{
+						"kind": "existingDirectory",
+						"basePath": "/home/user/Programs/Arduino",
+						"path": "/home/user/Programs/Arduino"
+					}
+
+				},
+
+				{
+					"name": "Makefile path",
+					"trDisplayName": "Makefile Path:",
+					"mandatory": false,
+					"type": "PathChooser",
+					"data":
+					{
+						"kind": "existingDirectory",
+						"basePath": "%{ProjectDirectory}",
+						"path": "%{ProjectDirectory}"
+					}
+
+				},
+
+				{
+					"name": "AltLibraryPath",
+					"trDisplayName": "Alternative library path:",
+					"mandatory": false,
+					"type": "PathChooser",
+					"data":
+					{
+						"kind": "existingDirectory",
+						"basePath": "/home/user/Arduino/libraries",
+						"path": "/home/user/Arduino/libraries"
+					}
+
+				},
+
+
+				{
+					"name": "ArduinoLibs",
+					"trDisplayName": "Libraries:",
+					"type": "LineEdit",
+					"data" :
+					{
+						"trText": "Servo",
+						"richText": true
+					}
+				}
+			]
+		},
+
+
+
+		{
+			"trDisplayName": "Choose Arduino Board",
+			"trShortTitle": "Arduino Board",
+			"typeId": "Fields",
+			"data":
+				[
+				{
+					"name": "ArduinoBoard",
+					"trDisplayName": "Arduino Board:",
+					"type": "ComboBox",
+					"data":
+					{
+						"index": 0,
+						"items":
+							[
+							{
+								"trKey": "Uno",
+								"value": "uno"
+							},
+							{
+								"trKey": "Duemilanove or Diecimila",
+								"value": "duemilanoveordiecimila"
+							},
+							{
+								"trKey": "Yun",
+								"value": "yun"
+							},
+							{
+								"trKey": "Nano",
+								"value": "nano"
+							},
+							{
+								"trKey": "Mega or Mega 2560",
+								"value": "megaormega2560"
+							},
+							{
+								"trKey": "Leonardo",
+								"value": "leonardo"
+							},
+							{
+								"trKey": "Micro",
+								"value": "micro"
+							},
+							{
+								"trKey": "Esplora",
+								"value": "esplora"
+							},
+							{
+								"trKey": "Mini",
+								"value": "mini"
+							},
+							{
+								"trKey": "Ethernet",
+								"value": "ethernet"
+							}
+						]
+					}
+				}
+			]
+
+		},
+
+		{
+			"trDisplayName": "MCU Selection",
+			"trShortTitle": "MCU Selection",
+			"typeId": "Fields",
+			"data":
+				[
+				{
+					"name": "Mcu",
+					"trDisplayName": "MCU selection:",
+					"type": "ComboBox",
+					"data":
+					{
+						"index": 0,
+						"items":
+							[
+							{
+								"trKey": "Atmega328P",
+								"value": "atmega328p",
+								"condition": "%{JS: '%{ArduinoBoard}' === 'uno' || '%{ArduinoBoard}' === 'yun' || '%{ArduinoBoard}' === 'nano'}"
+							},
+							{
+								"trKey": "Atmega168",
+								"value": "atmega168",
+								"condition": "%{JS: '%{ArduinoBoard}' === 'uno' || '%{ArduinoBoard}' === 'yun' || '%{ArduinoBoard}' === 'nano'}"
+							}
+						]
+					}
+				},
+				{
+					"name": "Port",
+					"trDisplayName": "Serial Port:",
+					"type": "ComboBox",
+					"data":
+					{
+						"index": 0,
+						"items":
+							[
+							{
+								"trKey": "ttyUSB0",
+								"value": "/dev/ttyUSB0"
+							},
+							{
+								"trKey": "ttyACM0",
+								"value": "/dev/ttyACM0"
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"trDisplayName": "Project Management",
+			"trShortTitle": "Summary",
+			"typeId": "Summary"
+		}
+	],
+	"generators":
+		[
+		{
+			"typeId": "File",
+			"data":
+				[
+				{
+					"source": "project.creator",
+					"target": "%{ProjectName}.creator",
+					"openAsProject": true
+				},
+				{
+					"source": "project.config",
+					"target": "%{ProjectName}.config",
+					"openAsProject": true
+				},
+				{
+					"source": "project.files",
+					"target": "%{ProjectName}.files",
+					"openAsProject": true
+				},
+				{
+					"source": "project.includes",
+					"target": "%{ProjectName}.includes",
+					"openAsProject": true
+				},
+				{
+					"source": "makefile",
+					"target": "makefile",
+					"openAsProject": false
+				},
+				{
+					"source": "main.cpp",
+					"target": "%{ProjectName}.cpp",
+					"openAsProject": true
+				},
+				{
+					"source": "Arduino.mk",
+					"target": "Arduino.mk",
+					"openAsEditor": true
+				},
+				{
+					"source": "Arduino-Makefile-master",
+					"target": "Arduino-Makefile-master",
+					"openAsEditor": true
+				},
+				{
+					"source": "../git.ignore",
+					"target": "%{ProjectDirectory}/.gitignore",
+					"condition": "%{JS: ! %{IsSubproject} && '%{VersionControl}' === 'G.Git'}"
+				}
+			]
+		}
+	]
+}

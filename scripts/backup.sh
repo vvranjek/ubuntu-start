@@ -1,6 +1,10 @@
 #! /bin/bash
 
-CUR_DIR=$(pwd)
+
+SCRIPT=`realpath $0`
+SCRIPTS_DIR=`dirname $SCRIPT`
+
+CUR_DIR=$SCRIPTS_DIR
 
 if [ $# != 0 ]; then
 	DIR=$0

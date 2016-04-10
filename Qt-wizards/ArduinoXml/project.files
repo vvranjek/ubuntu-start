@@ -1,0 +1,4 @@
+makefile
+%ProjectName%.cpp
+%ProjectName%.h
+Arduino.mk

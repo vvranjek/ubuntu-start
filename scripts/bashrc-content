@@ -23,21 +23,23 @@ function gitrm
 	git ls-files --deleted | xargs git rm 
 }
 
-udir="/home/$USER/SVN/ubuntu-vid/Apt-get/trunk/"
+function git-log
+{
+	git log --graph --decorate --first-parent $1
+}
+
+function frep
+{
+        grep -R $1 .
+}
+
+function gdiff
+{
+    git difftool --dir-diff
+}
 
 PATH=$PATH:/home/$USER/bin
 
 #############################################################################
-
-
-
-
-
-
-
-
-
-
-
 
 

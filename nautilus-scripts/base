@@ -15,6 +15,9 @@
 #FILE=$(basename $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
 #EXTENSION="${FILE##*.}"
 
+#SCRIPT=`realpath $0`
+#SCRIPTS_DIR=`dirname $SCRIPT`
+
 # Check if the fale has extension
 #if [ "$EXTENSION" == "$FILE" ]; then
 #    echo "File without extension"

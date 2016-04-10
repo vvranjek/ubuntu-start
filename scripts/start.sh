@@ -5,8 +5,10 @@
 
 clear
 
-SCRIPTS_DIR=$(find `pwd` -name "scripts")
-NAUTILUS_SCRIPTS_DIR=$(pwd)/../nautilus-scripts
+SCRIPT=`realpath $0`
+SCRIPTS_DIR=`dirname $SCRIPT`
+#SCRIPTS_DIR=$(find `pwd` -name "scripts")
+NAUTILUS_SCRIPTS_DIR=$SCRIPTS_DIR/../nautilus-scripts
 FILENAME=package-list
 
 echo "SCRIPTS_DIR = $SCRIPTS_DIR"
@@ -43,6 +45,48 @@ echo "Adding open as root menu to nautilus"
 sudo bash -c "$SCRIPTS_DIR/nautilusRoot.sh"
 sleep 0.3
 
+
+while true; do
+    read -p "Whould you like install ZSH and Oh-My-Zsh? (Y/N)" answer
+    case $answer in
+      [Yy]* ) 
+
+	sudo apt-get install zsh
+	wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+	chsh -s /bin/zsh $USER
+	break;;
+ 		
+    [Nn]* ) echo "NO"; break;;
+	* ) echo "Please answer yes or no.";;
+    esac
+done
+
+
+
+if [ -f /home/$USER/.zshrc ];
+then
+   	echo "File .zshrc exists. "
+
+	echo "Adding modifications to zshrc"
+	if grep "Added by bashrc-add.sh" /home/$USER/.zshrc ; then
+		echo ".zshrc already contains modifications from this script."
+	else
+		while true; do
+	    	read -p "Do you want to add modifications to .zshrc? (Y/N)?" answer
+	    		case $answer in
+			[Yy]* ) echo "Running zshrc script"
+				$SCRIPTS_DIR/bashrc-add.sh /home/$USER/.zshrc
+	 			break;;
+			[Nn]* ) echo "NO"; break;;
+			* ) echo "Please answer yes or no.";;
+	    		esac
+		done
+	fi
+else
+  	echo "File .zshrc does not exist."
+fi
+
+
 echo "Adding modifications to bashrc"
 if grep "Added by bashrc-add.sh" /home/$USER/.bashrc ; then
 	echo ".bashrc already contains modifications from this script."
@@ -51,7 +95,7 @@ else
     	read -p "Do you want to add modifications to .bashrc? (Y/N)?" answer
     		case $answer in
         	[Yy]* ) echo "Running bashrc script"
-			./bashrc-add.sh
+			$SCRIPTS_DIR/bashrc-add.sh /home/$USER/.bashrc
  			break;;
         	[Nn]* ) echo "NO"; break;;
         	* ) echo "Please answer yes or no.";;
@@ -143,23 +187,6 @@ while true; do
 	* ) echo "Please answer yes or no.";;
     esac
 done
-
-while true; do
-    read -p "Whould you like install ZSH and Oh-My-Zsh? (Y/N)" answer
-    case $answer in
-      [Yy]* ) 
-
-	sudo apt-get install zsh
-	wget --no-check-certificate http://install.ohmyz.sh -O - | sh
-	chsh -s /bin/zsh vid
-	chsh -s /bin/zsh ulu
-	break;;
- 		
-    [Nn]* ) echo "NO"; break;;
-	* ) echo "Please answer yes or no.";;
-    esac
-done
-
 
 
 echo Done!
