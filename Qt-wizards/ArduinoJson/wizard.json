@@ -255,8 +255,8 @@
 					"openAsEditor": true
 				},
 				{
-					"source": "Arduino-Makefile-master",
-					"target": "Arduino-Makefile-master",
+					"source": "Arduino-Makefile-master/Arduino.mk",
+					"target": "Arduino-Makefile-master/Arduino.mk",
 					"openAsEditor": true
 				},
 				{

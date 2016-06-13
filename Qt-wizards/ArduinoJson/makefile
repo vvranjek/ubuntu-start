@@ -5,7 +5,7 @@ TARGET       = %{ProjectName}
 ARDUINO_LIBS = %{ArduinoLibs}
 
 BOARD_TAG    = %{ArduinoBoard}
-MCU	     = %{Mcu}
+MCU	     = atmega328p
 ARDUINO_PORT = %{Port}
 
 ARDMK_DIR = %{ProjectDirectory}

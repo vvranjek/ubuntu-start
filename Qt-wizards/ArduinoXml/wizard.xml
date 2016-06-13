@@ -55,7 +55,7 @@ leave room for the Qt 4 target page.
         <file source="makefile"    target="makefile"/>
 	<file source="Arduino.mk"  target="Arduino.mk"/>
 	<file source="Common.mk"   target="Common.mk"/>
-	<file source="Arduino-Makefile-master"   target="Arduino-Makefile"/>
+        <file source="Arduino-Makefile-master/Arduino.mk"   target="Arduino-Makefile/Arduino.mk"/>
 
 
 

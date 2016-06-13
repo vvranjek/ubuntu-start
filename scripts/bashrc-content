@@ -38,6 +38,29 @@ function gdiff
     git difftool --dir-diff
 }
 
+
+function grany
+{
+    GREP=""
+    NUM=0
+
+    for var in "$@"
+    do
+        if [[ NUM -eq 0 ]]
+        then
+            GREP+="grep -R $var ."
+        else
+            GREP+=" | grep $var"
+        fi
+
+        (( NUM++ ))
+    done
+
+    echo $GREP
+    eval $GREP
+}
+
+
 PATH=$PATH:/home/$USER/bin
 
 #############################################################################
