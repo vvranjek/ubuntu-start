@@ -5,7 +5,7 @@ touchpad="ETPS/2 Elantech Touchpad"
 echo "Setting touchpad settings for $touchpad."
 
 # Synaptics Noise Cancelation
-xinput set-prop "$touchpad" "Synaptics Noise Cancellation" 0, 0
+xinput set-prop "$touchpad" "Synaptics Noise Cancellation" 1, 1
 
 # Pointer speed and acceleration
 #xinput set-prop "$touchpad" "Device Accel Velocity Scaling" 1
@@ -32,10 +32,10 @@ xinput set-prop "$touchpad" "Synaptics Noise Cancellation" 0, 0
 #xinput set-prop "$touchpad" "Move Speed" 306 1 2 0.06 0
 
 # Tap time is in Tap durations and Tap time. 'Tap Time' messes with tapping, just set it to 1000!
-xinput set-prop "$touchpad" "Synaptics Tap Time" 200
-xinput set-prop "$touchpad" "Synaptics Tap Durations" 200 150 100
+#xinput set-prop "$touchpad" "Synaptics Tap Time" 200
+#xinput set-prop "$touchpad" "Synaptics Tap Durations" 200 150 100
 
-xinput set-prop "$touchpad" "Synaptics Tap Durations" 200 150 100
+#xinput set-prop "$touchpad" "Synaptics Tap Durations" 200 150 100
 
 # Set speed
 xinput set-prop "$touchpad" "Device Accel Velocity Scaling" 20
@@ -44,7 +44,7 @@ xinput set-prop "$touchpad" "Device Accel Velocity Scaling" 20
 xinput set-prop "$touchpad" "Synaptics Area" 0 3000 0 2000
 
 # Disable touchpad while typing
-syndaemon -i 1 -K -d
+#syndaemon -i 1 -K -d
 
 
 echo "Done!"

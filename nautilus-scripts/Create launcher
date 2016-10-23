@@ -1,16 +1,22 @@
 #! /bin/bash
 
+# Save IFS
+IFS_BAK=$IFS
+IFS=""
+
 DIR=$(dirname $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
 FILE=$(basename $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
-EXTENSION="${FILE##*.}"
+EXTENSION='${FILE##*.}'
+
+zenity –title=”Debug” –text=”$DIR”
 
 # Remove newline from NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
 NAUTILUS_SCRIPT_SELECTED_FILE_PATHS=$(echo $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS | tr -d '\n')
 
-# Check if the fale has extension
-if [ "$EXTENSION" == "$FILE" ]; then
+# Check if the file has extension
+if [ '$EXTENSION' == '$FILE' ]; then
     echo "File without extension"
-    FILENAME=$FILE
+    FILENAME='$FILE'
     LAUNCHER_NAME="$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS".desktop
     #gedit $LAUNCHER_NAME
 else
@@ -40,6 +46,18 @@ echo "Type=Application" >> "$LAUNCHER_NAME"
 echo "Categories=Utility;Application;" >> "$LAUNCHER_NAME"
 
 chmod +x $LAUNCHER_NAME
+
+ANS=$(zenity –question –title=”$FILENAME” –text=”Would you kike to add to applications menu?”)
+
+
+if [[ $? -eq 0 ]]; then
+    gksudo cp $LAUNCHER_NAME /usr/share/applications/$FILENAME
+else
+    zenity –question –title=”$FILENAME” –text=”Answer is $?”
+fi
+
+# Restore IFS
+IFS=$IFS_BAK
 
 gedit $LAUNCHER_NAME
 
