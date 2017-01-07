@@ -1,0 +1,3 @@
+If you have multiple wne installations, for example win32 and wine64, you can editi the default 'open with' wine version in the corresponding desktop files here:
+
+/home/vid/.local/share/applications

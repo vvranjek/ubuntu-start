@@ -1,3 +1,4 @@
+ubuntu-restricted-extras 
 scudcloud
 openocd
 meld
@@ -19,7 +20,6 @@ google-chrome-stable
 nautilus-dropbox 
 terminator 
 jdownloader 
-ubuntu-restricted-extras 
 skype 
 compizconfig-settings-manager 
 compiz-plugins-extra 

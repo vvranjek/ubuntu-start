@@ -21,3 +21,8 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_osi="
 Save, then
 sudo update-grub
 Restart computer.
+
+
+If SD card reader isn't recognised, try
+
+sudo apt-get install --reinstall udisks2
