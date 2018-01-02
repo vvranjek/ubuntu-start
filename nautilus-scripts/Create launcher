@@ -6,9 +6,7 @@ IFS=""
 
 DIR=$(dirname $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
 FILE=$(basename $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
-EXTENSION='${FILE##*.}'
-
-zenity –title=”Debug” –text=”$DIR”
+EXTENSION='${$FILE##*.}'
 
 # Remove newline from NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
 NAUTILUS_SCRIPT_SELECTED_FILE_PATHS=$(echo $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS | tr -d '\n')
@@ -24,6 +22,12 @@ else
     FILENAME="${FILE%.*}"
     LAUNCHER_NAME="${NAUTILUS_SCRIPT_SELECTED_FILE_PATHS%.*}.desktop"
 fi
+
+# Override previus LAUNCHER_NAME definition. Have to see if this works for all situations
+LAUNCHER_NAME="$DIR/$FILE.desktop"
+
+# Debug
+#zenity --info --title ”Debug” --text "DIR: $DIR \n FILE: $FILE \n EXTENSION: $EXTENSION \n LAUNCHER_NAME: $LAUNCHER_NAME"
 
 if [[ -x "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" ]]
 then
@@ -47,11 +51,13 @@ echo "Categories=Utility;Application;" >> "$LAUNCHER_NAME"
 
 chmod +x $LAUNCHER_NAME
 
-ANS=$(zenity –question –title=”$FILENAME” –text=”Would you kike to add to applications menu?”)
+gedit $LAUNCHER_NAME
 
+ANS=$(zenity --question --title="$FILENAME" --text="Would you kike to add to applications menu?")
 
 if [[ $? -eq 0 ]]; then
     gksudo cp $LAUNCHER_NAME /usr/share/applications/$FILENAME
+    gksudo updatedb
 else
     zenity –question –title=”$FILENAME” –text=”Answer is $?”
 fi
@@ -59,5 +65,4 @@ fi
 # Restore IFS
 IFS=$IFS_BAK
 
-gedit $LAUNCHER_NAME
 

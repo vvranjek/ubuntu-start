@@ -1,0 +1,4 @@
+#! /bin/bash
+
+ulg2kml $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS 
+

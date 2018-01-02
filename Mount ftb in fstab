@@ -1,0 +1,12 @@
+sudo mkdir /media/vid/FtpDrive
+
+sudo echo "# Vidernet drive
+curlftpfs#vidernet:password@vidernet.asuscomm.com/sda1/ /media/vid/Vidernet fuse rw,uid=1000,umask=0777,user,suid,allow_other,exec,auto,utf8  0   1
+
+
+
+# Without it 'mount' has permission issues
+sudo echo "user_allow_other" >> /etc/fuse.conf
+
+
+Add 'mount /home/vid/FtpDrive' to '/etc/rc.local' for it to mount on startup

@@ -39,13 +39,14 @@ leave room for the Qt 4 target page.
 -->
 <wizard version="1" kind="project"
         class="" firstpage="10"
-        id="A.Arduino" category="B.CustomProjects">
+        id="A.Arduino_xml" category="B.CustomProjects">
     <icon>arduino.png</icon>
     <description>Creates an Arduino project.</description>
-    <displayname>Arduino Project</displayname>;
+    <displayname>Arduino Project xml</displayname>;
     <displaycategory>Custom Projects</displaycategory>
     <files>
         <file source="project.creator"  target="%ProjectName%.creator" openproject="true"/>
+        <file source="project.creator.user" target="%ProjectName%.creator.user"/>
         <file source="project.includes" target="%ProjectName%.includes"/>
         <file source="project.config"   target="%ProjectName%.config"/>
         <file source="project.files"    target="%ProjectName%.files"/>
@@ -55,7 +56,7 @@ leave room for the Qt 4 target page.
         <file source="makefile"    target="makefile"/>
 	<file source="Arduino.mk"  target="Arduino.mk"/>
 	<file source="Common.mk"   target="Common.mk"/>
-        <file source="Arduino-Makefile-master/Arduino.mk"   target="Arduino-Makefile/Arduino.mk"/>
+        <file source="Arduino-Makefile/Arduino.mk"   target="Arduino-Makefile/Arduino.mk"/>
 
 
 

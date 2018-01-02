@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=
+Name=
+Comment=
+Exec=/home/vid/ubuntu-start/nautilus-scripts/test this/space folder/testfile
+Icon=/home/vid/ubuntu-start/nautilus-scripts
+this
+folder/icon.png
+Terminal=false
+Type=Application
+Categories=Utility;Application;

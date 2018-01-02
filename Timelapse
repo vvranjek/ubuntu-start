@@ -1,0 +1,2 @@
+ffmpeg -r 30 -start_number 3610 -i IMG_%d.JPG -s hd1080 -vcodec libx264 ../time-lapse_32.mp4
+
