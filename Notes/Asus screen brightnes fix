@@ -1,0 +1,19 @@
+
+
+
+    in file /etc/default/grub
+
+    Change
+
+    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+
+    to
+
+    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_osi="
+
+    Then, save the file.
+
+    sudo update-grub
+
+    Restart computer.
+
