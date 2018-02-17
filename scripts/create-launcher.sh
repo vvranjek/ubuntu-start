@@ -71,11 +71,12 @@ echo "Launcher is placed on /home/$USER/Desktop/${name}.desktop"
 
 chmod +x /home/$USER/Desktop/${name}.desktop
 
-echo "Do you want to create a shortcut in /udr/share/applications? True or false?"
+echo "Do you want to create a shortcut in /usr/share/applicationS? True or false?"
 while true; do
     read  sn
     case $sn in
-        [true]* ) sudo cp /home/$USER/Desktop/${name}.desktop /usr/share/applications/${name}.desktop; break;;
+        [true]* ) sudo cp /home/$USER/Desktop/${name}.desktop ~/.local/share/applications/${name}.desktop
+	break;;
         [false]* ) sn="false"; break;;
         * ) sn="true";;
     esac

@@ -4,6 +4,8 @@
 IFS_BAK=$IFS
 IFS=""
 
+USR=$USER
+
 DIR=$(dirname $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
 FILE=$(basename $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
 EXTENSION='${$FILE##*.}'
@@ -56,8 +58,8 @@ gedit $LAUNCHER_NAME
 ANS=$(zenity --question --title="$FILENAME" --text="Would you kike to add to applications menu?")
 
 if [[ $? -eq 0 ]]; then
-    gksudo cp $LAUNCHER_NAME /usr/share/applications/$FILENAME
-    gksudo updatedb
+    gksudo cp $LAUNCHER_NAME /home/$USR/.local/share/applications/$FILENAME.desktop
+    updatedb
 else
     zenity –question –title=”$FILENAME” –text=”Answer is $?”
 fi
