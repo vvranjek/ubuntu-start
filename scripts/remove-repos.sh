@@ -4,15 +4,14 @@
 # Read line number i
 #line=$(sed -n "${i}p" "$filename")
 
-if [ ! -f /home/$USER/log/removed-repos.log ]
-then
-    install -D /home/$USER/log/
-    
-fi
+
+mkdir -p /home/$USER/log/
 
 echo "Warning! This program only removes launchpad repositories."
 echo Running apt-get update...
-ppa=$(sudo apt-get update 2>&1 >/dev/null | grep ^"W: Failed to fetch")
+ppa=$(sudo apt-get update | grep ^"Err:")
+
+echo ppa: $ppa
 
 if [[ -n "$ppa" ]]
 then
@@ -25,9 +24,14 @@ then
 
 	echo "$ppa" | while read -r line
 	do
-		#echo "Reding line: $line"	
+		echo "Reading line: $line"	
 		#echo "$line" | grep ^W | awk '{split($line, a, "/"); print "ppa:"a[4]"/"a[5]}' | xargs sudo add-apt-repository --remove	
-		REPO=$(echo "$line" | grep ^W | awk '{split($line, a, "/"); print "ppa:"a[4]"/"a[5]}')
+		
+		#REPO=${(cut -d "=" -f 2 <<< $line)%% *}
+
+		REPO=$(echo $line | cut -d' ' -f2)
+		echo Removing repo: $REPO
+
 		sudo add-apt-repository --remove $REPO
 		if [ $? == 0 ]
 		then

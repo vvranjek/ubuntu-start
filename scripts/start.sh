@@ -9,7 +9,7 @@ SCRIPT=`realpath $0`
 SCRIPTS_DIR=`dirname $SCRIPT`
 #SCRIPTS_DIR=$(find `pwd` -name "scripts")
 NAUTILUS_SCRIPTS_DIR=$SCRIPTS_DIR/../nautilus-scripts
-FILENAME=package-list
+FILENAME=$SCRIPTS_DIR/package-list
 
 echo "SCRIPTS_DIR = $SCRIPTS_DIR"
 echo "NAUTILUS_SCRIPTS_DIR = $NAUTILUS_SCRIPTS_DIR"
@@ -157,7 +157,7 @@ while true; do
 	
 
     echo "Removing unknow sources"
-    ./remove-repos.sh
+    $SCRIPTS_DIR/remove-repos.sh
 
     break;;
     
@@ -174,7 +174,8 @@ while true; do
 	
 	cat $FILENAME | while read -r line; do
 			# Check for commented lines
-			fs=${line:0:1}
+			fs="$(echo $line | head -c 1)"
+
 		if [ "$fs" != "#" ]; then
 			sudo apt-get install $line -y
 		fi
