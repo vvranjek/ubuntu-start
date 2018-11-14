@@ -1,4 +1,4 @@
-ubuntu-restricted-extras 
+#ubuntu-restricted-extras 
 scudcloud
 openocd
 meld
@@ -18,8 +18,6 @@ grive-tools
 ubuntu-tweak 
 google-chrome-stable 
 nautilus-dropbox 
-terminator 
-jdownloader 
 skype 
 compizconfig-settings-manager 
 compiz-plugins-extra 
@@ -27,28 +25,20 @@ compiz-plugins-extra
 #sudo apt-get remove  banshee 
 #rhythmbox 
 mountmanager 
-xoscope 
 wine 
-flashplugin-installer 
 vlc 
 unetbootin 
 fdupes 
-#sudo  apt-get install gnome-panel 
 tuxguitar 
 timidity 
 tuxguitar-jsa 
-#drawers 
-dayfolder 
+#drawers  
 sl 
 nautilus-actions-extra 
 nautilus-open-terminal 
 nautilus-image-converter 
 nautilus-actions 
 nautilus-scripts-manager 
-rabbitvcs-cli  
-rabbitvcs-core 
-rabbitvcs-gedit  
-rabbitvcs-nautilus3 
 aptitude 
 git 
 qbittorrent 
@@ -65,27 +55,19 @@ clementine
 calibre 
 build-essential 
 cmake 
-subversion 
 git
-libgtk2.0-dev 
 pkg-config 
-libjpeg-dev 
-python-dev 
-yasm 
 openshot openshot-doc 
 minitube 
 pinta 
 picasa 
 dia 
 xsane 
-stellarium 
 xbmc 
-screenlets 
-screenlets-pack-all 
-kid3-qt 
-tagtool 
 gpointing-device-settings 
 solaar 
 guake
 prime-indicator
 xsel
+sshfs
+davfs2

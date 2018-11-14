@@ -1,0 +1,40 @@
+#! /bin/bash
+
+# Save IFS
+IFS_BAK=$IFS
+IFS=""
+
+USR=$USER
+
+DIR=$(dirname $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
+FILE=$(basename $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
+EXTENSION='${$FILE##*.}'
+
+# Remove newline from NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
+NAUTILUS_SCRIPT_SELECTED_FILE_PATHS=$(echo $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS | tr -d '\n')
+
+# Check if the file has extension
+if [ '$EXTENSION' == '$FILE' ]; then
+    echo "File without extension"
+    FILENAME='$FILE'
+    LAUNCHER_NAME="$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS".desktop
+    #gedit $LAUNCHER_NAME
+else
+    echo "File has extension"
+    FILENAME="${FILE%.*}"
+    LAUNCHER_NAME="${NAUTILUS_SCRIPT_SELECTED_FILE_PATHS%.*}.desktop"
+fi
+
+ANS=$(zenity --question --title="$FILENAME" --text="Would you kike to add to applications menu?")
+
+if [[ $? -eq 0 ]]; then
+    ln -s $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS /home/$USR/.local/share/applications/$FILE
+    updatedb
+else
+    zenity –question –title=”$FILENAME” –text=”Answer is $?”
+fi
+
+# Restore IFS
+IFS=$IFS_BAK
+
+
