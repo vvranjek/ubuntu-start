@@ -72,3 +72,7 @@ xsel
 sshfs
 davfs2
 backintime-qt4
+
+### Themes
+pop-icon-theme
+numix-gtk-theme

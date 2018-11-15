@@ -103,6 +103,52 @@ else
 	done
 fi
 
+#Disable/enable scrollbar overlay
+sh $SCRIPTS_DIR/scrollbarOverlay.sh
+
+
+while true; do
+	read -p "Do you want to add a bunch of repos (Y/N)?" answer
+	case $answer in
+	[Yy]* ) 
+		sudo add-apt-repository ppa:noobslab/apps   -y    #open-as-administrator 
+		sudo add-apt-repository ppa:nilarimogard/webupd8 -y #Prime indicator 
+		sudo add-apt-repository ppa:appgrid/stable -y      #Appgrid
+		sudo apt-add-repository ppa:rael-gc/scudcloud -y  # Slack
+		sudo apt-add-repository ppa:freecad-maintainers/freecad-stable -y # FreeCAD
+
+		echo "Removing unknow sources"
+		$SCRIPTS_DIR/remove-repos.sh
+
+		break;;
+
+	[Nn]* ) echo "NO"; break;;
+	    * ) echo "Please answer yes or no.";;
+	esac
+done
+
+# Install applications from package-list
+while true; do
+	read -p "Do you want to install some apps (Y/N)?" answer
+	case $answer in
+	[Yy]* ) 	
+	cat $FILENAME | while read -r line; do
+		# Check for commented lines
+		fs="$(echo $line | head -c 1)"
+
+		if [ "$fs" != "#" ]; then
+			sudo apt-get install $line -y
+		fi
+			
+		indicator-multiload & disown
+	done
+	break;;
+ 		
+	[Nn]* ) echo "NO"; break;;
+	    * ) echo "Please answer yes or no.";;
+	esac 
+done
+
 echo "Checking for icons and themes"
 if [ ! -d "/home/$USER/.icons/Graphite-icons" ]; then
 	
@@ -121,73 +167,25 @@ else
 
 fi
 
-#Disable/enable scrollbar overlay
-sh $SCRIPTS_DIR/scrollbarOverlay.sh
+	while true; do
+	read -p "Do you want to install and set Materia theme and Pop icons? (Y/N)?" answer
+		case $answer in
+		      	[Yy]* ) echo "Installing theme"
+				#sudo add-apt-repository ppa:numix/ppa -y
+				sudo add-apt-repository ppa:system76/pop -y
 
+				sudo apt-get install materia-gtk-theme -y
+				sudo apt-get install pop-gtk-theme -y
 
-while true; do
-    read -p "Do you want to add a bunch of repos (Y/N)?" answer
-    case $answer in
-	  [Yy]* ) 
-
-    
-    sudo add-apt-repository ppa:thefanclub/grive-tools -y   # Grive, google drive client
-    sudo add-apt-repository ppa:jd-team/jdownloader -y
-    sudo add-apt-repository ppa:nae-team/ppa -y
-    sudo add-apt-repository ppa:rabbitvcs/ppa -y    #SVN nautilus stuff
-    sudo add-apt-repository ppa:flozz/flozz    -y     # nautilus-terminal
-    sudo add-apt-repository ppa:noobslab/apps   -y    #open-as-administrator 
-    sudo add-apt-repository ppa:daniel.pavel/solaar -y #Sollar, tool for logitech unigying receicers 
-    sudo add-apt-repository sudo ppa:nilarimogard/webupd8 -y #Prime indicator 
-    sudo add-apt-repository ppa:appgrid/stable -y      #Appgrid
-    sudo apt-add-repository ppa:rael-gc/scudcloud -y  # Slack
-    sudo apt-add-repository ppa:freecad-maintainers/freecad-stable # FreeCAD
-
-
-    #sudo add-apt-repository ppa:gloobus-dev/gloobus-preview -y
-    #sudo apt-add-repository ppa:screenlets/ppa -y 		# Scrennlets
-    #sudo apt-add-repository ppa:ian-berke/ppa-drawers -y   # Drawers
-    #sudo add-apt-repository ppa:thejambi/thejambi -y   # DayFolder
-    #sudo add-apt-repository ppa:piotr-zagawa/ma2 -y  # MyAgenda
-    
-    
-
-    #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -   #Google chrome repo
-    #sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-	
-
-    echo "Removing unknow sources"
-    $SCRIPTS_DIR/remove-repos.sh
-
-    break;;
-    
-    [Nn]* ) echo "NO"; break;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
-
-# Install applications from package-list
-while true; do
-    read -p "Do you want to install some apps (Y/N)?" answer
-    case $answer in
-      [Yy]* ) 
-	
-	cat $FILENAME | while read -r line; do
-			# Check for commented lines
-			fs="$(echo $line | head -c 1)"
-
-		if [ "$fs" != "#" ]; then
-			sudo apt-get install $line -y
-		fi
-			
-		indicator-multiload & disown
+				echo "Setting theme and icons"
+				gsettings set org.gnome.desktop.interface gtk-theme "Materia"
+				gsettings set org.gnome.desktop.wm.preferences theme "Materia"
+				gsettings set org.gnome.desktop.interface icon-theme "Pop"
+				break;;
+		       	[Nn]* ) echo "NO"; break;;
+				* ) echo "Please answer yes or no.";;
+	  	esac
 	done
-	break;;
- 		
-    [Nn]* ) echo "NO"; break;;
-	* ) echo "Please answer yes or no.";;
-    esac
-done
 
 
 echo Done!
