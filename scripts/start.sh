@@ -149,6 +149,11 @@ while true; do
 	esac 
 done
 
+# Git settings
+git config --global user.email "vidvranjek@gmail.com"
+git config --global user.name "Your Name" 
+
+# Themes an icons
 echo "Checking for icons and themes"
 if [ ! -d "/home/$USER/.icons/Graphite-icons" ]; then
 	
@@ -180,6 +185,7 @@ fi
 				sudo apt-get install pop-gtk-theme -y
 				sudo apt-get install pop-icon-theme -y
 				sudo apt-get install system76-wallpapers -y
+				#sudo apt-get install arrongin-telinkrin-themes
 
 				echo "Setting theme and icons and wallpaper"
 				gsettings set org.gnome.desktop.interface gtk-theme "Materia-compact"
