@@ -57,7 +57,7 @@ URL=vidcloud.myqnapcloud.com
 WEBDEV_URL="http://$URL"
 WEBDAV_MOUNT="davfs defaults,_netdev,auto,user  0       0"
 CIFS_MOUNT="cifs defaults,rw,credentials=$DIR/.smbcredentials"
-SSH_MOUNT="fuse defaults,auto,user 0 0"
+SSH_MOUNT="fuse allow_other,noatime,follow_symlinks,delay_connect,defaults,auto,user 0 0"
 #CIFS_MOUNT="cifs defaults,rw,credentials=$DIR/.smbcredentials,iocharset=utf8,sec=ntlm 0 0"
 #CIFS_MOUNT="cifs defaults,rw,credentials=$DIR/.smbcredentials uid=1000,gid=46,dir_mode=0777,file_mode=0777 0 0"
 #CIFS_MOUNT="cifs rw,user,credentials=$DIR/.smbcredentials,uid=1000,gid=1000,iocharset=utf8 0 0
@@ -74,7 +74,7 @@ fi
 
 
 ############### sshfs #############################
-
+# sshfs#someuser@remote.com:/remote_dir  /media/remote_dir/   fuse    auto,_netdev,port=22,user,allow_other,noatime,follow_symlinks,IdentityFile=/home/someuser/.ssh/id_rsa,reconnect     0       0
 # sshfs#USER@MACHINE:/remote/path/ /mnt/local/path/      fuse    user,_netdev,auto_cache,reconnect,uid=1000,gid=1000,IdentityFile=/full/path/to/.ssh/id_rsa,idmap=user,allow_other    0       2
 
 FOLDER="share/"

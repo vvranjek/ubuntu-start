@@ -1,0 +1,126 @@
+
+#   Stick 0738:A221
+#Throttle 0738:2221
+
+# Stick axes
+axis vendor=0x0738 product=0x2221 device=1 src=0 target=joyaxis axis=0
+axis vendor=0x0738 product=0x2221 device=1 src=1 target=joyaxis axis=1
+#axis vendor=0x0738 product=0x2221 device=1 src=4 target=joyaxis axis=2
+#axis vendor=0x0738 product=0x2221 device=1 src=3 target=joyaxis axis=3
+#axis vendor=0x0738 product=0x2221 device=1 src=4 target=joyaxis axis=4
+axis vendor=0x0738 product=0x2221 device=1 src=5 target=joyaxis axis=2
+#axis vendor=0x0738 product=0x2221 device=1 src=6 target=joyaxis axis=6
+
+# Stick buttons
+#button vendor=0x0738 product=0x2221 src=0 target=joybtn button=0
+#button vendor=0x0738 product=0x2221 src=2 target=joybtn button=2
+#button vendor=0x0738 product=0x2221 src=3 target=joybtn button=3
+#button vendor=0x0738 product=0x2221 src=4 target=joybtn button=4
+#button vendor=0x0738 product=0x2221 src=5 target=joybtn button=5
+#button vendor=0x0738 product=0x2221 src=6 target=joybtn button=6
+#button vendor=0x0738 product=0x2221 src=7 target=joybtn button=7
+#button vendor=0x0738 product=0x2221 src=8 target=joybtn button=8
+#button vendor=0x0738 product=0x2221 src=9 target=joybtn button=9
+#button vendor=0x0738 product=0x2221 src=10 target=joybtn button=10
+#button vendor=0x0738 product=0x2221 src=11 target=joybtn button=11
+#button vendor=0x0738 product=0x2221 src=12 target=joybtn button=12
+#button vendor=0x0738 product=0x2221 src=13 target=joybtn button=13
+#button vendor=0x0738 product=0x2221 src=14 target=joybtn button=14
+#button vendor=0x0738 product=0x2221 src=15 target=joybtn button=15
+#button vendor=0x0738 product=0x2221 src=16 target=joybtn button=16
+
+# Stick buttons
+button vendor=0x0738 product=0x2221 device=1 src=0 target=joybtn button=0
+button vendor=0x0738 product=0x2221 device=1 src=1 target=joybtn button=1
+button vendor=0x0738 product=0x2221 device=1 src=4 target=joybtn button=2
+button vendor=0x0738 product=0x2221 device=1 src=5 target=joybtn button=3
+button vendor=0x0738 product=0x2221 device=1 src=10 target=joybtn button=4
+button vendor=0x0738 product=0x2221 device=1 src=11 target=joybtn button=5
+button vendor=0x0738 product=0x2221 device=1 src=12 target=joybtn button=6
+button vendor=0x0738 product=0x2221 device=1 src=13 target=joybtn button=7
+
+button vendor=0x0738 product=0x2221 device=1 src=6 target=joybtn button=8
+button vendor=0x0738 product=0x2221 device=1 src=7 target=joybtn button=9
+button vendor=0x0738 product=0x2221 device=1 src=8 target=joybtn button=10
+button vendor=0x0738 product=0x2221 device=1 src=9 target=joybtn button=11
+
+
+
+# Throttle axes
+#axis vendor=0x0738 product=0xA221 device=1 src=0 target=joyaxis axis=2
+axis vendor=0x0738 product=0xA221 device=1 src=1 target=joyaxis axis=3
+#axis vendor=0x0738 product=0xA221 device=1 src=2 target=joyaxis axis=9
+#axis vendor=0x0738 product=0xA221 device=1 src=3 target=joyaxis axis=10
+#axis vendor=0x0738 product=0xA221 device=1 src=4 target=joyaxis axis=11
+#axis vendor=0x0738 product=0xA221 device=1 src=5 target=joyaxis axis=12
+#axis vendor=0x0738 product=0xA221 device=1 src=6 target=joyaxis axis=13
+#axis vendor=0x0738 product=0xA221 device=1 src=7 target=joyaxis axis=14
+#axis vendor=0x0738 product=0xA221 device=1 src=8 target=joyaxis axis=15
+
+
+# Throttle buttons
+#button vendor=0x0738 product=0xA221 src=0 target=joybtn button=17
+#button vendor=0x0738 product=0xA221 device=1 src=1 target=joybtn button=18
+#button vendor=0x0738 product=0xA221 device=1 src=2 target=joybtn button=19
+#button vendor=0x0738 product=0xA221 device=1 src=3 target=joybtn button=20
+#button vendor=0x0738 product=0xA221 device=1 src=4 target=joybtn button=21
+#button vendor=0x0738 product=0xA221 src=5 target=joybtn button=22
+#button vendor=0x0738 product=0xA221 src=6 target=joybtn button=23
+#button vendor=0x0738 product=0xA221 src=7 target=joybtn button=24
+#button vendor=0x0738 product=0xA221 src=8 target=joybtn button=25
+#button vendor=0x0738 product=0xA221 src=9 target=joybtn button=26
+#button vendor=0x0738 product=0xA221 src=10 target=joybtn button=27
+#button vendor=0x0738 product=0xA221 src=11 target=joybtn button=28
+#button vendor=0x0738 product=0xA221 src=12 target=joybtn button=29
+#button vendor=0x0738 product=0xA221 src=13 target=joybtn button=30
+#button vendor=0x0738 product=0xA221 src=14 target=joybtn button=31
+#button vendor=0x0738 product=0xA221 src=15 target=joybtn button=32
+#button vendor=0x0738 product=0xA221 src=16 target=joybtn button=33
+#button vendor=0x0738 product=0xA221 src=17 target=joybtn button=34
+
+# Throttle buttons
+button vendor=0x0738 product=0xA221 device=1 src=0 target=joybtn button=12
+button vendor=0x0738 product=0xA221 device=1 src=1 target=joybtn button=13
+button vendor=0x0738 product=0xA221 device=1 src=2 target=joybtn button=14
+button vendor=0x0738 product=0xA221 device=1 src=3 target=joybtn button=15
+button vendor=0x0738 product=0xA221 device=1 src=4 target=joybtn button=16
+button vendor=0x0738 product=0xA221 device=1 src=5 target=joybtn button=17
+
+button vendor=0x0738 product=0xA221 device=1 src=6 target=joybtn button=18
+button vendor=0x0738 product=0xA221 device=1 src=9 target=joybtn button=19
+button vendor=0x0738 product=0xA221 device=1 src=10 target=joybtn button=20
+button vendor=0x0738 product=0xA221 device=1 src=7 target=joybtn button=21
+button vendor=0x0738 product=0xA221 device=1 src=8 target=joybtn button=22
+button vendor=0x0738 product=0xA221 device=1 src=13 target=joybtn button=23
+button vendor=0x0738 product=0xA221 device=1 src=14 target=joybtn button=24
+button vendor=0x0738 product=0xA221 device=1 src=15 target=joybtn button=25
+button vendor=0x0738 product=0xA221 device=1 src=16 target=joybtn button=26
+button vendor=0x0738 product=0xA221 device=1 src=17 target=joybtn button=27
+button vendor=0x0738 product=0xA221 device=1 src=18 target=joybtn button=28
+button vendor=0x0738 product=0xA221 device=1 src=27 target=joybtn button=29
+button vendor=0x0738 product=0xA221 device=1 src=28 target=joybtn button=30
+button vendor=0x0738 product=0xA221 device=1 src=32 target=joybtn button=31
+
+
+#button vendor=0x0738 product=0xA221 device=1 src= target=joybtn button=24
+#button vendor=0x0738 product=0xA221 device=1 src= target=joybtn button=25
+#button vendor=0x0738 product=0xA221 device=1 src= target=joybtn button=26
+#button vendor=0x0738 product=0xA221 device=1 src= target=joybtn button=27
+#button vendor=0x0738 product=0xA221 device=1 src= target=joybtn button=
+#button vendor=0x0738 product=0xA221 device=1 src= target=joybtn button=
+#button vendor=0x0738 product=0xA221 device=1 src= target=joybtn button=
+#button vendor=0x0738 product=0xA221 device=1 src= target=joybtn button=
+
+
+
+
+# Craft: vendor=0x046d, product=0x4066
+
+#button vendor=0x046D product=0x4066 src=0 target=kbd button=rightctrl
+
+
+
+#axis vendor=0x0738 product=0x2221 src=4 target=joyaxis axis=7
+#axis vendor=0x0738 product=0x2221 src=0 target=joyaxis axis=0
+
+#code "x-56.code"
