@@ -95,14 +95,25 @@ if [ ! -f /home/$USER/.ssh/id_rsa ]; then
 	ssh-copy-id vid@vidcloud.myqnapcloud.com
 fi
 
+# Add "user_allow_other" to /etc/fuse.conf
+FUSECONF="/etc/fuse.conf"
+if grep -q "user_allow_other" $FUSECONF; then
+    echo "Entry user_allow_other exists, replacing"
+    sudo sed -i -e "s/.*user_allow_other.*/user_allow_other/" $FUSECONF
+else
+    echo "Adding user_allow_other to $FUSECONF"
+    sudo sh -c "echo "user_allow_other"  >> $FUSECONF"
+fi
+
+
 # Replace the ssh line if it already exists
 if grep -q $URL "$FSTAB"; then
-    echo "Entry $REMOTE exists, replacing"
+    echo "Entry $URL exists, replacing"
     REMOTE_DOWNLOADS_COMMAND_SED=$(echo "$REMOTE_COMMAND" | sed 's/\//\\\//g')
     REMOTE_DOWNLOADS_SED=$(echo "$URL" | sed 's/\//\\\//g')
     sudo sed -i -e "s/.*$REMOTE_DOWNLOADS_SED.*/$REMOTE_DOWNLOADS_COMMAND_SED/" $FSTAB
 else
-    sudo echo $REMOTE_COMMAND  >> $FSTAB
+    sudo sh -c "echo $REMOTE_COMMAND  >> $FSTAB"
 fi
 
 # Remove comment for user_allow_other in /etc/fuse.conf
@@ -149,7 +160,7 @@ if grep -q $URL "$FSTAB"; then
     REMOTE_DOWNLOADS_SED=$(echo "$URL" | sed 's/\//\\\//g')
     sudo sed -i -e "s/.*$REMOTE_DOWNLOADS_SED.*/$REMOTE_DOWNLOADS_COMMAND_SED/" $FSTAB
 else
-    sudo echo $REMOTE_COMMAND  >> $FSTAB
+    sudo sh -c "echo $REMOTE_COMMAND  >> $FSTAB"
 fi
 
 # Replace secret line if it already exists
@@ -160,7 +171,7 @@ if grep -q "$WEBDEV_URL" "$SECRET_FILE"; then
     REPLACE=$(echo "$URL" | sed 's/\//\\\//g')
     sudo sed -i -e "s/.*$REPLACE.*/$WEBDEV_SECRET/" $SECRET_FILE
 else
-    sudo echo "$WEBDEV_URL:$PORT/$FOLDER $USERNAME $PASSWORD" >> $SECRET_FILE
+    sudo sh -c "echo "$WEBDEV_URL:$PORT/$FOLDER $USERNAME $PASSWORD" >> $SECRET_FILE"
 fi
 ###################################################
 
@@ -200,7 +211,7 @@ if grep -q $REMOTE "$FSTAB"; then
     REMOTE_DOWNLOADS_SED=$(echo "$REMOTE" | sed 's/\//\\\//g')
     sudo sed -i -e "s/.*$REMOTE_DOWNLOADS_SED.*/$REMOTE_DOWNLOADS_COMMAND_SED/" $FSTAB
 else
-    sudo echo $REMOTE_COMMAND  >> $FSTAB
+    sudo sh -c "echo $REMOTE_COMMAND  >> $FSTAB"
 fi
 
 # vidcloud
@@ -216,7 +227,7 @@ if grep -q $REMOTE "$FSTAB"; then
     REMOTE_DOWNLOADS_SED=$(echo "$REMOTE" | sed 's/\//\\\//g')
     sudo sed -i -e "s/.*$REMOTE_DOWNLOADS_SED.*/$REMOTE_DOWNLOADS_COMMAND_SED/" $FSTAB
 else
-    sudo echo $REMOTE_COMMAND  >> $FSTAB
+    sudo sh -c "echo $REMOTE_COMMAND  >> $FSTAB"
 fi
 
 # Multimedia
@@ -232,7 +243,7 @@ if grep -q $REMOTE "$FSTAB"; then
     REMOTE_DOWNLOADS_SED=$(echo "$REMOTE" | sed 's/\//\\\//g')
     sudo sed -i -e "s/.*$REMOTE_DOWNLOADS_SED.*/$REMOTE_DOWNLOADS_COMMAND_SED/" $FSTAB
 else
-    sudo echo $REMOTE_COMMAND  >> $FSTAB
+    sudo sh -c "echo $REMOTE_COMMAND  >> $FSTAB"
 fi
 
 echo Restart the com

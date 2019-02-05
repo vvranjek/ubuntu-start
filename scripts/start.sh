@@ -51,6 +51,7 @@ while true; do
     case $answer in
       [Yy]* ) 
 
+	sudo apt-get install git -y
 	sudo apt-get install zsh -y
 	wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 	chsh -s /bin/zsh $USER
