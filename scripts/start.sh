@@ -105,7 +105,7 @@ else
 fi
 
 #Disable/enable scrollbar overlay
-sh $SCRIPTS_DIR/scrollbarOverlay.sh
+#sh $SCRIPTS_DIR/scrollbarOverlay.sh
 
 
 while true; do
@@ -119,8 +119,8 @@ while true; do
 		sudo apt-add-repository ppa:freecad-maintainers/freecad-stable -y # FreeCAD
 		sudo add-apt-repository ppa:bit-team/stable -y 			  # Back in time 
 
-		echo "Removing unknow sources"
-		$SCRIPTS_DIR/remove-repos.sh
+		#echo "Removing unknow sources"
+		#$SCRIPTS_DIR/remove-repos.sh
 
 		break;;
 
@@ -131,7 +131,7 @@ done
 
 # Install applications from package-list
 while true; do
-	read -p "Do you want to install some apps (Y/N)?" answer
+	read -p "Do you want to install applications from package-list (Y/N)?" answer
 	case $answer in
 	[Yy]* ) 
 	sudo DEBIAN_FRONTEND=noninteractive apt-get -y install ubuntu-restricted-extras
@@ -155,9 +155,30 @@ while true; do
 	esac 
 done
 
-# Git settings
-git config --global user.email "vidvranjek@gmail.com"
-git config --global user.name "Your Name" 
+# Setup git
+while true; do
+	read -p "Do you want to setup Git (Y/N)?" answer
+	case $answer in
+	[Yy]* ) 
+		sudo apt-get install git
+		name="Vid Vranjek"
+		read -p "Enter name [$name]: " input
+		name="${input:-$name}"
+
+		email="vidvranjek@gmail.com"
+		read -p "Enter email [$email]: " input
+		email="${input:-$email}"
+
+		# Git settings
+		git config --global user.name "$name"
+		git config --global user.email "$email"
+		break;;
+ 		
+	[Nn]* ) echo "NO"; break;;
+	    * ) echo "Please answer yes or no.";;
+	esac 
+done
+		 
 
 # Themes an icons
 echo "Checking for icons and themes"
@@ -178,36 +199,38 @@ else
 
 fi
 
-	while true; do
-	read -p "Do you want to install and set Unity, Materia theme and Pop icons? (Y/N)?" answer
-		case $answer in
-		      	[Yy]* ) echo "Installing theme"
-				#sudo add-apt-repository ppa:numix/ppa -y
-				sudo add-apt-repository ppa:system76/pop -y
-				sudo add-apt-repository ppa:noobslab/themes -y
+while true; do
+read -p "Do you want to install and set Unity, Materia theme and Pop icons? (Y/N)?" answer
+	case $answer in
+      	[Yy]* ) echo "Installing theme"
+		#sudo add-apt-repository ppa:numix/ppa -y
+		sudo add-apt-repository ppa:system76/pop -y
+		sudo add-apt-repository ppa:noobslab/themes -y
 
-				sudo apt-get install ubuntu-unity-desktop -y
-				sudo apt-get install materia-gtk-theme -y
-				sudo apt-get install pop-gtk-theme -y
-				sudo apt-get install pop-icon-theme -y
-				sudo apt-get install system76-wallpapers -y
-				#sudo apt-get install arrongin-telinkrin-themes
+		sudo apt-get install ubuntu-unity-desktop -y
+		sudo apt-get install materia-gtk-theme -y
+		sudo apt-get install pop-gtk-theme -y
+		sudo apt-get install pop-icon-theme -y
+		sudo apt-get install system76-wallpapers -y
+		#sudo apt-get install arrongin-telinkrin-themes
 
-				echo "Setting theme and icons and wallpaper"
-				gsettings set org.gnome.desktop.interface gtk-theme "Materia-compact"
-				gsettings set org.gnome.desktop.wm.preferences theme "Materia-compact"
-				gsettings set org.gnome.desktop.interface icon-theme "Pop"
-				gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/System76-Fractal_Mountains-by_Kate_Hazen_of_System76.png'
-				gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ background-color '#2e3436ff'
-				gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-opacity 0.8045977011494253
-				gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ panel-opacity 0.34980988593155893
-				gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ icon-size 32
-				
-				break;;
-		       	[Nn]* ) echo "NO"; break;;
-				* ) echo "Please answer yes or no.";;
-	  	esac
-	done
+		echo "Setting theme and icons and wallpaper"
+		gsettings set org.gnome.desktop.interface gtk-theme "Materia-compact"
+		gsettings set org.gnome.desktop.wm.preferences theme "Materia-compact"
+		gsettings set org.gnome.desktop.interface icon-theme "Pop"
+		gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/System76-Fractal_Mountains-by_Kate_Hazen_of_System76.png'
+		gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ background-color '#2e3436ff'
+		gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-opacity 0.8045977011494253
+		gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ panel-opacity 0.34980988593155893
+		gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ icon-size 32
+		
+		break;;
+       	[Nn]* ) echo "NO"; break;;
+		* ) echo "Please answer yes or no.";;
+	esac
+done
 
 
 echo Done!
+
+exit 0
