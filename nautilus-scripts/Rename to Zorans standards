@@ -1,9 +1,5 @@
 #! /bin/bash
 
-
-
-
-
 # newline-delimited paths for selected files (only if local) 
 # NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
     
@@ -12,19 +8,37 @@
     
 # current location
 # NAUTILUS_SCRIPT_CURRENT_URI
-Ren
+
 # position and size of current window 
 # NAUTILUS_SCRIPT_WINDOW_GEOMETRY
 
-# zenity --question --title="$FILENAME" --text="\
-NAUTILUS_SCRIPT_SELECTED_FILE_PATHS: $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS \n\
-NAUTILUS_SCRIPT_SELECTED_URIS: $NAUTILUS_SCRIPT_SELECTED_URIS \n\
-NAUTILUS_SCRIPT_CURRENT_URI: $NAUTILUS_SCRIPT_CURRENT_URI \n\
-NAUTILUS_SCRIPT_WINDOW_GEOMETRY: $NAUTILUS_SCRIPT_WINDOW_GEOMETRY"
+#zenity --question --title="$FILENAME" --text="\
+#NAUTILUS_SCRIPT_SELECTED_FILE_PATHS: $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS \n\
+#NAUTILUS_SCRIPT_SELECTED_URIS: $NAUTILUS_SCRIPT_SELECTED_URIS \n\
+#NAUTILUS_SCRIPT_CURRENT_URI: $NAUTILUS_SCRIPT_CURRENT_URI \n\
+#NAUTILUS_SCRIPT_WINDOW_GEOMETRY: $NAUTILUS_SCRIPT_WINDOW_GEOMETRY"
 
-    
+
+SAVEIFS=$IFS
+IFS=$(echo -en "\n\b")
+
+for FILE in $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
+do 
+    DIR=$(dirname $FILE)
+    FILENAME=$(basename $FILE)
+    EXTENSION='${$FILE##*.}'
+	#zenity --info --text="File: $FILENAME"
+	
+	# Replace spaces with underscore
+	FILE_UNERSCORE=`echo $FILENAME | tr -s ' ' | tr ' ' '_'`
+	mv -i $FILENAME `echo $FILE_UNERSCORE`
+	# Replace upper case to lower case
+	mv -i $FILE_UNERSCORE `echo $FILE_UNERSCORE | tr 'A-Z' 'a-z'`
+done
+
+
 DIR=$(dirname $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
-FILE=$(basename $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
+FILENAME=$(basename $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
 EXTENSION='${$FILE##*.}'
 
 # Remove newline from NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
@@ -41,7 +55,9 @@ fi
 
 
 # Restore IFS
-IFS=$IFS_BAK
+IFS=$SAVEIFS
+
+exit 0
 
 
 
