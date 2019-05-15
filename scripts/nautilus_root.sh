@@ -1,3 +1,4 @@
+#! /bin/bash
 
 if grep "Open as root" /usr/share/applications/nautilus.desktop
 then

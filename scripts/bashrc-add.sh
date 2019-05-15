@@ -6,7 +6,7 @@ SCRIPTS_DIR=`dirname $SCRIPT`
 
 if grep "Added by bashrc-add.sh to $FILE" $FILE ; then
 	echo "$FILE already contains modifications from this script."
-else if cat $SCRIPTS_DIR/bashrc-content >> $FILE ; then
+else if cat $SCRIPTS_DIR/content/bashrc-content >> $FILE ; then
 	echo "Copied bashrc-content to $FILE!"
 else
 	echo "Something went wrong."
