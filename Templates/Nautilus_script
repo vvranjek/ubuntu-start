@@ -28,6 +28,7 @@ do
     DIR=""
     FILENAME=""
     EXTENSION=""
+    FILENAME=""
     
     # It is a directory
     if [[ -d $FILE ]]; then
