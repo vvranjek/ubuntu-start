@@ -1,7 +1,0 @@
-n. */
-
-/* DFLL.CALA  bit masks and bit positions */
-#define DFLL_CALL_gm  0x7F  /* DFLL Calibration Value A group mask. */
-#define DFLL_CALL_gp  0  /* DFLL Calibration Value A group position. */
-#define DFLL_CALL0_bm  (1<<0)  /* DFLL Calibration Value A bit 0 mask. */
-#define DFLL_CALL0_bp  0
