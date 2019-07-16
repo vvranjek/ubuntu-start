@@ -1,5 +1,0 @@
-p  6  /* Command bit 6 position. */
-
-/* NVM.CTRLA  bit masks and bit positions */
-#define NVM_CMDEX_bm  0x01  /* Command Execute bit mask. */
-#define NVM_CMDEX_bp  0  /* Command Exe
