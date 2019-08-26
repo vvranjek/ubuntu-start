@@ -1,27 +1,32 @@
 #! /bin/bash
 
 USER_SET=""
+ROOT_SET=""
 USER=${SUDO_USER:-${USER}}
 
-while getopts u:d:p:f: option
+while getopts ur option
 do
 case "${option}"
 in
-u) USER=${OPTARG};USER_SET=true;;
+u) 
+    USER_SET=true;;
+r) 
+    ROOT_SET=true;;
 esac
 done
+
+if [ "$USER_SET" != "true" ] -a [ "$USER_SET" != "true" ]; then
+    echo
+    echo "Plese use option -u (user) or -r (root)"
+    exit 1
+fi
 
 # Info
 echo  
 echo "Don't forget to forward port $PORT! Press any key..."
-read nothing
+#read nothing
 
-# Check for user
-echo User: $USER
-if [[ -z "$USER_SET" ]]; then
-    echo "You can set user with [-u user]"
-    #exit 1;
-fi
+
 
 
 ############### Get the directory of original script, not the link
@@ -36,10 +41,26 @@ echo Script location: $DIR
 
 
 
-MNT_NAS=/media/$USER/VIDCLOUD/
-sudo mkdir -p $MNT_NAS
+# Mount NAS user
 
-sudo umount $MNT_NAS
-sudo sshfs -o allow_other vid@vidcloud.myqnapcloud.com:/share/NAS/ $MNT_NAS
+if [ "$USER_SET" == "true" ]; then
+    MNT_NAS=/media/$USER/VIDCLOUD/
+    sudo mkdir -p $MNT_NAS
+
+    sudo umount $MNT_NAS
+    sudo sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other vid@vidcloud.myqnapcloud.com:/share/NAS/ $MNT_NAS
+fi
+
+
+
+# Mount root
+if [ "$ROOT_SET" == "true" ]; then
+
+    MNT_NAS_ROOT=/media/$USER/VIDCLOUD_ROOT/
+    sudo mkdir -p $MNT_NAS_ROOT
+
+    sudo umount $MNT_NAS_ROOT
+    sudo sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other vid@vidcloud.myqnapcloud.com:/ $MNT_NAS_ROOT
+fi
 
 
