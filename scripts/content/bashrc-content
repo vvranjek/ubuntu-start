@@ -60,6 +60,7 @@ function grany
     eval $GREP
 }
 
+alias gksu='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
 
 PATH=$PATH:/home/$USER/bin
 
