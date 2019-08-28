@@ -35,7 +35,12 @@ function frep
 
 function gdiff
 {
-    git difftool --dir-diff
+    git difftool --dir-diff $1
+}
+
+function finds
+{
+    find . -readable -prune -o -name $1 -print
 }
 
 
