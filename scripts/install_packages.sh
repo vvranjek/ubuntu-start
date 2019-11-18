@@ -25,7 +25,6 @@ while true; do
             fi
                 
             indicator-multiload & disown
-        done
 	done
 	#####################################################################################
 	break;;
