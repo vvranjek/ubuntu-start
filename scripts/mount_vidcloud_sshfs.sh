@@ -6,16 +6,18 @@ USER=${SUDO_USER:-${USER}}
 
 while getopts ur option
 do
-case "${option}"
-in
-u) 
-    USER_SET=true;;
-r) 
-    ROOT_SET=true;;
+    case "${option}"
+    in
+    u)
+        echo "User set"
+        USER_SET=true;;
+    r) 
+        echo "Root set"
+        ROOT_SET=true;;
 esac
 done
 
-if [ "$USER_SET" != "true" ] -a [ "$USER_SET" != "true" ]; then
+if [ "$USER_SET" != "true" ] && [ "$ROOT_SET" != "true" ]; then
     echo
     echo "Plese use option -u (user) or -r (root)"
     exit 1
@@ -44,9 +46,10 @@ echo Script location: $DIR
 # Mount NAS user
 
 if [ "$USER_SET" == "true" ]; then
+    echo
+    echo "Mounting VIDCLOUD"
     MNT_NAS=/media/$USER/VIDCLOUD/
     sudo mkdir -p $MNT_NAS
-
     sudo umount $MNT_NAS
     sudo sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other vid@vidcloud.myqnapcloud.com:/share/NAS/ $MNT_NAS
 fi
@@ -55,10 +58,10 @@ fi
 
 # Mount root
 if [ "$ROOT_SET" == "true" ]; then
-
+    echo
+    echo "Mounting VIDCLOUD_ROOT"
     MNT_NAS_ROOT=/media/$USER/VIDCLOUD_ROOT/
     sudo mkdir -p $MNT_NAS_ROOT
-
     sudo umount $MNT_NAS_ROOT
     sudo sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other vid@vidcloud.myqnapcloud.com:/ $MNT_NAS_ROOT
 fi

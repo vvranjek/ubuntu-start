@@ -37,6 +37,9 @@ $SCRIPTS_DIR/setup_git.sh
 # Install Unity, Materia theme and Pop icons
 $SCRIPTS_DIR/install_unity.sh
 
+# Update templates
+$SCRIPTS_DIR/update_templates.sh
+
 echo Done!
 
 exit 0

@@ -1,5 +1,4 @@
 #ignore_this
-scudcloud
 openocd
 meld
 qtcreator
@@ -73,6 +72,9 @@ xsel
 sshfs
 davfs2
 backintime-qt4
+terminator
+redshift
+redshift-gtk
 
 ### Themes
 pop-icon-theme

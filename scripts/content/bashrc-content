@@ -40,7 +40,12 @@ function gdiff
 
 function finds
 {
-    find . -readable -prune -o -name $1 -print
+    find . -readable -name $@
+}
+
+function findsp
+{
+    find . -readable -prune -o -name $@ -print
 }
 
 

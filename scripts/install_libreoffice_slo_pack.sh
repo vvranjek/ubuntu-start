@@ -6,7 +6,7 @@ SCRIPTS_DIR=`dirname $SCRIPT`
 
 echo
 
-# Install and setup zsh
+# Install and setup libreoffice
 while true; do
     read -p "Whould you like install Slovenian for libreoffice? (Y/N)" answer
     case $answer in
