@@ -35,7 +35,13 @@ function frep
 
 function gdiff
 {
-    git difftool --dir-diff $1
+    git difftool --dir-diff $@
+}
+
+function gdiff-1
+{
+    echo "running: git difftool --dir-diff $1^ $1"
+    git difftool --dir-diff $1^ $1
 }
 
 function finds
