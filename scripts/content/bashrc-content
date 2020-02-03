@@ -38,7 +38,7 @@ function gdiff
     git difftool --dir-diff $@
 }
 
-function gdiff-1
+function gdiffs
 {
     echo "running: git difftool --dir-diff $1^ $1"
     git difftool --dir-diff $1^ $1
