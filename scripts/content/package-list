@@ -7,6 +7,7 @@ xclip
 appgrid
 unity-tweak-tool
 
+peek
 backintime-qt4
 doxygen-gui
 exfat-fuse
@@ -75,6 +76,7 @@ backintime-qt4
 terminator
 redshift
 redshift-gtk
+smbclient
 
 ### Themes
 pop-icon-theme

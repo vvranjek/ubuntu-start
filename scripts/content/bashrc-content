@@ -44,6 +44,11 @@ function gdiffs
     git difftool --dir-diff $1^ $1
 }
 
+function gitgrep
+{
+    git grep $@ $(git rev-list --all)
+}
+
 function finds
 {
     find . -readable -name $@
@@ -74,6 +79,12 @@ function grany
 
     echo $GREP
     eval $GREP
+}
+
+
+function branchmv
+{
+    git branch -m $(git rev-parse --abbrev-ref HEAD) $@
 }
 
 alias gksu='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'

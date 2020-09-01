@@ -1,4 +1,12 @@
 #! /bin/bash
 
-cat $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS | xclip -sel clip  
+do_stuff ()
+{
+	cp "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS/*" $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS/../.
+}
+
+
+
+gnome-terminal -x sh -c "do_stuff; bash"
+
 

@@ -3,6 +3,7 @@
 USER_SET=""
 ROOT_SET=""
 USER=${SUDO_USER:-${USER}}
+URL='vidvranjek.com'
 
 while getopts ur option
 do
@@ -51,7 +52,7 @@ if [ "$USER_SET" == "true" ]; then
     MNT_NAS=/media/$USER/VIDCLOUD/
     sudo mkdir -p $MNT_NAS
     sudo umount $MNT_NAS
-    sudo sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other vid@vidcloud.myqnapcloud.com:/share/NAS/ $MNT_NAS
+    sudo sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 vid@$URL:/share/NAS/ $MNT_NAS
 fi
 
 
@@ -63,7 +64,7 @@ if [ "$ROOT_SET" == "true" ]; then
     MNT_NAS_ROOT=/media/$USER/VIDCLOUD_ROOT/
     sudo mkdir -p $MNT_NAS_ROOT
     sudo umount $MNT_NAS_ROOT
-    sudo sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other vid@vidcloud.myqnapcloud.com:/ $MNT_NAS_ROOT
+    sudo sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 vid@$URL:/ $MNT_NAS_ROOT
 fi
 
 
