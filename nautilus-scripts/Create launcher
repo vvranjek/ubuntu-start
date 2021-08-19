@@ -1,70 +1,35 @@
 #! /bin/bash
 
-# Save IFS
-IFS_BAK=$IFS
-IFS=""
 
-USR=$USER
 
-DIR=$(dirname $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
-FILE=$(basename $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
-EXTENSION='${$FILE##*.}'
+# Current path
+DIR=$(pwd)
 
-# Remove newline from NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
-NAUTILUS_SCRIPT_SELECTED_FILE_PATHS=$(echo $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS | tr -d '\n')
 
-# Check if the file has extension
-if [ '$EXTENSION' == '$FILE' ]; then
-    echo "File without extension"
-    FILENAME='$FILE'
-    LAUNCHER_NAME="$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS".desktop
-    #gedit $LAUNCHER_NAME
-else
-    echo "File has extension"
-    FILENAME="${FILE%.*}"
-    LAUNCHER_NAME="${NAUTILUS_SCRIPT_SELECTED_FILE_PATHS%.*}.desktop"
-fi
+# Ask for new folder nam
+FOLDER_NAME=$(zenity --entry --title="New folder name" --text=$(pwd))
 
-# Override previus LAUNCHER_NAME definition. Have to see if this works for all situations
-LAUNCHER_NAME="$DIR/$FILE.desktop"
+#NAUTILUS_SCRIPT_SELECTED_FILE_PATHS="$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS\n"
 
-# Debug
-#zenity --info --title ”Debug” --text "DIR: $DIR \n FILE: $FILE \n EXTENSION: $EXTENSION \n LAUNCHER_NAME: $LAUNCHER_NAME"
 
-if [[ -x "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" ]]
-then
-    echo "File '$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS' is executable"
-else
-    #gksudo chmod +x $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
-    echo "File '$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS' is not executable or found"
-fi
+zenity --info --text=$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
 
-#touch $LAUNCHER_NAME
+echo $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS |
+while IFS="\n" read -r line
+do
+  FILE=$(basename $line)
+  zenity --entry --title="New folder name" --text=$line
+  echo "Copying $line"
+  mkdir -p $DIR/$FOLDER_NAME
+  cp $line $DIR/$FOLDER_NAME/$FILE
+done
 
-echo "[Desktop Entry]" > "$LAUNCHER_NAME"
-echo "Version=" >> "$LAUNCHER_NAME"
-echo "Name=$FILENAME" >> "$LAUNCHER_NAME"
-echo "Comment=" >> "$LAUNCHER_NAME"
-echo "Exec=$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" >> "$LAUNCHER_NAME"
-echo "Icon=$DIR/icon.png" >> "$LAUNCHER_NAME"
-echo "Terminal=false" >> "$LAUNCHER_NAME"
-echo "Type=Application" >> "$LAUNCHER_NAME"
-echo "Categories=Utility;Application;" >> "$LAUNCHER_NAME"
 
-chmod +x $LAUNCHER_NAME
 
-gedit $LAUNCHER_NAME
+exit 0
 
-ANS=$(zenity --question --title="$FILENAME" --text="Would you kike to add to applications menu?")
 
-if [[ $? -eq 0 ]]; then
-    gksudo cp $LAUNCHER_NAME /home/$USR/.local/share/applications/$FILENAME.desktop
-    updatedb
-else
-    zenity –question –title=”$FILENAME” –text=”Answer is $?”
-fi
 
-# Restore IFS
-IFS=$IFS_BAK
+
 
 

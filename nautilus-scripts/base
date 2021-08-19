@@ -11,6 +11,8 @@
 #NAUTILUS_SCRIPT_SELECTED_FILE_PATHS=$(echo $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS | tr -d '\n')
 #	remove newline from the end of string
 
+#DIR=$(pwd)
+
 #DIR=$(dirname $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
 #FILE=$(basename $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
 #EXTENSION="${FILE##*.}"

@@ -1,4 +1,8 @@
 #! /bin/bash
 
-ulg2kml $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS 
+NAUTILUS_SCRIPT_SELECTED_FILE_PATHS=$(echo $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS | tr -d '\n')
+
+
+/home/vid/roms/snes/Hacks/floating131/flips-linux "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS"
+
 
