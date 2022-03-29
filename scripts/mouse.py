@@ -1,5 +1,13 @@
 #! /usr/bin/env python3
 
+
+# On Ubuntu install
+# sudo apt install python3 python3-pip python3-tk
+# pip3 install pyautogui
+
+
+
+
 #from autopilot.input import Mouse
 import time
 import random
