@@ -6,8 +6,6 @@
 # pip3 install pyautogui
 
 
-
-
 #from autopilot.input import Mouse
 import time
 import random
