@@ -1,0 +1,332 @@
+#! /bin/bash
+
+#
+# Parameters
+#
+
+BITCOIN_BIN="/home/$USER/Crea/src/bitcoinsv-cloud2/build-bitcoinsv-cloud2-Desktop-Debug/src"
+DATA_DIR="/home/$USER/bitcoin"
+
+GENERATOR_PATH="/home/$USER/bitcoin/btcli"
+
+
+
+# Get correct absolute paths of this file
+
+SCRIPT_PATH=$0
+
+usage_btcnd() {
+        echo
+        echo "Usage: btcnd -a \"bitcoind_arguments\" -b bitcoind_path [-n node_number]"
+        echo "Example: btcnd -a \"-conf=/path/to/bitcoin.conf\" -b /path/to/sv/build/src -n 1"
+        echo
+        echo "-a, --args        Pass arguments to bitcoind"
+        echo "-n. --node        Node number"
+        echo "-b, --bin         Path to bitcoind binaries"
+        echo "-t, --type        Node type for auto-configuration. regtest|mainnet|testnet"
+        echo "-o, --output      Print tail outptut ov bitcoind.log"
+        echo "-x, --clean-chain Delete working directory to start with a clean chain"
+        echo
+        echo "After running btcnd you can use 'btcli' command just like the "
+        echo "bitcoin-cli but without additional arguments."
+        echo
+        echo "Note: if you ran 'btcnd' with -n option, for example [-n 1], run this node"
+        echo "with 'btcli1'"  
+}
+
+
+# Print configuration
+#echo
+#echo "SCRIPT_PATH: $SCRIPT_PATH"
+#echo "BITCOIN_BIN=$BITCOIN_BIN"
+#echo "DATA_DIR=$DATA_DIR"
+#echo "TEMPLATE=$TEMPLATE"
+
+function source_all
+{
+    # Source all files in btcli folder
+    if [ "$(ls -A $GENERATOR_PATH)" ]; then
+        for f in $GENERATOR_PATH/*-src; do
+            echo "Sourcing: $f"
+            source $f 
+        done
+    else
+        echo "No source found in $GENERATOR_PATH"
+    fi
+}
+
+
+#
+#   Command line options
+#
+
+# Use conf or data parameter. Probably depricated
+CLEAN_CHAIN="false"
+MAINNET="false"
+ARGS_MAN=""
+TEMPLATE=""
+NODE_TYPE="none"
+NODE_TYPE_IS_SET="false"
+
+function btcnd 
+{
+    TAIL=""
+    NODE_VER=""
+    FUNC="btcli"
+    
+    echo "Getting args"
+
+    # Get options
+    while [[ $# -gt 0 ]]
+    do
+        case "$1" in
+        
+            -h|--help)
+            usage
+            return 0
+            ;;
+        
+            -n|--node)
+            NODE_VER="$2"
+            shift # past argument
+            shift # past value
+            ;;
+
+            -a|--args)
+            ARGS_MAN="$2"
+            shift # past argument
+            shift # past value
+            ;;
+            
+            -b|--bin)
+            BITCOIN_BIN="$2"
+            shift # past argument
+            shift # past value
+            ;;
+            
+            -t|--type)
+            NODE_TYPE="$2"
+            NODE_TYPE_IS_SET="true"
+            shift # past argument
+            shift # past value
+            ;;
+            
+            -o|--output)
+            TAIL="true"
+            shift # past argument
+            ;;
+            
+            -x|--clean-chain)
+            CLEAN_CHAIN="true"
+            shift # past argument
+            ;;
+            
+            # Depricated
+            -m|--mainnet)
+            echo
+            echo "WARNING!!!   Option -m|--mainnet is depricated. Please use --conf instead"
+            read
+            MAINNET="true"
+            DATA_DIR="$DATA_DIR/mainnet"
+            shift # past argument
+            ;;
+        esac
+    done
+    
+    echo "Getting args done"
+    
+    # Check for correct input
+    if [ "$NODE_TYPE" != 'regtest' ] && [ "$NODE_TYPE" != 'mainnet' ] && [ "$NODE_TYPE" != 'testnet' ] && [ "$NODE_TYPE" != 'none' ]; then
+        echo
+        echo "ERROR: Wrong node type"
+        usage
+    elif [ "$ARGS_MAN" != "" ] && [ "$NODE_TYPE" != 'none' ]; then
+        echo
+        echo "ERROR: arguments --args and --type are exclusive"
+        usage
+    fi
+    
+    #return 0
+    
+    
+    # Args
+    if [ ! -z $ARGS_MAN ] ;then
+            ARGS=$ARGS_MAN
+    fi
+    
+    PID_FILE=$GENERATOR_PATH/btcli$NODE_VER-pid 
+    
+    if [ ! -f $PID_FILE ]; then
+        PID_FROM_FILE=-1
+        echo "No PID file found"
+    else
+        PID_FROM_FILE=$(cat $PID_FILE)
+        echo "PID from file is $PID_FROM_FILE"
+    fi
+        
+    
+    # Print configuration
+    echo
+    echo "SCRIPT_PATH: $SCRIPT_PATH"
+    echo "DIR: $DIR"
+    echo "SOURCE: $SOURCE"
+    echo "BITCOIN_BIN=$BITCOIN_BIN"
+    echo "DATA_DIR=$DATA_DIR"
+    echo "TEMPLATE=$TEMPLATE"
+    echo
+    
+    #echo Making dir: $DATA_DIR    
+    #mkdir -p $DATA_DIR
+    
+    if [ "$NODE_TYPE_IS_SET" = 'true' ]; then
+        # Create conf file
+        CONF_FILE_PATH=$DATA_DIR/btcnd-$NODE_TYPE$NODE_VER
+        CONF_FILE=$CONF_FILE_PATH/bitcoin.conf
+        ARGS="-conf=$CONF_FILE"
+    fi
+    
+    # Restart bitcoind
+    echo
+    echo "Restarting bitcoind $NODE_VER"
+    echo "Args: $ARGS"
+    echo "Stopping bitcoind, pid: $PID_FROM_FILE"
+    $BITCOIN_BIN/bitcoin-cli $ARGS stop
+    
+    # Wait for bitcoind to stop
+    while [[ 1 ]]; do       
+        if ! ps -p $PID_FROM_FILE > /dev/null; then
+            break
+        fi
+        
+        echo "Waiting to stop $PID_FROM_FILE"
+        sleep 1
+    done
+    
+    echo "Bitcoind ($PID_FROM_FILE) stopped"
+    
+    # Check if any bitcoind processes are still running
+    if pidof bitcoind > /dev/null; then
+        echo "Bitcoind is still running:"
+        pidof bitcoind
+        echo
+        read
+    fi
+    
+    # Clear data dir if requested
+    if [ "$CLEAN_CHAIN" = 'true' ] && [ "$NODE_TYPE_IS_SET" = 'true']; then
+        NODE_DIR=$DATA_DIR/btcnd-$NODE_TYPE$NODE_VER
+        echo "Removing: $DATA_DIR"
+        echo "Are you sure you want to remove $DATA_DIR? Use Ctrl-C to exit"
+        read
+        rm -rf $DATA_DIR
+        #echo "Copying: $DATA_DIR/regtest_prune"
+        #cp -r $DATA_DIR/../regtest_prune/. $DATA_DIR/
+        #CLEAN_CHAIN="false"
+    fi
+    
+    
+    
+    
+    
+    
+    if [ "$NODE_TYPE_IS_SET" = 'true' ]; then
+        PORT="8335"
+
+    
+        if [ "$NODE_VER" = "" ]; then
+            NODE_CALCULATION="0"    
+        else
+            NODE_CALCULATION=$NODE_VER
+        fi
+
+        let "PORT = $NODE_CALCULATION * 2 + $PORT + 1"
+        let "PORT_RPC = $PORT + 1"
+        
+        mkdir -p $CONF_FILE_PATH
+        
+        echo "datadir=$CONF_FILE_PATH" > $CONF_FILE
+        echo "regtest=1" >> $CONF_FILE
+        echo "port=$PORT" >> $CONF_FILE
+        echo "rpcport=$PORT_RPC" >> $CONF_FILE
+        echo "rpcuser=user" >> $CONF_FILE
+        echo "rpcpassword=password" >> $CONF_FILE
+        echo "debug=1" >> $CONF_FILE
+        echo "debugexclude=libevent" >> $CONF_FILE
+        echo "debugexclude=leveldb" >> $CONF_FILE
+        echo "excessiveblocksize=10000000" >> $CONF_FILE
+        echo "maxstackmemoryusageconsensus=0" >> $CONF_FILE
+        
+        ARGS="-conf=$CONF_FILE"
+        ARGS_MAN=$ARGS
+    fi
+    
+    
+    
+    
+    
+    # Create a file with btcli function. This is a workaround because I cant find a way to create dynamic functions
+    S_FILE=$GENERATOR_PATH/btcli$NODE_VER-src  
+    mkdir -p $GENERATOR_PATH/
+    
+    # Start bitcoind
+    echo
+    echo "Running $BITCOIN_BIN/bitcoind $ARGS"
+    $BITCOIN_BIN/bitcoind $ARGS &
+    PID=$!
+    echo "PID is $PID"
+    echo $PID > $PID_FILE
+    
+    sleep 1
+    echo
+    
+    
+    echo "Creating file: $S_FILE"
+    ############################## Create a btcli file ###############################
+    echo "" > $S_FILE
+    echo "" >> $S_FILE
+    echo "" >> $S_FILE
+    echo "PID_FROM_FILE=$PID" >> $S_FILE
+    echo "function btcli$NODE_VER" >> $S_FILE
+    echo "{" >> $S_FILE
+    echo "  BITCOIN_BIN=$BITCOIN_BIN" >> $S_FILE
+    echo "  ARGS=$ARGS_MAN" >> $S_FILE
+    echo "  \$BITCOIN_BIN/bitcoin-cli \$ARGS \$@" >> $S_FILE
+    echo "}" >> $S_FILE
+    echo ""  >> $S_FILE
+
+    ###################################################################################
+
+    # Source all files in btcli folder
+    source_all
+
+
+    
+    # Tail output
+    if [ "$TAIL" = 'true' ]; then
+        tail -f $DATA_DIR/bitcoind.log
+    fi
+}
+
+
+return 0
+
+
+    echo "Creating file: $S_FILE"
+    ############################## Create a btcli file ###############################
+    echo "" > $S_FILE
+    echo "" >> $S_FILE
+    echo "" >> $S_FILE
+    echo "PID_FROM_FILE=$PID" >> $S_FILE
+    echo "function btcli$NODE_VER" >> $S_FILE
+    echo "{" >> $S_FILE
+    echo "  BITCOIN_BIN=$BITCOIN_BIN" >> $S_FILE
+    echo "  ARGS=$ARGS_MAN" >> $S_FILE
+    echo "  \$BITCOIN_BIN/bitcoin-cli \$ARGS \$@" >> $S_FILE
+    echo "}" >> $S_FILE
+    echo ""  >> $S_FILE
+
+    ###################################################################################
+
+
+
+
