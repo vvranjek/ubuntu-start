@@ -40,6 +40,9 @@ $SCRIPTS_DIR/install_unity.sh
 # Update templates
 $SCRIPTS_DIR/update_templates.sh
 
+# Setup bitcoin shortcuts
+$SCRIPTS_DIR//home/vid/ubuntu-start/scripts/setup_bitcoin_shortcuts.sh
+
 echo Done!
 
 exit 0

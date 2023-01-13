@@ -1,0 +1,70 @@
+#! /bin/bash
+
+# newline-delimited paths for selected files (only if local) 
+# NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
+    
+# newline-delimited URIs for selected files 
+# NAUTILUS_SCRIPT_SELECTED_URIS
+    
+# current location
+# NAUTILUS_SCRIPT_CURRENT_URI
+
+# position and size of current window 
+# NAUTILUS_SCRIPT_WINDOW_GEOMETRY
+
+# Debug
+#zenity --info --title="Debug" --width=600 --height=400 --text="
+#NAUTILUS_SCRIPT_SELECTED_FILE_PATHS:\n$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS \n\
+#NAUTILUS_SCRIPT_SELECTED_URIS:\n$NAUTILUS_SCRIPT_SELECTED_URIS \n\
+#NAUTILUS_SCRIPT_CURRENT_URI:\n$NAUTILUS_SCRIPT_CURRENT_URI \n\
+#NAUTILUS_SCRIPT_WINDOW_GEOMETRY:\n\t$NAUTILUS_SCRIPT_WINDOW_GEOMETRY"
+
+
+SAVEIFS=$IFS
+IFS=$(echo -en "\n\b")
+
+for FILE in $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
+do 
+    DIR=""
+    FILENAME=""
+    EXTENSION=""
+    FILENAME=""
+    
+    # It is a directory
+    if [[ -d $FILE ]]; then
+        
+        #dirname="/path/to/somewhere//"
+        RESULT="${FILE%"${FILE##*[!/]}"}" # extglob-free multi-trailing-/ trim
+        DIRNAME="${RESULT##*/}"                  # remove everything before the last /
+        FILENAME=$DIRNAME
+        
+        IS_DIR="true"
+        
+    # It is a file
+    elif [[ -f $FILE  ]]; then
+        DIR=$(dirname $FILE)
+        FILENAME=$(basename $FILE)
+        EXTENSION='${$FILE##*.}'
+        
+        IS_DIR="false"
+        
+    else
+        IS_DIR="unknown"
+    fi
+
+    #zenity --info --text="File: $FILENAME"
+    
+    
+    # Your code here!!!
+    
+    
+done
+
+
+# Restore IFS
+IFS=$SAVEIFS
+
+exit 0
+
+
+
