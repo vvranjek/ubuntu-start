@@ -1,8 +1,0 @@
-/
-#define USART_DREINTLVL0_bp  0  /* Data Register Empty Interrupt Level bit 0 position. */
-#define USART_DREINTLVL1_bm  (1<<1)  /* Data Register Empty Interrupt Level bit 1 mask. */
-#define USART_DREINTLVL1_bp  1  /* Data Register Empty Interrupt Level bit 1 position. */
-
-/* USART.CTRLB  bit masks and bit positions */
-#define USART_RXEN_bm  0x10  /* Receiver Enable bit mask. */
-#define 
