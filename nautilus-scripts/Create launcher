@@ -20,8 +20,12 @@ gnome-terminal -- bash -c "
       appimage2deb --pkg-name temp --unpack \"\$appimage\"
     done
 
+
+pattern='file://'
+FOLDERPATH=\${NAUTILUS_SCRIPT_CURRENT_URI/$pattern/}
+echo "FOLDERPATH=${FOLDERPATH}"
     # Install the temporary DEB package using pkexec
-    pkexec dpkg -i \$NAUTILUS_SCRIPT_CURRENT_URI/temp.deb
+    pkexec dpkg -i \$FOLDERPATH/temp.deb
 
     # Clean up any broken packages using pkexec
     pkexec apt-get install -f
